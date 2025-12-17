@@ -59,65 +59,146 @@
 </head>
 <body class="bg-[#0b0b0b] text-white">
 
-  <div class="bg-black text-xs text-gray-200">
-    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 px-4 py-2">
-      <div class="flex items-center gap-4">
-        <span class="inline-flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-[var(--a2ci-red)]"></span>
-          <span>Coordination SSI, Audit, Conseil &amp; Ingénierie en Prévention Incendie</span>
-        </span>
+ 
+
+<div class="bg-black text-xs text-gray-300 border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 px-4 py-2.5">
+    
+    <div class="hidden sm:flex items-center gap-4">
+      <span class="inline-flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
+        <span class="font-medium tracking-wide">Coordination SSI, Audit & Conseil</span>
+      </span>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-end">
+      
+      <div class="flex items-center gap-2">
+        <svg class="h-3.5 w-3.5 text-[var(--a2ci-red)]" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+        </svg>
+        <span>33210 Mazères</span>
       </div>
-      <div class="flex flex-wrap items-center gap-4">
-        <span>📍 Parc d’activités du Pays de Langon – 33210 Mazères</span>
-        <a href="tel:+33556272367" class="transition hover:text-[var(--a2ci-red)]">📞 05 56 27 23 67</a>
-        <a href="mailto:contact@a2ci-prevention-incendie.fr" class="hidden transition hover:text-[var(--a2ci-red)] sm:inline">
-          ✉️ contact@a2ci-prevention-incendie.fr
-        </a>
-      </div>
+
+      <a href="tel:+33556272367" class="flex items-center gap-2 transition hover:text-white group">
+        <svg class="h-3.5 w-3.5 text-[var(--a2ci-red)] group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
+          <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+        </svg>
+        <span class="font-semibold">05 56 27 23 67</span>
+      </a>
+
+      <a href="mailto:contact@a2ci-prevention-incendie.fr" class="hidden sm:flex items-center gap-2 transition hover:text-white group">
+        <svg class="h-3.5 w-3.5 text-[var(--a2ci-red)] group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+          <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+        </svg>
+        <span>contact@a2ci.fr</span>
+      </a>
+
     </div>
   </div>
+</div>
 
-  <header class="sticky top-0 z-40 border-b border-[#DEDEDD]/70 bg-white text-black">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-6 px-4 py-3">
+<header class="sticky top-0 z-40 border-b border-[#DEDEDD]/70 bg-white text-black shadow-sm transition-all duration-300" id="main-header">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
     
-    <a href="#" class="flex items-center gap-4 group">
-      <img src="images/logo.svg" alt="A2CI Prévention Incendie" class="h-14 w-auto transition-transform group-hover:scale-105" />
-      
+    <a href="#" class="flex items-center gap-4 group shrink-0">
+      <img src="images/logo.svg" alt="A2CI Prévention Incendie" class="h-12 w-auto sm:h-14 transition-transform group-hover:scale-105" />
       <div class="flex flex-col justify-center">
-        <span class="font-heading text-2xl font-extrabold text-black leading-none">
+        <span class="font-heading text-xl sm:text-2xl font-extrabold text-black leading-none">
           A2CI
         </span>
-        <span class="font-heading text-xs font-bold text-gray-600 uppercase tracking-widest mt-0.5">
+        <span class="font-heading text-[10px] sm:text-xs font-bold text-gray-600 uppercase tracking-widest mt-0.5">
           Prévention Incendie
         </span>
       </div>
     </a>
 
-    <nav class="hidden items-center gap-8 text-sm font-semibold md:flex">
-      <a href="#expertises" class="relative hover:text-[var(--a2ci-red)] transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[var(--a2ci-red)] after:transition-all hover:after:w-full">
+    <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold">
+      <a href="#expertises" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
         Prestations
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
       </a>
-      <a href="#secteurs" class="relative hover:text-[var(--a2ci-red)] transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[var(--a2ci-red)] after:transition-all hover:after:w-full">
-        ERP / ERT / IGH
+      <a href="#secteurs" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
+        ERP / IGH
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
       </a>
-      <a href="#process" class="relative hover:text-[var(--a2ci-red)] transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[var(--a2ci-red)] after:transition-all hover:after:w-full">
+      <a href="#process" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
         Méthode
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
       </a>
-      <a href="#formations" class="relative hover:text-[var(--a2ci-red)] transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-[var(--a2ci-red)] after:transition-all hover:after:w-full">
+      <a href="#formations" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
         Formations
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
       </a>
     </nav>
 
     <div class="flex items-center gap-3">
-      <a href="#contact" class="hidden rounded-full border border-gray-200 bg-gray-50 px-4 py-2 text-xs font-bold text-gray-700 transition hover:border-[var(--a2ci-red)] hover:text-[var(--a2ci-red)] sm:inline-block">
-        Plaquette PDF
+      <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-[var(--a2ci-red)] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-red-700 shadow-md hover:shadow-lg">
+        <span class="hidden sm:inline">Demander un devis</span>
+        <span class="sm:hidden">Contact</span>
       </a>
-      <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-[var(--a2ci-red)] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-red-700 shadow-md hover:shadow-lg sm:text-sm">
-        Contact
+
+      <button id="mobile-menu-btn" class="md:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-black hover:bg-gray-50 focus:outline-none" aria-label="Menu">
+        <svg id="icon-menu" class="h-6 w-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+        <svg id="icon-close" class="absolute h-6 w-6 opacity-0 rotate-90 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-xl overflow-hidden transition-all duration-300 max-h-0 opacity-0 md:hidden">
+    <div class="flex flex-col p-6 gap-4">
+      <a href="#expertises" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Prestations</a>
+      <a href="#secteurs" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Secteurs (ERP / IGH)</a>
+      <a href="#process" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Méthode</a>
+      <a href="#formations" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Formations</a>
+      
+      <a href="#contact" class="flex items-center gap-2 text-sm font-semibold text-gray-500 mt-2" onclick="closeMenu()">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        Télécharger la plaquette
       </a>
     </div>
   </div>
 </header>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      // Ouvrir
+      menu.classList.remove('max-h-0', 'opacity-0');
+      menu.classList.add('max-h-[500px]', 'opacity-100');
+      // Animation Icone
+      iconMenu.classList.add('opacity-0', '-rotate-90');
+      iconClose.classList.remove('opacity-0', 'rotate-90');
+    } else {
+      closeMenu();
+    }
+  }
+
+  function closeMenu() {
+    isMenuOpen = false;
+    // Fermer
+    menu.classList.remove('max-h-[500px]', 'opacity-100');
+    menu.classList.add('max-h-0', 'opacity-0');
+    // Animation Icone
+    iconMenu.classList.remove('opacity-0', '-rotate-90');
+    iconClose.classList.add('opacity-0', 'rotate-90');
+  }
+
+  // Événement clic
+  btn.addEventListener('click', toggleMenu);
+</script>
 
 <!-- Hero Section -->
     <section class="relative w-full overflow-hidden bg-black">
@@ -634,7 +715,7 @@
         </div>
 
         <div class="hidden md:block w-5/12 order-3 relative h-full">
-            <div class="absolute top-1/2 -translate-y-1/2 left-12 w-[115%] h-[380px] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out translate-x-16 group-hover:translate-x-0 pointer-events-none pr-4">
+            <div class="absolute top-1/2 -translate-y-1/2 left-8 right-0 h-[320px] lg:h-[380px] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out translate-x-16 group-hover:translate-x-0 pointer-events-none">
                 
                 <div class="w-full h-full overflow-hidden rounded-[3rem] border border-red-600/50 shadow-[0_0_25px_rgba(220,38,38,0.25)] animate-float-slow transform rotate-2 transition-all duration-700 group-hover:border-red-500 group-hover:shadow-[0_0_50px_rgba(220,38,38,0.7)]">
                     <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1000&auto=format&fit=crop" 
@@ -650,7 +731,7 @@
       <div class="relative mb-32 flex flex-col md:flex-row items-center justify-between w-full group min-h-[250px]">
         
         <div class="hidden md:block w-5/12 order-1 relative h-full">
-             <div class="absolute top-1/2 -translate-y-1/2 right-12 w-[115%] h-[380px] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out -translate-x-16 group-hover:translate-x-0 pointer-events-none pl-4">
+             <div class="absolute top-1/2 -translate-y-1/2 right-8 left-0 h-[320px] lg:h-[380px] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out -translate-x-16 group-hover:translate-x-0 pointer-events-none">
                 
                 <div class="w-full h-full overflow-hidden rounded-[3rem] border border-red-600/50 shadow-[0_0_25px_rgba(220,38,38,0.25)] animate-float-slower transform -rotate-2 transition-all duration-700 group-hover:border-red-500 group-hover:shadow-[0_0_50px_rgba(220,38,38,0.7)]">
                     <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1000&auto=format&fit=crop" 
@@ -692,7 +773,7 @@
         </div>
 
         <div class="hidden md:block w-5/12 order-3 relative h-full">
-             <div class="absolute top-1/2 -translate-y-1/2 left-12 w-[115%] h-[380px] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out translate-x-16 group-hover:translate-x-0 pointer-events-none pr-4">
+             <div class="absolute top-1/2 -translate-y-1/2 left-8 right-0 h-[320px] lg:h-[380px] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-out translate-x-16 group-hover:translate-x-0 pointer-events-none">
                 
                 <div class="w-full h-full overflow-hidden rounded-[3rem] border border-red-600/50 shadow-[0_0_25px_rgba(220,38,38,0.25)] animate-float-slow transform rotate-3 transition-all duration-700 group-hover:border-red-500 group-hover:shadow-[0_0_50px_rgba(220,38,38,0.7)]">
                     <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1000&auto=format&fit=crop" 
@@ -1089,6 +1170,7 @@
   </div>
 </section>
 
+<!-- Contact -->
 <section id="contact" class="relative w-full bg-[#0a0a0a] py-24 overflow-hidden text-white">
   
   <div class="absolute inset-0 z-0 opacity-20 pointer-events-none" 
@@ -1205,6 +1287,267 @@
     </div>
   </div>
 </section>
+
+
+
+<footer class="bg-black text-white pt-20 pb-10 border-t border-white/10 relative overflow-hidden bg-tech-grid">
+  
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[var(--a2ci-red)] to-transparent opacity-50"></div>
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[var(--a2ci-red)] opacity-5 blur-[120px] rounded-full pointer-events-none"></div>
+
+  <div class="mx-auto max-w-7xl px-4 relative z-10">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      
+      <div>
+        <a href="#" class="flex items-center gap-3 mb-6">
+          <img src="images/logo.svg" alt="A2CI" class="h-10 w-auto brightness-0 invert" /> 
+          <div class="flex flex-col">
+            <span class="font-heading text-xl font-extrabold text-white leading-none">A2CI</span>
+            <span class="font-heading text-[10px] font-bold text-gray-500 uppercase tracking-widest">Prévention Incendie</span>
+          </div>
+        </a>
+        <p class="text-sm text-gray-400 leading-relaxed mb-6">
+          Bureau d'études techniques spécialisé en sécurité incendie. Audit, ingénierie et formation pour ERP, IGH et sites industriels.
+        </p>
+        <div class="text-xs font-semibold text-[var(--a2ci-red)] uppercase tracking-widest">
+          Intervention Grand Sud-Ouest
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-heading text-sm font-bold text-white uppercase tracking-widest mb-6">Navigation</h4>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li><a href="#expertises" class="hover:text-[var(--a2ci-red)] transition-colors">Nos Prestations</a></li>
+          <li><a href="#secteurs" class="hover:text-[var(--a2ci-red)] transition-colors">Secteurs (ERP/IGH)</a></li>
+          <li><a href="#process" class="hover:text-[var(--a2ci-red)] transition-colors">Notre Méthode</a></li>
+          <li><a href="#formations" class="hover:text-[var(--a2ci-red)] transition-colors">Catalogue Formations</a></li>
+          <li><a href="#contact" class="hover:text-[var(--a2ci-red)] transition-colors">Demander un devis</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading text-sm font-bold text-white uppercase tracking-widest mb-6">Informations</h4>
+        <ul class="space-y-3 text-sm text-gray-400 font-tech">
+          <li class="flex items-center justify-between border-b border-white/5 pb-2">
+            <span>Forme :</span> <span class="text-white">SAS</span>
+          </li>
+          <li class="flex items-center justify-between border-b border-white/5 pb-2">
+            <span>Capital :</span> <span class="text-white">3 000 €</span>
+          </li>
+          <li class="flex items-center justify-between border-b border-white/5 pb-2">
+            <span>SIRET :</span> <span class="text-white">487 945 388 00030</span>
+          </li>
+          <li class="flex items-center justify-between border-b border-white/5 pb-2">
+            <span>NAF :</span> <span class="text-white">7112B</span>
+          </li>
+          <li class="flex items-center justify-between pt-2">
+            <span>TVA :</span> <span class="text-white">FR 58 487 945 388</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-heading text-sm font-bold text-white uppercase tracking-widest mb-6">Nous trouver</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <svg class="h-5 w-5 text-[var(--a2ci-red)] shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            <span class="text-sm text-gray-400">Parc d'activités du Pays de Langon<br>15 Rue des Acacias<br>33210 Mazères</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="h-5 w-5 text-[var(--a2ci-red)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+            <a href="tel:+33556272367" class="text-sm text-white font-bold hover:text-[var(--a2ci-red)] transition-colors">05 56 27 23 67</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg class="h-5 w-5 text-[var(--a2ci-red)] shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <a href="mailto:contact@a2ci-prevention-incendie.fr" class="text-sm text-gray-400 hover:text-white transition-colors">contact@a2ci-prevention-incendie.fr</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">
+        &copy; <script>document.write(new Date().getFullYear())</script> A2CI Prévention Incendie. Tous droits réservés.
+      </p>
+      <div class="flex items-center gap-6 text-xs text-gray-500">
+        <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+        <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+        <a href="#" class="hover:text-white transition-colors">CGV</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- chatbot-->
+<div id="a2ci-chat-widget" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4 font-sans">
+
+  <div id="chat-window" class="hidden w-[350px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/5 transition-all duration-300 origin-bottom-right scale-90 opacity-0">
+    
+    <div class="bg-black p-4 flex items-center justify-between border-b border-red-900/30">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <div class="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center text-white border border-white/20">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+          </div>
+          <span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-black"></span>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">Assistant A2CI</h4>
+          <p class="text-[10px] text-gray-400">En ligne</p>
+        </div>
+      </div>
+      <button onclick="toggleChat()" class="text-gray-400 hover:text-white transition-colors">
+        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+
+    <div id="chat-messages" class="h-[300px] overflow-y-auto bg-gray-50 p-4 flex flex-col gap-3">
+      <p class="text-[10px] text-center text-gray-400 my-2">Aujourd'hui</p>
+      </div>
+
+    <div class="p-3 bg-white border-t border-gray-100 flex items-center gap-2">
+      <input type="text" placeholder="Écrivez votre message..." disabled class="w-full bg-gray-50 text-xs rounded-full px-4 py-2 text-gray-500 cursor-not-allowed focus:outline-none">
+      <button class="p-2 rounded-full bg-gray-100 text-gray-400 cursor-not-allowed">
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+      </button>
+    </div>
+  </div>
+
+  <button id="chat-btn" onclick="toggleChat()" class="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[var(--a2ci-red)] text-white shadow-lg shadow-red-900/40 transition-all hover:scale-110 hover:bg-red-700 active:scale-95">
+    
+    <svg id="icon-open" class="h-7 w-7 transition-all duration-300 group-hover:rotate-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+    </svg>
+    
+    <svg id="icon-close" class="absolute h-7 w-7 opacity-0 rotate-90 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+
+    <span id="chat-notification" class="absolute top-0 right-0 flex h-3 w-3">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-red-400 border border-[var(--a2ci-red)]"></span>
+    </span>
+  </button>
+
+</div>
+
+<script>
+  let chatOpen = false;
+  let hasGreeted = false;
+
+  function toggleChat() {
+    const windowEl = document.getElementById('chat-window');
+    const btnOpen = document.getElementById('icon-open');
+    const btnClose = document.getElementById('icon-close');
+    const notification = document.getElementById('chat-notification');
+
+    chatOpen = !chatOpen;
+
+    if (chatOpen) {
+      // Ouvrir
+      windowEl.classList.remove('hidden');
+      // Petit délai pour l'animation CSS
+      setTimeout(() => {
+        windowEl.classList.remove('scale-90', 'opacity-0');
+        windowEl.classList.add('scale-100', 'opacity-100');
+      }, 10);
+
+      // Icones bouton
+      btnOpen.classList.add('opacity-0', '-rotate-90');
+      btnClose.classList.remove('opacity-0', 'rotate-90');
+      
+      // Cacher notif
+      if(notification) notification.style.display = 'none';
+
+      // Lancer le scénario si première fois
+      if (!hasGreeted) {
+        hasGreeted = true;
+        startChatScenario();
+      }
+
+    } else {
+      // Fermer
+      windowEl.classList.remove('scale-100', 'opacity-100');
+      windowEl.classList.add('scale-90', 'opacity-0');
+      
+      setTimeout(() => {
+        windowEl.classList.add('hidden');
+      }, 300);
+
+      // Icones bouton
+      btnOpen.classList.remove('opacity-0', '-rotate-90');
+      btnClose.classList.add('opacity-0', 'rotate-90');
+    }
+  }
+
+  function startChatScenario() {
+    const messagesContainer = document.getElementById('chat-messages');
+
+    // 1. Ajouter indicateur de frappe
+    const typingId = 'typing-' + Date.now();
+    messagesContainer.innerHTML += `
+      <div id="${typingId}" class="flex items-end gap-2 self-start max-w-[80%]">
+        <div class="h-6 w-6 rounded-full bg-gray-200 flex items-center justify-center shrink-0 text-[10px]">🤖</div>
+        <div class="rounded-2xl rounded-bl-none bg-white p-3 shadow-sm border border-gray-100">
+          <div class="flex gap-1">
+            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
+            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s"></span>
+            <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // 2. Attendre 1.5s et afficher le message
+    setTimeout(() => {
+      // Supprimer l'indicateur
+      const typingEl = document.getElementById(typingId);
+      if(typingEl) typingEl.remove();
+
+      // Ajouter le message
+      messagesContainer.innerHTML += `
+        <div class="flex flex-col gap-1 self-start max-w-[85%] animate-fade-in-up">
+          <div class="flex items-end gap-2">
+             <div class="h-6 w-6 rounded-full bg-black text-white flex items-center justify-center shrink-0 text-[10px]">
+                <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+             </div>
+             <div class="rounded-2xl rounded-bl-none bg-white p-3 shadow-sm border border-gray-200 text-sm text-gray-700">
+               Bonjour ! Je ne suis pas disponible pour le moment pour vous accompagner. <br><br>
+               <strong>Voulez-vous que je vous mette en contact avec un membre de l'équipe ?</strong>
+             </div>
+          </div>
+          
+          <div class="pl-8 flex gap-2 mt-2">
+            <a href="#contact" onclick="toggleChat()" class="px-4 py-2 bg-[var(--a2ci-red)] text-white text-xs font-bold rounded-full hover:bg-red-700 transition shadow-sm">
+              Oui, contacter l'équipe
+            </a>
+            <button onclick="toggleChat()" class="px-4 py-2 bg-gray-200 text-gray-600 text-xs font-bold rounded-full hover:bg-gray-300 transition">
+              Non, merci
+            </button>
+          </div>
+        </div>
+      `;
+      
+      // Scroll to bottom
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }, 1500);
+  }
+</script>
+
+<style>
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-in-up {
+    animation: fade-in-up 0.3s ease-out forwards;
+  }
+</style>
+
+
 
 </body>
 </html>
