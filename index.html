@@ -59,6 +59,24 @@
       left: 0;
       z-index: 1;
     }
+    /* Animation d'entrée du header */
+    @keyframes slideDownHeader {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    .header-animate-entry {
+      animation: slideDownHeader 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* État du header une fois scrollé (plus fin) */
+    .header-scrolled {
+      padding-top: 0.5rem !important;    /* py-2 */
+      padding-bottom: 0.5rem !important; /* py-2 */
+      background-color: rgba(255, 255, 255, 0.95) !important; /* Légère transparence */
+      backdrop-filter: blur(8px); /* Effet de flou derrière */
+      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1) !important;
+    }
   </style>
 </head>
 <body class="bg-[#0b0b0b] text-white overflow-x-hidden w-full">
@@ -103,7 +121,7 @@
   </div>
 </div>
 
-<header class="sticky top-0 z-40 border-b border-[#DEDEDD]/70 bg-white text-black shadow-sm transition-all duration-300" id="main-header">
+<header class="sticky top-0 z-40 border-b border-[#DEDEDD]/70 bg-white text-black shadow-sm transition-all duration-500 ease-in-out header-animate-entry" id="main-header">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
     
     <a href="#" class="flex items-center gap-4 group shrink-0">
@@ -138,7 +156,7 @@
     </nav>
 
     <div class="flex items-center gap-3">
-      <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-[var(--a2ci-red)] px-4 py-2.5 text-xs font-bold text-white transition hover:bg-red-700 shadow-md hover:shadow-lg">
+      <a href="#contact" class="inline-flex items-center justify-center rounded-md bg-[var(--a2ci-red)] px-6 py-2.5 text-xs font-bold text-white transition-all duration-300 hover:bg-red-700 shadow-md hover:shadow-lg hover:-translate-y-0.5">
         <span class="hidden sm:inline">Demander un devis</span>
         <span class="sm:hidden">Contact</span>
       </a>
