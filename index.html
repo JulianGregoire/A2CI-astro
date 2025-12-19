@@ -1742,6 +1742,19 @@
       // Scroll to bottom
       messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }, 1500);
+
+    // Animation du header au scroll
+  const mainHeader = document.getElementById('main-header');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      // Si on descend, on affine le menu
+      mainHeader.classList.add('header-scrolled');
+    } else {
+      // Si on remonte tout en haut, on remet l'état initial
+      mainHeader.classList.remove('header-scrolled');
+    }
+  });
   }
 </script>
 
