@@ -20,6 +20,9 @@
       --a2ci-grey: #DEDEDD;
       --a2ci-white: #FFFFFF;
     }
+    html {
+      scroll-behavior: smooth;
+    }
     html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -76,6 +79,78 @@
       background-color: rgba(255, 255, 255, 0.95) !important; /* Légère transparence */
       backdrop-filter: blur(8px); /* Effet de flou derrière */
       box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* --- Scroll reveal animations (CSS-only, light) --- */
+    .scroll-reveal {
+      opacity: 1;
+      transform: none;
+    }
+    @supports (animation-timeline: view()) {
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(18px) scale(0.99);
+        animation: reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation-timeline: view();
+        animation-range: entry 10% cover 30%;
+      }
+      .scroll-reveal[data-animate="fade-right"] {
+        animation-name: reveal-right;
+      }
+      .scroll-reveal[data-animate="fade-left"] {
+        animation-name: reveal-left;
+      }
+      .scroll-reveal[data-animate="fade-up"] {
+        animation-name: reveal-up;
+      }
+      .scroll-reveal[data-animate="zoom"] {
+        animation-name: reveal-zoom;
+      }
+      @keyframes reveal-up {
+        from { opacity: 0; transform: translateY(18px) scale(0.99); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes reveal-left {
+        from { opacity: 0; transform: translateX(22px) scale(0.99); }
+        to { opacity: 1; transform: translateX(0) scale(1); }
+      }
+      @keyframes reveal-right {
+        from { opacity: 0; transform: translateX(-22px) scale(0.99); }
+        to { opacity: 1; transform: translateX(0) scale(1); }
+      }
+      @keyframes reveal-zoom {
+        from { opacity: 0; transform: scale(0.94); }
+        to { opacity: 1; transform: scale(1); }
+      }
+    }
+
+    /* --- Load-in animation for hero (CSS-only) --- */
+    @media (prefers-reduced-motion: no-preference) {
+      .load-reveal {
+        opacity: 0;
+        transform: translateY(12px);
+        animation: load-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation-delay: var(--load-delay, 0ms);
+        will-change: transform, opacity;
+      }
+      @keyframes load-in {
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .scroll-reveal {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+      .load-reveal {
+        animation: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
     }
   </style>
 </head>
@@ -223,7 +298,7 @@
 </script>
 
 <!-- Hero Section -->
-    <section class="relative w-full overflow-hidden bg-black">
+    <section class="relative w-full overflow-hidden bg-black scroll-reveal" data-animate="fade-up">
   <div class="absolute inset-0 z-0">
     <img
       src="https://images.pexels.com/photos/266487/pexels-photo-266487.jpeg"
@@ -237,7 +312,7 @@
 
   <div class="relative z-10 mx-auto flex min-h-[700px] max-w-7xl flex-col justify-center px-4 py-20 lg:min-h-[800px]">
     
-    <div class="max-w-3xl">
+    <div class="max-w-3xl scroll-reveal" data-animate="fade-right" style="--reveal-delay: 120ms;">
       <div class="mb-6 flex items-center gap-3">
         <span class="h-[2px] w-10 bg-[var(--a2ci-red)]"></span>
         <span class="text-sm font-bold uppercase tracking-[0.2em] text-gray-300">
@@ -295,10 +370,10 @@
 </section>
 
   <!-- Notre savoir-faire -->
-  <section class="bg-white py-16 lg:py-20">
+  <section class="bg-white py-16 lg:py-20 scroll-reveal" data-animate="fade-up">
     <div class="mx-auto max-w-6xl px-4">
       
-      <div class="mx-auto mb-16 max-w-3xl text-center">
+      <div class="mx-auto mb-16 max-w-3xl text-center scroll-reveal" data-animate="zoom">
         <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--a2ci-red)]">
           Notre savoir-faire
         </p>
@@ -310,7 +385,7 @@
         </p>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-3">
+      <div class="grid gap-8 md:grid-cols-3 scroll-reveal" data-animate="fade-up" style="--reveal-delay: 120ms;">
         
         <div class="group text-center">
           <div class="mb-6 flex items-center justify-center">
@@ -359,14 +434,14 @@
   </section>
 
 <!-- À propos de A2CI -->
-<section id="apropos" class="bg-white py-20 lg:py-24 relative overflow-hidden">
+<section id="apropos" class="bg-white py-20 lg:py-24 relative overflow-hidden scroll-reveal" data-animate="fade-up">
   
   <div class="absolute right-0 top-0 h-full w-1/3 bg-gray-50 skew-x-12 translate-x-32 z-0"></div>
 
   <div class="mx-auto max-w-7xl px-4 relative z-10">
-    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 scroll-reveal" data-animate="fade-up" style="--reveal-delay: 120ms;">
       
-      <div class="relative group">
+      <div class="relative group scroll-reveal" data-animate="fade-right">
         <div class="absolute -top-4 -left-4 w-2/3 h-2/3 border-2 border-[var(--a2ci-red)]/20 rounded-xl z-0 transition-transform duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2"></div>
         
         <div class="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -439,7 +514,7 @@
   
   <div class="relative z-10 mx-auto max-w-7xl px-4">
     
-    <div class="mx-auto mb-16 max-w-3xl text-center">
+    <div class="mx-auto mb-16 max-w-3xl text-center scroll-reveal" data-animate="zoom">
       <div class="flex items-center justify-center gap-2 mb-3">
         <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
         <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--a2ci-red)]">
@@ -1071,7 +1146,7 @@
   
   <div class="mx-auto max-w-[1600px] px-4">
     
-    <div class="mx-auto mb-16 max-w-3xl text-center">
+    <div class="mx-auto mb-16 max-w-3xl text-center scroll-reveal" data-animate="zoom">
         <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--a2ci-red)]">
           Notre équipe
         </p>
@@ -1440,7 +1515,7 @@
       </div>
     </div>
 
-    <div class="rounded-2xl bg-white p-6 text-black sm:p-10 shadow-2xl relative overflow-hidden">
+    <div class="rounded-2xl bg-white p-6 text-black sm:p-10 shadow-2xl relative overflow-hidden scroll-reveal" data-animate="zoom">
       <div class="absolute top-0 left-0 w-full h-1 bg-[var(--a2ci-red)]"></div>
       
       <h3 class="font-heading text-2xl font-bold mb-6">Envoyer une demande</h3>
@@ -1498,7 +1573,7 @@
   </div>
 </section>
 
-<footer class="bg-black text-white pt-20 pb-10 border-t border-white/10 relative overflow-hidden bg-tech-grid">
+<footer class="bg-black text-white pt-20 pb-10 border-t border-white/10 relative overflow-hidden bg-tech-grid scroll-reveal" data-animate="fade-up">
   
   <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-[var(--a2ci-red)] to-transparent opacity-50"></div>
   <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[var(--a2ci-red)] opacity-5 blur-[120px] rounded-full pointer-events-none"></div>
@@ -1770,5 +1845,18 @@
 
 
 
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
