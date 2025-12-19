@@ -81,6 +81,24 @@
       box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1) !important;
     }
 
+    /* --- Animation "Glow" pour les cartes --- */
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .glow-border:hover::before {
+      transform: translateX(350%);
+    }
+
     /* --- Scroll reveal animations (CSS-only, light) --- */
     .scroll-reveal {
       opacity: 1;
