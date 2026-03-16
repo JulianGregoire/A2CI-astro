@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formations SECOURISME - A2CI Prévention</title>
+  <meta name="description" content="Formations Secourisme et Santé au Travail (SST), Initiation DAE par A2CI. Les gestes qui sauvent en milieu professionnel." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-blue: #2563eb;
+      --a2ci-blue-dark: #1e40af;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    
+    .formation-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 3rem;
+      border: 1px solid #f1f1f1;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .formation-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+      border-color: var(--a2ci-blue);
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .premium-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .premium-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-blue);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<section class="relative pt-32 pb-20 bg-black">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="https://images.pexels.com/photos/6646914/pexels-photo-6646914.jpeg" alt="Formation Secourisme A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-8">
+    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+      Catalogue complet
+    </a>
+    <h1 class="font-heading text-5xl md:text-7xl font-extrabold text-white mb-6">Formations <br><span class="text-blue-500">SECOURISME.</span></h1>
+    <p class="max-w-2xl text-xl text-gray-400 font-light">Maîtrisez les gestes d'urgence et la conduite à tenir pour porter secours en toutes circonstances.</p>
+  </div>
+</section>
+
+<section class="py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="space-y-16">
+
+      <!-- SST -->
+      <div id="sst" class="formation-card reveal-on-scroll">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Santé au Travail</span>
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Sauveteur Secouriste <br>du Travail (SST)</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mb-10 rounded-full"></div>
+            
+            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Objectifs pédagogiques (INRS)</h4>
+            <ul class="premium-list text-gray-600 font-light mb-10">
+              <li>Examiner la victime et alarmer les secours</li>
+              <li>Secourir efficacement face à une victime consciente (saignements, étouffement, malaise)</li>
+              <li>Réagir face à une victime inconsciente (RCP, usage du défibrillateur DAE)</li>
+              <li>Connaître les protocoles de PLS et de protection</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-4">
+              <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100 min-w-[200px]">
+                <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Public & Durée</p>
+                <p class="text-sm font-bold">Groupe de 10 max / 2 Jours (14h)</p>
+              </div>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sst.pdf" target="_blank" class="p-6 bg-gray-900 text-white rounded-2xl flex items-center gap-4 hover:bg-black transition-colors">
+                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                <div class="text-left">
+                  <p class="text-[10px] font-bold opacity-60 uppercase mb-0.5">Documentation</p>
+                  <p class="text-xs font-bold">Fiche Programme (PDF)</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img src="https://images.pexels.com/photos/6646914/pexels-photo-6646914.jpeg" alt="Formation SST" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DAE -->
+      <div id="dae" class="formation-card reveal-on-scroll">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div class="order-2 lg:order-1 relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img src="https://images.pexels.com/photos/6646911/pexels-photo-6646911.jpeg" alt="Formation DAE" class="w-full h-full object-cover" />
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Urgences Vitales</span>
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Initiation au <br>Défibrillateur (DAE)</h2>
+            <div class="h-1.5 w-24 bg-blue-600 mb-10 rounded-full"></div>
+            
+            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Programme Prioritaire</h4>
+            <ul class="premium-list text-gray-600 font-light mb-10">
+              <li>Reconnaître l'arrêt cardiaque</li>
+              <li>Apprendre l'installation et l'usage du défibrillateur (Automatique/Semi-Auto)</li>
+              <li>Pratiquer le massage cardiaque (RCP) sur mannequins</li>
+              <li>Maîtriser la chaîne de survie</li>
+            </ul>
+
+            <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100 italic font-medium text-gray-700">
+              "L'utilisation précoce du DAE augmente drastiquement les chances de survie."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recyclage MAC SST -->
+      <div id="mac-sst" class="formation-card reveal-on-scroll">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Actualisation</span>
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-12 uppercase">Maintien & Actualisation <br>(MAC SST)</h2>
+            <p class="text-gray-600 font-light mb-8 leading-relaxed">
+              Pour rester valide, le certificat SST doit être renouvelé tous les 24 mois. Cette journée permet de revoir les gestes techniques et les évolutions de protocoles.
+            </p>
+            <div class="flex items-center gap-6">
+               <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">1J</div>
+               <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Une journée <br>pour rester apte</div>
+            </div>
+          </div>
+          <div class="bg-gray-900 p-12 rounded-[3.5rem] shadow-2xl text-white">
+             <h4 class="text-xl font-bold mb-6 italic">Moyens techniques mis à disposition :</h4>
+             <ul class="space-y-4 text-sm text-gray-400">
+               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Mannequins ADU/ENF/NOUR</li>
+               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Défibrillateurs de formation</li>
+               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Valise INRS & Matériel de mise en scène</li>
+               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Supports audiovisuels complets</li>
+             </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-24 bg-gray-900 text-white text-center relative overflow-hidden">
+  <div class="max-w-4xl mx-auto px-8 relative z-10">
+    <h2 class="font-heading text-4xl font-bold mb-8">Formations sur site ou en centre</h2>
+    <p class="text-xl text-gray-400 mb-12 font-light">Nous intervenons directement dans votre établissement ou vous accueillons en centre selon votre programmation.</p>
+    <a href="index.html#contact" class="inline-block px-10 py-5 bg-blue-600 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-blue-700 transition-all shadow-xl shadow-blue-900/40">Demander une session</a>
+  </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Simple Scroll Reveal Observer
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

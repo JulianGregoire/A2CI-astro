@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formations INCENDIE - A2CI Prévention</title>
+  <meta name="description" content="Catalogue complet des formations sécurité incendie : SRI, ARI, SSI, Évacuation. Expertise et pédagogie par A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-dark: #960606;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    
+    .formation-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 3rem;
+      border: 1px solid #f1f1f1;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .formation-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+      border-color: var(--a2ci-red);
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .premium-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .premium-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<section class="relative pt-32 pb-20 bg-black">
+  <div class="absolute inset-0 z-0 opacity-30">
+    <img src="https://images.pexels.com/photos/70544/fireman-fire-extinguishing-flame-70544.jpeg" alt="Formation Incendie A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-8">
+    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+      Catalogue complet
+    </a>
+    <h1 class="font-heading text-5xl md:text-7xl font-extrabold text-white mb-6">Formations <br><span class="text-[var(--a2ci-red)]">INCENDIE.</span></h1>
+    <p class="max-w-2xl text-xl text-gray-400 font-light">Maîtrisez les risques, les procédures d'évacuation et l'usage des équipements de sécurité incendie.</p>
+  </div>
+</section>
+
+<section class="py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="space-y-16">
+
+      <!-- SRI -->
+      <div id="sri" class="formation-card reveal-on-scroll">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <span class="inline-block px-4 py-1 bg-red-50 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Base & Essentiels</span>
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Sensibilisation au <br>Risque Incendie (SRI)</h2>
+            <div class="h-1.5 w-24 bg-[var(--a2ci-red)] mb-10 rounded-full"></div>
+            
+            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Objectifs pédagogiques</h4>
+            <ul class="premium-list text-gray-600 font-light mb-10">
+              <li>Acquérir les réflexes et conduites à tenir en cas de départ de feu</li>
+              <li>Savoir alerter les secours et alarmer le bâtiment</li>
+              <li>Maîtriser l'extinction avec les moyens appropriés (EXT, RIA)</li>
+              <li>Connaître les modalités d'évacuation et l'organisation interne</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-4">
+              <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100 min-w-[200px]">
+                <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Public & Durée</p>
+                <p class="text-sm font-bold">Groupe de 10 max / Contactez-nous</p>
+              </div>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri.pdf" target="_blank" class="p-6 bg-gray-900 text-white rounded-2xl flex items-center gap-4 hover:bg-black transition-colors">
+                <svg class="w-6 h-6 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                <div class="text-left">
+                  <p class="text-[10px] font-bold opacity-60 uppercase mb-0.5">Documentation</p>
+                  <p class="text-xs font-bold">Fiche Programme (PDF)</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img src="https://images.pexels.com/photos/1036396/pexels-photo-1036396.jpeg" alt="Formation SRI" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SSI -->
+      <div id="ssi" class="formation-card reveal-on-scroll" style="transition-delay: 100ms;">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div class="order-2 lg:order-1 relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg" alt="Formation SSI" class="w-full h-full object-cover" />
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="inline-block px-4 py-1 bg-red-50 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Expertise Technique</span>
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Exploitation du SSI <br>& Système d’Évacuation</h2>
+            <div class="h-1.5 w-24 bg-[var(--a2ci-red)] mb-10 rounded-full"></div>
+            
+            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Programme Technique</h4>
+            <ul class="premium-list text-gray-600 font-light mb-10">
+              <li>Appréhender le Système de Sécurité Incendie installé</li>
+              <li>Connaître les différents points de commande et signalisation</li>
+              <li>Exploiter le matériel de manière opérationnelle</li>
+              <li>Effectuer les essais fonctionnels périodiques réglementaires</li>
+            </ul>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Méthode</p>
+                <p class="text-xs font-bold">Théorie & Exercice Pratique sur site</p>
+              </div>
+              <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Validation</p>
+                <p class="text-xs font-bold">Attestation de fin de formation</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARI -->
+      <div id="ari" class="formation-card reveal-on-scroll">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div>
+            <span class="inline-block px-4 py-1 bg-red-50 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Protection Individuelle</span>
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Appareil Respiratoire <br>Isolant (ARI)</h2>
+            <div class="h-1.5 w-24 bg-[var(--a2ci-red)] mb-10 rounded-full"></div>
+            
+            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Compétences visées</h4>
+            <ul class="premium-list text-gray-600 font-light mb-10">
+              <li>Identifier les risques liés aux fumées et l'asphyxie</li>
+              <li>Maîtriser le portage, le capelage et la vérification de l'ARI</li>
+              <li>Savoir calculer l'autonomie et gérer la réserve d'air</li>
+              <li>Progresser en milieu enfumé en toute sécurité</li>
+            </ul>
+
+            <div class="p-6 bg-blue-50/50 border border-blue-100 rounded-2xl">
+              <p class="text-xs font-bold text-blue-600 uppercase mb-2">Recyclage</p>
+              <p class="text-sm text-blue-900">Maintien et actualisation des compétences ARI disponible annuellement.</p>
+            </div>
+          </div>
+          <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
+            <img src="https://images.pexels.com/photos/1239167/pexels-photo-1239167.jpeg" alt="Formation ARI" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <!-- RIAs -->
+      <div id="ria" class="formation-card reveal-on-scroll">
+        <div class="grid lg:grid-cols-2 gap-16">
+          <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl order-2 lg:order-1">
+             <img src="https://images.pexels.com/photos/544965/pexels-photo-544965.jpeg" alt="Formation RIA" class="w-full h-full object-cover" />
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="inline-block px-4 py-1 bg-red-50 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Moyens d'Extinction</span>
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Robinet d’Incendie <br>Armé (RIA)</h2>
+            <div class="h-1.5 w-24 bg-[var(--a2ci-red)] mb-10 rounded-full"></div>
+            
+            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Objectifs opérationnels</h4>
+            <ul class="premium-list text-gray-600 font-light mb-10">
+              <li>Appréhender le RIA, son utilité et ses limites</li>
+              <li>Connaître la mise en œuvre et le maniement de la lance</li>
+              <li>Apprendre les règles de sécurité lors de l'attaque d'un feu</li>
+              <li>Exercice pratique avec mise en eau réelle</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Autres Formations (Grid) -->
+<section class="py-32 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-8">
+    <h3 class="font-heading text-3xl font-bold text-black mb-16 uppercase tracking-tight text-center">Spécificités <span class="text-[var(--a2ci-red)]">& Evacuations.</span></h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Equipier de 1ère intervention -->
+      <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 hover:shadow-xl transition-all reveal-on-scroll">
+        <h5 class="text-xl font-bold mb-4">Équipier de Première Intervention</h5>
+        <p class="text-sm text-gray-500 font-light leading-relaxed mb-6">Formation complète pour intervenir efficacement sur un départ de feu en attendant les secours extérieurs.</p>
+        <div class="h-1 w-12 bg-[var(--a2ci-red)] mb-6"></div>
+        <p class="text-[10px] font-bold text-gray-400 uppercase">Groupe de 10 max / 0,5 Journée</p>
+      </div>
+
+      <!-- Evacuation GSF -->
+      <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 hover:shadow-xl transition-all reveal-on-scroll" style="transition-delay: 100ms;">
+        <h5 class="text-xl font-bold mb-4">Évacuation (GSF)</h5>
+        <p class="text-sm text-gray-500 font-light leading-relaxed mb-6">Mise en place et rôles des guides file, serre file et responsable d'évacuation.</p>
+        <div class="h-1 w-12 bg-[var(--a2ci-red)] mb-6"></div>
+        <p class="text-[10px] font-bold text-gray-400 uppercase">Formation Cadres / 0,5 Journée</p>
+      </div>
+
+      <!-- Handi-Incendie -->
+      <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 hover:shadow-xl transition-all reveal-on-scroll" style="transition-delay: 200ms;">
+        <h5 class="text-xl font-bold mb-4">Sensibilisation Handicap</h5>
+        <p class="text-sm text-gray-500 font-light leading-relaxed mb-6">Adapter l'évacuation et la mise en sécurité pour les personnes présentant un handicap.</p>
+        <div class="h-1 w-12 bg-blue-600 mb-6"></div>
+        <p class="text-[10px] font-bold text-gray-400 uppercase">Accessibilité et Sûreté</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-24 bg-gray-900 text-white text-center">
+  <div class="max-w-4xl mx-auto px-8">
+    <h2 class="font-heading text-4xl font-bold mb-8">Besoin d'un programme sur-mesure ?</h2>
+    <p class="text-xl text-gray-400 mb-12 font-light">Nous adaptons nos formations aux réalités techniques de votre établissement et à la typologie de vos risques.</p>
+    <a href="index.html#contact" class="inline-block px-10 py-5 bg-[var(--a2ci-red)] rounded-full text-sm font-bold uppercase tracking-widest hover:bg-red-700 transition-all transform hover:-translate-y-1">Consulter nos experts</a>
+  </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Simple Scroll Reveal Observer
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
