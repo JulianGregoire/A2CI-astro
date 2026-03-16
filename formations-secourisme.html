@@ -22,9 +22,10 @@
     .formation-card {
       background: white;
       border-radius: 2.5rem;
-      padding: 3rem;
+      padding: 2.5rem;
       border: 1px solid #f1f1f1;
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow: hidden;
     }
     .formation-card:hover {
       transform: translateY(-8px);
@@ -42,8 +43,9 @@
     }
     .premium-list li {
       position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.75rem;
+      padding-left: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9375rem;
     }
     .premium-list li::before {
       content: '→';
@@ -73,41 +75,34 @@
   </div>
 </section>
 
-<section class="py-32 bg-white">
+<section class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-8">
-    <div class="space-y-16">
+    <div class="space-y-12">
 
       <!-- SST -->
       <div id="sst" class="formation-card reveal-on-scroll">
-        <div class="grid lg:grid-cols-2 gap-16">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Santé au Travail</span>
-            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Sauveteur Secouriste <br>du Travail (SST)</h2>
-            <div class="h-1.5 w-24 bg-blue-600 mb-10 rounded-full"></div>
+            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Santé au Travail</span>
+            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Sauveteur Secouriste <br>du Travail (SST)</h2>
+            <div class="h-1 w-20 bg-blue-600 mb-6 rounded-full"></div>
             
-            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Objectifs pédagogiques (INRS)</h4>
-            <ul class="premium-list text-gray-600 font-light mb-10">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs pédagogiques (INRS)</h4>
+            <ul class="premium-list text-gray-600 font-light mb-8">
               <li>Examiner la victime et alarmer les secours</li>
-              <li>Secourir efficacement face à une victime consciente (saignements, étouffement, malaise)</li>
-              <li>Réagir face à une victime inconsciente (RCP, usage du défibrillateur DAE)</li>
-              <li>Connaître les protocoles de PLS et de protection</li>
+              <li>Secourir efficacement face à une victime consciente</li>
+              <li>Réagir face à une victime inconsciente (RCP/DAE)</li>
+              <li>Maintien et actualisation tous les 24 mois</li>
             </ul>
 
             <div class="flex flex-wrap gap-4">
-              <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100 min-w-[200px]">
-                <p class="text-[10px] font-bold text-gray-400 uppercase mb-2">Public & Durée</p>
-                <p class="text-sm font-bold">Groupe de 10 max / 2 Jours (14h)</p>
-              </div>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sst.pdf?110/27209c911127216c298f1c9601a3884acd20173f" target="_blank" class="p-6 bg-gray-900 text-white rounded-2xl flex items-center gap-4 hover:bg-black transition-colors shadow-lg">
-                <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                <div class="text-left">
-                  <p class="text-[10px] font-bold opacity-60 uppercase mb-0.5">Documentation</p>
-                  <p class="text-xs font-bold">Fiche Programme SST (PDF)</p>
-                </div>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sst.pdf?110/27209c911127216c298f1c9601a3884acd20173f" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-xl flex items-center gap-3 hover:bg-black transition-all text-xs font-bold shadow-lg">
+                <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                FICHE SST (PDF)
               </a>
             </div>
           </div>
-          <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
             <img src="https://images.pexels.com/photos/6646914/pexels-photo-6646914.jpeg" alt="Formation SST" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
@@ -116,25 +111,25 @@
 
       <!-- DAE -->
       <div id="dae" class="formation-card reveal-on-scroll">
-        <div class="grid lg:grid-cols-2 gap-16">
-          <div class="order-2 lg:order-1 relative rounded-[2.5rem] overflow-hidden shadow-2xl">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1 relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
             <img src="https://images.pexels.com/photos/6646911/pexels-photo-6646911.jpeg" alt="Formation DAE" class="w-full h-full object-cover" />
           </div>
           <div class="order-1 lg:order-2">
-            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Urgences Vitales</span>
-            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase">Initiation au <br>Défibrillateur (DAE)</h2>
-            <div class="h-1.5 w-24 bg-blue-600 mb-10 rounded-full"></div>
+            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Urgences Vitales</span>
+            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Initiation au <br>Défibrillateur (DAE)</h2>
+            <div class="h-1 w-20 bg-blue-600 mb-6 rounded-full"></div>
             
-            <h4 class="text-sm font-bold uppercase tracking-wider text-gray-400 mb-4">Programme Prioritaire</h4>
-            <ul class="premium-list text-gray-600 font-light mb-10">
-              <li>Reconnaître l'arrêt cardiaque</li>
-              <li>Apprendre l'installation et l'usage du défibrillateur (Automatique/Semi-Auto)</li>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Programme Prioritaire</h4>
+            <ul class="premium-list text-gray-600 font-light mb-8">
+              <li>Reconnaître l'arrêt cardiaque précoce</li>
+              <li>Installation et usage du DAE (Auto/Semi-Auto)</li>
               <li>Pratiquer le massage cardiaque (RCP) sur mannequins</li>
               <li>Maîtriser la chaîne de survie</li>
             </ul>
 
-            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-dae.pdf?108/42909c771bd557083a1e05e11f6b117827699f2a" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-2xl font-bold text-xs hover:bg-black transition-colors shadow-lg uppercase tracking-widest">
-              Fiche Programme DAE (PDF)
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-dae.pdf?108/42909c771bd557083a1e05e11f6b117827699f2a" target="_blank" class="px-6 py-3 bg-gray-900 text-white rounded-xl inline-flex items-center gap-3 hover:bg-black transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
+              Fiche DAE (PDF)
             </a>
           </div>
         </div>
@@ -142,26 +137,28 @@
 
       <!-- Recyclage MAC SST -->
       <div id="mac-sst" class="formation-card reveal-on-scroll">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Actualisation</span>
-            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-12 uppercase">Maintien & Actualisation <br>(MAC SST)</h2>
-            <p class="text-gray-600 font-light mb-8 leading-relaxed">
-              Pour rester valide, le certificat SST doit être renouvelé tous les 24 mois. Cette journée permet de revoir les gestes techniques et les évolutions de protocoles.
+            <span class="inline-block px-4 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Actualisation</span>
+            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Maintien & Actualisation <br>(MAC SST)</h2>
+            <div class="h-1 w-20 bg-blue-600 mb-6 rounded-full"></div>
+            
+            <p class="text-gray-600 font-light mb-8 text-sm leading-relaxed">
+              Le recyclage SST est obligatoire tous les 24 mois pour garantir l'aptitude opérationnelle et l'intégration des nouvelles directives de secours.
             </p>
             <div class="flex items-center gap-6 mb-8">
-               <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl">1J</div>
-               <div class="text-sm font-bold text-gray-500 uppercase tracking-widest">Une journée <br>pour rester apte</div>
+               <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">1J</div>
+               <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Durée : une journée <br>de mise à jour</div>
             </div>
-            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-macsst.pdf?109/07f37785cdcb5a742d2be5e713068df7803c945e" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white rounded-2xl font-bold text-xs hover:bg-blue-700 transition-colors shadow-lg">Fiche Recyclage SST (PDF)</a>
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-macsst.pdf?109/07f37785cdcb5a742d2be5e713068df7803c945e" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-xl font-bold text-xs hover:bg-blue-700 transition-all shadow-lg uppercase shadow-blue-900/10">Fiche Recyclage (PDF)</a>
           </div>
-          <div class="bg-gray-900 p-12 rounded-[3.5rem] shadow-2xl text-white">
-             <h4 class="text-xl font-bold mb-6 italic">Moyens techniques mis à disposition :</h4>
-             <ul class="space-y-4 text-sm text-gray-400">
+          <div class="bg-gray-900 p-10 rounded-[2.5rem] shadow-xl text-white">
+             <h4 class="text-lg font-bold mb-4 italic text-blue-400">Pédagogie Active :</h4>
+             <ul class="space-y-3 text-xs text-gray-400">
                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Mannequins ADU/ENF/NOUR</li>
                <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Défibrillateurs de formation</li>
-               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Valise INRS & Matériel de mise en scène</li>
-               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Supports audiovisuels complets</li>
+               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Matériel de mise en scène INRS</li>
+               <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Supports audiovisuels interactifs</li>
              </ul>
           </div>
         </div>
@@ -172,9 +169,9 @@
 </section>
 
 <!-- Call to Action -->
-<section class="py-24 bg-gray-900 text-white text-center relative overflow-hidden">
+<section class="py-24 bg-gray-900 text-white text-center">
   <div class="max-w-4xl mx-auto px-8 relative z-10">
-    <h2 class="font-heading text-4xl font-bold mb-8">Formations sur site ou en centre</h2>
+    <h2 class="font-heading text-4xl font-bold mb-8 uppercase italic">Formations sur site ou en centre</h2>
     <p class="text-xl text-gray-400 mb-12 font-light">Nous intervenons directement dans votre établissement ou vous accueillons en centre selon votre programmation.</p>
     <a href="index.html#contact" class="inline-block px-10 py-5 bg-blue-600 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-blue-700 transition-all shadow-xl shadow-blue-900/40">Demander une session</a>
   </div>
