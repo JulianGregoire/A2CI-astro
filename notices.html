@@ -120,80 +120,75 @@
         <div class="grid lg:grid-cols-2 gap-10">
             
             <!-- Notice Accessibilité -->
-            <div class="notice-card reveal-on-scroll">
-                <div class="mb-8">
-                    <span class="badge-regulation">ERP Construction & Aménagement</span>
-                    <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4">Notice d'Accessibilité</h2>
-                    <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6"></div>
-                    <p class="text-gray-500 font-light leading-relaxed mb-6">
-                        Présenter les dispositions constructives permettant de répondre aux conditions d'accessibilité exigées par le Code de la Construction et de l'Habitation (Article R111-19).
-                    </p>
-                </div>
-
-                <div class="space-y-6 mb-10">
-                    <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                        <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                             <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                             Objectif Stratégique
-                        </h4>
-                        <p class="text-sm text-gray-600 font-light italic">
-                            Définir les dispositions par rapport au type d'établissement et aux ressources existantes pour éviter tout avis défavorable.
-                        </p>
+            <div class="reveal-on-scroll glass-card p-12 rounded-[4rem] border-b-8 border-[var(--a2ci-red)] flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-6 mb-10">
+                        <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center shadow-inner">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-900 leading-tight">Notice <br><span class="text-gradient">d'Accessibilité.</span></h2>
                     </div>
-                    
-                    <ul class="premium-list text-sm text-gray-600 font-medium">
-                        <li>Arrêté du 1er août 2006 (ERP neufs)</li>
-                        <li>Arrêté du 21 mars 2007 (Evolutions ERP)</li>
-                        <li>Conformité Article R123.24 du CCH</li>
-                    </ul>
-                </div>
 
+                    <div class="space-y-8 mb-12">
+                        <div class="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 flex items-start gap-4">
+                            <div class="text-[var(--a2ci-red)] text-xl">⚖️</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Cadre Légal</h4>
+                                <p class="text-sm text-gray-500 font-light leading-relaxed">Arrêtés du 1er août 2006 et 21 mars 2007 (Articles R111-19 et suivants).</p>
+                            </div>
+                        </div>
+                        <div class="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 flex items-start gap-4">
+                            <div class="text-[var(--a2ci-red)] text-xl">🏗️</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Objectif Constructif</h4>
+                                <p class="text-sm text-gray-500 font-light leading-relaxed">Présentation des dispositions permettant l'accès PMR lors de constructions ou créations d'ERP.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-[2.5rem] overflow-hidden group mb-8">
+                    <img src="https://images.pexels.com/photos/4552350/pexels-photo-4552350.jpeg" alt="Accessibilité PMR" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" />
+                </div>
                 <div class="p-6 bg-red-50 rounded-3xl border border-red-100">
-                    <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mb-2">Risque Majeur</p>
-                    <p class="text-sm text-gray-800 font-light">
-                        L'absence de cette notice expose l'exploitant à un <span class="font-bold">avis défavorable</span> systématique de la commission lors de son passage.
-                    </p>
+                    <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mb-2 font-black italic">Risque Majeur</p>
+                    <p class="text-sm text-gray-800 font-light leading-relaxed">L'absence de cette notice expose l'exploitant à un <span class="font-bold">avis défavorable</span> systématique de la commission.</p>
                 </div>
             </div>
 
             <!-- Notice Sécurité -->
-            <div class="notice-card reveal-on-scroll" style="transition-delay: 200ms;">
-                <div class="mb-8">
-                    <span class="badge-regulation">Prévention Incendie</span>
-                    <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4">Notice de Sécurité</h2>
-                    <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6"></div>
-                    <p class="text-gray-500 font-light leading-relaxed mb-6">
-                        Synthèse des dispositions de sécurité incendie conformément à l'article R 123-22 du CCH, obligatoire pour tout projet de travaux en ERP.
-                    </p>
-                </div>
+            <div class="reveal-on-scroll glass-card p-12 rounded-[4rem] border-b-8 border-gray-900 flex flex-col justify-between" style="transition-delay: 200ms;">
+                <div>
+                    <div class="flex items-center gap-6 mb-10">
+                        <div class="w-16 h-16 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center shadow-inner">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                        </div>
+                        <h2 class="text-4xl font-bold text-gray-900 leading-tight">Notice <br><span class="text-gradient">de Sécurité.</span></h2>
+                    </div>
 
-                <div class="space-y-4 mb-10">
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[var(--a2ci-red)] shadow-sm font-bold">1</div>
-                        <p class="text-xs font-semibold text-gray-700 uppercase">Vérifier la conformité spécifique</p>
-                    </div>
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[var(--a2ci-red)] shadow-sm font-bold">2</div>
-                        <p class="text-xs font-semibold text-gray-700 uppercase">Accompagner le suivi de chantier</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 mb-8">
-                    <div class="p-4 bg-gray-900 text-white rounded-2xl">
-                        <p class="text-[10px] font-bold text-gray-500 uppercase mb-2">Standards</p>
-                        <p class="text-xs font-bold font-heading">NF S 61-930 à 940</p>
-                    </div>
-                    <div class="p-4 bg-gray-900 text-white rounded-2xl">
-                        <p class="text-[10px] font-bold text-gray-500 uppercase mb-2">Règlement</p>
-                        <p class="text-xs font-bold font-heading">Arrêté 22 juin 1990</p>
+                    <div class="space-y-8 mb-12">
+                        <div class="p-8 bg-gray-900 text-white rounded-[2.5rem] shadow-xl flex items-start gap-4">
+                            <div class="text-red-400 text-xl">📜</div>
+                            <div>
+                                <h4 class="font-bold mb-2">Règlementation ERP</h4>
+                                <p class="text-sm text-gray-400 font-light leading-relaxed">Article R 123-22 du Code de la Construction et de l'Habitation.</p>
+                            </div>
+                        </div>
+                        <div class="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 flex items-start gap-4">
+                            <div class="text-[var(--a2ci-red)] text-xl">🛡️</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-2">Normes NF S</h4>
+                                <p class="text-sm text-gray-500 font-light leading-relaxed">Respect des normes NF S 61-930 à NF S 61-940 pour le SSI.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <ul class="premium-list text-sm text-gray-600 font-medium">
-                    <li>Résistance au feu (Arrêté 2004)</li>
-                    <li>Dispositions particulières selon type ERP</li>
-                    <li>Maîtrise de l'article R123-22 du CCH</li>
-                </ul>
+                <div class="rounded-[2.5rem] overflow-hidden group">
+                    <img src="https://images.pexels.com/photos/1216503/pexels-photo-1216503.jpeg" alt="Sécurité Incendie" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700" />
+                </div>
             </div>
 
         </div>
