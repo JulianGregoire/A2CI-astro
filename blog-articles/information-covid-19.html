@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Information Covid-19 - Blog A2CI Prévention</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="../js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-dark: #960606;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    .article-content { line-height: 1.8; color: #4B5563; font-weight: 300; }
+    .article-content p { margin-bottom: 2rem; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<article class="pt-40 pb-24">
+  <div class="max-w-4xl mx-auto px-8">
+    <header class="mb-16 text-center md:text-left">
+      <a href="../blog.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-[var(--a2ci-red)] transition-colors mb-8 text-sm font-bold uppercase tracking-widest">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+        Retour au Mag
+      </a>
+      <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
+        <span class="px-4 py-1 bg-gray-50 text-gray-500 border border-gray-100 text-[10px] font-bold uppercase tracking-widest rounded-full">Information</span>
+        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">15 Mai 2020</span>
+      </div>
+      <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight uppercase tracking-tight">Information <span class="text-[var(--a2ci-red)]">Covid-19.</span></h1>
+    </header>
+
+    <div class="rounded-[2.5rem] overflow-hidden mb-16 shadow-2xl">
+      <img src="../images/b278f7cfa2a384f8-1a792.jpg" alt="Equipe A2CI en télétravail/bureau" class="w-full h-auto" />
+    </div>
+
+    <div class="article-content max-w-3xl mx-auto">
+      <p class="text-xl font-medium text-gray-900 mb-10 leading-relaxed italic border-l-4 border-[var(--a2ci-red)] pl-8">
+        "Nous vous informons que l’entreprise A2ci. Prévention Incendie poursuit son activité et que le pôle formation reste malheureusement attaché aux conditions actuelles."
+      </p>
+      
+      <p>
+        Face à cette situation sanitaire exceptionnelle et dans le respect des gestes barrières préconisés par le Ministère de la Santé, l’accès à l’établissement par des personnes extérieures se se fera uniquement sur prise de rendez-vous et se limitera aux rendez-vous ne pouvant être tenus à distance.
+      </p>
+
+      <p>
+        Afin d’assurer et de préserver la santé de tous, les règles sanitaires et les gestes barrières devront être respectés (port du masque obligatoire et lavage des mains indispensable). Des désinfections quotidiennes de nos locaux sont assurés permettant la présence de notre équipe sur place.
+      </p>
+      
+      <p>
+        A2ci. Prévention incendie, met également à votre disposition du gel hydroalcoolique à l’entrée de l’établissement ainsi que du papier jetable. Pour vous protéger et protéger les autres, nous vous invitons donc à privilégier nos échanges par voie dématérialisée.
+      </p>
+
+      <div class="bg-gray-50 rounded-3xl p-8 mt-12 border border-gray-100">
+        <p class="font-bold text-gray-900 mb-4 uppercase text-xs tracking-widest">Nous contacter :</p>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-4">
+            <svg class="w-5 h-5 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+            <span class="text-gray-600">contact@a2ci-prevention-incendie.fr</span>
+          </li>
+          <li class="flex items-center gap-4">
+            <svg class="w-5 h-5 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5.983C3 4.888 3.895 4 5 4h.443c.433 0 .823.192 1.084.524l2.094 2.66c.261.332.327.768.175 1.15l-.934 2.336a1 1 0 00.126 1.112l3.41 4.41a1 1 0 001.112.126l2.336-.934a1 1 0 011.15.175l2.66 2.094c.332.261.524.621.524 1.084v.443c0 1.105-.895 2-2 2a14.004 14.004 0 01-13-13z" /></svg>
+            <span class="text-gray-600">05 56 27 23 67</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>
+
+<div id="footer-component"></div>
+
+</body>
+</html>

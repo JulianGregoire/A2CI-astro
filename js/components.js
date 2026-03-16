@@ -12,10 +12,33 @@ async function loadHeader() {
   const headerContainer = document.getElementById('header-component');
   if (!headerContainer) return;
 
+  // Determine path to components based on script location or current URL
+  const basePath = window.location.pathname.includes('/blog-articles/') ? '../' : '';
+
   try {
-    const response = await fetch('components/header.html');
+    const response = await fetch(`${basePath}components/header.html`);
     const html = await response.text();
     headerContainer.innerHTML = html;
+    
+    // Fix image and link paths if in subdirectory
+    if (basePath === '../') {
+      const images = headerContainer.querySelectorAll('img');
+      images.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('../')) {
+          img.setAttribute('src', '../' + src);
+        }
+      });
+      
+      const links = headerContainer.querySelectorAll('a');
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('../')) {
+          link.setAttribute('href', '../' + href);
+        }
+      });
+    }
+
     initHeaderLogic();
     highlightActiveLink();
   } catch (error) {
@@ -27,10 +50,23 @@ async function loadFooter() {
   const footerContainer = document.getElementById('footer-component');
   if (!footerContainer) return;
 
+  const basePath = window.location.pathname.includes('/blog-articles/') ? '../' : '';
+
   try {
-    const response = await fetch('components/footer.html');
+    const response = await fetch(`${basePath}components/footer.html`);
     const html = await response.text();
     footerContainer.innerHTML = html;
+
+    // Fix images in footer too
+    if (basePath === '../') {
+      const images = footerContainer.querySelectorAll('img');
+      images.forEach(img => {
+        const src = img.getAttribute('src');
+        if (src && !src.startsWith('http') && !src.startsWith('../')) {
+          img.setAttribute('src', '../' + src);
+        }
+      });
+    }
   } catch (error) {
     console.error('Error loading footer:', error);
   }
