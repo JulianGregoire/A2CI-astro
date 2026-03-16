@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications & Satisfaction - A2CI Prévention</title>
+  <meta name="description" content="Découvrez nos certifications Qualiopi et nos indicateurs de satisfaction stagiaires." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-dark: #960606;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    
+    .cert-card {
+      background: white;
+      border-radius: 2.5rem;
+      padding: 3rem;
+      border: 1px solid #f1f1f1;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .cert-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+      border-color: var(--a2ci-red);
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stat-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid var(--a2ci-red);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<section class="relative pt-32 pb-20 bg-black">
+  <div class="absolute inset-0 z-0 opacity-30">
+    <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg" alt="Certifications A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-8 text-center md:text-left">
+    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+      Retour aux formations
+    </a>
+    <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white mb-6 uppercase tracking-tight">Qualité & <br><span class="text-[var(--a2ci-red)]">Satisfaction.</span></h1>
+    <p class="max-w-2xl text-lg text-gray-400 font-light leading-relaxed mx-auto md:mx-0">Notre engagement pour l'excellence pédagogique et la transparence de nos résultats.</p>
+  </div>
+</section>
+
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="grid lg:grid-cols-2 gap-12">
+      
+      <!-- Certification Qualiopi -->
+      <div class="cert-card reveal-on-scroll">
+        <div class="flex items-center gap-6 mb-8">
+          <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100 p-2">
+            <img src="https://www.a2ci-prevention-incendie.fr/local/cache-vignettes/L120xH60/qualiopi-9b98c.png?1635338303" alt="Logo Qualiopi" class="w-full h-auto" />
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-[var(--a2ci-red)] uppercase tracking-widest">Certification d'État</span>
+            <h3 class="text-2xl font-bold uppercase mt-1">Certification Qualiopi</h3>
+          </div>
+        </div>
+        <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">
+          A2CI est certifié QUALIOPI pour ses actions de formation. Cette certification atteste de la qualité du processus mis en œuvre par les prestataires d'actions concourant au développement des compétences.
+        </p>
+        <div class="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100">
+          <p class="text-xs font-bold text-gray-400 uppercase mb-3 tracking-widest">Détails du certificat</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[var(--a2ci-red)] rounded-full"></span> Certificat COFRAC</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[var(--a2ci-red)] rounded-full"></span> Renouvellement de certification</li>
+          </ul>
+        </div>
+        <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/522726-48323_-_certificat_qualiopi_renouvellement_cofrac_.pdf?117/b883d9075d4a6fdd0688e7e59d784c4a798ad477" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl font-bold text-xs hover:bg-red-700 transition-all uppercase tracking-widest shadow-lg">
+          Voir le certificat Qualiopi
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </a>
+      </div>
+
+      <!-- Satisfaction Stagiaires -->
+      <div class="cert-card reveal-on-scroll" style="transition-delay: 100ms;">
+        <div class="flex items-center gap-6 mb-8">
+          <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100">
+            <svg class="w-8 h-8 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-[var(--a2ci-red)] uppercase tracking-widest">Performance Pédagogique</span>
+            <h3 class="text-2xl font-bold uppercase mt-1">Satisfaction Clients</h3>
+          </div>
+        </div>
+        <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">
+          La réussite de nos stagiaires et la satisfaction de nos clients sont au cœur de notre démarche. Nous analysons semestriellement les retours d'expérience pour améliorer nos programmes.
+        </p>
+        <div class="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100 flex items-center justify-around text-center">
+          <div>
+            <p class="text-3xl font-heading font-extrabold text-[var(--a2ci-red)]">98%</p>
+            <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Taux de Satisfaction</p>
+          </div>
+          <div class="h-10 w-px bg-gray-200"></div>
+          <div>
+            <p class="text-3xl font-heading font-extrabold text-[var(--a2ci-red)]">2025</p>
+            <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">1er Semestre</p>
+          </div>
+        </div>
+        <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/recap_satisfaction_1er_semestre_2025.pdf?130/36c3504727fd3a93fb0cf5896df13732931776bd" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-xl font-bold text-xs hover:bg-[var(--a2ci-red)] transition-all uppercase tracking-widest shadow-lg">
+          Consulter le rapport 2025
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-8 text-center">
+    <div class="mb-12">
+      <h2 class="font-heading text-3xl font-bold mb-6 uppercase tracking-tight">Notre engagement qualité</h2>
+      <p class="text-gray-600 font-light leading-relaxed italic">"Nous mettons tout en œuvre pour que nos formations soient une réelle valeur ajoutée pour la sécurité de vos collaborateurs et de vos établissements."</p>
+    </div>
+    <div class="h-px w-24 bg-[var(--a2ci-red)] mx-auto"></div>
+  </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Simple Scroll Reveal Observer
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
