@@ -218,30 +218,147 @@
       <div class="h-1 w-20 bg-[var(--a2ci-red)] mx-auto rounded-full"></div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-        <span class="text-xl font-bold text-[var(--a2ci-red)] mb-2 block">2006</span>
-        <p class="text-sm text-gray-600 leading-relaxed">Création de l'entreprise par Mr Rémy DENIS. Premières missions de Coordination SSI en Gironde.</p>
+    <!-- Timeline Container -->
+    <div class="relative overflow-x-auto pb-12 pt-16 scrollbar-hide lg:overflow-x-hidden">
+      <!-- Main Horizontal Line (Axis) -->
+      <div class="absolute left-0 right-0 top-[280px] h-0.5 bg-gray-200 z-0">
+        <div class="absolute inset-y-0 left-0 bg-[var(--a2ci-red)] w-full opacity-30"></div>
       </div>
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-        <span class="text-xl font-bold text-[var(--a2ci-red)] mb-2 block">2007</span>
-        <p class="text-sm text-gray-600 leading-relaxed">Ouverture du Bureau d’Etudes Techniques. Création de plans informatiques et CCTP/DPGF.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-        <span class="text-xl font-bold text-[var(--a2ci-red)] mb-2 block">2009</span>
-        <p class="text-sm text-gray-600 leading-relaxed">Lancement du service formation pour les systèmes de sécurité et la gestion de l'évacuation.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-        <span class="text-xl font-bold text-[var(--a2ci-red)] mb-2 block">2012</span>
-        <p class="text-sm text-gray-600 leading-relaxed">Nouvelle activité Hygiène et Sécurité. Accompagnement des ERT et mise à niveau des procédures ERP.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all hover:shadow-md">
-        <span class="text-xl font-bold text-[var(--a2ci-red)] mb-2 block">2013</span>
-        <p class="text-sm text-gray-600 leading-relaxed">Ouverture d'un centre de formation dédié à l'incendie, au 1er secours et à la sécurité.</p>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow-md border-2 border-[var(--a2ci-red)]/20 transition-all hover:shadow-lg">
-        <span class="text-xl font-bold text-[var(--a2ci-red)] mb-2 block">2021</span>
-        <p class="text-sm text-gray-700 leading-relaxed font-semibold">Reprise d'A2CI Prévention Incendie par l'équipe actuelle. Continuité de l'excellence et du savoir-faire.</p>
+
+      <div class="flex min-w-[1200px] justify-between px-10 relative z-10">
+        
+        <!-- 2006 -->
+        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2">
+          <!-- Year & Image -->
+          <div class="mb-6 text-center">
+            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2006</span>
+            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2006.png" alt="2006" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <!-- Dashed Connector -->
+          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
+          <!-- Dot -->
+          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          </div>
+          <!-- Description -->
+          <div class="mt-8 text-center px-2">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Création</h3>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Fondation par Mr Rémy DENIS. Début de l'expertise en Coordination SSI.</p>
+          </div>
+        </div>
+
+        <!-- 2007 -->
+        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2 mt-12">
+          <!-- Year & Image -->
+          <div class="mb-6 text-center">
+            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2007</span>
+            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2007.png" alt="2007" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <!-- Dashed Connector -->
+          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
+          <!-- Dot -->
+          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          </div>
+          <!-- Description -->
+          <div class="mt-8 text-center px-2">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Bureau d'Études</h3>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Extension à l'ingénierie technique et conception de plans SSI.</p>
+          </div>
+        </div>
+
+        <!-- 2009 -->
+        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2">
+          <!-- Year & Image -->
+          <div class="mb-6 text-center">
+            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2009</span>
+            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2009.png" alt="2009" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <!-- Dashed Connector -->
+          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
+          <!-- Dot -->
+          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          </div>
+          <!-- Description -->
+          <div class="mt-8 text-center px-2">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Pôle Formation</h3>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Ouverture du service formation pour l'utilisation des équipements.</p>
+          </div>
+        </div>
+
+        <!-- 2012 -->
+        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2 mt-12">
+          <!-- Year & Image -->
+          <div class="mb-6 text-center">
+            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2012</span>
+            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2012.png" alt="2012" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <!-- Dashed Connector -->
+          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
+          <!-- Dot -->
+          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          </div>
+          <!-- Description -->
+          <div class="mt-8 text-center px-2">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Consolidation</h3>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Accompagnement renforcé des ERT et mise en conformité procédures.</p>
+          </div>
+        </div>
+
+        <!-- 2013 -->
+        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2">
+          <!-- Year & Image -->
+          <div class="mb-6 text-center">
+            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2013</span>
+            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2013.png" alt="2013" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <!-- Dashed Connector -->
+          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
+          <!-- Dot -->
+          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          </div>
+          <!-- Description -->
+          <div class="mt-8 text-center px-2">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Centre Technique</h3>
+            <p class="text-[11px] text-gray-500 leading-relaxed">Création du centre de formation dédié Risques et Premier secours.</p>
+          </div>
+        </div>
+
+        <!-- 2021 -->
+        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2 mt-12">
+          <!-- Year & Image -->
+          <div class="mb-6 text-center">
+            <span class="text-sm font-bold text-[var(--a2ci-red)] mb-2 block tracking-wider">2021</span>
+            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-2xl border-2 border-[var(--a2ci-red)]/50 group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2021.png" alt="2021" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <!-- Dashed Connector -->
+          <div class="h-16 w-px border-l border-dashed border-[var(--a2ci-red)] transition-colors"></div>
+          <!-- Dot -->
+          <div class="w-4 h-4 rounded-full bg-[var(--a2ci-red)] shadow-lg shadow-red-500/30 flex items-center justify-center -mt-2 border-2 border-white">
+            <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+          </div>
+          <!-- Description -->
+          <div class="mt-8 text-center px-2">
+            <h3 class="text-xs font-bold uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Nouvel Horizon</h3>
+            <p class="text-[11px] text-gray-700 leading-relaxed font-semibold">Reprise par l'équipe actuelle. Innovation et engagement durable.</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
