@@ -210,7 +210,7 @@
 </section>
 
 <!-- Historique -->
-<section id="historique" class="py-20 bg-gray-50 overflow-hidden">
+<section id="historique" class="py-20 bg-gray-50">
   <div class="mx-auto max-w-6xl px-4">
     <div class="text-center mb-12">
       <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--a2ci-red)]">Notre Parcours</p>
@@ -219,13 +219,14 @@
     </div>
 
     <!-- Timeline Container -->
-    <div class="relative overflow-x-auto pb-12 pt-16 scrollbar-hide">
+    <div class="relative overflow-x-auto pb-20 pt-16 scrollbar-hide">
       <!-- Main Horizontal Line (Axis) -->
       <div class="absolute left-0 right-0 top-[280px] h-0.5 bg-gray-200 z-0">
         <div class="absolute inset-y-0 left-0 bg-[var(--a2ci-red)] w-full opacity-30"></div>
       </div>
 
-      <div class="flex min-w-[1300px] justify-between px-20 relative z-10">
+      <!-- Increased min-width and added a spacer at the end to prevent clipping -->
+      <div class="flex min-w-[1500px] gap-12 px-20 relative z-10">
         
         <!-- 2006 -->
         <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2">
@@ -358,6 +359,9 @@
             <p class="text-[11px] text-gray-700 leading-relaxed font-semibold">Reprise par l'équipe actuelle. Innovation et engagement durable.</p>
           </div>
         </div>
+
+        <!-- Ghost Spacer to ensure full scrolling space at the end -->
+        <div class="w-20 shrink-0 h-1"></div>
 
       </div>
     </div>
