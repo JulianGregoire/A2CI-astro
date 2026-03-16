@@ -132,22 +132,65 @@
 <!-- Header -->
 <header class="sticky top-0 z-40 border-b border-[#DEDEDD]/70 bg-white text-black shadow-sm transition-all duration-500 ease-in-out" id="main-header">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+    
     <a href="index.html" class="flex items-center gap-4 group shrink-0">
       <img src="images/logo.svg" alt="A2CI Prévention Incendie" class="h-12 w-auto sm:h-14 transition-transform group-hover:scale-105" />
       <div class="flex flex-col justify-center">
-        <span class="font-heading text-xl sm:text-2xl font-extrabold text-black leading-none">A2CI</span>
-        <span class="font-heading text-[10px] sm:text-xs font-bold text-gray-600 uppercase tracking-widest mt-0.5">Prévention Incendie</span>
+        <span class="font-heading text-xl sm:text-2xl font-extrabold text-black leading-none">
+          A2CI
+        </span>
+        <span class="font-heading text-[10px] sm:text-xs font-bold text-gray-600 uppercase tracking-widest mt-0.5">
+          Prévention Incendie
+        </span>
       </div>
     </a>
+
     <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold">
-      <a href="index.html#expertises" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">Prestations</a>
-      <a href="#historique" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">Historique</a>
-      <a href="#expertises" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">Expertises</a>
-      <a href="#moyens" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">Nos Moyens</a>
-      <a href="#equipe" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">Équipe</a>
+      <a href="a2ci.html" class="relative text-[var(--a2ci-red)] transition-colors py-2 group">
+        L'agence
+        <span class="absolute bottom-0 left-0 h-[2px] w-full bg-[var(--a2ci-red)]"></span>
+      </a>
+      <a href="index.html#expertises" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
+        Prestations
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
+      </a>
+      <a href="index.html#secteurs" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
+        ERP / IGH
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
+      </a>
+      <a href="index.html#process" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
+        Méthode
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
+      </a>
+      <a href="index.html#formations" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
+        Formations
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
+      </a>
     </nav>
+
     <div class="flex items-center gap-3">
-      <a href="index.html#contact" class="inline-flex items-center justify-center rounded-md bg-[var(--a2ci-red)] px-6 py-2.5 text-xs font-bold text-white transition-all duration-300 hover:bg-red-700 shadow-md">Contact</a>
+      <a href="index.html#contact" class="inline-flex items-center justify-center rounded-md bg-[var(--a2ci-red)] px-6 py-2.5 text-xs font-bold text-white transition-all duration-300 hover:bg-red-700 shadow-md">
+        Contact
+      </a>
+
+      <button id="mobile-menu-btn" class="md:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-black hover:bg-gray-50 focus:outline-none" aria-label="Menu">
+        <svg id="icon-menu" class="h-6 w-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+        <svg id="icon-close" class="absolute h-6 w-6 opacity-0 rotate-90 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-xl overflow-hidden transition-all duration-300 max-h-0 opacity-0 md:hidden">
+    <div class="flex flex-col p-6 gap-4">
+      <a href="a2ci.html" class="text-lg font-bold text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">L'agence</a>
+      <a href="index.html#expertises" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Prestations</a>
+      <a href="index.html#secteurs" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Secteurs (ERP / IGH)</a>
+      <a href="index.html#process" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Méthode</a>
+      <a href="index.html#formations" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Formations</a>
     </div>
   </div>
 </header>
@@ -456,6 +499,46 @@
 </footer>
 
 <script>
+  // Mobile Menu Logic
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      menu.classList.remove('max-h-0', 'opacity-0');
+      menu.classList.add('max-h-[500px]', 'opacity-100');
+      iconMenu.classList.add('opacity-0', '-rotate-90');
+      iconClose.classList.remove('opacity-0', 'rotate-90');
+    } else {
+      closeMenu();
+    }
+  }
+
+  function closeMenu() {
+    isMenuOpen = false;
+    menu.classList.remove('max-h-[500px]', 'opacity-100');
+    menu.classList.add('max-h-0', 'opacity-0');
+    iconMenu.classList.remove('opacity-0', '-rotate-90');
+    iconClose.classList.add('opacity-0', 'rotate-90');
+  }
+
+  if(btn) btn.addEventListener('click', toggleMenu);
+
+  // Header Scroll Logic
+  const mainHeader = document.getElementById('main-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      mainHeader.classList.add('header-scrolled');
+    } else {
+      mainHeader.classList.remove('header-scrolled');
+    }
+  });
+
+  // Team Scroll Logic
   function scrollTeam(dir) {
     const container = document.getElementById('team-scroll-container');
     const scrollAmount = 340;

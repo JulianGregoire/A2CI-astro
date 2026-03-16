@@ -230,6 +230,10 @@
     </a>
 
     <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold">
+      <a href="a2ci.html" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
+        L'agence
+        <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
+      </a>
       <a href="#expertises" class="relative hover:text-[var(--a2ci-red)] transition-colors py-2 group">
         Prestations
         <span class="absolute bottom-0 left-0 h-[2px] w-0 bg-[var(--a2ci-red)] transition-all group-hover:w-full"></span>
@@ -267,6 +271,7 @@
 
   <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-xl overflow-hidden transition-all duration-300 max-h-0 opacity-0 md:hidden">
     <div class="flex flex-col p-6 gap-4">
+      <a href="a2ci.html" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">L'agence</a>
       <a href="#expertises" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Prestations</a>
       <a href="#secteurs" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Secteurs (ERP / IGH)</a>
       <a href="#process" class="text-lg font-bold text-gray-800 hover:text-[var(--a2ci-red)] border-b border-gray-100 pb-3" onclick="closeMenu()">Méthode</a>
