@@ -30,10 +30,6 @@
     body { font-family: 'Inter', sans-serif; }
     .font-heading { font-family: 'Outfit', sans-serif; }
     
-    .premium-gradient {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    }
-    
     .glass-card {
       background: var(--glass-white);
       backdrop-filter: blur(12px);
@@ -41,13 +37,6 @@
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
     }
     
-    .text-gradient {
-      background: linear-gradient(135deg, var(--a2ci-red) 0%, #b3050f 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
     .reveal-on-scroll {
       opacity: 0;
       transform: translateY(30px);
@@ -59,44 +48,10 @@
       transform: translateY(0);
     }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(0); }
-      50% { transform: translateY(-15px) rotate(1deg); }
-    }
-    .animate-float-premium {
-      animation: float 8s ease-in-out infinite;
-    }
-
-    .shimmer-effect {
-      position: relative;
-      overflow: hidden;
-    }
-    .shimmer-effect::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        to bottom right,
-        rgba(255,255,255,0) 0%,
-        rgba(255,255,255,0.1) 50%,
-        rgba(255,255,255,0) 100%
-      );
-      transform: rotate(45deg);
-      animation: shimmer 4s infinite;
-    }
-    @keyframes shimmer {
-      0% { transform: translateX(-100%) rotate(45deg); }
-      100% { transform: translateX(100%) rotate(45deg); }
-    }
-
-    /* Custom checkmark list */
     .premium-list li {
       position: relative;
-      padding-left: 2rem;
-      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
     }
     .premium-list li::before {
       content: '→';
@@ -104,10 +59,23 @@
       left: 0;
       color: var(--a2ci-red);
       font-weight: bold;
-      transition: transform 0.3s ease;
     }
-    .premium-list li:hover::before {
-      transform: translateX(5px);
+
+    .tech-card {
+        background: white;
+        border-radius: 2rem;
+        padding: 2.5rem;
+        border: 1px solid #f1f1f1;
+        transition: all 0.3s ease;
+    }
+    .tech-card:hover {
+        border-color: var(--a2ci-red);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+
+    .grid-pattern {
+        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+        background-size: 20px 20px;
     }
   </style>
 </head>
@@ -125,230 +93,215 @@
   <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
     <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
       <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-      Analyse & Conseil
+      Expertise Indépendante
     </div>
     <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6">
       Audit <br><span class="text-[var(--a2ci-red-light)]">& Conseil.</span>
     </h1>
-    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed mb-10">
-      Assistance stratégique et évaluation rigoureuse de vos installations SSI. Garanti de conformité et expertise Dommages d'Ouvrages.
+    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Assistance stratégique aux Maîtres d'Ouvrages et Cabinets d'Expertises pour l'évaluation rigoureuse de vos installations et la gestion des Dommages d'Ouvrages.
     </p>
     <div class="flex flex-wrap justify-center gap-4">
-      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md">
-        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">AMO</div>
-        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Assistance</div>
+      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">Audit</div>
+        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Technique</div>
       </div>
-      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md">
-        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">SSI</div>
-        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Expertise</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Analyse du contexte : Section Immersive (Staggered Steps) -->
-<section class="py-32 relative bg-gray-50 overflow-hidden">
-  <div class="absolute top-0 right-0 w-1/2 h-full bg-white hidden lg:block"></div>
-  
-  <div class="mx-auto max-w-7xl px-6 relative z-10">
-    <div class="grid lg:grid-cols-2 gap-24 items-start">
-      <div class="reveal-on-scroll">
-        <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-10 leading-tight text-gray-900">
-          Analyse du <br><span class="text-[var(--a2ci-red)]">Contexte</span>
-        </h2>
-        <div class="h-1.5 w-32 bg-[var(--a2ci-red)] mb-12 rounded-full"></div>
-        
-        <p class="text-gray-600 text-lg mb-12 leading-relaxed">
-          Avant tout audit sur site, nous analysons l'environnement réglementaire et environnemental pour comprendre les enjeux spécifiques à votre établissement.
-        </p>
-        
-        <div class="space-y-12">
-          <!-- Step 1 -->
-          <div class="group flex gap-8 items-start">
-            <div class="flex-shrink-0 w-16 h-16 rounded-[1.5rem] bg-white shadow-xl flex items-center justify-center font-heading text-3xl font-black text-[var(--a2ci-red)] border border-gray-100 group-hover:scale-110 transition-transform duration-500">
-              01
-            </div>
-            <div>
-              <h4 class="text-2xl font-bold mb-3 text-gray-900">Visite & Immersion</h4>
-              <p class="text-gray-500 leading-relaxed font-light">Audit complet sur site et participation aux réunions de travail pour comprendre les phases de travaux à réaliser.</p>
-            </div>
-          </div>
-          
-          <!-- Step 2 -->
-          <div class="group flex gap-8 items-start">
-            <div class="flex-shrink-0 w-16 h-16 rounded-[1.5rem] bg-white shadow-xl flex items-center justify-center font-heading text-3xl font-black text-[var(--a2ci-red)] border border-gray-100 group-hover:scale-110 transition-transform duration-500">
-              02
-            </div>
-            <div>
-              <h4 class="text-2xl font-bold mb-3 text-gray-900">Vérification Historique</h4>
-              <p class="text-gray-500 leading-relaxed font-light">Analyse de la réglementation des textes en vigueur à l'époque des travaux originaux.</p>
-            </div>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="group flex gap-8 items-start">
-            <div class="flex-shrink-0 w-16 h-16 rounded-[1.5rem] bg-white shadow-xl flex items-center justify-center font-heading text-3xl font-black text-[var(--a2ci-red)] border border-gray-100 group-hover:scale-110 transition-transform duration-500">
-              03
-            </div>
-            <div>
-              <h4 class="text-2xl font-bold mb-3 text-gray-900">Trame Normative</h4>
-              <p class="text-gray-500 leading-relaxed font-light">Création d’une trame d’étude avec les obligations réglementaires propres au type et classement de l'établissement.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="lg:sticky lg:top-32 reveal-on-scroll" style="transition-delay: 300ms;">
-        <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white group">
-          <img src="images/audit_contexte.png" alt="Analyse Contexte SSI" class="w-full h-auto transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-[var(--a2ci-red)]/10 mix-blend-multiply opacity-30"></div>
-          
-          <div class="absolute top-8 left-8 glass-card p-6 rounded-2xl shadow-xl border-l-[6px] border-[var(--a2ci-red)] max-w-[240px]">
-            <div class="text-[10px] uppercase tracking-widest font-black text-gray-500 mb-1">Expertise</div>
-            <div class="text-sm font-bold text-gray-800 italic leading-tight">"Rigueur absolue sur le cadre réglementaire historique"</div>
-          </div>
-        </div>
+      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">Conseil</div>
+        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Réglementaire</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Audit de Site : Grid Premium -->
+<!-- Phase 1: Analyse du Contexte -->
+<section class="py-24 bg-white relative">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal-on-scroll">
+                <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-8 text-gray-900 leading-tight">Analyse du Contexte <br><span class="text-[var(--a2ci-red)]">& Existant.</span></h2>
+                <div class="h-1.5 w-32 bg-[var(--a2ci-red)] mb-10 rounded-full"></div>
+                <p class="text-gray-600 text-lg mb-10 leading-relaxed font-light">
+                    Avant tout audit sur site, nous sécurisons le cadre réglementaire historique de l'établissement pour une évaluation précise et sans faille.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex gap-6 items-start">
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center font-bold text-[var(--a2ci-red)] border border-gray-100">01</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 mb-1">Immersion Initiale</h5>
+                            <p class="text-sm text-gray-500 font-light">Visites sur site et réunions de travail pour comprendre les phases de travaux réalisées.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center font-bold text-[var(--a2ci-red)] border border-gray-100">02</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 mb-1">Référentiel Historique</h5>
+                            <p class="text-sm text-gray-500 font-light">Analyse fine des textes réglementaires en vigueur à l'époque des travaux.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 items-start">
+                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center font-bold text-[var(--a2ci-red)] border border-gray-100">03</div>
+                        <div>
+                            <h5 class="font-bold text-gray-900 mb-1">Trame d'Étude</h5>
+                            <p class="text-sm text-gray-500 font-light">Création d'une trame personnalisée selon le type et le classement de l'établissement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="absolute -inset-10 grid-pattern opacity-20 -z-10"></div>
+                <div class="bg-gray-50 p-12 rounded-[3.5rem] border border-gray-200">
+                    <img src="images/audit_contexte.png" alt="Analyse Contexte" class="rounded-[2.5rem] shadow-xl w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 2: Audit de Terrain - Functional Tests -->
+<section class="py-32 bg-gray-900 text-white relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6 relative z-10">
+        <div class="text-center mb-24 reveal-on-scroll">
+            <h2 class="font-heading text-4xl lg:text-6xl font-black mb-8">L'Audit de <span class="text-[var(--a2ci-red-light)]">Terrain.</span></h2>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto font-light">Essais exhaustifs de l'ensemble de la chaîne de sécurité en présence de l'entreprise de maintenance.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll">
+                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">🔔</div>
+                <h5 class="text-lg font-bold mb-3">Détection</h5>
+                <p class="text-sm text-gray-400 font-light">Test de 100% des têtes de détection automatique d'incendie.</p>
+            </div>
+            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">🚨</div>
+                <h5 class="text-lg font-bold mb-3">Déclencheurs</h5>
+                <p class="text-sm text-gray-400 font-light">Vérification de tous les déclencheurs manuels et indicateurs d'action.</p>
+            </div>
+            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">⚙️</div>
+                <h5 class="text-lg font-bold mb-3">Pilotage</h5>
+                <p class="text-sm text-gray-400 font-light">Contrôle de tous les DAS, DAC et DCM du système.</p>
+            </div>
+            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">🔄</div>
+                <h5 class="text-lg font-bold mb-3">Scénarios</h5>
+                <p class="text-sm text-gray-400 font-light">Validation des scénarios de mise en sécurité manuels et automatiques.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase 2: Audit de Terrain - Visual Control (The Technical Grid) -->
 <section class="py-32 bg-white relative">
-  <div class="mx-auto max-w-7xl px-6">
-    <div class="text-center mb-20 reveal-on-scroll">
-      <h2 class="font-heading text-4xl font-bold mb-6 text-gray-900 uppercase tracking-tighter">Audit de <span class="text-[var(--a2ci-red)]">Site</span></h2>
-      <p class="text-gray-500 font-medium max-w-2xl mx-auto italic">Essais exhaustifs réalisés en présence des entreprises de maintenance et des représentants.</p>
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="flex flex-col lg:flex-row gap-20">
+            <div class="lg:w-1/3 reveal-on-scroll">
+                <div class="sticky top-32">
+                    <h3 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase tracking-tighter">Maîtrise des <span class="text-[var(--a2ci-red)]">Réseaux.</span></h3>
+                    <p class="text-gray-500 leading-relaxed font-light mb-8">
+                        Un contrôle visuel méticuleux de l'installation pour déceler les non-conformités physiques souvent ignorées.
+                    </p>
+                    <div class="p-6 bg-gray-50 border-l-4 border-[var(--a2ci-red)] rounded-r-2xl">
+                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Normes de référence</p>
+                        <p class="text-sm font-semibold text-gray-700 italic">NFC 15-100, NFS 61-932 & NFS 61-970</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-2/3 grid sm:grid-cols-2 gap-6 reveal-on-scroll">
+                <div class="tech-card">
+                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
+                        Séparation Réseaux
+                    </h6>
+                    <p class="text-sm text-gray-500 font-light">Séparation stricte des réseaux SSI et DAS des autres flux du bâtiment.</p>
+                </div>
+                <div class="tech-card">
+                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
+                        Fixations Stables
+                    </h6>
+                    <p class="text-sm text-gray-500 font-light">Vérification des fixations réalisées sur les parties stables du bâtiment.</p>
+                </div>
+                <div class="tech-card">
+                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
+                        Zéro "Câbles Volants"
+                    </h6>
+                    <p class="text-sm text-gray-500 font-light">Audit des réseaux pour s'assurer qu'aucun câble ne repose sur les plafonds.</p>
+                </div>
+                <div class="tech-card">
+                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
+                        Catégorie Câbles
+                    </h6>
+                    <p class="text-sm text-gray-500 font-light">Conformité des types de câblage aux exigences réglementaires SSI.</p>
+                </div>
+                <div class="tech-card">
+                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
+                        Positionnement
+                    </h6>
+                    <p class="text-sm text-gray-500 font-light">Audit du positionnement des détecteurs, DM, DS et matériels déportés.</p>
+                </div>
+                <div class="tech-card">
+                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
+                        Feu & Traversées
+                    </h6>
+                    <p class="text-sm text-gray-500 font-light">Contrôle du rebouchage des cloisons, planchers et plafonds coupe-feu.</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <!-- Item 1 -->
-      <div class="reveal-on-scroll glass-card p-10 rounded-[2.5rem] hover:shadow-2xl transition-all duration-500 group border-b-4 border-b-transparent hover:border-b-[var(--a2ci-red)]">
-        <div class="w-14 h-14 bg-[var(--a2ci-red)] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-6 transition-transform">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">Tests de Détection</h3>
-        <p class="text-gray-500 leading-relaxed font-light">Tests de 100% des têtes de détection automatique, déclencheurs manuels et indicateurs d'action.</p>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="reveal-on-scroll glass-card p-10 rounded-[2.5rem] hover:shadow-2xl transition-all duration-500 group border-b-4 border-b-transparent hover:border-b-[var(--a2ci-red)]" style="transition-delay: 100ms;">
-        <div class="w-14 h-14 bg-[var(--a2ci-red)] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-6 transition-transform">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H7a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">Pilotage DAS & DAC</h3>
-        <p class="text-gray-500 leading-relaxed font-light">Vérification des asservissements DAS, DAC, DCM et scénarios de mise en sécurité manuels et automatiques.</p>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="reveal-on-scroll glass-card p-10 rounded-[2.5rem] hover:shadow-2xl transition-all duration-500 group border-b-4 border-b-transparent hover:border-b-[var(--a2ci-red)]" style="transition-delay: 200ms;">
-        <div class="w-14 h-14 bg-[var(--a2ci-red)] text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:rotate-6 transition-transform">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold mb-4 text-gray-900 leading-tight">Contrôle Visuel Installations</h3>
-        <p class="text-gray-500 leading-relaxed font-light">Audit des réseaux, fixations, câblage (NFC 15-100) et traversées coupe-feu.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- Maîtrise des Réseaux : Section Impact -->
-<section class="py-32 premium-gradient relative overflow-hidden">
-  <div class="mx-auto max-w-7xl px-6 relative z-10">
-    <div class="flex flex-col lg:flex-row items-center gap-20">
-      <div class="lg:w-1/2 reveal-on-scroll">
-        <h2 class="font-heading text-4xl lg:text-6xl font-bold mb-8 text-gray-900">Maîtrise des <br>Réseaux</h2>
-        <p class="text-xl text-gray-600 mb-10 leading-relaxed font-light">
-          Nous effectuons un contrôle visuel exhaustif pour garantir la conformité physique totale de vos installations selon les normes <strong>NFC 15-100, NFS 61-932 et NFS 61-970</strong>.
-        </p>
+<!-- Phase 3: Le Rapport d'Audit -->
+<section class="py-32 bg-gray-50 relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center mb-20 reveal-on-scroll">
+            <h2 class="font-heading text-5xl font-bold text-gray-900">Le Rapport <span class="text-[var(--a2ci-red)]">d'Audit.</span></h2>
+            <p class="text-gray-500 font-light max-w-2xl mx-auto mt-4">Une synthèse stratégique pour transformer vos observations techniques en un plan d'action de mise en conformité.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            <!-- Analyse de l'Existant Block -->
+            <div class="bg-white p-12 rounded-[3.5rem] shadow-xl reveal-on-scroll">
+                <h4 class="text-2xl font-bold mb-8 text-gray-900 border-b pb-4 flex justify-between items-center">
+                    Analyse de l'Existant
+                    <span class="text-[var(--a2ci-red)] text-xs uppercase tracking-widest font-black">Phase A</span>
+                </h4>
+                <ul class="premium-list text-gray-600 font-light space-y-4">
+                    <li>Rappel des obligations réglementaires à la date des travaux originaux.</li>
+                    <li>Descriptif détaillé du process de fonctionnement du SSI actuel.</li>
+                    <li>Adéquation avec les dossiers de conception, rapports SDIS et commissions passées.</li>
+                    <li>Relevé exhaustif des écarts normatifs et des dérives de conception.</li>
+                </ul>
+            </div>
+
+            <!-- Propositions & Amélioration Block -->
+            <div class="bg-white p-12 rounded-[3.5rem] shadow-xl reveal-on-scroll" style="transition-delay: 200ms;">
+                <h4 class="text-2xl font-bold mb-8 text-gray-900 border-b pb-4 flex justify-between items-center">
+                    Propositions & Progrès
+                    <span class="text-[var(--a2ci-red)] text-xs uppercase tracking-widest font-black">Phase B</span>
+                </h4>
+                <ul class="premium-list text-gray-600 font-light space-y-4">
+                    <li>Modifications techniques pour pallier aux non-conformités détectées.</li>
+                    <li>Plan de remise en adéquation avec la conception SSI initiale.</li>
+                    <li>Amélioration vers les normes en vigueur pour les systèmes vétustes.</li>
+                    <li>Étude de faisabilité technique selon les contraintes du bâtiment.</li>
+                </ul>
+            </div>
+        </div>
         
-        <div class="grid grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <div class="text-[var(--a2ci-red)] text-2xl font-black mb-1">NFC 15-100</div>
-            <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Séparation-Fixation</div>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <div class="text-gray-300 text-2xl font-black mb-1">NFS 61-932</div>
-            <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Positionnement</div>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <div class="text-gray-300 text-2xl font-black mb-1">C750/H2</div>
-            <div class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Traversées CF</div>
-          </div>
-          <div class="bg-gray-900 p-6 rounded-2xl shadow-xl">
-            <div class="text-[var(--a2ci-red)] text-2xl font-black mb-1">Audit</div>
-            <div class="text-[10px] font-bold uppercase tracking-widest text-gray-500">Zéro Câbles Volants</div>
-          </div>
+        <div class="mt-20 text-center reveal-on-scroll">
+            <div class="inline-block p-1 bg-gray-200 rounded-full">
+                <div class="px-8 py-4 bg-white rounded-full flex items-center gap-4">
+                    <span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-sm font-bold text-gray-700 tracking-wide uppercase">Objectif : Zéro Non-Conformité</span>
+                </div>
+            </div>
         </div>
-      </div>
-      
-      <div class="lg:w-1/2 reveal-on-scroll" style="transition-delay: 300ms;">
-        <div class="relative group">
-          <div class="absolute -inset-10 bg-[var(--a2ci-red)]/10 blur-3xl rounded-full opacity-50 transition-all group-hover:scale-110"></div>
-          <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg" alt="Contrôle Technique SSI" class="relative z-10 rounded-[3rem] shadow-2xl border border-white/50 animate-float-premium" />
-        </div>
-      </div>
     </div>
-  </div>
-</section>
-
-<!-- Rapport d'Audit : Section Technique (A/B Phases) -->
-<section class="py-32 bg-white overflow-hidden">
-  <div class="mx-auto max-w-7xl px-6">
-    <div class="flex flex-col lg:flex-row gap-24">
-      <div class="lg:w-2/5">
-        <div class="sticky top-32 reveal-on-scroll">
-          <h2 class="font-heading text-5xl font-bold mb-8 text-gray-900 leading-tight">Le Rapport <br>d'<span class="text-[var(--a2ci-red)]">Audit</span></h2>
-          <p class="text-lg text-gray-500 leading-relaxed mb-12 font-light">
-            Une synthèse exhaustive des essais et contrôles visuels établis, définissant la trajectoire vers une mise en conformité totale.
-          </p>
-          <div class="relative rounded-[2rem] overflow-hidden shadow-xl border border-gray-100">
-            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg" alt="Rapport Audit SSI" class="w-full h-auto" />
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 text-white text-xs font-bold uppercase tracking-widest opacity-80">Synthèse Stratégique</div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="lg:w-3/5 space-y-16">
-        <!-- Phase A -->
-        <div class="reveal-on-scroll relative pl-16">
-          <div class="absolute left-0 top-0 w-12 h-12 bg-gray-50 border border-gray-200 rounded-2xl flex items-center justify-center font-heading text-xl font-black text-[var(--a2ci-red)]">A</div>
-          <div class="absolute left-6 top-12 w-px h-[calc(100%+2rem)] bg-gradient-to-b from-gray-200 to-transparent"></div>
-          
-          <h4 class="text-3xl font-bold mb-6 text-gray-900">Diagnostic Initial</h4>
-          <ul class="premium-list text-gray-600 text-lg font-light leading-relaxed">
-            <li>Obligations réglementaires à la date des derniers travaux.</li>
-            <li>Descriptif détaillé du fonctionnement du SSI en place.</li>
-            <li>Vérification de l'adéquation réglementaire via audits croisés (SDIS, Bureau de contrôle).</li>
-          </ul>
-        </div>
-
-        <!-- Phase B -->
-        <div class="reveal-on-scroll relative pl-16" style="transition-delay: 200ms;">
-          <div class="absolute left-0 top-0 w-12 h-12 bg-gray-900 border border-black rounded-2xl flex items-center justify-center font-heading text-xl font-black text-[var(--a2ci-red)] shadow-xl">B</div>
-          
-          <h4 class="text-3xl font-bold mb-6 text-gray-900">Plan d'Action Correctif</h4>
-          <div class="glass-card p-6 rounded-2xl border-l-[6px] border-[var(--a2ci-red)] mb-8">
-            <p class="text-[var(--a2ci-red)] font-bold mb-1 italic">Engagement de Conformité</p>
-            <p class="text-sm text-gray-600 font-medium">Levées des écarts normatifs et propositions d'améliorations SSI.</p>
-          </div>
-          
-          <ul class="premium-list text-gray-600 text-lg font-light leading-relaxed">
-            <li>Relevé des écarts normatifs par rapport à la conception originale.</li>
-            <li>Propositions techniques pour pallier aux non-conformités.</li>
-            <li>Améliorations proposées selon les normes actuelles et faisabilité bâtiment.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 <div id="footer-component"></div>
@@ -374,20 +327,14 @@
   // Particles.js Initialization
   particlesJS('particles-js', {
     "particles": {
-      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+      "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
       "color": { "value": "#ffffff" },
       "shape": { "type": "circle" },
       "opacity": { "value": 0.5, "random": false },
-      "size": { "value": 3, "random": true },
-      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
-      "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-    },
-    "interactivity": {
-      "detect_on": "canvas",
-      "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-      "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
-    },
-    "retina_detect": true
+      "size": { "value": 2, "random": true },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
+      "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    }
   });
 </script>
 
