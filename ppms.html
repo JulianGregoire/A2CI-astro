@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPMS - Plan Particulier de Mise en Sûreté - A2CI</title>
+  <meta name="description" content="Accompagnement pour l'élaboration du PPMS face aux risques majeurs. Protection des élèves et du personnel scolaire par A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/components.js" defer></script>
+  <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    :root {
+      --a2ci-red: #960606;
+      --a2ci-red-light: #C40808;
+      --a2ci-dark: #0b0b0b;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    
+    .glass-card {
+      background: var(--glass-white);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+    
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .premium-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .premium-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: bold;
+    }
+
+    .question-card {
+        background: white;
+        border-radius: 2rem;
+        padding: 2rem;
+        border: 1px solid #f1f1f1;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+    }
+    .question-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--a2ci-red);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+    .question-number {
+        position: absolute;
+        bottom: -1rem;
+        right: 1rem;
+        font-size: 5rem;
+        font-weight: 800;
+        color: var(--a2ci-red);
+        opacity: 0.05;
+        font-family: 'Outfit';
+    }
+
+    .law-item {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background: #f9f9f9;
+        border-radius: 1.25rem;
+        transition: background 0.3s ease;
+    }
+    .law-item:hover {
+        background: #f1f1f1;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg" alt="PPMS Scolaire A2CI" class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
+    <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      Risques Majeurs & Sécurité
+    </div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+      Plan Particulier de <br><span class="text-[var(--a2ci-red-light)]">Mise en Sûreté (PPMS).</span>
+    </h1>
+    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed font-light italic">
+      "Mettre les élèves, le personnel et le public présent en sûreté en cas de déclenchement d’une alerte pour risques majeurs."
+    </p>
+  </div>
+</section>
+
+<!-- Définition Section -->
+<section class="py-24 bg-white relative">
+    <div class="mx-auto max-w-5xl px-6">
+        <div class="reveal-on-scroll text-center mb-16">
+            <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6">Face aux <span class="text-[var(--a2ci-red)]">Risques Majeurs.</span></h2>
+            <p class="text-gray-500 font-light leading-relaxed max-w-3xl mx-auto">
+                Le risque majeur est caractérisé par sa faible fréquence et son énorme gravité (naturelle ou anthropique). Le PPMS définit l’organisation pour gérer la crise en attendant les secours.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-10 reveal-on-scroll">
+            <div class="p-10 bg-gray-50 rounded-[3rem] border border-gray-100 flex flex-col justify-center">
+                <h4 class="text-xl font-bold mb-4">Adaptation Locale</h4>
+                <p class="text-sm text-gray-500 font-light leading-relaxed">
+                    Chaque document est propre à l'établissement. Nous prenons en compte les spécificités des lieux, du public, des ressources et des risques inventoriés.
+                </p>
+            </div>
+            <div class="p-10 bg-gray-900 text-white rounded-[3rem] shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-4 -right-4 w-24 h-24 bg-[var(--a2ci-red)] opacity-10 rounded-full"></div>
+                <h4 class="text-xl font-bold mb-4">Plages horaires & Lieux</h4>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">
+                    Le plan couvre les activités péri-scolaires et tous les lieux de déplacement des élèves, y compris les activités extra-muros.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Les 6 Questions Stratégiques -->
+<section class="py-32 bg-gray-50 relative">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center mb-24 reveal-on-scroll">
+            <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900">La Stratégie des <span class="text-[var(--a2ci-red)]">6 Questions.</span></h2>
+            <p class="text-gray-500 max-w-2xl mx-auto mt-4 font-light">Une méthodologie rigoureuse pour ne rien laisser au hasard lors d'un événement majeur.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="question-card reveal-on-scroll">
+                <span class="question-number">01</span>
+                <h5 class="text-lg font-bold mb-3 text-gray-900 leading-tight">Quand déclencher l’alerte ?</h5>
+                <p class="text-xs text-gray-500 font-light">Identification précise des seuils critiques et des types d'événements déclencheurs.</p>
+            </div>
+            <div class="question-card reveal-on-scroll" style="transition-delay: 100ms;">
+                <span class="question-number">02</span>
+                <h5 class="text-lg font-bold mb-3 text-gray-900 leading-tight">Comment déclencher l’alerte ?</h5>
+                <p class="text-xs text-gray-500 font-light">Mise en place des moyens logistiques et techniques de signalement sur tout le site.</p>
+            </div>
+            <div class="question-card reveal-on-scroll" style="transition-delay: 200ms;">
+                <span class="question-number">03</span>
+                <h5 class="text-lg font-bold mb-3 text-gray-900 leading-tight">Quelles consignes immédiates ?</h5>
+                <p class="text-xs text-gray-500 font-light">Choix stratégique entre évacuation, confinement ou mise à l’abri selon le danger.</p>
+            </div>
+            <div class="question-card reveal-on-scroll" style="transition-delay: 300ms;">
+                <span class="question-number">04</span>
+                <h5 class="text-lg font-bold mb-3 text-gray-900 leading-tight">Où et comment mettre en sûreté ?</h5>
+                <p class="text-xs text-gray-500 font-light">Identification des lieux sécurisés et des protocoles de déplacement fluides.</p>
+            </div>
+            <div class="question-card reveal-on-scroll" style="transition-delay: 400ms;">
+                <span class="question-number">05</span>
+                <h5 class="text-lg font-bold mb-3 text-gray-900 leading-tight">Gestion des communications ?</h5>
+                <p class="text-xs text-gray-500 font-light">Organisation des flux d'information internes et liaison constante avec les secours.</p>
+            </div>
+            <div class="question-card reveal-on-scroll" style="transition-delay: 500ms;">
+                <span class="question-number">06</span>
+                <h5 class="text-lg font-bold mb-3 text-gray-900 leading-tight">Documents et ressources ?</h5>
+                <p class="text-xs text-gray-500 font-light">Inventaire des outils indispensables au bon fonctionnement du PPMS en temps de crise.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Culture du Risque & Simulation -->
+<section class="py-32 bg-white relative">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal-on-scroll">
+                <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900 mb-8 leading-tight">Culture du Risque & <br><span class="text-[var(--a2ci-red)]">Validation.</span></h2>
+                <div class="h-1.5 w-24 bg-[var(--a2ci-red)] mb-10 rounded-full"></div>
+                <p class="text-gray-600 mb-10 font-light leading-relaxed">
+                    Le document écrit n'est que la première étape. Pour être réellement protecteur, il doit être porté par l'ensemble de la communauté éducative.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex gap-4 p-6 bg-gray-50 rounded-2xl border border-gray-100 italic font-medium text-gray-700">
+                        "L'information des personnels, parents et élèves est le garant de la culture du risque."
+                    </div>
+                    <div class="flex gap-4 p-6 bg-[var(--a2ci-red)] text-white rounded-2xl shadow-xl shadow-red-100 font-bold">
+                        <svg class="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        L'exercice de simulation : l'étape indispensable pour valider et ajuster le plan.
+                    </div>
+                </div>
+            </div>
+            <div class="reveal-on-scroll">
+                <div class="rounded-[3rem] overflow-hidden shadow-2xl transform rotate-1">
+                    <img src="https://images.pexels.com/photos/8112130/pexels-photo-8112130.jpeg" alt="Exercice simulation PPMS" class="w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Réglementations PPMS -->
+<section class="py-24 bg-gray-900 text-white overflow-hidden relative">
+    <div class="mx-auto max-w-5xl px-6 relative z-10">
+        <h2 class="font-heading text-4xl font-bold mb-16 text-center">Cadre <span class="text-[var(--a2ci-red-light)]">Législatif.</span></h2>
+        <div class="grid sm:grid-cols-3 gap-6">
+            <div class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal-on-scroll">
+                <div class="text-[var(--a2ci-red-light)] font-black text-2xl mb-4">ORSEC</div>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">Guide ORSEC (Tome G1) désignant les établissements scolaires comme vulnérables.</p>
+            </div>
+            <div class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="text-[var(--a2ci-red-light)] font-black text-2xl mb-4">Code Éduc.</div>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">Article L 312-13-1 relatif au droit des élèves à la sécurité et prévention.</p>
+            </div>
+            <div class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:-translate-y-2 transition-all duration-300 reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="text-[var(--a2ci-red-light)] font-black text-2xl mb-4">Circulaire</div>
+                <p class="text-xs text-gray-400 font-light leading-relaxed">Circulaire n°2002-119 du 29/05/2002 (BO hors-série n°3 du 30/05/2002).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Simple Scroll Reveal Observer
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Particles.js Initialization
+  particlesJS('particles-js', {
+    "particles": {
+      "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.4, "random": false },
+      "size": { "value": 2, "random": true },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+      "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    }
+  });
+</script>
+
+</body>
+</html>
