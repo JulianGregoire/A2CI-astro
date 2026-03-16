@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notice d'Accessibilité - ERP - A2CI Prévention Incendie</title>
+  <meta name="description" content="Élaboration de votre Notice d'Accessibilité pour ERP lors de construction ou aménagement. Conformité articles R111-19 et CCH par A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/components.js" defer></script>
+  <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    :root {
+      --a2ci-red: #960606;
+      --a2ci-red-light: #C40808;
+      --a2ci-dark: #0b0b0b;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    
+    .glass-card {
+      background: var(--glass-white);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+    
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .premium-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .premium-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: bold;
+    }
+
+    .info-card {
+        padding: 2.5rem;
+        border-radius: 2.5rem;
+        background: white;
+        border: 1px solid #f0f0f0;
+        transition: all 0.3s ease;
+    }
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="https://images.pexels.com/photos/4064305/pexels-photo-4064305.jpeg" alt="Accession ERP A2CI" class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
+    <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      Accessibilité Universelle
+    </div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6">
+      Notice <br><span class="text-[var(--a2ci-red-light)]">d'Accessibilité.</span>
+    </h1>
+    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Définition des dispositions constructives pour répondre aux conditions d’accessibilité exigées par la réglementation ERP lors de vos projets de construction ou d’aménagement.
+    </p>
+  </div>
+</section>
+
+<!-- Réglementation Section -->
+<section class="py-24 bg-white relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="reveal-on-scroll">
+                <h2 class="font-heading text-4xl font-bold mb-8 text-gray-900">Le Cadre <span class="text-[var(--a2ci-red)]">Réglementaire.</span></h2>
+                <p class="text-gray-600 mb-8 font-light leading-relaxed">
+                    La notice d'accessibilité est régie par des arrêtés stricts fixant les dispositions relatives à l’accessibilité aux personnes handicapées lors de la construction ou création d’ERP.
+                </p>
+                <div class="space-y-4">
+                    <div class="p-6 bg-gray-50 border-l-4 border-[var(--a2ci-red)] rounded-r-2xl">
+                        <h6 class="font-bold text-gray-900 text-sm mb-1">Arrêté du 1er août 2006</h6>
+                        <p class="text-xs text-gray-500 font-light italic">Articles R111-19 à R111-19-3 et R111-19-6 du CCH.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 border-l-4 border-[var(--a2ci-red)] rounded-r-2xl">
+                        <h6 class="font-bold text-gray-900 text-sm mb-1">Arrêté du 21 mars 2007</h6>
+                        <p class="text-xs text-gray-500 font-light italic">Articles R111-19-8 à R111-19-11 du CCH (Dispositions modifiées).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal-on-scroll">
+                <div class="relative rounded-[3rem] overflow-hidden shadow-2xl">
+                    <img src="https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg" alt="Conformité Accessibilité" class="w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Objectif & Missions -->
+<section class="py-32 bg-gray-50">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center mb-20 reveal-on-scroll">
+            <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900">Missions & <span class="text-[var(--a2ci-red)]">Expertise.</span></h2>
+            <p class="text-gray-500 font-light max-w-2xl mx-auto mt-4 italic">
+                S'assurer que les dispositions constructives permettent de répondre aux conditions d'accessibilité conformément à l'article R123.24 du CCH.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            <div class="info-card reveal-on-scroll">
+                <div class="text-4xl mb-6">📐</div>
+                <h4 class="text-2xl font-bold mb-4">Analyse Spécifique</h4>
+                <p class="text-gray-500 font-light leading-relaxed">
+                    Nous définissons les dispositions par rapport à la réglementation, au type d’établissement et aux dispositions déjà présentes dans l’établissement. Ce document vient en complément indispensable de vos plans d'aménagement.
+                </p>
+            </div>
+            <div class="info-card reveal-on-scroll bg-gray-900 text-white border-transparent" style="transition-delay: 200ms;">
+                <div class="text-4xl mb-6">⚠️</div>
+                <h4 class="text-2xl font-bold mb-4 text-[var(--a2ci-red-light)]">Risques Encourus</h4>
+                <p class="text-gray-400 font-light leading-relaxed">
+                    L'absence de cette notice expose l'exploitant à un <span class="text-white font-bold">avis défavorable</span> de la commission de sécurité lors de son passage dans l’établissement. Un document manquant peut bloquer l'ouverture ou la validation de vos travaux.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Simple Scroll Reveal Observer
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Particles.js Initialization
+  particlesJS('particles-js', {
+    "particles": {
+      "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.4, "random": false },
+      "size": { "value": 2, "random": true },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+      "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    }
+  });
+</script>
+
+</body>
+</html>
