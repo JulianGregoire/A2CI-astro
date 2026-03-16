@@ -218,150 +218,120 @@
       <div class="h-1 w-20 bg-[var(--a2ci-red)] mx-auto rounded-full"></div>
     </div>
 
-    <!-- Timeline Container -->
-    <div class="relative overflow-x-auto pb-20 pt-16 scrollbar-hide">
-      <!-- Main Horizontal Line (Axis) -->
-      <div class="absolute left-0 right-0 top-[280px] h-0.5 bg-gray-200 z-0">
-        <div class="absolute inset-y-0 left-0 bg-[var(--a2ci-red)] w-full opacity-30"></div>
-      </div>
+    <!-- Improved Grid Timeline (Fixed, no scroll) -->
+    <div class="relative space-y-12 lg:space-y-0">
+      <!-- Vertical line for mobile, becomes horizontal logic on desktop -->
+      <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gray-100 lg:hidden"></div>
 
-      <!-- Increased min-width and added a spacer at the end to prevent clipping -->
-      <div class="flex min-w-[1500px] gap-12 px-20 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
         
         <!-- 2006 -->
-        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2">
-          <!-- Year & Image -->
+        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2">
           <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2006</span>
-            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2006.png" alt="2006" class="w-full h-full object-cover" />
+            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2006</span>
+            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2006.png" alt="2006" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
             </div>
           </div>
-          <!-- Dashed Connector -->
-          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
-          <!-- Dot -->
-          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
+            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
           </div>
-          <!-- Description -->
-          <div class="mt-8 text-center px-2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Création</h3>
-            <p class="text-[11px] text-gray-500 leading-relaxed">Fondation par Mr Rémy DENIS. Début de l'expertise en Coordination SSI.</p>
+          <div class="mt-6 text-center max-w-[260px]">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Création</h3>
+            <p class="text-[12px] text-gray-500 leading-relaxed">Fondation par Mr Rémy DENIS. Création de l'expertise historique en Coordination SSI.</p>
           </div>
         </div>
 
         <!-- 2007 -->
-        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2 mt-12">
-          <!-- Year & Image -->
+        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2 lg:mt-16">
           <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2007</span>
-            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2007.png" alt="2007" class="w-full h-full object-cover" />
+            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2007</span>
+            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2007.png" alt="2007" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
             </div>
           </div>
-          <!-- Dashed Connector -->
-          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
-          <!-- Dot -->
-          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
+            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
           </div>
-          <!-- Description -->
-          <div class="mt-8 text-center px-2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Bureau d'Études</h3>
-            <p class="text-[11px] text-gray-500 leading-relaxed">Extension à l'ingénierie technique et conception de plans SSI.</p>
+          <div class="mt-6 text-center max-w-[260px]">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Bureau d'Études</h3>
+            <p class="text-[12px] text-gray-500 leading-relaxed">Extension à l'ingénierie technique incendie et conception de plans réglementaires.</p>
           </div>
         </div>
 
         <!-- 2009 -->
-        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2">
-          <!-- Year & Image -->
+        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2">
           <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2009</span>
-            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2009.png" alt="2009" class="w-full h-full object-cover" />
+            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2009</span>
+            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2009.png" alt="2009" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
             </div>
           </div>
-          <!-- Dashed Connector -->
-          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
-          <!-- Dot -->
-          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
+            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
           </div>
-          <!-- Description -->
-          <div class="mt-8 text-center px-2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Pôle Formation</h3>
-            <p class="text-[11px] text-gray-500 leading-relaxed">Ouverture du service formation pour l'utilisation des équipements.</p>
+          <div class="mt-6 text-center max-w-[260px]">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Pôle Formation</h3>
+            <p class="text-[12px] text-gray-500 leading-relaxed">Lancement du service de formation pour la gestion opérationnelle des risques.</p>
           </div>
         </div>
 
         <!-- 2012 -->
-        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2 mt-12">
-          <!-- Year & Image -->
+        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2 lg:-mt-16">
           <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2012</span>
-            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2012.png" alt="2012" class="w-full h-full object-cover" />
+            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2012</span>
+            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2012.png" alt="2012" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
             </div>
           </div>
-          <!-- Dashed Connector -->
-          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
-          <!-- Dot -->
-          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
+            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
           </div>
-          <!-- Description -->
-          <div class="mt-8 text-center px-2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Consolidation</h3>
-            <p class="text-[11px] text-gray-500 leading-relaxed">Accompagnement renforcé des ERT et mise en conformité procédures.</p>
+          <div class="mt-6 text-center max-w-[260px]">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Consolidation</h3>
+            <p class="text-[12px] text-gray-500 leading-relaxed">Renforcement de l'accompagnement des établissements recevant du public (ERP).</p>
           </div>
         </div>
 
         <!-- 2013 -->
-        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2">
-          <!-- Year & Image -->
+        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2">
           <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-500 mb-2 block tracking-wider">2013</span>
-            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2013.png" alt="2013" class="w-full h-full object-cover" />
+            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2013</span>
+            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
+              <img src="images/hist_2013.png" alt="2013" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
             </div>
           </div>
-          <!-- Dashed Connector -->
-          <div class="h-16 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors"></div>
-          <!-- Dot -->
-          <div class="w-4 h-4 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-2">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-white"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
+            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
           </div>
-          <!-- Description -->
-          <div class="mt-8 text-center px-2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">Centre Technique</h3>
-            <p class="text-[11px] text-gray-500 leading-relaxed">Création du centre de formation dédié Risques et Premier secours.</p>
+          <div class="mt-6 text-center max-w-[260px]">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Centre Dédié</h3>
+            <p class="text-[12px] text-gray-500 leading-relaxed">Création du centre de formation incendie et premier secours spécialisé.</p>
           </div>
         </div>
 
         <!-- 2021 -->
-        <div class="group flex flex-col items-center w-48 transition-all hover:-translate-y-2 mt-12">
-          <!-- Year & Image -->
+        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2 lg:mt-16">
           <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-[var(--a2ci-red)] mb-2 block tracking-wider">2021</span>
-            <div class="w-32 h-44 overflow-hidden rounded-lg shadow-2xl border-2 border-[var(--a2ci-red)]/50 group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2021.png" alt="2021" class="w-full h-full object-cover" />
+            <span class="text-sm font-bold text-[var(--a2ci-red)] mb-2 block tracking-widest">2021</span>
+            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-2xl border-2 border-[var(--a2ci-red)]/40 grayscale-0 transition-all duration-700">
+              <img src="images/hist_2021.png" alt="2021" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
             </div>
           </div>
-          <!-- Dashed Connector -->
-          <div class="h-16 w-px border-l border-dashed border-[var(--a2ci-red)] transition-colors"></div>
-          <!-- Dot -->
-          <div class="w-4 h-4 rounded-full bg-[var(--a2ci-red)] shadow-lg shadow-red-500/30 flex items-center justify-center -mt-2 border-2 border-white">
-            <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+          <div class="h-12 w-px border-l border-dashed border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-12 h-12 rounded-full bg-white border border-[var(--a2ci-red)]/30 shadow-lg flex items-center justify-center -mt-6 z-20">
+            <div class="w-3 h-3 rounded-full bg-[var(--a2ci-red)]"></div>
           </div>
-          <!-- Description -->
-          <div class="mt-8 text-center px-2">
-            <h3 class="text-xs font-bold uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Nouvel Horizon</h3>
-            <p class="text-[11px] text-gray-700 leading-relaxed font-semibold">Reprise par l'équipe actuelle. Innovation et engagement durable.</p>
+          <div class="mt-6 text-center max-w-[260px]">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Nouvel Horizon</h3>
+            <p class="text-[12px] text-gray-700 leading-relaxed font-bold">Reprise par l'équipe actuelle. Innovation et engagement pour l'avenir.</p>
           </div>
         </div>
-
-        <!-- Ghost Spacer to ensure full scrolling space at the end -->
-        <div class="w-20 shrink-0 h-1"></div>
 
       </div>
     </div>
