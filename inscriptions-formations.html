@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modalités d'inscription - A2CI Prévention</title>
+  <meta name="description" content="Découvrez les étapes et modalités d'accès à nos formations sécurité incendie et secourisme." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-dark: #960606;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    
+    .step-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 2.5rem;
+      border: 1px solid #f1f1f1;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+      border-color: var(--a2ci-red);
+    }
+    .step-number {
+      position: absolute;
+      top: -1.5rem;
+      left: 2.5rem;
+      width: 3rem;
+      height: 3rem;
+      background: var(--a2ci-red);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(227, 6, 19, 0.2);
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<section class="relative pt-32 pb-20 bg-black">
+  <div class="absolute inset-0 z-0 opacity-20">
+    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="S'inscrire aux formations A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
+  </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-8">
+    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+      Retour au catalogue
+    </a>
+    <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white mb-6 uppercase tracking-tight">Modalités <br><span class="text-[var(--a2ci-red)]">d'inscription.</span></h1>
+    <p class="max-w-2xl text-lg text-gray-400 font-light leading-relaxed">Retrouvez ci-dessous les étapes clés et les modalités d'accès à nos sessions de formation professionnelle.</p>
+  </div>
+</section>
+
+<section class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-8">
+    
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+      
+      <!-- Étape 1 -->
+      <div class="step-card reveal-on-scroll">
+        <div class="step-number">01</div>
+        <h3 class="text-xl font-bold mb-4 mt-2">Dossier Client</h3>
+        <p class="text-gray-600 font-light leading-relaxed mb-6">Si vous êtes nouveau client, la première étape consiste à enregistrer votre fiche établissement pour faciliter vos futures demandes.</p>
+        <a href="index.html#contact" class="inline-flex items-center gap-2 text-[var(--a2ci-red)] font-bold text-sm hover:underline">
+          Compléter le formulaire ici
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        </a>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="step-card reveal-on-scroll" style="transition-delay: 100ms;">
+        <div class="step-number">02</div>
+        <h3 class="text-xl font-bold mb-4 mt-2">Étude & Devis</h3>
+        <p class="text-gray-600 font-light leading-relaxed">Nos experts analysent vos besoins spécifiques, vos contraintes et vos effectifs pour vous transmettre un devis détaillé et adapté à votre structure sous un délai moyen de quelques heures.</p>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="step-card reveal-on-scroll" style="transition-delay: 200ms;">
+        <div class="step-number">03</div>
+        <h3 class="text-xl font-bold mb-4 mt-2">Pré-inscription</h3>
+        <p class="text-gray-600 font-light leading-relaxed mb-4">Votre pré-inscription devient valide dès que les éléments suivants sont confirmés :</p>
+        <ul class="space-y-2 text-sm text-gray-700 font-medium">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[var(--a2ci-red)] rounded-full"></span> Date(s) et horaire(s) défini(s) d'un commun accord</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[var(--a2ci-red)] rounded-full"></span> Réception du devis signé avec bon pour accord</li>
+        </ul>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="step-card reveal-on-scroll" style="transition-delay: 300ms;">
+        <div class="step-number">04</div>
+        <h3 class="text-xl font-bold mb-4 mt-2">Validation Finale</h3>
+        <p class="text-gray-600 font-light leading-relaxed">Pour finaliser et sécuriser définitivement votre session, vous devrez nous retourner la <strong>Convention de Formation Professionnelle</strong> signée, qui fait acte d'engagement réciproque.</p>
+      </div>
+
+    </div>
+
+    <!-- Délais et Engagement -->
+    <div class="mt-24 bg-gray-50 rounded-[3rem] p-10 lg:p-16 border border-gray-100 flex flex-col md:flex-row gap-12 items-center reveal-on-scroll">
+      <div class="md:w-1/3">
+        <div class="w-20 h-20 bg-black rounded-2xl flex items-center justify-center mb-6">
+          <svg class="w-10 h-10 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <h4 class="text-2xl font-bold uppercase mb-4">Délais de traitement</h4>
+        <p class="text-gray-500 text-sm font-light">Réactivité et planification stratégique pour votre sécurité.</p>
+      </div>
+      <div class="md:w-2/3 space-y-6">
+        <p class="text-xl text-gray-800 font-medium leading-relaxed">Dès réception de votre demande, l’inscription sera traitée sous un délai allant de <span class="text-[var(--a2ci-red)] font-bold">quelques heures à 6 mois</span> selon la complexité du programme.</p>
+        <div class="h-px w-full bg-gray-200"></div>
+        <p class="text-gray-600 italic">"Nous nous adaptons à vos attentes, en fonction de nos disponibilités et de vos contraintes techniques et opérationnelles."</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="py-24 bg-black text-white text-center">
+  <div class="max-w-4xl mx-auto px-8">
+    <h2 class="font-heading text-3xl font-bold mb-8 uppercase">Prêt à planifier votre session ?</h2>
+    <p class="text-gray-400 mb-10 font-light">Prenez contact avec notre responsable pédagogique pour une étude personnalisée de votre plan de formation.</p>
+    <a href="index.html#contact" class="inline-block px-10 py-5 bg-[var(--a2ci-red)] rounded-full text-sm font-bold uppercase tracking-widest hover:bg-red-700 transition-all hover:scale-105">Nous contacter</a>
+  </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Reveal animations
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
