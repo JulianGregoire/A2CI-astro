@@ -9,8 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
     :root {
       --a2ci-red: #960606;
       --a2ci-red-light: #C40808;
@@ -108,54 +117,31 @@
 
 
 <!-- Hero Section -->
-<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-white">
-  <!-- Subtle Background Pattern -->
-  <div class="absolute inset-0 z-0 opacity-[0.03] pointer-events-none">
-    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" stroke-width="1"/>
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#grid)" />
-    </svg>
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Coordination SSI A2CI" class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
-
-  <div class="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:py-32">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
-      <div class="reveal-on-scroll active">
-        <div class="inline-flex items-center gap-2 mb-8 px-4 py-2 bg-gray-100 rounded-full border border-gray-200 shadow-sm">
-          <span class="w-2 h-2 rounded-full bg-[var(--a2ci-red)] animate-pulse"></span>
-          <span class="text-[10px] font-bold uppercase tracking-widest text-gray-600">Expertise Réglementaire</span>
-        </div>
-        <h1 class="font-heading text-6xl lg:text-8xl font-extrabold mb-8 leading-[0.95] tracking-tight text-gray-900">
-          Coordination <br><span class="text-gradient">SSI.</span>
-        </h1>
-        <p class="text-xl text-gray-600 leading-relaxed mb-12 font-light max-w-xl">
-          Ingénierie de pointe pour la mise en conformité de vos établissements. Un accompagnement stratégique de la conception à la réception finale.
-        </p>
-        <div class="flex flex-wrap gap-6">
-          <div class="glass-card px-8 py-5 rounded-3xl">
-            <div class="text-[var(--a2ci-red)] font-black text-xl mb-1">NF S 61-932</div>
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Installation</div>
-          </div>
-          <div class="glass-card px-8 py-5 rounded-3xl">
-            <div class="text-[var(--a2ci-red)] font-black text-xl mb-1">NF S 61-970</div>
-            <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Conception</div>
-          </div>
-        </div>
+  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
+    <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      Expertise Réglementaire
+    </div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6">
+      Coordination <br><span class="text-[var(--a2ci-red-light)]">SSI.</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed mb-10">
+      Ingénierie de pointe pour la mise en conformité de vos établissements. Un accompagnement stratégique de la conception à la réception finale.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md">
+        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">NF S 61-932</div>
+        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Installation</div>
       </div>
-      
-      <div class="relative reveal-on-scroll active" style="transition-delay: 200ms;">
-        <div class="absolute -inset-10 bg-gradient-to-tr from-[var(--a2ci-red)]/20 to-transparent blur-3xl opacity-30 rounded-full animate-float-premium"></div>
-        <div class="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white transform rotate-2 hover:rotate-0 transition-transform duration-700">
-          <img src="images/ssi_hero.png" alt="Coordination SSI Expertise" class="w-full h-auto" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-          <div class="absolute bottom-10 left-10 text-white">
-            <div class="text-3xl font-heading font-black">SDIS 33</div>
-            <div class="text-sm font-bold opacity-80">Conformité Garantie</div>
-          </div>
-        </div>
+      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md">
+        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">NF S 61-970</div>
+        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Conception</div>
       </div>
     </div>
   </div>
@@ -385,6 +371,25 @@
 
   document.querySelectorAll('.reveal-on-scroll').forEach(el => {
     observer.observe(el);
+  });
+
+  // Particles.js Initialization
+  particlesJS('particles-js', {
+    "particles": {
+      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5, "random": false },
+      "size": { "value": 3, "random": true },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+      "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+      "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+    },
+    "retina_detect": true
   });
 </script>
 
