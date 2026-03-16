@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BET & AMO - A2CI Prévention Incendie</title>
+  <meta name="description" content="Bureau d'Études Techniques et Assistance à Maîtrise d'Ouvrage (AMO) par A2CI. Expertise en conception, suivi et réception SSI en Gironde." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/components.js" defer></script>
+  <style>
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    :root {
+      --a2ci-red: #960606;
+      --a2ci-red-light: #C40808;
+      --a2ci-dark: #0b0b0b;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    
+    .premium-gradient {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .glass-card {
+      background: var(--glass-white);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+    
+    .text-gradient {
+      background: linear-gradient(135deg, var(--a2ci-red) 0%, #b3050f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-15px) rotate(1deg); }
+    }
+    .animate-float-premium {
+      animation: float 8s ease-in-out infinite;
+    }
+
+    /* Custom bullet list */
+    .premium-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .premium-list li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: bold;
+    }
+
+    .tech-step {
+        border-left: 2px solid #e5e7eb;
+        padding-left: 2rem;
+        position: relative;
+    }
+    .tech-step::before {
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--a2ci-red);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg" alt="BET & AMO A2CI" class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
+    <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      Ingénierie & Assistance
+    </div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6">
+      Bureau d'Études <br><span class="text-[var(--a2ci-red-light)]">& AMO.</span>
+    </h1>
+    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Assistance à Maîtrise d’Ouvrage stratégique : de la consultation des entreprises au suivi opérationnel des chantiers SSI.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md">
+        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">BET</div>
+        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Technique</div>
+      </div>
+      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md">
+        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">AMO</div>
+        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Consultation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission Overview -->
+<section class="py-24 bg-white relative">
+    <div class="mx-auto max-w-4xl px-6 text-center">
+        <div class="reveal-on-scroll">
+            <h2 class="font-heading text-3xl font-bold mb-8 text-gray-900 uppercase tracking-tighter">Notre <span class="text-[var(--a2ci-red)]">Mission</span></h2>
+            <p class="text-xl text-gray-600 leading-relaxed font-light mb-12 italic">
+                "Assister la maîtrise d’ouvrages dans la consultation des entreprises et les phases de suivi et de réception des travaux liés aux installations des systèmes de sécurité incendie."
+            </p>
+            <div class="h-1 w-20 bg-[var(--a2ci-red)] mx-auto rounded-full"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase Étude : Technical Journey -->
+<section class="py-32 bg-gray-50 relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="text-center lg:text-left mb-20 reveal-on-scroll">
+            <h2 class="font-heading text-5xl font-bold text-gray-900 leading-tight">Phase <br><span class="text-[var(--a2ci-red)]">Étude.</span></h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16">
+            <div class="space-y-12">
+                <!-- Concept -->
+                <div class="reveal-on-scroll tech-step">
+                    <h4 class="text-2xl font-bold mb-4 text-gray-900">Initialisation & Process</h4>
+                    <p class="text-gray-500 leading-relaxed mb-4 font-light">Rencontre avec les intervenants (MOA, MOE, Bureaux de contrôle) pour définir le phasage des travaux et la corrélation entre les corps d’état.</p>
+                </div>
+
+                <!-- Visite -->
+                <div class="reveal-on-scroll tech-step" style="transition-delay: 100ms;">
+                    <h4 class="text-2xl font-bold mb-4 text-gray-900">Visite Technique</h4>
+                    <p class="text-gray-500 leading-relaxed font-light">Audit par notre Ingénieur Conseil : relevé d'équipements, évaluation des difficultés de chantier et contraintes structurelles.</p>
+                </div>
+
+                <!-- Plans -->
+                <div class="reveal-on-scroll tech-step" style="transition-delay: 200ms;">
+                    <h4 class="text-2xl font-bold mb-4 text-gray-900">Cartographie & Plans</h4>
+                    <p class="text-gray-500 leading-relaxed font-light">Récupération des fonds de plans AutoCAD. Notre chargé d'études assure la numérisation si aucun support informatique n'est disponible.</p>
+                </div>
+
+                <!-- Analyse AO -->
+                <div class="reveal-on-scroll tech-step" style="transition-delay: 300ms;">
+                    <h4 class="text-2xl font-bold mb-4 text-gray-900">Appel d'Offres & Budget</h4>
+                    <p class="text-gray-500 leading-relaxed font-light">Chiffrage budgetaire, analyse des offres entreprises, rédaction des questionnaires et tableaux de classement.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[3rem] p-12 shadow-xl border border-gray-100 reveal-on-scroll" style="transition-delay: 200ms;">
+                <h4 class="text-2xl font-bold mb-8 text-gray-900">Consultation des Entreprises (DCE)</h4>
+                <div class="space-y-6">
+                    <div class="p-6 bg-gray-50 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="p-3 bg-[var(--a2ci-red)] text-white rounded-xl">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">CCTP & RC</h5>
+                            <p class="text-sm text-gray-500">Cahier des Clauses Techniques Particulières et Règlement de Consultation.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="p-3 bg-[var(--a2ci-red)] text-white rounded-xl">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">DPGF</h5>
+                            <p class="text-sm text-gray-500">Décompte de Prix Global et Forfaitaire pour une maîtrise budgétaire optimale.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="p-3 bg-[var(--a2ci-red)] text-white rounded-xl">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-900">Plans d'Implantation</h5>
+                            <p class="text-sm text-gray-500">Localisation précise des matériels (Détection & Mise en sécurité) AutoCAD.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 p-6 border-l-4 border-[var(--a2ci-red)] bg-gray-50 rounded-r-2xl">
+                    <p class="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Nota Professionnel</p>
+                    <p class="text-sm text-gray-600 italic">Études réalisées sous l'entête du Maître d'Ouvrage (CCTP, DPGF) ou selon ses trames d'analyse pour une intégration parfaite dans vos process.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase Réalisation : Grid Control -->
+<section class="py-32 bg-white relative">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="flex flex-col lg:flex-row items-center gap-20 mb-32">
+            <div class="lg:w-1/2 reveal-on-scroll">
+                <h2 class="font-heading text-6xl font-black text-gray-900 mb-8">Phase <br><span class="text-[var(--a2ci-red)]">Réalisation.</span></h2>
+                <div class="space-y-10">
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold">01</div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Pilotage Site</h5>
+                            <p class="text-gray-500 leading-relaxed font-light">Organisation et participation aux réunions de chantier spécifiques SSI. Rédaction et diffusion systématique des comptes-rendus.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold">02</div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Suivi Temporel</h5>
+                            <p class="text-gray-500 leading-relaxed font-light">Contrôle permanent de l'avancement travaux par rapport au planning initial. Relances proactives des entreprises.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold">03</div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-2">Gestion Administrative</h5>
+                            <p class="text-gray-500 leading-relaxed font-light">Validation des situations mensuelles entreprises et sous-traitants pour faciliter la gestion financière du MOA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="relative group">
+                    <div class="absolute -inset-10 bg-[var(--a2ci-red)]/10 blur-3xl rounded-full opacity-50 group-hover:scale-110 transition-all duration-700"></div>
+                    <div class="relative glass-card p-4 rounded-[3.5rem] border-white shadow-2xl">
+                        <img src="https://images.pexels.com/photos/1239167/pexels-photo-1239167.jpeg" alt="Suivi réalisation SSI" class="rounded-[2.5rem] w-full h-auto animate-float-premium" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modification Management Block -->
+        <div class="bg-gray-900 rounded-[3rem] p-12 lg:p-20 text-white reveal-on-scroll shadow-2xl">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="font-heading text-4xl font-bold mb-6">Gestion des <br><span class="text-[var(--a2ci-red-light)]">Modifications.</span></h3>
+                    <p class="text-gray-400 text-lg font-light leading-relaxed">
+                        Toutes les évolutions en cours de chantier sont notifiées par écrit et transmises au coordinateur SSI pour mise à jour immédiate des plans et tableaux de corrélation.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
+                        <div class="text-3xl mb-2">✍️</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-[var(--a2ci-red-light)]">Écrit</div>
+                        <div class="text-[10px] text-gray-500 mt-2 font-medium italic">Traçabilité totale</div>
+                    </div>
+                    <div class="p-8 bg-white/5 rounded-3xl border border-white/10 text-center">
+                        <div class="text-3xl mb-2">🔄</div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-[var(--a2ci-red-light)]">Sync</div>
+                        <div class="text-[10px] text-gray-500 mt-2 font-medium italic">Coordination SSI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Phase Réception : Final Check -->
+<section class="py-32 bg-gray-50 relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-6">
+        <div class="flex flex-col lg:flex-row gap-20 items-end">
+            <div class="lg:w-3/5 reveal-on-scroll">
+                <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-[var(--a2ci-red)] mb-6">Phase de Clôture</p>
+                <h2 class="font-heading text-5xl lg:text-7xl font-bold text-gray-900 mb-10 leading-[0.9]">Réception <br><span class="text-gradient">Technique.</span></h2>
+                <div class="glass-card p-10 rounded-[2.5rem] bg-white border-transparent shadow-xl">
+                    <p class="text-gray-600 text-lg leading-relaxed font-light mb-8">
+                        Assistance à la maîtrise d’ouvrages dans la préparation des réceptions finales en coordination avec le coordinateur SSI et le bureau de contrôle.
+                    </p>
+                    <ul class="premium-list text-gray-500 leading-relaxed font-light">
+                        <li>Lancement de la réception finale des installations SSI.</li>
+                        <li>Coordination Maître d'Ouvrage / Maître d’Œuvres / Coordinateur SSI.</li>
+                        <li>Interface directe avec le Bureau de Contrôle pour validation finale.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lg:w-2/5 reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="p-8 rounded-[2.5rem] bg-[var(--a2ci-red)] text-white shadow-2xl shadow-red-900/40 transform -rotate-2">
+                    <h5 class="text-xl font-bold mb-4">Garantie Finale</h5>
+                    <p class="text-sm text-red-100 font-light leading-relaxed">
+                        Bien qu'A2CI n'établisse pas le PV de test final (prérogative exclusive du coordinateur SSI), nous assurons une réception finale méticuleuse en coordination avec tous les interlocuteurs du projet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Particles.js Initialization
+  particlesJS('particles-js', {
+    "particles": {
+      "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5, "random": false },
+      "size": { "value": 2, "random": true },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
+      "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
