@@ -218,118 +218,120 @@
       <div class="h-1 w-20 bg-[var(--a2ci-red)] mx-auto rounded-full"></div>
     </div>
 
-    <!-- Improved Grid Timeline (Fixed, no scroll) -->
-    <div class="relative space-y-12 lg:space-y-0">
-      <!-- Vertical line for mobile, becomes horizontal logic on desktop -->
-      <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gray-100 lg:hidden"></div>
+    <!-- Timeline Container (Fixed on Desktop, Scrollable only if needed on small screens) -->
+    <div class="relative py-12 lg:py-20">
+      <!-- Main Horizontal Line (Axis) -->
+      <div class="absolute left-0 right-0 top-[220px] lg:top-[260px] h-0.5 bg-gray-200 z-0 hidden md:block">
+        <div class="absolute inset-y-0 left-0 bg-[var(--a2ci-red)] w-full opacity-30"></div>
+      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
+      <div class="flex flex-wrap md:flex-nowrap justify-between gap-4 md:gap-2 relative z-10">
         
         <!-- 2006 -->
-        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2">
-          <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2006</span>
-            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2006.png" alt="2006" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+        <div class="group flex flex-col items-center w-full md:w-1/6 transition-all hover:-translate-y-2">
+          <div class="mb-4 text-center">
+            <span class="text-[10px] lg:text-xs font-bold text-gray-500 mb-1 block tracking-wider">2006</span>
+            <div class="w-24 h-32 lg:w-32 lg:h-44 overflow-hidden rounded-lg shadow-lg border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 mx-auto">
+              <img src="images/hist_2006.png" alt="2006" class="w-full h-full object-cover" />
             </div>
           </div>
-          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
-          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
-            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-3 h-3 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-1.5 hidden md:flex">
+            <div class="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-white"></div>
           </div>
-          <div class="mt-6 text-center max-w-[260px]">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Création</h3>
-            <p class="text-[12px] text-gray-500 leading-relaxed">Fondation par Mr Rémy DENIS. Création de l'expertise historique en Coordination SSI.</p>
+          <div class="mt-4 text-center px-1">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-1">Création</h3>
+            <p class="text-[9px] lg:text-[10px] text-gray-500 leading-tight">Fondation par Mr Rémy DENIS. Expertise SSI.</p>
           </div>
         </div>
 
         <!-- 2007 -->
-        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2 lg:mt-16">
-          <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2007</span>
-            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2007.png" alt="2007" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+        <div class="group flex flex-col items-center w-full md:w-1/6 transition-all hover:-translate-y-2 md:mt-10">
+          <div class="mb-4 text-center">
+            <span class="text-[10px] lg:text-xs font-bold text-gray-500 mb-1 block tracking-wider">2007</span>
+            <div class="w-24 h-32 lg:w-32 lg:h-44 overflow-hidden rounded-lg shadow-lg border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 mx-auto">
+              <img src="images/hist_2007.png" alt="2007" class="w-full h-full object-cover" />
             </div>
           </div>
-          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
-          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
-            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-3 h-3 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-1.5 hidden md:flex">
+            <div class="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-white"></div>
           </div>
-          <div class="mt-6 text-center max-w-[260px]">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Bureau d'Études</h3>
-            <p class="text-[12px] text-gray-500 leading-relaxed">Extension à l'ingénierie technique incendie et conception de plans réglementaires.</p>
+          <div class="mt-4 text-center px-1">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-1">Bureau d'Études</h3>
+            <p class="text-[9px] lg:text-[10px] text-gray-500 leading-tight">Ingénierie technique et plans SSI.</p>
           </div>
         </div>
 
         <!-- 2009 -->
-        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2">
-          <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2009</span>
-            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2009.png" alt="2009" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+        <div class="group flex flex-col items-center w-full md:w-1/6 transition-all hover:-translate-y-2">
+          <div class="mb-4 text-center">
+            <span class="text-[10px] lg:text-xs font-bold text-gray-500 mb-1 block tracking-wider">2009</span>
+            <div class="w-24 h-32 lg:w-32 lg:h-44 overflow-hidden rounded-lg shadow-lg border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 mx-auto">
+              <img src="images/hist_2009.png" alt="2009" class="w-full h-full object-cover" />
             </div>
           </div>
-          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
-          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
-            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-3 h-3 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-1.5 hidden md:flex">
+            <div class="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-white"></div>
           </div>
-          <div class="mt-6 text-center max-w-[260px]">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Pôle Formation</h3>
-            <p class="text-[12px] text-gray-500 leading-relaxed">Lancement du service de formation pour la gestion opérationnelle des risques.</p>
+          <div class="mt-4 text-center px-1">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-1">Formation</h3>
+            <p class="text-[9px] lg:text-[10px] text-gray-500 leading-tight">Ouverture du service formation.</p>
           </div>
         </div>
 
         <!-- 2012 -->
-        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2 lg:-mt-16">
-          <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2012</span>
-            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2012.png" alt="2012" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+        <div class="group flex flex-col items-center w-full md:w-1/6 transition-all hover:-translate-y-2 md:mt-10">
+          <div class="mb-4 text-center">
+            <span class="text-[10px] lg:text-xs font-bold text-gray-500 mb-1 block tracking-wider">2012</span>
+            <div class="w-24 h-32 lg:w-32 lg:h-44 overflow-hidden rounded-lg shadow-lg border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 mx-auto">
+              <img src="images/hist_2012.png" alt="2012" class="w-full h-full object-cover" />
             </div>
           </div>
-          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
-          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
-            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-3 h-3 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-1.5 hidden md:flex">
+            <div class="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-white"></div>
           </div>
-          <div class="mt-6 text-center max-w-[260px]">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Consolidation</h3>
-            <p class="text-[12px] text-gray-500 leading-relaxed">Renforcement de l'accompagnement des établissements recevant du public (ERP).</p>
+          <div class="mt-4 text-center px-1">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-1">Consolidation</h3>
+            <p class="text-[9px] lg:text-[10px] text-gray-500 leading-tight">Accompagnement ERT renforcé.</p>
           </div>
         </div>
 
         <!-- 2013 -->
-        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2">
-          <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-gray-400 mb-2 block tracking-widest">2013</span>
-            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-xl border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700">
-              <img src="images/hist_2013.png" alt="2013" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+        <div class="group flex flex-col items-center w-full md:w-1/6 transition-all hover:-translate-y-2">
+          <div class="mb-4 text-center">
+            <span class="text-[10px] lg:text-xs font-bold text-gray-500 mb-1 block tracking-wider">2013</span>
+            <div class="w-24 h-32 lg:w-32 lg:h-44 overflow-hidden rounded-lg shadow-lg border border-white/20 grayscale group-hover:grayscale-0 transition-all duration-700 mx-auto">
+              <img src="images/hist_2013.png" alt="2013" class="w-full h-full object-cover" />
             </div>
           </div>
-          <div class="h-12 w-px border-l border-dashed border-gray-200 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
-          <div class="w-12 h-12 rounded-full bg-white border border-gray-100 shadow-md group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-6 z-20">
-            <div class="w-3 h-3 rounded-full bg-gray-200 group-hover:bg-[var(--a2ci-red)] transition-all"></div>
+          <div class="h-12 w-px border-l border-dashed border-gray-300 group-hover:border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
+          <div class="w-3 h-3 rounded-full bg-white border-2 border-gray-300 group-hover:bg-[var(--a2ci-red)] group-hover:border-[var(--a2ci-red)] transition-all flex items-center justify-center -mt-1.5 hidden md:flex">
+            <div class="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-white"></div>
           </div>
-          <div class="mt-6 text-center max-w-[260px]">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-900 mb-2">Centre Dédié</h3>
-            <p class="text-[12px] text-gray-500 leading-relaxed">Création du centre de formation incendie et premier secours spécialisé.</p>
+          <div class="mt-4 text-center px-1">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-1">Centre Technique</h3>
+            <p class="text-[9px] lg:text-[10px] text-gray-500 leading-tight">Centre dédié Risques & Secours.</p>
           </div>
         </div>
 
         <!-- 2021 -->
-        <div class="group relative flex flex-col items-center transition-all duration-500 hover:-translate-y-2 lg:mt-16">
-          <div class="mb-6 text-center">
-            <span class="text-sm font-bold text-[var(--a2ci-red)] mb-2 block tracking-widest">2021</span>
-            <div class="w-full aspect-[4/5] max-w-[240px] overflow-hidden rounded-2xl shadow-2xl border-2 border-[var(--a2ci-red)]/40 grayscale-0 transition-all duration-700">
-              <img src="images/hist_2021.png" alt="2021" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+        <div class="group flex flex-col items-center w-full md:w-1/6 transition-all hover:-translate-y-2 md:mt-10">
+          <div class="mb-4 text-center">
+            <span class="text-[10px] lg:text-xs font-bold text-[var(--a2ci-red)] mb-1 block tracking-wider">2021</span>
+            <div class="w-24 h-32 lg:w-32 lg:h-44 overflow-hidden rounded-lg shadow-2xl border-2 border-[var(--a2ci-red)]/50 group-hover:grayscale-0 transition-all duration-700 mx-auto">
+              <img src="images/hist_2021.png" alt="2021" class="w-full h-full object-cover" />
             </div>
           </div>
           <div class="h-12 w-px border-l border-dashed border-[var(--a2ci-red)] transition-colors hidden md:block"></div>
-          <div class="w-12 h-12 rounded-full bg-white border border-[var(--a2ci-red)]/30 shadow-lg flex items-center justify-center -mt-6 z-20">
-            <div class="w-3 h-3 rounded-full bg-[var(--a2ci-red)]"></div>
+          <div class="w-3 h-3 rounded-full bg-[var(--a2ci-red)] shadow-lg flex items-center justify-center -mt-1.5 border-2 border-white hidden md:flex">
+            <div class="w-1 h-1 rounded-full bg-white"></div>
           </div>
-          <div class="mt-6 text-center max-w-[260px]">
-            <h3 class="text-sm font-bold uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Nouvel Horizon</h3>
-            <p class="text-[12px] text-gray-700 leading-relaxed font-bold">Reprise par l'équipe actuelle. Innovation et engagement pour l'avenir.</p>
+          <div class="mt-4 text-center px-1">
+            <h3 class="text-[10px] font-bold uppercase tracking-widest text-[var(--a2ci-red)] mb-1">Nouvel Horizon</h3>
+            <p class="text-[9px] lg:text-[10px] text-gray-700 leading-tight font-semibold">Reprise & Innovation.</p>
           </div>
         </div>
 
