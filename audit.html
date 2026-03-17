@@ -192,66 +192,124 @@
 </section>
 
 <!-- Phase 2: Audit de Terrain - Visual Control (The Technical Grid) -->
-<section class="py-32 bg-white relative">
-    <div class="mx-auto max-w-7xl px-6">
-        <div class="flex flex-col lg:flex-row gap-20">
-            <div class="lg:w-1/3 reveal-on-scroll">
+<section class="py-32 bg-[#fafafa] relative overflow-hidden">
+    <div class="absolute inset-0 grid-pattern opacity-[0.03] -z-0"></div>
+    <div class="mx-auto max-w-7xl px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+            <div class="lg:w-[35%] reveal-on-scroll">
                 <div class="sticky top-32">
-                    <h3 class="font-heading text-4xl font-bold text-gray-900 mb-6 uppercase tracking-tighter">Maîtrise des <span class="text-[var(--a2ci-red)]">Réseaux.</span></h3>
-                    <p class="text-gray-500 leading-relaxed font-light mb-8">
-                        Un contrôle visuel méticuleux de l'installation pour déceler les non-conformités physiques souvent ignorées.
-                    </p>
-                    <div class="rounded-3xl overflow-hidden shadow-lg border border-gray-100 mb-8 transform rotate-1 hover:rotate-0 transition-transform duration-500">
-                        <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg" alt="Câblage technique" class="w-full h-auto" />
+                    <div class="inline-block px-3 py-1 bg-white border border-gray-200 text-[var(--a2ci-red)] text-[9px] font-black uppercase tracking-[0.2em] rounded-full mb-6 shadow-sm">
+                        Contrôle Physique
                     </div>
-                    <div class="p-6 bg-gray-50 border-l-4 border-[var(--a2ci-red)] rounded-r-2xl">
-                        <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Normes de référence</p>
-                        <p class="text-sm font-semibold text-gray-700 italic">NFC 15-100, NFS 61-932 & NFS 61-970</p>
+                    <h3 class="font-heading text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 leading-[1.1] tracking-tighter">
+                        Maîtrise des <br><span class="text-[var(--a2ci-red)]">Réseaux.</span>
+                    </h3>
+                    <p class="text-gray-500 text-lg leading-relaxed font-light mb-10">
+                        Un contrôle visuel méticuleux de l'installation pour déceler les non-conformités physiques souvent ignorées, garantissant la pérennité de votre investissement.
+                    </p>
+                    
+                    <div class="group relative mb-12">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-[var(--a2ci-red)] to-red-400 rounded-[2.5rem] opacity-20 blur-xl group-hover:opacity-30 transition-opacity"></div>
+                        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
+                            <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg" alt="Câblage technique premium" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                <p class="text-white text-[10px] font-bold uppercase tracking-widest">Inspection de conformité câblage</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 bg-white border border-gray-100 rounded-[2rem] shadow-sm relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-1.5 h-full bg-[var(--a2ci-red)]"></div>
+                        <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3">Référentiels Techniques</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-gray-50 text-gray-700 text-[10px] font-bold rounded border border-gray-100">NFC 15-100</span>
+                            <span class="px-2 py-1 bg-gray-50 text-gray-700 text-[10px] font-bold rounded border border-gray-100">NFS 61-932</span>
+                            <span class="px-2 py-1 bg-gray-50 text-gray-700 text-[10px] font-bold rounded border border-gray-100">NFS 61-970</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-2/3 grid sm:grid-cols-2 gap-6 reveal-on-scroll">
-                <div class="tech-card">
-                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-                        Séparation Réseaux
-                    </h6>
-                    <p class="text-sm text-gray-500 font-light">Séparation stricte des réseaux SSI et DAS des autres flux du bâtiment.</p>
+
+            <div class="lg:w-[65%] grid sm:grid-cols-2 gap-x-8 gap-y-10 reveal-on-scroll">
+                <!-- Card 1 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                        <span class="text-6xl font-black text-gray-900">01</span>
+                    </div>
+                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
+                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Séparation Réseaux</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Vérification de la séparation stricte des courants faibles SSI/DAS des autres réseaux polluants (courants forts, info) pour éviter toute interférence.
+                    </p>
                 </div>
-                <div class="tech-card">
-                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-                        Fixations Stables
-                    </h6>
-                    <p class="text-sm text-gray-500 font-light">Vérification des fixations réalisées sur les parties stables du bâtiment.</p>
+
+                <!-- Card 2 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                        <span class="text-6xl font-black text-gray-900">02</span>
+                    </div>
+                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
+                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Fixations Stables</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Audit des supports : chaque câble doit être fixé sur les parties pérennes du bâtiment, interdisant l'usage de câbles "volants" sur faux-plafonds.
+                    </p>
                 </div>
-                <div class="tech-card">
-                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-                        Zéro "Câbles Volants"
-                    </h6>
-                    <p class="text-sm text-gray-500 font-light">Audit des réseaux pour s'assurer qu'aucun câble ne repose sur les plafonds.</p>
+
+                <!-- Card 3 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                        <span class="text-6xl font-black text-gray-900">03</span>
+                    </div>
+                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
+                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Conformité Câbles</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Contrôle de la catégorie des câbles (CR1, C2...) en fonction de leur rôle critique dans la chaîne de sécurité et de l'environnement traversé.
+                    </p>
                 </div>
-                <div class="tech-card">
-                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-                        Catégorie Câbles
-                    </h6>
-                    <p class="text-sm text-gray-500 font-light">Conformité des types de câblage aux exigences réglementaires SSI.</p>
+
+                <!-- Card 4 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                        <span class="text-6xl font-black text-gray-900">04</span>
+                    </div>
+                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
+                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Positionnement Matériel</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light">
+                        Analyse du positionnement physique des détecteurs, DM et DS selon les zones de protection et les flux d'évacuation prévus.
+                    </p>
                 </div>
-                <div class="tech-card">
-                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-                        Positionnement
-                    </h6>
-                    <p class="text-sm text-gray-500 font-light">Audit du positionnement des détecteurs, DM, DS et matériels déportés.</p>
-                </div>
-                <div class="tech-card">
-                    <h6 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                        <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-                        Feu & Traversées
-                    </h6>
-                    <p class="text-sm text-gray-500 font-light">Contrôle du rebouchage des cloisons, planchers et plafonds coupe-feu.</p>
+
+                <!-- Card 5 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden sm:col-span-2">
+                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
+                        <span class="text-6xl font-black text-gray-900">05</span>
+                    </div>
+                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
+                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Sectorisation & Rebouchage</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed font-light max-w-2xl">
+                        Vérification critique du rebouchage coupe-feu des traversées de cloisons et planchers. Une faille dans l'étanchéité rend la sectorisation inefficace face aux fumées.
+                    </p>
                 </div>
             </div>
         </div>
