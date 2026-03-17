@@ -212,13 +212,6 @@
           </div>
         </div>
       </div>
-          </div>
-          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="https://images.pexels.com/photos/6646915/pexels-photo-6646915.jpeg" alt="Recyclage SST" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          </div>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -236,6 +229,16 @@
 <div id="footer-component"></div>
 
 <script>
+  // Simple Scroll Reveal Observer
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
   document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 
   // --- Filter Logic ---
