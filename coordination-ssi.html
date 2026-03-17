@@ -271,43 +271,59 @@
 
 <div id="header-component"></div>
 
-<!-- HERO (White) -->
-<section class="hero bg-white pt-[140px] pb-12">
-  <div class="container-custom py-0">
-    <div class="section-custom scroll-reveal">
-      <div class="section-text">
-        <div class="badge-premium mb-8 bg-red-50 border-red-100">
-          <span class="badge-dot"></span>
-          <span class="badge-text text-[var(--a2ci-red)]">Expertise & Prévention</span>
-        </div>
-        
-        <h1 class="font-heading text-5xl lg:text-6xl font-bold mb-8 leading-tight text-gray-900">
-          Coordination <br>
-          <span class="text-[var(--a2ci-red)]">SSI.</span>
-        </h1>
-        
-        <p class="text-lg text-gray-600 mb-10 leading-relaxed">
-          Réalisation conforme aux normes <span class="text-gray-900 font-semibold">NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932.</span><br>
-          Un accompagnement stratégique de la conception à la réception finale pour garantir la sécurité et la conformité de vos établissements.
-        </p>
+<!-- HERO (Audit & Conseil style) -->
+<section class="hero scroll-reveal relative w-full overflow-hidden flex flex-col justify-center min-h-[700px] lg:min-h-[850px] bg-black">
+  <div class="absolute inset-0 z-0">
+    <img src="images/ssi_hero.png" alt="Coordination SSI" class="h-full w-full object-cover opacity-50">
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-transparent to-transparent opacity-60"></div>
+  </div>
+  
+  <div id="particles-js" class="absolute inset-0 z-0"></div>
 
-        <div class="flex flex-wrap gap-5">
-          <a href="index.html#contact" class="cta-button">
-            Demander une étude
-          </a>
-          <a href="#contenu-dossier" class="inline-flex items-center justify-center rounded-md border border-gray-200 bg-gray-50 px-8 py-4 text-base font-semibold text-gray-700 transition duration-300 hover:bg-gray-100">
-            Détails techniques
-          </a>
-        </div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+    <div class="max-w-3xl">
+      <!-- Badge style from Audit -->
+      <div class="inline-flex items-center gap-2 mb-8 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded shadow-lg shadow-red-900/20">
+        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+        Expertise Indépendante
       </div>
       
-      <div class="section-img">
-        <div class="img-wrapper">
-          <img src="images/ssi_hero.png" alt="Coordination SSI" class="glow-border rounded-2xl shadow-2xl">
+      <!-- Heading style from Audit -->
+      <h1 class="font-heading text-5xl lg:text-7xl font-extrabold mb-8 leading-[1.1] text-white tracking-tighter">
+        Coordination <br>
+        <span class="text-[var(--a2ci-red-light)]">SSI.</span>
+      </h1>
+      
+      <p class="text-lg lg:text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl font-light">
+        Assistance stratégique aux Maîtres d'Ouvrages pour la réalisation conforme aux normes <span class="text-white font-semibold">NFS 61-930 à 61-940</span>. Un accompagnement de la conception à la réception finale.
+      </p>
+
+      <!-- Glass Cards from Audit -->
+      <div class="flex flex-wrap gap-4 mb-12">
+        <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-white min-w-[200px] hover:bg-white/10 transition-all duration-300">
+          <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Conception</div>
+          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Administrative</div>
         </div>
+        <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-white min-w-[200px] hover:bg-white/10 transition-all duration-300">
+          <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Réception</div>
+          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Technique</div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-5">
+        <a href="index.html#contact" class="cta-button">
+          Demander une étude
+        </a>
+        <a href="#contenu-dossier" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10 group">
+          <span>Détails techniques</span>
+          <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
       </div>
     </div>
   </div>
+
+  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-10 opacity-0 lg:opacity-100"></div>
 </section>
 
 <!-- SECTION 1 (White) -->
