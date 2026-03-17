@@ -8,28 +8,30 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
     :root {
-      --a2ci-red: #960606;
-      --a2ci-red-light: #C40808;
+      --a2ci-red: #E30613;
+      --a2ci-red-light: #ff1a1a;
       --a2ci-black: #000000;
       --bg-dark: #0b0b0b;
       --card-dark: #111111;
       --border-dark: #222222;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
     }
     
     body { 
       margin: 0;
-      font-family: 'Open Sans', system-ui, -apple-system, sans-serif; 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
       background: #fff;
       color: #333;
     }
     
     .font-heading { 
-      font-family: 'Poppins', system-ui, -apple-system, sans-serif; 
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif; 
     }
 
     .container-custom {
@@ -39,7 +41,14 @@
     }
 
     h1, h2, h3 { margin-bottom: 20px; }
-    p { line-height: 1.7; }
+    p { line-height: 1.7; font-weight: 300; }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
 
     /* HERO (Dark) */
     .hero {
@@ -271,59 +280,52 @@
 
 <div id="header-component"></div>
 
-<!-- HERO (Audit & Conseil style) -->
-<section class="hero scroll-reveal relative w-full overflow-hidden flex flex-col justify-center min-h-[700px] lg:min-h-[850px] bg-black">
-  <div class="absolute inset-0 z-0">
-    <img src="images/ssi_hero.png" alt="Coordination SSI" class="h-full w-full object-cover opacity-50">
-    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-transparent to-transparent opacity-60"></div>
+<!-- HERO (Dark) -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-50">
+    <img src="images/ssi_hero.png" alt="Coordination SSI" class="h-full w-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
   
-  <div id="particles-js" class="absolute inset-0 z-0"></div>
+  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
 
-  <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
-    <div class="max-w-3xl">
-      <!-- Badge style from Audit -->
-      <div class="inline-flex items-center gap-2 mb-8 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded shadow-lg shadow-red-900/20">
-        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-        Expertise Indépendante
-      </div>
-      
-      <!-- Heading style from Audit -->
-      <h1 class="font-heading text-5xl lg:text-7xl font-extrabold mb-8 leading-[1.1] text-white tracking-tighter">
-        Coordination <br>
-        <span class="text-[var(--a2ci-red-light)]">SSI.</span>
-      </h1>
-      
-      <p class="text-lg lg:text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl font-light">
-        Assistance stratégique aux Maîtres d'Ouvrages pour la réalisation conforme aux normes <span class="text-white font-semibold">NFS 61-930 à 61-940</span>. Un accompagnement de la conception à la réception finale.
-      </p>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
+    <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      Expertise & Prévention
+    </div>
+    
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+      Coordination <br><span class="text-[var(--a2ci-red-light)]">SSI.</span>
+    </h1>
+    
+    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Réalisation conforme aux normes <span class="text-white font-semibold">NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932.</span><br>
+      Un accompagnement stratégique de la conception à la réception finale pour garantir la sécurité et la conformité de vos établissements.
+    </p>
 
-      <!-- Glass Cards from Audit -->
-      <div class="flex flex-wrap gap-4 mb-12">
-        <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-white min-w-[200px] hover:bg-white/10 transition-all duration-300">
-          <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Conception</div>
-          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Administrative</div>
-        </div>
-        <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md text-white min-w-[200px] hover:bg-white/10 transition-all duration-300">
-          <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Réception</div>
-          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Technique</div>
-        </div>
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Conception</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Technique</div>
       </div>
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Suivi</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Réglementaire</div>
+      </div>
+    </div>
 
-      <div class="flex flex-wrap gap-5">
-        <a href="index.html#contact" class="cta-button">
-          Demander une étude
-        </a>
-        <a href="#contenu-dossier" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10 group">
-          <span>Détails techniques</span>
-          <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
-      </div>
+    <div class="flex flex-wrap justify-center gap-5">
+      <a href="index.html#contact" class="cta-button">
+        Demander une étude
+      </a>
+      <a href="#contenu-dossier" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
+        Détails techniques
+      </a>
     </div>
   </div>
 
-  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent z-10 opacity-0 lg:opacity-100"></div>
+  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10 opacity-0 lg:opacity-100"></div>
 </section>
 
 <!-- SECTION 1 (White) -->
@@ -534,13 +536,13 @@
   if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', {
       "particles": {
-        "number": { "value": 40, "density": { "enable": true, "value_area": 800 } },
+        "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
         "color": { "value": "#ffffff" },
         "shape": { "type": "circle" },
-        "opacity": { "value": 0.1, "random": true },
+        "opacity": { "value": 0.5, "random": false },
         "size": { "value": 2, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.05, "width": 1 },
-        "move": { "enable": true, "speed": 0.8, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
       },
       "interactivity": {
         "detect_on": "canvas",
