@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document Unique (D.U) - Hygiène & Sécurité - A2CI</title>
-  <meta name="description" content="Accompagnement pour l'élaboration du Document Unique (DUERP). Évaluation des risques professionnels et prévention santé sécurité au travail." />
+  <title>Document Unique (DUER) - A2CI Prévention Incendie</title>
+  <meta name="description" content="Accompagnement pour l'élaboration et la mise à jour de votre Document Unique d’Évaluation des Risques Professionnels (DUER) avec A2CI." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,49 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
+    :root {
+      --a2ci-accent: #2563eb; /* Blue accent for Hygiene & Security */
+      --a2ci-accent-light: #60a5fa;
+      --a2ci-black: #000000;
+      --bg-dark: #050816;
+      --card-dark: #0b1020;
+      --border-dark: #151a30;
+    }
+    
+    body { 
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      background: #fff;
+      color: #333;
+    }
+    
+    .font-heading { 
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif; 
+    }
+
+    .container-custom {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { line-height: 1.7; font-weight: 300; }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    /* HERO (Dark) */
+    .hero {
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
     #particles-js {
       position: absolute;
       width: 100%;
@@ -19,293 +62,503 @@
       top: 0;
       left: 0;
       z-index: 1;
+      opacity: 0.25;
     }
-    :root {
-      --a2ci-red: #960606;
-      --a2ci-red-light: #C40808;
-      --a2ci-dark: #0b0b0b;
-      --glass-white: rgba(255, 255, 255, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.4);
+
+    /* TIMELINE */
+    .timeline-container {
+      position: relative;
+      padding: 40px 0;
     }
-    body { font-family: 'Inter', sans-serif; }
-    .font-heading { font-family: 'Outfit', sans-serif; }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, var(--a2ci-accent), transparent);
+      opacity: 0.3;
+    }
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
+    }
+    .step-dot {
+      width: 12px;
+      height: 12px;
+      background: var(--a2ci-accent);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      box-shadow: 0 0 15px var(--a2ci-accent);
+    }
+
+    /* SECTIONS */
+    .section-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .section-custom.reverse { flex-direction: row-reverse; }
+
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-accent);
+      border-left: 2px solid var(--a2ci-accent);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
+
+    .section-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* DARK SECTION */
+    .section-dark {
+      background: var(--bg-dark);
+      color: #fff;
+    }
     
-    .glass-card {
-      background: var(--glass-white);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    .section-dark p { color: #d1d5db; }
+    .section-dark .section-img img {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ACCORDEON (Dark) */
+    .accordion {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      background: var(--card-dark);
+    }
+
+    .accordion-item { border-bottom: 1px solid var(--border-dark); }
+    .accordion-item:last-child { border-bottom: none; }
+
+    .accordion-header {
+      padding: 24px;
+      cursor: pointer;
+      background: transparent;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .accordion-header:hover { background: rgba(255,255,255,0.03); }
+
+    .accordion-header svg {
+      transition: transform 0.3s;
+      width: 20px;
+      height: 20px;
+      color: var(--a2ci-accent);
+    }
+
+    .accordion-header.active { color: var(--a2ci-accent); }
+    .accordion-header.active svg { transform: rotate(180deg); }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0 24px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .accordion-content.open {
+      max-height: 2000px;
+      padding: 0 24px 24px 24px;
+    }
+
+    /* GLOW BORDER EFFECT */
+    .glow-border {
+      position: relative;
+      overflow: hidden;
+    }
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .glow-border:hover::before { transform: translateX(350%); }
+
+    /* CTA */
+    .section-cta { padding-bottom: 80px; }
+    .cta {
+      text-align: center;
+      padding: 80px 40px;
+      background: linear-gradient(145deg, #111 0%, #000 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border-dark);
+      position: relative;
+      color: #fff;
+    }
+
+    .cta::after {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px; right: -1px; bottom: -1px;
+      background: linear-gradient(45deg, transparent 40%, var(--a2ci-accent) 50%, transparent 60%);
+      z-index: -1;
+      border-radius: 24px;
+      opacity: 0.1;
+    }
+
+    .cta-button {
+      background: var(--a2ci-accent);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
     }
     
-    .reveal-on-scroll {
+    .cta-button:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+    }
+
+    .text-accent { color: var(--a2ci-accent); }
+
+    .scroll-reveal {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     
-    .reveal-on-scroll.active {
+    .scroll-reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
-
-    .premium-list li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-    .premium-list li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--a2ci-red);
-      font-weight: bold;
-    }
-
-    .law-card {
-        border-left: 4px solid var(--a2ci-red);
-        background: white;
-        padding: 1.5rem;
-        border-radius: 0 1.5rem 1.5rem 0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-    }
-    .law-card:hover {
-        transform: translateX(10px);
-    }
-
-    .step-number {
-        font-family: 'Outfit', sans-serif;
-        font-weight: 800;
-        font-size: 5rem;
-        line-height: 1;
-        opacity: 0.1;
-        position: absolute;
-        top: -1rem;
-        right: 1rem;
-        color: var(--a2ci-red);
-    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+<body class="overflow-x-hidden w-full">
 
 <div id="header-component"></div>
 
-<!-- Hero Section -->
-<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32">
+<!-- HERO (Dark) -->
+<section class="relative w-full overflow-hidden bg-[#050816] py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
   <div class="absolute inset-0 z-0 opacity-40">
     <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Document Unique A2CI" class="h-full w-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#050816] via-[#050816]/60 to-transparent"></div>
   </div>
+  
   <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+
   <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
-    <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
+    <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-accent)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
       <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-      Hygiène & Sécurité au Travail
+      Hygiène & Sécurité
     </div>
-    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6">
-      Document <br><span class="text-[var(--a2ci-red-light)]">Unique (D.U)</span>
+    
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+      Document Unique <br><span class="text-[var(--a2ci-accent-light)]">d’Évaluation des Risques.</span>
     </h1>
-    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light italic">
-      "L’évaluation des risques professionnels consiste à identifier, évaluer et analyser les risques auxquels sont exposés les salariés durant leur travail."
+    
+    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Identifier, évaluer et analyser les risques auxquels sont exposés les salariés durant leur travail pour une prévention efficace.
     </p>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-accent-light)] font-black text-xl mb-1">Obligatoire</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Dès 1 salarié</div>
+      </div>
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-accent-light)] font-black text-xl mb-1">Conformité</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Code du Travail</div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-5">
+      <a href="index.html#contact" class="cta-button">
+        Demander un accompagnement
+      </a>
+      <a href="#procede" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
+        Méthodologie
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10 opacity-0 lg:opacity-100"></div>
+</section>
+
+<!-- TIMELINE SECTION (White) -->
+<section id="procede" class="bg-white py-20">
+  <div class="container-custom py-0">
+    <div class="text-center mb-20 scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-4">Notre <span class="text-accent">Approche.</span></h2>
+      <p class="text-gray-500 font-light max-w-2xl mx-auto">Une démarche structurée pour transformer vos obligations en leviers de performance.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 relative px-4">
+      <div class="timeline-line hidden md:block" style="background: linear-gradient(to bottom, transparent, var(--a2ci-accent), transparent);"></div>
+      
+      <!-- Step 1 -->
+      <div class="text-center scroll-reveal">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-accent)] font-bold">01</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Identifier</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Recenser les risques de chaque unité de travail.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 100ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-accent)] font-bold">02</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Évaluer</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Analyser les risques selon leur gravité et leur fréquence.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 200ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-accent)] font-bold">03</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Prévenir</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Mettre en place des actions pour réduire ou supprimer les risques.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Réglementation Section -->
-<section class="py-24 bg-white relative">
-    <div class="mx-auto max-w-7xl px-6">
-        <div class="grid lg:grid-cols-2 gap-20">
-            <div class="reveal-on-scroll">
-                <h2 class="font-heading text-4xl font-bold mb-8 text-gray-900">Le Cadre <span class="text-[var(--a2ci-red)]">Réglementaire.</span></h2>
-                <div class="space-y-4">
-                    <div class="law-card">
-                        <p class="text-sm font-semibold text-gray-900">Code du Travail</p>
-                        <p class="text-xs text-gray-500">Articles L4121-1 à L4121-3, R4121-1, R4741-1</p>
-                    </div>
-                    <div class="law-card">
-                        <p class="text-sm font-semibold text-gray-900">Directives Européennes</p>
-                        <p class="text-xs text-gray-500">Directive n°89/391/CEE du 12 juin 1989</p>
-                    </div>
-                    <div class="law-card">
-                        <p class="text-sm font-semibold text-gray-900">Décrets & Circulaires</p>
-                        <p class="text-xs text-gray-500">Décrets 2001-1016, 2008-244, 2008-1347 | Circulaire DRT n°6</p>
-                    </div>
-                    <div class="law-card">
-                        <p class="text-sm font-semibold text-gray-900">Loi de Prévention</p>
-                        <p class="text-xs text-gray-500">Loi n° 91-1414 du 31 décembre 1991</p>
-                    </div>
-                </div>
-            </div>
-            <div class="reveal-on-scroll bg-black text-white p-12 rounded-[3.5rem] shadow-2xl relative overflow-hidden">
-                <div class="absolute -top-4 -right-4 w-32 h-32 bg-[var(--a2ci-red)] opacity-10 rounded-full"></div>
-                <div class="mb-10 rounded-[2rem] overflow-hidden border border-white/10 shadow-lg">
-                    <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg" alt="Signature responsable" class="w-full h-48 object-cover opacity-80" />
-                </div>
-                <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
-                    <span class="w-8 h-8 rounded-lg bg-[var(--a2ci-red)] flex items-center justify-center text-sm italic">i</span>
-                    Responsabilité du Dirigeant
-                </h3>
-                <p class="text-gray-400 font-light leading-relaxed mb-8">
-                    La personne responsable de l’élaboration du Document Unique est le <span class="text-white font-bold">chef d’entreprise</span>. 
-                    Il engage sa responsabilité pénale en cas d'accident si la législation n'est pas respectée.
-                </p>
-                <div class="p-6 bg-white/5 border border-white/10 rounded-2xl italic text-sm text-red-200">
-                    "Le fait de ne pas transcrire ou de ne pas mettre à jour les résultats de l’évaluation des risques est puni d’une amende de 5ème classe."
-                </div>
-                <p class="mt-4 text-[10px] text-gray-500 uppercase tracking-widest">(Article R4741-1 du Code du Travail)</p>
-            </div>
+<!-- SECTION 1 (White) -->
+<section class="bg-[#fafafa]">
+  <div class="container-custom">
+    <div class="section-custom scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-accent)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Obligation <span class="text-accent">réglementaire</span></h2>
         </div>
+        <p class="mb-4 text-gray-600">
+          Le Document Unique est obligatoire pour toutes les entreprises employant au moins une personne. Il doit être mis à jour chaque année, après un accident du travail ou lors de tout changement dans l’organisation.
+        </p>
+        <p class="text-gray-600">
+          Le chef d’entreprise est responsable de son élaboration et peut être sanctionné en cas de non-respect.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581093458791-9f3c4f0c0b3d" alt="Obligation" class="glow-border">
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Obligatoire & Utilité -->
-<section class="py-24 bg-gray-50">
-    <div class="mx-auto max-w-7xl px-6">
-        <div class="grid lg:grid-cols-2 gap-12">
-            <!-- Obligation -->
-            <div class="reveal-on-scroll p-10 bg-white rounded-[3rem] shadow-sm border border-gray-100">
-                <div class="w-12 h-12 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
-                </div>
-                <h4 class="text-2xl font-bold mb-4">Est-il obligatoire ?</h4>
-                <p class="text-gray-500 font-light leading-relaxed">
-                    <span class="text-gray-900 font-semibold">Oui, dès le 1er salarié.</span> Quel que soit le statut (titulaire, non titulaire), la tenue et la mise à jour annuelle sont impératives.
-                </p>
-                <div class="mt-6 space-y-3">
-                    <div class="flex items-center gap-3 text-sm text-gray-600">
-                        <span class="text-[var(--a2ci-red)]">●</span> Mise à jour annuelle obligatoire
-                    </div>
-                    <div class="flex items-center gap-3 text-sm text-gray-600">
-                        <span class="text-[var(--a2ci-red)]">●</span> Re-évaluation après chaque accident
-                    </div>
-                    <div class="flex items-center gap-3 text-sm text-gray-600">
-                        <span class="text-[var(--a2ci-red)]">●</span> Adaptation à chaque changement technique/RH
-                    </div>
-                </div>
-            </div>
-
-            <!-- Utilité -->
-            <div class="reveal-on-scroll p-10 bg-white rounded-[3rem] shadow-sm border border-gray-100" style="transition-delay: 200ms;">
-                <div class="w-12 h-12 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6">
-                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                </div>
-                <h4 class="text-2xl font-bold mb-4">À quoi sert-il ?</h4>
-                <p class="text-gray-500 font-light leading-relaxed">
-                    C'est le point de départ d'une politique de sécurité. Sa finalité est de mettre en œuvre des <span class="text-gray-900 font-semibold">mesures de prévention effectives</span> pour éliminer les risques.
-                </p>
-                <div class="mt-8 p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">Risques souvent sous-estimés</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-gray-600 border border-gray-200 shadow-sm">Chutes de plain-pied</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-gray-600 border border-gray-200 shadow-sm">Manutentions</span>
-                        <span class="px-3 py-1 bg-white rounded-full text-xs font-semibold text-gray-600 border border-gray-200 shadow-sm">Maladies professionnelles</span>
-                    </div>
-                </div>
-            </div>
+<!-- SECTION 2 (White) -->
+<section class="bg-white">
+  <div class="container-custom pt-0">
+    <div class="section-custom reverse scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-accent)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Finalité du <span class="text-accent">Document Unique</span></h2>
         </div>
+        <p class="mb-4 text-gray-600">
+          Le Document Unique permet de mettre en place des actions de prévention efficaces afin d’améliorer les conditions de travail et réduire les risques professionnels.
+        </p>
+        <p class="text-gray-600">
+          Il permet également d’identifier des risques souvent sous-estimés comme les chutes de plain-pied ou les manutentions.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Finalité" class="glow-border">
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Etapes Méthodologiques -->
-<section class="py-32 bg-white relative">
-    <div class="mx-auto max-w-7xl px-6">
-        <div class="text-center mb-20 reveal-on-scroll">
-            <h2 class="font-heading text-4xl lg:text-5xl font-bold text-gray-900">Méthodologie & <span class="text-[var(--a2ci-red)]">Contenu.</span></h2>
-            <p class="text-gray-500 font-light max-w-2xl mx-auto mt-4">Le Document Unique regroupe l’inventaire des risques et les résultats de l’évaluation de l’établissement.</p>
+<!-- DETAIL REGLEMENTAIRE (Dark) -->
+<section id="detail-reglementaire" class="section-dark">
+  <div class="container-custom">
+    <div class="scroll-reveal">
+      <div class="text-center mb-16">
+        <p class="text-[var(--a2ci-accent)] font-bold uppercase tracking-widest text-xs mb-3">Expertise Hygiène & Sécurité</p>
+        <h2 class="font-heading text-4xl font-bold text-white">Détail réglementaire <span class="text-accent">et contenu</span></h2>
+      </div>
+
+      <div class="accordion glow-border">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Réglementation</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <ul class="list-none space-y-2 text-sm text-gray-400">
+              <li>• Article L4121-1 à L4121-3 du Code du Travail</li>
+              <li>• Directive 89/391/CEE du 12 juin 1989</li>
+              <li>• Décret 2001-1016 du 05 novembre 2001</li>
+              <li>• Circulaire DRT n°6 du 18 avril 2002</li>
+              <li>• Loi n°91-1414 du 31 décembre 1991</li>
+              <li>• Décrets 2008-244 et 2008-1347</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="grid lg:grid-cols-4 gap-8">
-            <!-- Illustrative Image -->
-            <div class="reveal-on-scroll lg:col-span-1">
-                <div class="h-full rounded-[3rem] overflow-hidden shadow-lg border border-gray-100 transform rotate-1">
-                    <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Sécurité au travail" class="h-full w-full object-cover" />
-                </div>
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Responsabilité du chef d’entreprise</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm text-gray-400 mb-4">Le chef d’entreprise est responsable de l’élaboration du Document Unique. En cas d’accident, sa responsabilité pénale peut être engagée.</p>
+            <div class="p-4 bg-white/5 rounded-xl border border-white/10 italic text-xs text-gray-400">
+              « Le fait de ne pas transcrire ou de ne pas mettre à jour les résultats de l’évaluation des risques est puni d’une amende de 5ème classe » (Article R4741-1 du Code du Travail).
             </div>
-            <!-- Etape 1 -->
-            <div class="reveal-on-scroll bg-gray-50 p-10 rounded-[3rem] relative overflow-hidden group hover:bg-white hover:shadow-xl hover:border-gray-100 transition-all duration-300">
-                <span class="step-number">01</span>
-                <h5 class="text-xl font-bold mb-6 relative z-10 text-gray-900">Identification</h5>
-                <p class="text-sm text-gray-500 font-light leading-relaxed mb-6">
-                    Recenser précisément les risques propres à chaque unité de travail au sein de votre collectivité ou établissement.
-                </p>
-                <div class="h-1 w-0 bg-[var(--a2ci-red)] group-hover:w-full transition-all duration-500 rounded-full"></div>
-            </div>
-
-            <!-- Etape 2 -->
-            <div class="reveal-on-scroll bg-gray-50 p-10 rounded-[3rem] relative overflow-hidden group hover:bg-white hover:shadow-xl hover:border-gray-100 transition-all duration-300" style="transition-delay: 100ms;">
-                <span class="step-number">02</span>
-                <h5 class="text-xl font-bold mb-6 relative z-10 text-gray-900">Évaluation</h5>
-                <p class="text-sm text-gray-500 font-light leading-relaxed mb-6">
-                    Pondérer les risques selon des critères rigoureux : gravité, fréquence d'exposition et niveau de maîtrise actuel.
-                </p>
-                <div class="h-1 w-0 bg-[var(--a2ci-red)] group-hover:w-full transition-all duration-500 rounded-full"></div>
-            </div>
-
-            <!-- Etape 3 -->
-            <div class="reveal-on-scroll bg-gray-50 p-10 rounded-[3rem] relative overflow-hidden group hover:bg-white hover:shadow-xl hover:border-gray-100 transition-all duration-300" style="transition-delay: 200ms;">
-                <span class="step-number">03</span>
-                <h5 class="text-xl font-bold mb-6 relative z-10 text-gray-900">Plan d'Action</h5>
-                <p class="text-sm text-gray-500 font-light leading-relaxed mb-6">
-                    Établir un plan d'actions pérennes visant à réduire ou éliminer chaque risque évalué pour protéger vos salariés.
-                </p>
-                <div class="h-1 w-0 bg-[var(--a2ci-red)] group-hover:w-full transition-all duration-500 rounded-full"></div>
-            </div>
+          </div>
         </div>
 
-        <!-- Summary Banner -->
-        <div class="mt-20 reveal-on-scroll">
-            <div class="bg-black rounded-[3rem] p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/3 text-center lg:text-left">
-                    <span class="text-[var(--a2ci-red-light)] font-bold uppercase tracking-[0.2em] text-xs">Synthèse A2CI</span>
-                    <h4 class="text-3xl font-bold text-white mt-4">Un pilotage <br>simplifié.</h4>
-                </div>
-                <div class="lg:w-2/3 grid sm:grid-cols-2 gap-8">
-                    <div class="flex gap-4">
-                        <div class="shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[var(--a2ci-red-light)]">✔</div>
-                        <p class="text-sm text-gray-400 font-light">Bilan écrit de la situation générale Hygiène & Sécurité.</p>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="shrink-0 w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-[var(--a2ci-red-light)]">✔</div>
-                        <p class="text-sm text-gray-400 font-light">Contribution directe à la prévention durable.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Contenu du Document Unique</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm text-gray-400 mb-4">Support écrit regroupant l’inventaire des risques et les résultats de l’évaluation.</p>
+            <ul class="list-none space-y-2 text-sm text-gray-400">
+              <li class="flex items-start gap-2"><span class="text-accent">✓</span> Bilan de la situation en matière d’hygiène & sécurité</li>
+              <li class="flex items-start gap-2"><span class="text-accent">✓</span> Élaboration d’un plan d’actions de prévention</li>
+            </ul>
+          </div>
         </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Méthodologie</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <ul class="list-none space-y-3 text-sm text-gray-400">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-accent)] mt-1.5"></span> Identification par unité de travail</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-accent)] mt-1.5"></span> Évaluation : gravité, fréquence, maîtrise</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-accent)] mt-1.5"></span> Plan d’action adapté à chaque risque</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white section-cta">
+  <div class="container-custom pt-32 pb-0">
+    <div class="cta scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold mb-4 text-white">Mettre votre Document Unique en <span class="text-accent">conformité</span></h2>
+      <p class="mb-10 text-lg text-gray-400">Expertise technique pour l'identification de vos risques et l'amélioration de vos conditions de travail.</p>
+      <a href="index.html#contact" class="cta-button">Demander un accompagnement</a>
+    </div>
+  </div>
 </section>
 
 <div id="footer-component"></div>
 
 <script>
-  // Simple Scroll Reveal Observer
-  const observerOptions = {
-    threshold: 0.1
-  };
+  // Accordion Logic
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains("open");
+      
+      // Close other items
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+      document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+      
+      if (!isOpen) {
+        content.classList.add("open");
+        header.classList.add("active");
+      }
+    });
+  });
 
+  // Reveal on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
-  // Particles.js Initialization
-  particlesJS('particles-js', {
-    "particles": {
-      "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-      "color": { "value": "#ffffff" },
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.4, "random": false },
-      "size": { "value": 2, "random": true },
-      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
-      "move": { "enable": true, "speed": 1.2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-    }
-  });
+  // Particles.js
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 2, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }
+      },
+      "retina_detect": true
+    });
+  }
 </script>
 
 </body>
