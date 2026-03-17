@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notices Accessibilité & Sécurité - A2CI Prévention Incendie</title>
-  <meta name="description" content="Rédaction de notices d'accessibilité et de sécurité pour ERP. Conformité réglementaire et accompagnement par A2CI en Gironde." />
+  <title>Notices réglementaires ERP - A2CI</title>
+  <meta name="description" content="Rédaction de notices d'accessibilité et de sécurité pour ERP. Accompagnement expert pour la conformité réglementaire de vos établissements." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +12,51 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-light: #ff1a1a;
+      --a2ci-black: #000000;
+      --bg-dark: #0b0b0b;
+      --card-dark: #111111;
+      --border-dark: #222222;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+    
+    body { 
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      background: #fff;
+      color: #333;
+    }
+    
+    .font-heading { 
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif; 
+    }
+
+    .container-custom {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { line-height: 1.7; font-weight: 300; }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    /* HERO (Dark) */
+    .hero {
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
     #particles-js {
       position: absolute;
       width: 100%;
@@ -19,217 +64,475 @@
       top: 0;
       left: 0;
       z-index: 1;
+      opacity: 0.25;
     }
-    :root {
-      --a2ci-red: #960606;
-      --a2ci-red-light: #C40808;
-      --a2ci-dark: #0b0b0b;
-      --glass-white: rgba(255, 255, 255, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.4);
+
+    /* TIMELINE */
+    .timeline-container {
+      position: relative;
+      padding: 40px 0;
     }
-    body { font-family: 'Inter', sans-serif; }
-    .font-heading { font-family: 'Outfit', sans-serif; }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, var(--a2ci-red), transparent);
+      opacity: 0.3;
+    }
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
+    }
+    .step-dot {
+      width: 12px;
+      height: 12px;
+      background: var(--a2ci-red);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      box-shadow: 0 0 15px var(--a2ci-red);
+    }
+
+    /* SECTIONS */
+    .section-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .section-custom.reverse { flex-direction: row-reverse; }
+
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-left: 2px solid var(--a2ci-red);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
+
+    .section-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* DARK SECTION */
+    .section-dark {
+      background: var(--bg-dark);
+      color: #fff;
+    }
     
-    .glass-card {
-      background: var(--glass-white);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    .section-dark p { color: #d1d5db; }
+    .section-dark .section-img img {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ACCORDEON (Dark) */
+    .accordion {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      background: var(--card-dark);
+    }
+
+    .accordion-item { border-bottom: 1px solid var(--border-dark); }
+    .accordion-item:last-child { border-bottom: none; }
+
+    .accordion-header {
+      padding: 24px;
+      cursor: pointer;
+      background: transparent;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .accordion-header:hover { background: rgba(255,255,255,0.03); }
+
+    .accordion-header svg {
+      transition: transform 0.3s;
+      width: 20px;
+      height: 20px;
+      color: var(--a2ci-red);
+    }
+
+    .accordion-header.active { color: var(--a2ci-red); }
+    .accordion-header.active svg { transform: rotate(180deg); }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0 24px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .accordion-content.open {
+      max-height: 3000px;
+      padding: 0 24px 24px 24px;
+    }
+
+    /* GLOW BORDER EFFECT */
+    .glow-border {
+      position: relative;
+      overflow: hidden;
+    }
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .glow-border:hover::before { transform: translateX(350%); }
+
+    /* CTA */
+    .section-cta { padding-bottom: 80px; }
+    .cta {
+      text-align: center;
+      padding: 80px 40px;
+      background: linear-gradient(145deg, #111 0%, #000 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border-dark);
+      position: relative;
+      color: #fff;
+    }
+
+    .cta-button {
+      background: var(--a2ci-red);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
     }
     
-    .reveal-on-scroll {
+    .cta-button:hover {
+      background: #b3050f;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(150, 6, 6, 0.3);
+    }
+
+    .text-red { color: var(--a2ci-red); }
+
+    .scroll-reveal {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     
-    .reveal-on-scroll.active {
+    .scroll-reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
-
-    .premium-list li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-    .premium-list li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--a2ci-red);
-      font-weight: bold;
-    }
-
-    .notice-card {
-        background: white;
-        border-radius: 2.5rem;
-        padding: 3rem;
-        border: 1px solid #f1f1f1;
-        transition: all 0.5s ease;
-        height: 100%;
-    }
-    .notice-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 60px rgba(0,0,0,0.06);
-        border-color: var(--a2ci-red-light);
-    }
-
-    .badge-regulation {
-        display: inline-block;
-        padding: 0.25rem 0.75rem;
-        background: #fdf2f2;
-        color: var(--a2ci-red);
-        border-radius: 0.5rem;
-        font-size: 0.7rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin-bottom: 1rem;
-    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+<body class="overflow-x-hidden w-full">
 
 <div id="header-component"></div>
 
-<!-- Hero Section -->
-<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32">
+<!-- HERO (Dark) -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
   <div class="absolute inset-0 z-0 opacity-40">
-    <img src="https://images.pexels.com/photos/544965/pexels-photo-544965.jpeg" alt="Notices Techniques A2CI" class="h-full w-full object-cover" />
+    <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg" alt="Notices ERP A2CI" class="h-full w-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
+  
   <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+
   <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
     <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
       <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-      Conformité & Architecture
+      CONFORMITÉ ÉTABLISSEMENTS
     </div>
-    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6">
-      Notices Techniques <br><span class="text-[var(--a2ci-red-light)]">& Réglementaires.</span>
+    
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+      Notices réglementaires <br><span class="text-[var(--a2ci-red-light)]">Accessibilité & Sécurité ERP</span>
     </h1>
+    
     <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
-      Élaboration des notices d'accessibilité et de sécurité indispensables pour l'obtention de vos autorisations de travaux et avis favorables des commissions.
+      Rédaction expert des notices d’accessibilité et de sécurité permettant de garantir la conformité de vos établissements recevant du public.
     </p>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Accessibilité</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">PMR & Accueil</div>
+      </div>
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Sécurité</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Feu & Évacuation</div>
+      </div>
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Conformité</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Avis Favorable</div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-5">
+      <a href="index.html#contact" class="cta-button">
+        Demander un accompagnement
+      </a>
+      <a href="#procede" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
+        Notre méthodologie
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10 opacity-0 lg:opacity-100"></div>
+</section>
+
+<!-- TIMELINE SECTION (White) -->
+<section id="procede" class="bg-white py-20 border-b border-gray-100">
+  <div class="container-custom py-0">
+    <div class="text-center mb-20 scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-4">Parcours de <span class="text-red">Rédaction.</span></h2>
+      <p class="text-gray-500 font-light max-w-2xl mx-auto">Une étude rigoureuse des obligations pour garantir la validation de vos projets.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 relative px-4 text-center">
+      <!-- Step 1 -->
+      <div class="scroll-reveal">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">01</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Analyse</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Étude des obligations selon le type d’établissement.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="scroll-reveal" style="transition-delay: 100ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">02</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Rédaction</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Élaboration des notices accessibilité et sécurité incendie.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="scroll-reveal" style="transition-delay: 200ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">03</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Vérification</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Contrôle des dispositions techniques et réglementaires.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Main Notices Grid -->
-<section class="py-24 bg-white relative">
-    <div class="mx-auto max-w-7xl px-6">
-        <div class="grid lg:grid-cols-2 gap-10">
-            
-            <!-- Notice Accessibilité -->
-            <div class="notice-card reveal-on-scroll">
-                <div class="mb-8">
-                    <span class="badge-regulation">ERP Construction & Aménagement</span>
-                    <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4">Notice d'Accessibilité</h2>
-                    <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 mb-8 transform -rotate-1">
-                        <img src="https://images.pexels.com/photos/1036396/pexels-photo-1036396.jpeg" alt="Accessibilité ERP" class="w-full h-40 object-cover" />
-                    </div>
-                    <p class="text-gray-500 font-light leading-relaxed mb-6">
-                        Présenter les dispositions constructives permettant de répondre aux conditions d'accessibilité exigées par le Code de la Construction et de l'Habitation (Article R111-19).
-                    </p>
-                </div>
-
-                <div class="space-y-6 mb-10">
-                    <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-                        <h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                             <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                             Objectif Stratégique
-                        </h4>
-                        <p class="text-sm text-gray-600 font-light italic">
-                            Définir les dispositions par rapport au type d'établissement et aux ressources existantes pour éviter tout avis défavorable.
-                        </p>
-                    </div>
-                    
-                    <ul class="premium-list text-sm text-gray-600 font-medium">
-                        <li>Arrêté du 1er août 2006 (ERP neufs)</li>
-                        <li>Arrêté du 21 mars 2007 (Evolutions ERP)</li>
-                        <li>Conformité Article R123.24 du CCH</li>
-                    </ul>
-                </div>
-
-                <div class="p-6 bg-red-50 rounded-3xl border border-red-100">
-                    <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mb-2">Risque Majeur</p>
-                    <p class="text-sm text-gray-800 font-light">
-                        L'absence de cette notice expose l'exploitant à un <span class="font-bold">avis défavorable</span> systématique de la commission lors de son passage.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Notice Sécurité -->
-            <div class="notice-card reveal-on-scroll" style="transition-delay: 200ms;">
-                <div class="mb-8">
-                    <span class="badge-regulation">Prévention Incendie</span>
-                    <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4">Notice de Sécurité</h2>
-                    <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6"></div>
-                    <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100 mb-8 transform rotate-1">
-                        <img src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg" alt="Sécurité incendie plans" class="w-full h-40 object-cover" />
-                    </div>
-                    <p class="text-gray-500 font-light leading-relaxed mb-6">
-                        Synthèse des dispositions de sécurité incendie conformément à l'article R 123-22 du CCH, obligatoire pour tout projet de travaux en ERP.
-                    </p>
-                </div>
-
-                <div class="space-y-4 mb-10">
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[var(--a2ci-red)] shadow-sm font-bold">1</div>
-                        <p class="text-xs font-semibold text-gray-700 uppercase">Vérifier la conformité spécifique</p>
-                    </div>
-                    <div class="flex items-center gap-4 p-4 bg-gray-50 rounded-xl">
-                        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[var(--a2ci-red)] shadow-sm font-bold">2</div>
-                        <p class="text-xs font-semibold text-gray-700 uppercase">Accompagner le suivi de chantier</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 mb-8">
-                    <div class="p-4 bg-black text-white rounded-2xl">
-                        <p class="text-[10px] font-bold text-gray-500 uppercase mb-2">Standards</p>
-                        <p class="text-xs font-bold font-heading">NF S 61-930 à 940</p>
-                    </div>
-                    <div class="p-4 bg-black text-white rounded-2xl">
-                        <p class="text-[10px] font-bold text-gray-500 uppercase mb-2">Règlement</p>
-                        <p class="text-xs font-bold font-heading">Arrêté 22 juin 1990</p>
-                    </div>
-                </div>
-
-                <ul class="premium-list text-sm text-gray-600 font-medium">
-                    <li>Résistance au feu (Arrêté 2004)</li>
-                    <li>Dispositions particulières selon type ERP</li>
-                    <li>Maîtrise de l'article R123-22 du CCH</li>
-                </ul>
-            </div>
-
+<!-- SECTION ACCESSIBILITÉ (White) -->
+<section class="bg-[#fafafa]">
+  <div class="container-custom">
+    <div class="section-custom scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Notice <span class="text-red">d’accessibilité</span></h2>
         </div>
+        <p class="mb-4 text-gray-600">
+          La notice d’accessibilité présente les dispositions constructives permettant de répondre aux exigences réglementaires en matière d’accessibilité aux personnes handicapées.
+        </p>
+        <p class="mb-4 text-gray-600">
+          Elle est réalisée dans le cadre de la construction ou de l’aménagement d’un ERP, en complément des plans d’aménagement.
+        </p>
+        <p class="text-gray-600">
+          Elle tient compte du type d’établissement, de la réglementation en vigueur et des dispositions existantes.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581093458791-9f3c4f0c0b3d" alt="Notice Accessibilité" class="glow-border">
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Call to Action Banner -->
-<section class="py-24 bg-black text-white relative overflow-hidden">
-    <div id="particles-js" class="absolute inset-0 z-0 opacity-10"></div>
-    <div class="mx-auto max-w-5xl px-6 relative z-10 text-center">
-        <h3 class="font-heading text-4xl font-extrabold mb-8 italic">"Toute transformation d'ERP doit faire l'objet d'une Notice de Sécurité."</h3>
-        <p class="text-xl text-gray-400 font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-            Nous adaptons nos notices selon le classement et la catégorie de votre établissement pour garantir une validation optimale en commission.
+<!-- SECTION SÉCURITÉ (White) -->
+<section class="bg-white">
+  <div class="container-custom pt-0">
+    <div class="section-custom reverse scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Notice <span class="text-red">de sécurité</span></h2>
+        </div>
+        <p class="mb-4 text-gray-600">
+          La notice de sécurité présente les dispositions permettant de répondre aux exigences du règlement de sécurité incendie pour les ERP.
         </p>
-        <a href="index.html#contact" class="inline-flex items-center justify-center p-1 bg-white/10 rounded-full transition-transform hover:scale-105 active:scale-95">
-            <div class="px-8 py-4 bg-[var(--a2ci-red)] rounded-full text-sm font-bold uppercase tracking-[0.2em] shadow-2xl shadow-red-900/40">
-                Sécuriser mon dossier
-            </div>
-        </a>
+        <p class="mb-4 text-gray-600">
+          Elle est obligatoire pour tous travaux et permet de garantir la conformité des installations et le bon suivi du chantier.
+        </p>
+        <p class="text-gray-600">
+          En l’absence de notice, l’exploitant s’expose à un avis défavorable de la commission de sécurité.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Notice Sécurité" class="glow-border">
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- DETAIL REGLEMENTAIRE (Dark) -->
+<section id="detail-reglementaire" class="section-dark">
+  <div class="container-custom">
+    <div class="scroll-reveal">
+      <div class="text-center mb-16">
+        <p class="text-[var(--a2ci-red-light)] font-bold uppercase tracking-widest text-xs mb-3">Cadre Légal & Technique</p>
+        <h2 class="font-heading text-4xl font-bold text-white">Détail <span class="text-red">réglementaire</span></h2>
+      </div>
+
+      <div class="accordion glow-border">
+        <!-- Réglementation Accessibilité -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Réglementation accessibilité</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <ul class="list-none space-y-3 text-sm text-gray-400">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Arrêté du 1er août 2006 (Accessibilité ERP)</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Arrêté du 21 mars 2007</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Articles R111-19 à R111-19-11 du CCH</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Référence : article R123.24</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Objectif Accessibilité -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Objectif de la notice d’accessibilité</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm text-gray-400 mb-4">Présenter les dispositions constructives répondant aux exigences selon :</p>
+            <ul class="list-none space-y-3 text-sm text-gray-400 mb-4">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Le type d’établissement</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Les contraintes existantes</li>
+            </ul>
+            <p class="text-xs text-red-400 italic">Absence de notice = risque d’avis défavorable en commission.</p>
+          </div>
+        </div>
+
+        <!-- Réglementation Sécurité -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Réglementation sécurité</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <ul class="list-none space-y-3 text-sm text-gray-400">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Code de la construction et de l’habitation (CCH)</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Arrêté du 25 juin 1980 (Règlement incendie)</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Arrêtés du 22 juin 1990 et 22 mars 2004</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Normes SSI NF S 61-930 à 940</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Objectif Sécurité -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Objectif de la notice de sécurité</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm text-gray-400 mb-4">Vérifier la conformité des travaux (Article R123-22 du CCH) :</p>
+            <ul class="list-none space-y-3 text-sm text-gray-400 mb-4">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Suivi des travaux en conformité</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Obligatoire pour tous les travaux en ERP</li>
+            </ul>
+            <p class="text-xs text-red-400 italic">Absence de notice = avis défavorable en commission de sécurité.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white section-cta">
+  <div class="container-custom pt-32 pb-0">
+    <div class="cta scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold mb-4 text-white">Rédiger vos notices <span class="text-red">réglementaires</span></h2>
+      <p class="mb-10 text-lg text-gray-400">Accompagnement expert pour sécuriser vos projets et garantir l'avis favorable des commissions.</p>
+      <a href="index.html#contact" class="cta-button">Demander un accompagnement</a>
+    </div>
+  </div>
 </section>
 
 <div id="footer-component"></div>
 
 <script>
-  // Simple Scroll Reveal Observer
-  const observerOptions = {
-    threshold: 0.1
-  };
+  // Accordion Logic
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains("open");
+      
+      // Close other items
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+      document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+      
+      if (!isOpen) {
+        content.classList.add("open");
+        header.classList.add("active");
+      }
+    });
+  });
 
+  // Reveal on scroll
+  const observerOptions = { threshold: 0.1 };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -238,22 +541,27 @@
     });
   }, observerOptions);
 
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
-  // Particles.js Initialization
-  particlesJS('particles-js', {
-    "particles": {
-      "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-      "color": { "value": "#ffffff" },
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.4, "random": false },
-      "size": { "value": 2, "random": true },
-      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
-      "move": { "enable": true, "speed": 1.2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-    }
-  });
+  // Particles.js
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 2, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }
+      },
+      "retina_detect": true
+    });
+  }
 </script>
 
 </body>
