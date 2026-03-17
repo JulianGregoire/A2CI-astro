@@ -43,11 +43,7 @@
 
     /* HERO */
     .hero {
-      text-align: center;
       margin-bottom: 80px;
-      padding-top: 140px; 
-      position: relative;
-      overflow: hidden;
     }
     
     #particles-js {
@@ -265,25 +261,35 @@
 
 <div id="header-component"></div>
 
-<div class="container-custom">
 
   <!-- HERO -->
-  <div class="hero scroll-reveal">
-    <div id="particles-js"></div>
-    <div class="relative z-10">
-      <div class="badge-premium">
+  <section class="hero scroll-reveal relative w-full overflow-hidden bg-black min-h-[600px] flex flex-col justify-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/ssi_hero.png" alt="Coordination SSI" class="h-full w-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-[#0b0b0b]/60 to-[#0b0b0b]/80"></div>
+    </div>
+    
+    <!-- Particles -->
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+    <!-- Content Wrapper -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 py-24 text-center">
+      <div class="badge-premium mb-6">
         <span class="badge-dot"></span>
         <span class="badge-text">Expertise & Prévention</span>
       </div>
-      <h1 class="font-heading text-5xl lg:text-7xl font-bold mb-8">
+      <h1 class="font-heading text-5xl lg:text-7xl font-bold mb-8 text-white">
         Coordination <span class="text-red">SSI.</span>
       </h1>
-      <p class="max-w-2xl mx-auto text-lg text-gray-400">
+      <p class="max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
         Réalisation conforme aux normes <span class="text-white font-semibold">NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932.</span><br>
         Un accompagnement stratégique de la conception à la réception finale.
       </p>
     </div>
-  </div>
+  </section>
+
+  <div class="container-custom">
 
   <!-- SECTION 1 -->
   <div class="section-custom scroll-reveal">
