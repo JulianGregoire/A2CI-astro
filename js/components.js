@@ -87,9 +87,10 @@ function initHeaderLogic() {
     isMenuOpen = !isMenuOpen;
     if (isMenuOpen) {
       menu.classList.remove('max-h-0', 'opacity-0');
-      menu.classList.add('max-h-[500px]', 'opacity-100', 'py-6');
+      menu.classList.add('max-h-[90vh]', 'opacity-100', 'py-6', 'overflow-y-auto');
       iconMenu.classList.add('opacity-0', '-rotate-90');
       iconClose.classList.remove('opacity-0', 'rotate-90');
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
     } else {
       closeMenu();
     }
@@ -97,10 +98,11 @@ function initHeaderLogic() {
 
   function closeMenu() {
     isMenuOpen = false;
-    menu.classList.remove('max-h-[500px]', 'opacity-100', 'py-6');
+    menu.classList.remove('max-h-[90vh]', 'opacity-100', 'py-6', 'overflow-y-auto');
     menu.classList.add('max-h-0', 'opacity-0');
     iconMenu.classList.remove('opacity-0', '-rotate-90');
     iconClose.classList.add('opacity-0', 'rotate-90');
+    document.body.style.overflow = ''; // Restore scroll
   }
 
   btn.addEventListener('click', toggleMenu);
