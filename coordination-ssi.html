@@ -8,42 +8,46 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
     :root {
-      --a2ci-red: #E30613;
-      --a2ci-red-dark: #960606;
-      --bg-dark: #050816;
-      --card-dark: #0b1020;
-      --border-dark: #222;
+      --a2ci-red: #960606;
+      --a2ci-red-light: #C40808;
+      --a2ci-black: #000000;
+      --bg-dark: #0b0b0b;
+      --card-dark: #111111;
+      --border-dark: #222222;
     }
     
     body { 
       margin: 0;
-      font-family: 'Inter', sans-serif; 
+      font-family: 'Open Sans', system-ui, -apple-system, sans-serif; 
       background: var(--bg-dark);
       color: #fff;
     }
     
-    .font-heading { font-family: 'Outfit', sans-serif; }
+    .font-heading { 
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif; 
+    }
 
     .container-custom {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       padding: 60px 20px;
     }
 
-    h1, h2 { margin-bottom: 15px; }
-    p { color: #ccc; line-height: 1.6; }
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { color: #d1d5db; line-height: 1.7; }
 
     /* HERO */
     .hero {
       text-align: center;
-      margin-bottom: 60px;
-      padding-top: 100px; /* Space for fixed header */
+      margin-bottom: 80px;
+      padding-top: 140px; 
       position: relative;
+      overflow: hidden;
     }
     
     #particles-js {
@@ -53,7 +57,14 @@
       top: 0;
       left: 0;
       z-index: 1;
-      opacity: 0.3;
+      opacity: 0.25;
+    }
+
+    .text-gradient {
+      background: linear-gradient(to r, #ffffff, #9ca3af);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     /* SECTIONS */
@@ -61,105 +72,192 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 40px;
-      margin-bottom: 80px;
+      gap: 60px;
+      margin-bottom: 100px;
     }
 
     .section-custom.reverse { flex-direction: row-reverse; }
 
-    .section-text { flex: 1; min-width: 300px; }
-    .section-img { flex: 1; min-width: 300px; }
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-left: 2px solid var(--a2ci-red);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
 
     .section-img img {
       width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(255,255,255,0.05);
     }
 
     /* ACCORDEON */
     .accordion {
-      border-radius: 10px;
+      border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--border-dark);
-      margin-bottom: 40px;
+      margin-bottom: 60px;
+      background: var(--card-dark);
     }
 
     .accordion-item { border-bottom: 1px solid var(--border-dark); }
     .accordion-item:last-child { border-bottom: none; }
 
     .accordion-header {
-      padding: 18px;
+      padding: 24px;
       cursor: pointer;
-      background: var(--card-dark);
-      font-weight: bold;
+      background: transparent;
+      font-weight: 600;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: background 0.3s;
+      transition: all 0.3s;
+      font-family: 'Poppins', sans-serif;
     }
 
-    .accordion-header:hover { background: #151a30; }
+    .accordion-header:hover { background: rgba(255,255,255,0.03); }
 
     .accordion-header svg {
       transition: transform 0.3s;
       width: 20px;
       height: 20px;
+      color: var(--a2ci-red);
     }
 
+    .accordion-header.active { color: var(--a2ci-red); }
     .accordion-header.active svg { transform: rotate(180deg); }
 
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: 0.3s ease-out;
-      padding: 0 18px;
-      background: rgba(11, 16, 32, 0.5);
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0 24px;
+      background: rgba(0, 0, 0, 0.2);
     }
 
     .accordion-content.open {
       max-height: 1000px;
-      padding: 18px;
+      padding: 0 24px 24px 24px;
     }
+
+    /* GLOW BORDER EFFECT */
+    .glow-border {
+      position: relative;
+      overflow: hidden;
+    }
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .glow-border:hover::before { transform: translateX(350%); }
 
     /* CTA */
     .cta {
       text-align: center;
-      margin-top: 80px;
-      padding: 60px 20px;
-      background: rgba(227, 6, 19, 0.1);
-      border-radius: 20px;
+      margin-top: 100px;
+      padding: 80px 40px;
+      background: linear-gradient(145deg, #111 0%, #000 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border-dark);
+      position: relative;
+    }
+
+    .cta::after {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px; right: -1px; bottom: -1px;
+      background: linear-gradient(45deg, transparent 40%, var(--a2ci-red) 50%, transparent 60%);
+      z-index: -1;
+      border-radius: 24px;
+      opacity: 0.1;
     }
 
     .cta-button {
       background: var(--a2ci-red);
       border: none;
-      padding: 15px 35px;
-      border-radius: 8px;
+      padding: 16px 40px;
+      border-radius: 6px;
       color: white;
       font-size: 16px;
-      font-weight: bold;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
       cursor: pointer;
       transition: all 0.3s;
       display: inline-block;
+      font-family: 'Poppins', sans-serif;
     }
     
     .cta-button:hover {
-      background: #c20510;
+      background: #b3050f;
       transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(227, 6, 19, 0.4);
+      box-shadow: 0 10px 20px rgba(150, 6, 6, 0.3);
     }
 
     .text-red { color: var(--a2ci-red); }
 
-    .reveal-on-scroll {
+    .scroll-reveal {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     
-    .reveal-on-scroll.active {
+    .scroll-reveal.active {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    /* Badge Style from Index */
+    .badge-premium {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px;
+      height: 32px;
+      background: rgba(150, 6, 6, 0.1);
+      border-radius: 100px;
+      border: 1px solid rgba(150, 6, 6, 0.3);
+      margin-bottom: 24px;
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--a2ci-red);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--a2ci-red);
+    }
+    .badge-text {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #fff;
     }
   </style>
 </head>
@@ -170,69 +268,84 @@
 <div class="container-custom">
 
   <!-- HERO -->
-  <div class="hero reveal-on-scroll">
+  <div class="hero scroll-reveal">
     <div id="particles-js"></div>
     <div class="relative z-10">
-      <h1 class="font-heading text-5xl font-extrabold mb-6">Coordination <span class="text-red">SSI.</span></h1>
-      <p class="max-w-2xl mx-auto text-lg">
-        Réalisation conforme aux normes <span class="text-white font-bold">NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932.</span><br>
-        Objectif : mise en conformité, extension ou remplacement du SSI d’un ERP.
+      <div class="badge-premium">
+        <span class="badge-dot"></span>
+        <span class="badge-text">Expertise & Prévention</span>
+      </div>
+      <h1 class="font-heading text-5xl lg:text-7xl font-bold mb-8">
+        Coordination <span class="text-red">SSI.</span>
+      </h1>
+      <p class="max-w-2xl mx-auto text-lg text-gray-400">
+        Réalisation conforme aux normes <span class="text-white font-semibold">NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932.</span><br>
+        Un accompagnement stratégique de la conception à la réception finale.
       </p>
     </div>
   </div>
 
   <!-- SECTION 1 -->
-  <div class="section-custom reveal-on-scroll">
+  <div class="section-custom scroll-reveal">
     <div class="section-text">
-      <h2 class="font-heading text-3xl font-bold mb-4">Analyse du <span class="text-red">projet</span></h2>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+        <h2 class="font-heading text-3xl font-bold mb-0">Analyse du <span class="text-red">projet</span></h2>
+      </div>
       <p class="mb-4">
-        Visite du site (si bâtiment existant) et participation à des réunions avec le maître d’ouvrage,
+        Visite du site et participation à des réunions stratégiques avec le maître d’ouvrage,
         l’exploitant, le maître d’œuvre et le bureau de contrôle.
       </p>
       <p>
-        Cette phase permet d’intégrer les contraintes du bâtiment, son activité,
-        ainsi que les obligations réglementaires selon son classement et son type.
+        Cette phase critique permet d’intégrer les contraintes du bâtiment, son activité,
+        ainsi que les obligations réglementaires selon son classement.
       </p>
     </div>
     <div class="section-img">
-      <img src="https://images.unsplash.com/photo-1581093458791-9f3c4f0c0b3d" alt="Analyse de projet SSI">
+      <div class="img-wrapper">
+        <img src="https://images.unsplash.com/photo-1581093458791-9f3c4f0c0b3d" alt="Analyse de projet SSI" class="glow-border">
+      </div>
     </div>
   </div>
 
   <!-- SECTION 2 -->
-  <div class="section-custom reverse reveal-on-scroll">
+  <div class="section-custom reverse scroll-reveal">
     <div class="section-text">
-      <h2 class="font-heading text-3xl font-bold mb-4">Validation <span class="text-red">technique</span></h2>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+        <h2 class="font-heading text-3xl font-bold mb-0">Validation <span class="text-red">technique</span></h2>
+      </div>
       <p>
-        Si nécessaire, consultation du Service Prévention de la Gironde afin de valider
+        Consultation du Service Prévention afin de valider
         les choix techniques ou argumenter les demandes de dérogation.
       </p>
-      <p class="mt-4">
+      <p class="mt-4 border-l-4 border-[var(--a2ci-red)] pl-5 italic text-gray-400">
         Notre expertise assure une interface fluide avec les autorités pour sécuriser vos investissements.
       </p>
     </div>
     <div class="section-img">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Validation technique">
+      <div class="img-wrapper">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Validation technique" class="glow-border">
+      </div>
     </div>
   </div>
 
   <!-- ACCORDEON -->
-  <div class="reveal-on-scroll">
-    <h2 class="font-heading text-3xl font-bold mb-8 text-center">Contenu du <span class="text-red">dossier SSI</span></h2>
+  <div class="scroll-reveal" style="margin-top: 40px;">
+    <div class="text-center mb-12">
+      <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Dossier Technique</p>
+      <h2 class="font-heading text-4xl font-bold">Contenu du <span class="text-red">dossier SSI</span></h2>
+    </div>
 
-    <div class="accordion">
+    <div class="accordion glow-border">
       <div class="accordion-item">
         <div class="accordion-header">
           <span>Cahier des charges fonctionnel</span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </div>
         <div class="accordion-content">
-          Présentation du site (description sommaire), activité du bâtiment, historique,
-          travaux envisagés, demandes de dérogation, découpage des zones (ZA/ZC/ZF/ZDA/ZDM),
-          scénario de mise en sécurité, technologie et localisation des matériels,
-          référentiel réglementaire, documents à fournir par les entreprises,
-          détail de la réception, exploitation du SSI et formation du personnel.<br><br>
-          <span class="text-white font-semibold italic">Réalisé selon la trame du SDIS de la Gironde.</span>
+          <p class="text-sm">Présentation du site, activité, historique, travaux envisagés, découpage des zones (ZA/ZC/ZF/ZDA), scénario de mise en sécurité, technologie et localisation des matériels, référentiel réglementaire, et exploitation du SSI.</p>
+          <p class="text-xs font-bold text-white mt-4 italic">Réalisé selon la trame du SDIS 33.</p>
         </div>
       </div>
 
@@ -242,9 +355,7 @@
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </div>
         <div class="accordion-content">
-          Plan informatique de l’ensemble du site (demande du SDIS).<br>
-          Plans de chaque niveau incluant zones d’alarme, compartimentage,
-          désenfumage, détection automatique et déclenchement manuel.
+          <p class="text-sm">Plans informatiques de l’ensemble du site. Cartographie de chaque niveau incluant zones d’alarme, compartimentage, désenfumage, et détection automatique.</p>
         </div>
       </div>
 
@@ -254,24 +365,22 @@
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </div>
         <div class="accordion-content">
-          Tableaux de corrélation en mode automatique et manuel,
-          réalisés selon la trame du SDIS de la Gironde.
+          <p class="text-sm">Matrices complexes des modes Automatique et Manuel, réalisées selon la nomenclature officielle des services de secours.</p>
         </div>
       </div>
 
       <div class="accordion-item">
         <div class="accordion-header">
-          <span>Réalisation et diffusion du dossier</span>
+          <span>diffusion & Protocoles</span>
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </div>
         <div class="accordion-content">
-          Dossier réalisé en 5 exemplaires et remis au maître d’ouvrage pour signature.<br><br>
-          Diffusion :
-          <ul class="list-disc pl-5 mt-2 text-gray-400">
-            <li>2 exemplaires pour la mairie (dont 1 pour le service instructeur)</li>
-            <li>1 pour le bureau de contrôle</li>
-            <li>1 pour le maître d’ouvrage</li>
-            <li>1 pour A2CI</li>
+          <p class="text-sm">Dossier en 5 exemplaires pour :</p>
+          <ul class="list-none space-y-2 mt-3 text-xs text-gray-400">
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 02 Mairie / SDIS</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Bureau de contrôle</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Maître d'ouvrage</li>
+            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Archive A2CI</li>
           </ul>
         </div>
       </div>
@@ -279,49 +388,50 @@
   </div>
 
   <!-- SECTION 3 -->
-  <div class="section-custom reveal-on-scroll">
+  <div class="section-custom scroll-reveal">
     <div class="section-text">
-      <h2 class="font-heading text-3xl font-bold mb-4">Suivi de <span class="text-red">chantier</span></h2>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+        <h2 class="font-heading text-3xl font-bold mb-0">Suivi de <span class="text-red">chantier</span></h2>
+      </div>
       <p class="mb-4">
-        Demande aux entreprises des plans d’exécution, documents techniques,
-        PV des matériels NF et associativité.
+        Analyse critique des plans d'exécution et validation des matériels NF. Réunions de coordination spécialisées pour lever les points de friction technique.
       </p>
       <p>
-        Analyse des documents, rédaction d’un rapport, organisation de réunions
-        avant et pendant les travaux avec tous les acteurs du projet.
+        Chaque étape fait l’objet d’un reporting précis diffusé à l’ensemble des parties prenantes.
       </p>
     </div>
     <div class="section-img">
-      <img src="images/ssi_meeting.png" alt="Suivi de chantier">
+      <div class="img-wrapper">
+        <img src="images/ssi_meeting.png" alt="Suivi de chantier" class="glow-border">
+      </div>
     </div>
   </div>
 
   <!-- SECTION 4 -->
-  <div class="section-custom reverse reveal-on-scroll">
+  <div class="section-custom reverse scroll-reveal">
     <div class="section-text">
-      <h2 class="font-heading text-3xl font-bold mb-4">Réception & <span class="text-red">fin de chantier</span></h2>
-      <p class="mb-4">
-        Collecte des documents du dossier d’identité (DOE, PV de mise en service,
-        autocontrôles des entreprises).
-      </p>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+        <h2 class="font-heading text-3xl font-bold mb-0">Réception & <span class="text-red">fin de chantier</span></h2>
+      </div>
+      <p class="mb-4 text-white font-semibold">Tests de 100 % des équipements (détecteurs, DAS/DAC).</p>
       <p>
-        Tests de 100 % des équipements (détecteurs, déclencheurs, DAS/DAC/DCM)
-        et scénarios de sécurité selon les normes NFS 61-932 et NFS 61-970.
-      </p>
-      <p class="mt-4">
-        Rédaction du procès-verbal de réception et création du dossier d’identité du SSI.
+        Essais de corrélation selon les normes NFS 61-932 et 61-970. Consolidation du Dossier d'Identité du SSI et accompagnement lors de la commission de sécurité.
       </p>
     </div>
     <div class="section-img">
-      <img src="https://images.unsplash.com/photo-1581091012184-5c2b1b0b3c3f" alt="Réception et fin de chantier">
+      <div class="img-wrapper">
+        <img src="https://images.unsplash.com/photo-1581091012184-5c2b1b0b3c3f" alt="Réception et fin de chantier" class="glow-border">
+      </div>
     </div>
   </div>
 
   <!-- CTA -->
-  <div class="cta reveal-on-scroll">
-    <h2 class="font-heading text-4xl font-bold mb-6">Besoin d’un accompagnement <span class="text-red">SSI ?</span></h2>
-    <p class="mb-8 text-lg">Nos experts vous accompagnent pour sécuriser vos établissements et assurer leur mise en conformité.</p>
-    <a href="index.html#contact" class="cta-button">Demander une étude</a>
+  <div class="cta scroll-reveal">
+    <h2 class="font-heading text-4xl font-bold mb-4">Un projet de mise en <span class="text-red">conformité ?</span></h2>
+    <p class="mb-10 text-lg text-gray-400">Nos experts vous accompagnent pour sécuriser vos établissements et garantir leur validation par les autorités.</p>
+    <a href="index.html#contact" class="cta-button">Demander une étude SSI</a>
   </div>
 
 </div>
@@ -355,23 +465,23 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
   // Particles.js
   if (typeof particlesJS !== 'undefined') {
     particlesJS('particles-js', {
       "particles": {
-        "number": { "value": 50, "density": { "enable": true, "value_area": 800 } },
+        "number": { "value": 40, "density": { "enable": true, "value_area": 800 } },
         "color": { "value": "#ffffff" },
         "shape": { "type": "circle" },
-        "opacity": { "value": 0.2, "random": false },
+        "opacity": { "value": 0.1, "random": true },
         "size": { "value": 2, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.1, "width": 1 },
-        "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.05, "width": 1 },
+        "move": { "enable": true, "speed": 0.8, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
       },
       "interactivity": {
         "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true }
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }
       },
       "retina_detect": true
     });
