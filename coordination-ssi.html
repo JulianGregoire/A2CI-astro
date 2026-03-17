@@ -24,8 +24,8 @@
     body { 
       margin: 0;
       font-family: 'Open Sans', system-ui, -apple-system, sans-serif; 
-      background: var(--bg-dark);
-      color: #fff;
+      background: #fff;
+      color: #333;
     }
     
     .font-heading { 
@@ -35,15 +35,17 @@
     .container-custom {
       max-width: 1150px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 80px 20px;
     }
 
     h1, h2, h3 { margin-bottom: 20px; }
-    p { color: #d1d5db; line-height: 1.7; }
+    p { line-height: 1.7; }
 
-    /* HERO */
+    /* HERO (Dark) */
     .hero {
-      margin-bottom: 80px;
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
     }
     
     #particles-js {
@@ -56,20 +58,12 @@
       opacity: 0.25;
     }
 
-    .text-gradient {
-      background: linear-gradient(to r, #ffffff, #9ca3af);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
     /* SECTIONS */
     .section-custom {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 60px;
-      margin-bottom: 100px;
     }
 
     .section-custom.reverse { flex-direction: row-reverse; }
@@ -99,18 +93,29 @@
     .section-img img {
       width: 100%;
       border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
       position: relative;
       z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* DOSSIER TECHNIQUE (Dark) */
+    .section-dark {
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
+    .section-dark p { color: #d1d5db; }
+    .section-dark .section-img img {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
       border: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* ACCORDEON */
+    /* ACCORDEON (Dark) */
     .accordion {
       border-radius: 16px;
       overflow: hidden;
       border: 1px solid var(--border-dark);
-      margin-bottom: 60px;
       background: var(--card-dark);
     }
 
@@ -166,22 +171,25 @@
       left: -150%;
       width: 70%;
       height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
       pointer-events: none;
       z-index: 2;
     }
     .glow-border:hover::before { transform: translateX(350%); }
 
-    /* CTA */
+    /* CTA (Special Design) */
+    .section-cta {
+        padding-bottom: 80px;
+    }
     .cta {
       text-align: center;
-      margin-top: 100px;
       padding: 80px 40px;
       background: linear-gradient(145deg, #111 0%, #000 100%);
       border-radius: 24px;
       border: 1px solid var(--border-dark);
       position: relative;
+      color: #fff;
     }
 
     .cta::after {
@@ -229,7 +237,7 @@
       transform: translateY(0);
     }
 
-    /* Badge Style from Index */
+    /* Badge Style */
     .badge-premium {
       display: inline-flex;
       align-items: center;
@@ -253,214 +261,231 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      color: #fff;
+      color: inherit;
     }
+    .section-dark .badge-text { color: #fff; }
+    .bg-white .badge-text { color: var(--a2ci-red); }
   </style>
 </head>
 <body class="overflow-x-hidden w-full">
 
 <div id="header-component"></div>
 
+<!-- HERO (Dark) -->
+<section class="hero scroll-reveal relative w-full overflow-hidden flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0">
+    <img src="images/ssi_hero.png" alt="Coordination SSI" class="h-full w-full object-cover opacity-50">
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-transparent to-transparent opacity-60"></div>
+  </div>
+  
+  <div id="particles-js" class="absolute inset-0 z-0"></div>
 
-  <!-- HERO -->
-  <section class="hero scroll-reveal relative w-full overflow-hidden bg-black min-h-[700px] lg:min-h-[800px] flex flex-col justify-center">
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
-      <img src="images/ssi_hero.png" alt="Coordination SSI" class="h-full w-full object-cover opacity-50">
-      <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-transparent to-transparent opacity-60"></div>
-    </div>
-    
-    <!-- Particles -->
-    <div id="particles-js" class="absolute inset-0 z-0"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+    <div class="max-w-3xl">
+      <div class="badge-premium mb-8">
+        <span class="badge-dot"></span>
+        <span class="badge-text">Expertise & Prévention</span>
+      </div>
+      
+      <h1 class="font-heading text-5xl lg:text-7xl font-bold mb-8 leading-tight text-white">
+        Coordination <br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
+          SSI.
+        </span>
+      </h1>
+      
+      <p class="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+        Réalisation conforme aux normes <span class="text-white font-semibold">NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932.</span><br>
+        Un accompagnement stratégique de la conception à la réception finale pour garantir la sécurité et la conformité de vos établissements.
+      </p>
 
-    <!-- Content Wrapper -->
-    <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
-      <div class="max-w-3xl">
-        <div class="badge-premium mb-8">
-          <span class="badge-dot"></span>
-          <span class="badge-text">Expertise & Prévention</span>
-        </div>
-        
-        <h1 class="font-heading text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-          Coordination <br>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
-            SSI.
-          </span>
-        </h1>
-        
-        <p class="text-lg lg:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
-          Réalisation conforme aux normes <span class="text-white font-semibold">NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932.</span><br>
-          Un accompagnement stratégique de la conception à la réception finale pour garantir la sécurité et la conformité de vos établissements.
-        </p>
-
-        <div class="flex flex-wrap gap-5">
-          <a href="index.html#contact" class="cta-button">
-            Demander une étude
-          </a>
-          <a href="#contenu-dossier" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
-            Détails techniques
-          </a>
-        </div>
+      <div class="flex flex-wrap gap-5">
+        <a href="index.html#contact" class="cta-button">
+          Demander une étude
+        </a>
+        <a href="#contenu-dossier" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
+          Détails techniques
+        </a>
       </div>
     </div>
+  </div>
 
-    <!-- Bottom Gradient Glow -->
-    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#0b0b0b] to-transparent z-10"></div>
-  </section>
+  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10 opacity-0 lg:opacity-100"></div>
+</section>
 
+<!-- SECTION 1 (White) -->
+<section class="bg-white">
   <div class="container-custom">
-
-  <!-- SECTION 1 -->
-  <div class="section-custom scroll-reveal">
-    <div class="section-text">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-        <h2 class="font-heading text-3xl font-bold mb-0">Analyse du <span class="text-red">projet</span></h2>
-      </div>
-      <p class="mb-4">
-        Visite du site et participation à des réunions stratégiques avec le maître d’ouvrage,
-        l’exploitant, le maître d’œuvre et le bureau de contrôle.
-      </p>
-      <p>
-        Cette phase critique permet d’intégrer les contraintes du bâtiment, son activité,
-        ainsi que les obligations réglementaires selon son classement.
-      </p>
-    </div>
-    <div class="section-img">
-      <div class="img-wrapper">
-        <img src="https://images.unsplash.com/photo-1581093458791-9f3c4f0c0b3d" alt="Analyse de projet SSI" class="glow-border">
-      </div>
-    </div>
-  </div>
-
-  <!-- SECTION 2 -->
-  <div class="section-custom reverse scroll-reveal">
-    <div class="section-text">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-        <h2 class="font-heading text-3xl font-bold mb-0">Validation <span class="text-red">technique</span></h2>
-      </div>
-      <p>
-        Consultation du Service Prévention afin de valider
-        les choix techniques ou argumenter les demandes de dérogation.
-      </p>
-      <p class="mt-4 border-l-4 border-[var(--a2ci-red)] pl-5 italic text-gray-400">
-        Notre expertise assure une interface fluide avec les autorités pour sécuriser vos investissements.
-      </p>
-    </div>
-    <div class="section-img">
-      <div class="img-wrapper">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Validation technique" class="glow-border">
-      </div>
-    </div>
-  </div>
-
-  <!-- ACCORDEON -->
-  <div id="contenu-dossier" class="scroll-reveal" style="margin-top: 40px;">
-    <div class="text-center mb-12">
-      <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Dossier Technique</p>
-      <h2 class="font-heading text-4xl font-bold">Contenu du <span class="text-red">dossier SSI</span></h2>
-    </div>
-
-    <div class="accordion glow-border">
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span>Cahier des charges fonctionnel</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    <div class="section-custom scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900 text-gray-900">Analyse du <span class="text-red text-red">projet</span></h2>
         </div>
-        <div class="accordion-content">
-          <p class="text-sm">Présentation du site, activité, historique, travaux envisagés, découpage des zones (ZA/ZC/ZF/ZDA), scénario de mise en sécurité, technologie et localisation des matériels, référentiel réglementaire, et exploitation du SSI.</p>
-          <p class="text-xs font-bold text-white mt-4 italic">Réalisé selon la trame du SDIS 33.</p>
-        </div>
+        <p class="mb-4 text-gray-600">
+          Visite du site et participation à des réunions stratégiques avec le maître d’ouvrage,
+          l’exploitant, le maître d’œuvre et le bureau de contrôle.
+        </p>
+        <p class="text-gray-600">
+          Cette phase critique permet d’intégrer les contraintes du bâtiment, son activité,
+          ainsi que les obligations réglementaires selon son classement.
+        </p>
       </div>
-
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span>Plans et schémas</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </div>
-        <div class="accordion-content">
-          <p class="text-sm">Plans informatiques de l’ensemble du site. Cartographie de chaque niveau incluant zones d’alarme, compartimentage, désenfumage, et détection automatique.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span>Tableaux de corrélation</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </div>
-        <div class="accordion-content">
-          <p class="text-sm">Matrices complexes des modes Automatique et Manuel, réalisées selon la nomenclature officielle des services de secours.</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span>diffusion & Protocoles</span>
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </div>
-        <div class="accordion-content">
-          <p class="text-sm">Dossier en 5 exemplaires pour :</p>
-          <ul class="list-none space-y-2 mt-3 text-xs text-gray-400">
-            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 02 Mairie / SDIS</li>
-            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Bureau de contrôle</li>
-            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Maître d'ouvrage</li>
-            <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Archive A2CI</li>
-          </ul>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581093458791-9f3c4f0c0b3d" alt="Analyse de projet SSI" class="glow-border">
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- SECTION 3 -->
-  <div class="section-custom scroll-reveal">
-    <div class="section-text">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-        <h2 class="font-heading text-3xl font-bold mb-0">Suivi de <span class="text-red">chantier</span></h2>
+<!-- SECTION 2 (White) -->
+<section class="bg-white">
+  <div class="container-custom pt-0">
+    <div class="section-custom reverse scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Validation <span class="text-red">technique</span></h2>
+        </div>
+        <p class="text-gray-600">
+          Consultation du Service Prévention afin de valider
+          les choix techniques ou argumenter les demandes de dérogation.
+        </p>
+        <p class="mt-4 border-l-4 border-[var(--a2ci-red)] pl-5 italic text-gray-500">
+          Notre expertise assure une interface fluide avec les autorités pour sécuriser vos investissements.
+        </p>
       </div>
-      <p class="mb-4">
-        Analyse critique des plans d'exécution et validation des matériels NF. Réunions de coordination spécialisées pour lever les points de friction technique.
-      </p>
-      <p>
-        Chaque étape fait l’objet d’un reporting précis diffusé à l’ensemble des parties prenantes.
-      </p>
-    </div>
-    <div class="section-img">
-      <div class="img-wrapper">
-        <img src="images/ssi_meeting.png" alt="Suivi de chantier" class="glow-border">
-      </div>
-    </div>
-  </div>
-
-  <!-- SECTION 4 -->
-  <div class="section-custom reverse scroll-reveal">
-    <div class="section-text">
-      <div class="flex items-center gap-3 mb-4">
-        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-        <h2 class="font-heading text-3xl font-bold mb-0">Réception & <span class="text-red">fin de chantier</span></h2>
-      </div>
-      <p class="mb-4 text-white font-semibold">Tests de 100 % des équipements (détecteurs, DAS/DAC).</p>
-      <p>
-        Essais de corrélation selon les normes NFS 61-932 et 61-970. Consolidation du Dossier d'Identité du SSI et accompagnement lors de la commission de sécurité.
-      </p>
-    </div>
-    <div class="section-img">
-      <div class="img-wrapper">
-        <img src="https://images.unsplash.com/photo-1581091012184-5c2b1b0b3c3f" alt="Réception et fin de chantier" class="glow-border">
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Validation technique" class="glow-border">
+        </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- CTA -->
-  <div class="cta scroll-reveal">
-    <h2 class="font-heading text-4xl font-bold mb-4">Un projet de mise en <span class="text-red">conformité ?</span></h2>
-    <p class="mb-10 text-lg text-gray-400">Nos experts vous accompagnent pour sécuriser vos établissements et garantir leur validation par les autorités.</p>
-    <a href="index.html#contact" class="cta-button">Demander une étude SSI</a>
+<!-- DOSSIER TECHNIQUE (Dark) -->
+<section id="contenu-dossier" class="section-dark">
+  <div class="container-custom">
+    <div class="scroll-reveal">
+      <div class="text-center mb-16">
+        <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Dossier Technique</p>
+        <h2 class="font-heading text-4xl font-bold text-white">Contenu du <span class="text-red">dossier SSI</span></h2>
+      </div>
+
+      <div class="accordion glow-border">
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Cahier des charges fonctionnel</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm">Présentation du site, activité, historique, travaux envisagés, découpage des zones (ZA/ZC/ZF/ZDA), scénario de mise en sécurité, technologie et localisation des matériels, référentiel réglementaire, et exploitation du SSI.</p>
+            <p class="text-xs font-bold text-white mt-4 italic">Réalisé selon la trame du SDIS 33.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Plans et schémas</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm">Plans informatiques de l’ensemble du site. Cartographie de chaque niveau incluant zones d’alarme, compartimentage, désenfumage, et détection automatique.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Tableaux de corrélation</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm">Matrices complexes des modes Automatique et Manuel, réalisées selon la nomenclature officielle des services de secours.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>diffusion & Protocoles</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm">Dossier en 5 exemplaires pour :</p>
+            <ul class="list-none space-y-2 mt-3 text-xs text-gray-400">
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 02 Mairie / SDIS</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Bureau de contrôle</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Maître d'ouvrage</li>
+              <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> 01 Archive A2CI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-</div>
+<!-- SECTION 3 (White) -->
+<section class="bg-white">
+  <div class="container-custom">
+    <div class="section-custom scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Suivi de <span class="text-red">chantier</span></h2>
+        </div>
+        <p class="mb-4 text-gray-600">
+          Analyse critique des plans d'exécution et validation des matériels NF. Réunions de coordination spécialisées pour lever les points de friction technique.
+        </p>
+        <p class="text-gray-600">
+          Chaque étape fait l’objet d’un reporting précis diffusé à l’ensemble des parties prenantes.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="images/ssi_meeting.png" alt="Suivi de chantier" class="glow-border">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 (White) -->
+<section class="bg-white">
+  <div class="container-custom pt-0">
+    <div class="section-custom reverse scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Réception & <span class="text-red">fin de chantier</span></h2>
+        </div>
+        <p class="mb-4 text-gray-900 font-semibold">Tests de 100 % des équipements (détecteurs, DAS/DAC).</p>
+        <p class="text-gray-600">
+          Essais de corrélation selon les normes NFS 61-932 et 61-970. Consolidation du Dossier d'Identité du SSI et accompagnement lors de la commission de sécurité.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581091012184-5c2b1b0b3c3f" alt="Réception et fin de chantier" class="glow-border">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white section-cta">
+  <div class="container-custom py-0">
+    <div class="cta scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold mb-4 text-white">Un projet de mise en <span class="text-red">conformité ?</span></h2>
+      <p class="mb-10 text-lg text-gray-400">Nos experts vous accompagnent pour sécuriser vos établissements et garantir leur validation par les autorités.</p>
+      <a href="index.html#contact" class="cta-button">Demander une étude SSI</a>
+    </div>
+  </div>
+</section>
 
 <div id="footer-component"></div>
 
@@ -516,9 +541,3 @@
 
 </body>
 </html>
- { "particles_nb": 4 } }
-    },
-    "retina_detect": true
-  });
-</script>
-
