@@ -20,8 +20,8 @@ async function loadHeader() {
     const html = await response.text();
     headerContainer.innerHTML = html;
     
-    // Make the header container sticky
-    headerContainer.classList.add('sticky', 'top-0', 'z-[100]', 'w-full');
+    // Ensure the header container is fixed at the top
+    headerContainer.classList.add('fixed', 'top-0', 'left-0', 'z-[100]', 'w-full');
     
     // Fix image and link paths if in subdirectory
     if (basePath === '../') {
