@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Audit & Conseil SSI - A2CI Prévention Incendie</title>
+  <title>Audit SSI - A2CI Prévention Incendie</title>
   <meta name="description" content="Expertise en Audit de sécurité incendie par A2CI. Analyse réglementaire, audit de site et rapports détaillés en Gironde." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,6 +12,51 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-light: #ff1a1a;
+      --a2ci-black: #000000;
+      --bg-dark: #0b0b0b;
+      --card-dark: #111111;
+      --border-dark: #222222;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+    
+    body { 
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      background: #fff;
+      color: #333;
+    }
+    
+    .font-heading { 
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif; 
+    }
+
+    .container-custom {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { line-height: 1.7; font-weight: 300; }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    /* HERO (Dark) */
+    .hero {
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
     #particles-js {
       position: absolute;
       width: 100%;
@@ -19,387 +64,521 @@
       top: 0;
       left: 0;
       z-index: 1;
+      opacity: 0.25;
     }
-    :root {
-      --a2ci-red: #E30613;
-      --a2ci-red-light: #ff1a1a;
-      --a2ci-dark: #0b0b0b;
-      --glass-white: rgba(255, 255, 255, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.4);
+
+    /* TIMELINE */
+    .timeline-container {
+      position: relative;
+      padding: 40px 0;
     }
-    body { font-family: 'Inter', sans-serif; }
-    .font-heading { font-family: 'Outfit', sans-serif; }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, var(--a2ci-red), transparent);
+      opacity: 0.3;
+    }
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
+    }
+    .step-dot {
+      width: 12px;
+      height: 12px;
+      background: var(--a2ci-red);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      box-shadow: 0 0 15px var(--a2ci-red);
+    }
+
+    /* SECTIONS */
+    .section-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .section-custom.reverse { flex-direction: row-reverse; }
+
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-left: 2px solid var(--a2ci-red);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
+
+    .section-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* DARK SECTION */
+    .section-dark {
+      background: var(--bg-dark);
+      color: #fff;
+    }
     
-    .glass-card {
-      background: var(--glass-white);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    .section-dark p { color: #d1d5db; }
+    .section-dark .section-img img {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ACCORDEON (Dark) */
+    .accordion {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      background: var(--card-dark);
+    }
+
+    .accordion-item { border-bottom: 1px solid var(--border-dark); }
+    .accordion-item:last-child { border-bottom: none; }
+
+    .accordion-header {
+      padding: 24px;
+      cursor: pointer;
+      background: transparent;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .accordion-header:hover { background: rgba(255,255,255,0.03); }
+
+    .accordion-header svg {
+      transition: transform 0.3s;
+      width: 20px;
+      height: 20px;
+      color: var(--a2ci-red);
+    }
+
+    .accordion-header.active { color: var(--a2ci-red); }
+    .accordion-header.active svg { transform: rotate(180deg); }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0 24px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .accordion-content.open {
+      max-height: 2000px;
+      padding: 0 24px 24px 24px;
+    }
+
+    /* GLOW BORDER EFFECT */
+    .glow-border {
+      position: relative;
+      overflow: hidden;
+    }
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .glow-border:hover::before { transform: translateX(350%); }
+
+    /* CTA */
+    .section-cta { padding-bottom: 80px; }
+    .cta {
+      text-align: center;
+      padding: 80px 40px;
+      background: linear-gradient(145deg, #111 0%, #000 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border-dark);
+      position: relative;
+      color: #fff;
+    }
+
+    .cta::after {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px; right: -1px; bottom: -1px;
+      background: linear-gradient(45deg, transparent 40%, var(--a2ci-red) 50%, transparent 60%);
+      z-index: -1;
+      border-radius: 24px;
+      opacity: 0.1;
+    }
+
+    .cta-button {
+      background: var(--a2ci-red);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
     }
     
-    .reveal-on-scroll {
+    .cta-button:hover {
+      background: #b3050f;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(150, 6, 6, 0.3);
+    }
+
+    .text-red { color: var(--a2ci-red); }
+
+    .scroll-reveal {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
       transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     
-    .reveal-on-scroll.active {
+    .scroll-reveal.active {
       opacity: 1;
       transform: translateY(0);
     }
-
-    .premium-list li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-    .premium-list li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--a2ci-red);
-      font-weight: bold;
-    }
-
-    .tech-card {
-        background: white;
-        border-radius: 2rem;
-        padding: 2.5rem;
-        border: 1px solid #f1f1f1;
-        transition: all 0.3s ease;
-    }
-    .tech-card:hover {
-        border-color: var(--a2ci-red);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-    }
-
-    .grid-pattern {
-        background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
-        background-size: 20px 20px;
-    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 w-full">
+<body class="overflow-x-hidden w-full">
 
 <div id="header-component"></div>
 
-<!-- Hero Section -->
-<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32">
+<!-- HERO (Dark) -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
   <div class="absolute inset-0 z-0 opacity-40">
-    <img src="https://images.pexels.com/photos/1239162/pexels-photo-1239162.jpeg" alt="Audit & Conseil A2CI" class="h-full w-full object-cover" />
+    <img src="images/photo-audit-conseil.avif" alt="Audit SSI A2CI" class="h-full w-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
+  
   <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+
   <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
     <div class="inline-flex items-center gap-2 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
       <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
       Expertise Indépendante
     </div>
-    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6">
-      Audit <br><span class="text-[var(--a2ci-red-light)]">& Conseil.</span>
+    
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+      Audit des Systèmes de <br><span class="text-[var(--a2ci-red-light)]">Sécurité Incendie.</span>
     </h1>
+    
     <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
-      Assistance stratégique aux Maîtres d'Ouvrages et Cabinets d'Expertises pour l'évaluation rigoureuse de vos installations et la gestion des Dommages d'Ouvrages.
+      Dans le cadre de missions de Coordination SSI et de Bureau d’Études Techniques, nous assistons la maîtrise d’ouvrage dans ses audits d’installations SSI ainsi que les cabinets d’expertises en cas de dommages d’ouvrages.
     </p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
-        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">Audit</div>
-        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Technique</div>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Audit</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Technique</div>
       </div>
-      <div class="glass-card px-6 py-4 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
-        <div class="text-[var(--a2ci-red-light)] font-black text-lg mb-0.5">Conseil</div>
-        <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Réglementaire</div>
+      <div class="glass-card px-8 py-5 rounded-2xl bg-white/5 border-white/10 backdrop-blur-md text-white">
+        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Conseil</div>
+        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Réglementaire</div>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-5">
+      <a href="index.html#contact" class="cta-button">
+        Demander un audit
+      </a>
+      <a href="#detail-audit" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
+        Détails de l'audit
+      </a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-10 opacity-0 lg:opacity-100"></div>
+</section>
+
+<!-- TIMELINE SECTION (White) -->
+<section class="bg-white py-20">
+  <div class="container-custom py-0">
+    <div class="text-center mb-20 scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-4">Notre <span class="text-red">Méthodologie.</span></h2>
+      <p class="text-gray-500 font-light max-w-2xl mx-auto">Un accompagnement structuré en 4 étapes clés pour une expertise sans faille.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-8 relative px-4">
+      <div class="timeline-line hidden md:block"></div>
+      
+      <!-- Step 1 -->
+      <div class="text-center scroll-reveal">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">01</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Analyse réglementaire</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Étude du contexte, des normes et du classement de l’établissement.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 100ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">02</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Audit sur site</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Inspection complète du SSI et tests de fonctionnement.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 200ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">03</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Contrôles techniques</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Vérification des installations, réseaux et équipements.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 300ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">04</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Rapport d’audit</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Synthèse, écarts et préconisations de mise en conformité.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Phase 1: Analyse du Contexte -->
-<section class="py-24 bg-white relative">
-    <div class="mx-auto max-w-7xl px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
-            <div class="reveal-on-scroll">
-                <h2 class="font-heading text-4xl lg:text-5xl font-bold mb-8 text-gray-900 leading-tight">Analyse du Contexte <br><span class="text-[var(--a2ci-red)]">& Existant.</span></h2>
-                <div class="h-1.5 w-32 bg-[var(--a2ci-red)] mb-10 rounded-full"></div>
-                <p class="text-gray-600 text-lg mb-10 leading-relaxed font-light">
-                    Avant tout audit sur site, nous sécurisons le cadre réglementaire historique de l'établissement pour une évaluation précise et sans faille.
-                </p>
-                <div class="space-y-6">
-                    <div class="flex gap-6 items-start">
-                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center font-bold text-[var(--a2ci-red)] border border-gray-100">01</div>
-                        <div>
-                            <h5 class="font-bold text-gray-900 mb-1">Immersion Initiale</h5>
-                            <p class="text-sm text-gray-500 font-light">Visites sur site et réunions de travail pour comprendre les phases de travaux réalisées.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start">
-                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center font-bold text-[var(--a2ci-red)] border border-gray-100">02</div>
-                        <div>
-                            <h5 class="font-bold text-gray-900 mb-1">Référentiel Historique</h5>
-                            <p class="text-sm text-gray-500 font-light">Analyse fine des textes réglementaires en vigueur à l'époque des travaux.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start">
-                        <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center font-bold text-[var(--a2ci-red)] border border-gray-100">03</div>
-                        <div>
-                            <h5 class="font-bold text-gray-900 mb-1">Trame d'Étude</h5>
-                            <p class="text-sm text-gray-500 font-light">Création d'une trame personnalisée selon le type et le classement de l'établissement.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="relative reveal-on-scroll" style="transition-delay: 200ms;">
-                <div class="absolute -inset-10 grid-pattern opacity-20 -z-10"></div>
-                <div class="bg-gray-50 p-12 rounded-[3.5rem] border border-gray-200">
-                    <img src="images/audit_contexte.png" alt="Analyse Contexte" class="rounded-[2.5rem] shadow-xl w-full h-auto" />
-                </div>
-            </div>
+<!-- SECTION 1 (White) -->
+<section class="bg-[#fafafa]">
+  <div class="container-custom">
+    <div class="section-custom scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Analyse du <span class="text-red">contexte</span></h2>
         </div>
+        <p class="mb-4 text-gray-600">
+          Avant tout audit, une visite du site est réalisée et des réunions sont organisées avec l’ensemble des protagonistes afin de comprendre les différentes phases de travaux.
+        </p>
+        <p class="text-gray-600">
+          L’Ingénieur Conseil prend en compte la réglementation en vigueur à l’époque des travaux et établit une trame d’étude avec les obligations liées au type et au classement de l’établissement.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581093458791-9f3c4f0c0b3d" alt="Analyse du contexte" class="glow-border">
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Phase 2: Audit de Terrain - Functional Tests -->
-<section class="py-32 bg-black text-white relative overflow-hidden">
-    <div class="mx-auto max-w-7xl px-6 relative z-10">
-        <div class="text-center mb-24 reveal-on-scroll">
-            <h2 class="font-heading text-4xl lg:text-6xl font-black mb-8">L'Audit de <span class="text-[var(--a2ci-red-light)]">Terrain.</span></h2>
-            <p class="text-gray-400 text-lg max-w-2xl mx-auto font-light">Essais exhaustifs de l'ensemble de la chaîne de sécurité en présence de l'entreprise de maintenance.</p>
+<!-- SECTION 2 (White) -->
+<section class="bg-white">
+  <div class="container-custom pt-0">
+    <div class="section-custom reverse scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Audit sur <span class="text-red">site</span></h2>
         </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll">
-                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">🔔</div>
-                <h5 class="text-lg font-bold mb-3">Détection</h5>
-                <p class="text-sm text-gray-400 font-light">Test de 100% des têtes de détection automatique d'incendie.</p>
-            </div>
-            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll" style="transition-delay: 100ms;">
-                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">🚨</div>
-                <h5 class="text-lg font-bold mb-3">Déclencheurs</h5>
-                <p class="text-sm text-gray-400 font-light">Vérification de tous les déclencheurs manuels et indicateurs d'action.</p>
-            </div>
-            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll" style="transition-delay: 200ms;">
-                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">⚙️</div>
-                <h5 class="text-lg font-bold mb-3">Pilotage</h5>
-                <p class="text-sm text-gray-400 font-light">Contrôle de tous les DAS, DAC et DCM du système.</p>
-            </div>
-            <div class="p-8 bg-white/5 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors reveal-on-scroll" style="transition-delay: 300ms;">
-                <div class="text-[var(--a2ci-red-light)] text-3xl mb-4">🔄</div>
-                <h5 class="text-lg font-bold mb-3">Scénarios</h5>
-                <p class="text-sm text-gray-400 font-light">Validation des scénarios de mise en sécurité manuels et automatiques.</p>
-            </div>
+        <p class="mb-4 text-gray-600">
+          L’Ingénieur Conseil visite l’ensemble de l’établissement afin de vérifier que les risques sont bien couverts par le SSI existant.
+        </p>
+        <p class="text-gray-600">
+          Des essais sont réalisés, si possible en présence de l’entreprise de maintenance et du maître d’ouvrage pour une validation transparente et complète.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Audit sur site" class="glow-border">
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Phase 2: Audit de Terrain - Visual Control (The Technical Grid) -->
-<section class="py-32 bg-[#fafafa] relative overflow-hidden">
-    <div class="absolute inset-0 grid-pattern opacity-[0.03] -z-0"></div>
-    <div class="mx-auto max-w-7xl px-6 relative z-10">
-        <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-            <div class="lg:w-[35%] reveal-on-scroll">
-                <div class="sticky top-32">
-                    <div class="inline-block px-3 py-1 bg-white border border-gray-200 text-[var(--a2ci-red)] text-[9px] font-black uppercase tracking-[0.2em] rounded-full mb-6 shadow-sm">
-                        Contrôle Physique
-                    </div>
-                    <h3 class="font-heading text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 leading-[1.1] tracking-tighter">
-                        Maîtrise des <br><span class="text-[var(--a2ci-red)]">Réseaux.</span>
-                    </h3>
-                    <p class="text-gray-500 text-lg leading-relaxed font-light mb-10">
-                        Un contrôle visuel méticuleux de l'installation pour déceler les non-conformités physiques souvent ignorées, garantissant la pérennité de votre investissement.
-                    </p>
-                    
-                    <div class="group relative mb-12">
-                        <div class="absolute -inset-2 bg-gradient-to-r from-[var(--a2ci-red)] to-red-400 rounded-[2.5rem] opacity-20 blur-xl group-hover:opacity-30 transition-opacity"></div>
-                        <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white aspect-[4/3]">
-                            <img src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg" alt="Câblage technique premium" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                <p class="text-white text-[10px] font-bold uppercase tracking-widest">Inspection de conformité câblage</p>
-                            </div>
-                        </div>
-                    </div>
+<!-- DETAIL AUDIT (Dark) -->
+<section id="detail-audit" class="section-dark">
+  <div class="container-custom">
+    <div class="scroll-reveal">
+      <div class="text-center mb-16">
+        <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Expertise Technique</p>
+        <h2 class="font-heading text-4xl font-bold text-white">Détail de <span class="text-red">l’audit</span></h2>
+      </div>
 
-                    <div class="p-8 bg-white border border-gray-100 rounded-[2rem] shadow-sm relative overflow-hidden group">
-                        <div class="absolute top-0 left-0 w-1.5 h-full bg-[var(--a2ci-red)]"></div>
-                        <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3">Référentiels Techniques</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-2 py-1 bg-gray-50 text-gray-700 text-[10px] font-bold rounded border border-gray-100">NFC 15-100</span>
-                            <span class="px-2 py-1 bg-gray-50 text-gray-700 text-[10px] font-bold rounded border border-gray-100">NFS 61-932</span>
-                            <span class="px-2 py-1 bg-gray-50 text-gray-700 text-[10px] font-bold rounded border border-gray-100">NFS 61-970</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:w-[65%] grid sm:grid-cols-2 gap-x-8 gap-y-10 reveal-on-scroll">
-                <!-- Card 1 -->
-                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                        <span class="text-6xl font-black text-gray-900">01</span>
-                    </div>
-                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
-                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Séparation Réseaux</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light">
-                        Vérification de la séparation stricte des courants faibles SSI/DAS des autres réseaux polluants (courants forts, info) pour éviter toute interférence.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                        <span class="text-6xl font-black text-gray-900">02</span>
-                    </div>
-                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
-                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Fixations Stables</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light">
-                        Audit des supports : chaque câble doit être fixé sur les parties pérennes du bâtiment, interdisant l'usage de câbles "volants" sur faux-plafonds.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                        <span class="text-6xl font-black text-gray-900">03</span>
-                    </div>
-                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
-                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Conformité Câbles</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light">
-                        Contrôle de la catégorie des câbles (CR1, C2...) en fonction de leur rôle critique dans la chaîne de sécurité et de l'environnement traversé.
-                    </p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                        <span class="text-6xl font-black text-gray-900">04</span>
-                    </div>
-                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
-                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Positionnement Matériel</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light">
-                        Analyse du positionnement physique des détecteurs, DM et DS selon les zones de protection et les flux d'évacuation prévus.
-                    </p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="group bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative overflow-hidden sm:col-span-2">
-                    <div class="absolute top-0 right-0 p-8 opacity-[0.05] group-hover:opacity-[0.1] transition-opacity">
-                        <span class="text-6xl font-black text-gray-900">05</span>
-                    </div>
-                    <div class="w-12 h-12 bg-red-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--a2ci-red)] transition-colors duration-500">
-                        <svg class="w-6 h-6 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h4 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Sectorisation & Rebouchage</h4>
-                    <p class="text-gray-500 text-sm leading-relaxed font-light max-w-2xl">
-                        Vérification critique du rebouchage coupe-feu des traversées de cloisons et planchers. Une faille dans l'étanchéité rend la sectorisation inefficace face aux fumées.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Phase 3: Le Rapport d'Audit -->
-<section class="py-32 bg-gray-50 relative overflow-hidden">
-    <div class="mx-auto max-w-7xl px-6">
-        <div class="text-center mb-20 reveal-on-scroll">
-            <h2 class="font-heading text-5xl font-bold text-gray-900">Le Rapport <span class="text-[var(--a2ci-red)]">d'Audit.</span></h2>
-            <p class="text-gray-500 font-light max-w-2xl mx-auto mt-4">Une synthèse stratégique pour transformer vos observations techniques en un plan d'action de mise en conformité.</p>
-            <div class="mt-12 max-w-4xl mx-auto rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white">
-                <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg" alt="Réunion de remise de rapport" class="w-full h-64 object-cover" />
-            </div>
+      <div class="accordion glow-border">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Tests du système SSI</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <ul class="list-none space-y-3 text-sm text-gray-400">
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Toutes les têtes de détection automatique d’incendie</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Tous les déclencheurs manuels et indicateurs d’action</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Tous les DAS, DAC, DCM</li>
+              <li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)] mt-1.5"></span> Scénarios de mise en sécurité en manuel et en automatique</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-10">
-            <!-- Analyse de l'Existant Block -->
-            <div class="bg-white p-12 rounded-[3.5rem] shadow-xl reveal-on-scroll">
-                <h4 class="text-2xl font-bold mb-8 text-gray-900 border-b pb-4 flex justify-between items-center">
-                    Analyse de l'Existant
-                    <span class="text-[var(--a2ci-red)] text-xs uppercase tracking-widest font-black">Phase A</span>
-                </h4>
-                <ul class="premium-list text-gray-600 font-light space-y-4">
-                    <li>Rappel des obligations réglementaires à la date des travaux originaux.</li>
-                    <li>Descriptif détaillé du process de fonctionnement du SSI actuel.</li>
-                    <li>Adéquation avec les dossiers de conception, rapports SDIS et commissions passées.</li>
-                    <li>Relevé exhaustif des écarts normatifs et des dérives de conception.</li>
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Contrôles visuels</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm border-b border-white/10 pb-4 mb-4">Vérification du cheminement des réseaux SSI et DAS/DAC.</p>
+            <ul class="list-none space-y-2 text-xs text-gray-400">
+              <li>• Séparation des réseaux (NFC 15-100, NFS 61-932, NFS 61-970)</li>
+              <li>• Fixation des réseaux sur parties stables du bâtiment</li>
+              <li>• Absence de câbles volants et conformité des câbles</li>
+              <li>• Positionnement des équipements SSI (détecteurs, DM, DS)</li>
+              <li>• Rebouchage des traversées coupe-feu</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Rapport après audit</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm">Rapport comprenant les essais réalisés, les observations sur le fonctionnement du SSI, le référentiel réglementaire et les solutions correctives pour mise en conformité ou remplacement du système.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Contenu du rapport d’audit</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <div class="space-y-4">
+              <div>
+                <p class="text-[9px] font-black uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Analyse comparative</p>
+                <ul class="text-xs text-gray-400 space-y-1">
+                  <li>• Dossier de conception SSI initial</li>
+                  <li>• Rapports de (sous)commission de sécurité</li>
+                  <li>• Rapport du bureau de contrôle triennal</li>
                 </ul>
+              </div>
+              <div>
+                <p class="text-[9px] font-black uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Axes d'amélioration</p>
+                <p class="text-xs text-gray-400">Identification des écarts normatifs, propositions de modifications pour conformité et améliorations selon les normes actuelles (selon faisabilité technique).</p>
+              </div>
             </div>
-
-            <!-- Propositions & Amélioration Block -->
-            <div class="bg-white p-12 rounded-[3.5rem] shadow-xl reveal-on-scroll" style="transition-delay: 200ms;">
-                <h4 class="text-2xl font-bold mb-8 text-gray-900 border-b pb-4 flex justify-between items-center">
-                    Propositions & Progrès
-                    <span class="text-[var(--a2ci-red)] text-xs uppercase tracking-widest font-black">Phase B</span>
-                </h4>
-                <ul class="premium-list text-gray-600 font-light space-y-4">
-                    <li>Modifications techniques pour pallier aux non-conformités détectées.</li>
-                    <li>Plan de remise en adéquation avec la conception SSI initiale.</li>
-                    <li>Amélioration vers les normes en vigueur pour les systèmes vétustes.</li>
-                    <li>Étude de faisabilité technique selon les contraintes du bâtiment.</li>
-                </ul>
-            </div>
+          </div>
         </div>
-        
-        <div class="mt-20 text-center reveal-on-scroll">
-            <div class="inline-block p-1 bg-gray-200 rounded-full">
-                <div class="px-8 py-4 bg-white rounded-full flex items-center gap-4">
-                    <span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
-                    <span class="text-sm font-bold text-gray-700 tracking-wide uppercase">Objectif : Zéro Non-Conformité</span>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-white section-cta">
+  <div class="container-custom py-0">
+    <div class="cta scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold mb-4 text-white">Besoin d’un <span class="text-red">audit SSI ?</span></h2>
+      <p class="mb-10 text-lg text-gray-400">Assistance stratégique pour l'évaluation rigoureuse de vos installations et la gestion des risques.</p>
+      <a href="index.html#contact" class="cta-button">Demander un audit</a>
+    </div>
+  </div>
 </section>
 
 <div id="footer-component"></div>
 
 <script>
-  // Simple Scroll Reveal Observer
-  const observerOptions = {
-    threshold: 0.1
-  };
+  // Accordion Logic
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains("open");
+      
+      // Close other items
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+      document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+      
+      if (!isOpen) {
+        content.classList.add("open");
+        header.classList.add("active");
+      }
+    });
+  });
 
+  // Reveal on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
       }
     });
-  }, observerOptions);
+  }, { threshold: 0.1 });
 
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-    observer.observe(el);
-  });
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
-  // Particles.js Initialization
-  particlesJS('particles-js', {
-    "particles": {
-      "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
-      "color": { "value": "#ffffff" },
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.5, "random": false },
-      "size": { "value": 2, "random": true },
-      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
-      "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-    }
-  });
+  // Particles.js
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 2, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }
+      },
+      "retina_detect": true
+    });
+  }
 </script>
 
 </body>
