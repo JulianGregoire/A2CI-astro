@@ -107,6 +107,65 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
+    /* Custom Section Layouts */
+    .container-custom {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+    .section-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+    .section-custom.reverse { flex-direction: row-reverse; }
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-left: 2px solid var(--a2ci-red);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
+    .section-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .glow-border {
+      position: relative;
+      overflow: hidden;
+    }
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .glow-border:hover::before { transform: translateX(350%); }
+    .text-red { color: var(--a2ci-red); }
   </style>
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden w-full">
@@ -347,11 +406,7 @@
         </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- Expertises Techniques -->
+    </div<!-- Expertises Techniques -->
 <section id="expertises" class="py-24 bg-white relative overflow-hidden">
   <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
   
@@ -361,85 +416,57 @@
       <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">Une expertise globale pour votre maîtrise<br class="hidden sm:block"> des risques incendie.</h2>
       <p class="text-gray-600 max-w-3xl mx-auto">Nous intervenons sur l’ensemble des composantes réglementaires et techniques pour garantir la sécurité des biens et des personnes.</p>
     </div>
+  </div>
 
-    <div class="grid gap-8 md:grid-cols-2">
-      
-      <!-- Veille -->
-      <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-        <div class="aspect-video w-full overflow-hidden">
-          <img src="images/veille.png" alt="Veille règlementaire" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+  <!-- SECTION 3 (White) -->
+  <div class="container-custom">
+    <div class="section-custom scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Suivi de <span class="text-red">chantier</span></h2>
         </div>
-        <div class="p-8">
-          <div class="absolute top-0 left-0 w-1 h-full bg-[var(--a2ci-red)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--a2ci-red)] transition-colors">
-            <svg class="w-7 h-7 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Veille règlementaire</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            Nous déployons des outils de veille continue sur les normes françaises et européennes. Cette anticipation nous permet de mesurer les évolutions administratives et techniques pour vous assister avec précision lors de vos phases de travaux ou d'exploitation.
-          </p>
+        <p class="mb-4 text-gray-600">
+          Demande aux entreprises des plans d’exécution, documents techniques, PV des matériels NF et associativité.
+        </p>
+        <p class="text-gray-600">
+          Analyse des documents, rédaction d’un rapport, organisation de réunions avant et pendant les travaux avec tous les acteurs du projet.
+        </p>
+        <p class="text-gray-600 mt-4">
+          Chaque réunion fait l’objet d’un compte-rendu diffusé à l’ensemble des parties.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="images/ssi_meeting.png" alt="Suivi de chantier" class="glow-border">
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- Etudes -->
-      <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-        <div class="aspect-video w-full overflow-hidden">
-          <img src="images/etudes.png" alt="Études & Ingénierie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+  <!-- SECTION 4 (White) -->
+  <div class="container-custom pt-0">
+    <div class="section-custom reverse scroll-reveal">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Réception & <span class="text-red">fin de chantier</span></h2>
         </div>
-        <div class="p-8">
-          <div class="absolute top-0 left-0 w-1 h-full bg-[var(--a2ci-red)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--a2ci-red)] transition-colors">
-            <svg class="w-7 h-7 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Études & Ingénierie</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            Conception de solutions sur-mesure répondant aux exigences réglementaires tout en s'adaptant à l'évolution de vos infrastructures. Nos études intègrent vos contraintes d'exploitation pour une sécurité opérationnelle et pérenne.
-          </p>
+        <p class="mb-4 text-gray-600">
+          Collecte des documents du dossier d’identité (DOE, PV de mise en service, autocontrôles des entreprises).
+        </p>
+        <p class="text-gray-600">
+          Tests de 100 % des équipements (détecteurs, déclencheurs, DAS/DAC/DCM) et scénarios de sécurité selon les normes NFS 61-932 et NFS 61-970.
+        </p>
+        <p class="text-gray-600 mt-4">
+          Rédaction du procès-verbal de réception et création du dossier d’identité du SSI.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1581091012184-5c2b1b0b3c3f" alt="Réception et fin de chantier" class="glow-border">
         </div>
       </div>
-
-      <!-- Risques -->
-      <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-        <div class="aspect-video w-full overflow-hidden">
-          <img src="images/risques.png" alt="Analyse des Risques" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-        </div>
-        <div class="p-8">
-          <div class="absolute top-0 left-0 w-1 h-full bg-[var(--a2ci-red)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--a2ci-red)] transition-colors">
-            <svg class="w-7 h-7 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Analyse des Risques</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            Audits de sécurité complets et évaluation des risques pour tous types d'organisations (Industrie, ERP, IGH, Logement). Nous vous aidons à organiser l’évacuation et l'intervention de secours avec une approche pragmatique.
-          </p>
-        </div>
-      </div>
-
-      <!-- Réception -->
-      <div class="group relative bg-white rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-        <div class="aspect-video w-full overflow-hidden">
-          <img src="images/reception.png" alt="Réception Technique" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-        </div>
-        <div class="p-8">
-          <div class="absolute top-0 left-0 w-1 h-full bg-[var(--a2ci-red)] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div class="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[var(--a2ci-red)] transition-colors">
-            <svg class="w-7 h-7 text-[var(--a2ci-red)] group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors">Réception Technique</h3>
-          <p class="text-gray-600 leading-relaxed text-sm">
-            Test rigoureux des installations en fin de travaux pour valider l'adéquation parfaite entre la conception initiale, les prescriptions des autorités compétentes et la réalisation effective par vos prestataires.
-          </p>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
