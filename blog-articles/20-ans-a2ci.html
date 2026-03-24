@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Évènement : 20 ans d'A2CI - Blog A2CI Prévention</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="../js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-dark: #960606;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Outfit', sans-serif; }
+    .article-content { line-height: 1.8; color: #4B5563; font-weight: 300; }
+    .article-content p { margin-bottom: 2rem; }
+    .article-content h2 { 
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.875rem;
+      color: #111827;
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: -0.025em;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<article class="pt-40 pb-24">
+  <div class="max-w-4xl mx-auto px-8">
+    
+    <!-- Header de l'article -->
+    <header class="mb-16 text-center md:text-left">
+      <a href="../blog.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-[var(--a2ci-red)] transition-colors mb-8 text-sm font-bold uppercase tracking-widest">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+        Retour au Mag
+      </a>
+      <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
+        <span class="px-4 py-1 bg-red-50 text-[var(--a2ci-red)] border border-red-100 text-[10px] font-bold uppercase tracking-widest rounded-full">Vie de l'agence</span>
+        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">24 Mars 2024</span>
+      </div>
+      <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight uppercase tracking-tight">Évènement à venir : <span class="text-[var(--a2ci-red)]">Fêter les 20 ans de l'entreprise.</span></h1>
+    </header>
+
+    <!-- Image principale -->
+    <div class="rounded-[2.5rem] overflow-hidden mb-16 shadow-2xl">
+      <img src="../images/a2ci_20_ans.png" alt="Célébration 20 ans A2CI" class="w-full h-auto" />
+    </div>
+
+    <!-- Contenu -->
+    <div class="article-content max-w-3xl mx-auto">
+      <p class="text-xl font-medium text-gray-900 mb-10 leading-relaxed italic border-l-4 border-[var(--a2ci-red)] pl-8">
+        "En juin prochain, A2CI soufflera sa 20ème bougie. Une étape majeure que nous souhaitons célébrer avec ceux qui font notre succès au quotidien."
+      </p>
+      
+      <p>
+        Vingt ans d'expertise, vingt ans de passion pour la prévention incendie, et vingt ans de confiance partagée avec nos partenaires et clients. Pour marquer cet anniversaire symbolique, toute l'équipe d'A2CI se prépare à un évènement exceptionnel.
+      </p>
+
+      <h2>Rendez-vous en juin</h2>
+      <p>
+        C'est dans le cadre prestigieux de l'hippodrome de Langon que nous prévoyons de nous réunir. Ce lieu emblématique de la région nous permettra de vous accueillir dans une ambiance à la fois festive et conviviale, à l'image des valeurs portées par notre agence depuis sa création en 2006.
+      </p>
+      
+      <p>
+        Au programme : rétrospective sur ces deux décennies, échanges sur l'avenir de la prévention incendie et moments de partage. Nous reviendrons vers vous très prochainement avec plus de détails et les invitations officielles.
+      </p>
+
+      <p>
+        Préparez-vous à fêter avec nous cette belle aventure qui continue grâce à vous !
+      </p>
+    </div>
+
+    <footer class="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 bg-[var(--a2ci-red)] rounded-full flex items-center justify-center text-white font-bold text-xl uppercase">A</div>
+        <div>
+          <p class="font-bold text-sm">L'Équipe A2CI</p>
+          <p class="text-xs text-gray-400 uppercase tracking-widest">Depuis 2006</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</article>
+
+<div id="footer-component"></div>
+
+</body>
+</html>
