@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERP - Établissements Recevant du Public - A2CI Prévention Incendie</title>
+  <meta name="description" content="Expertise en sécurité incendie pour les ERP (Commerces, administrations, écoles, etc.) Catégories 1 à 5. Accompagnement réglementaire par A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #E30613;
+      --a2ci-red-light: #ff1a1a;
+      --a2ci-black: #000000;
+      --bg-dark: #0b0b0b;
+      --card-dark: #111111;
+      --border-dark: #222222;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+    
+    body { 
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      background: #fff;
+      color: #333;
+    }
+    
+    .font-heading { 
+      font-family: 'Outfit', system-ui, -apple-system, sans-serif; 
+    }
+
+    .container-custom {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { line-height: 1.7; font-weight: 300; }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    /* HERO (Dark) */
+    .hero {
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0.25;
+    }
+
+    /* SECTIONS */
+    .section-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .section-custom.reverse { flex-direction: row-reverse; }
+
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-left: 2px solid var(--a2ci-red);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
+
+    .section-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* CARDS */
+    .category-card {
+      background: #fff;
+      border: 1px solid #f3f4f6;
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    .category-card:hover {
+      border-color: var(--a2ci-red);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transform: translateY(-5px);
+    }
+
+    /* CTA */
+    .section-cta { padding-bottom: 80px; }
+    .cta {
+      text-align: center;
+      padding: 80px 40px;
+      background: linear-gradient(145deg, #111 0%, #000 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border-dark);
+      position: relative;
+      color: #fff;
+    }
+
+    .cta-button {
+      background: var(--a2ci-red);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      background: var(--a2ci-red-light);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="hero relative overflow-hidden flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div id="particles-js"></div>
+  <div class="absolute inset-0 z-0">
+    <img src="images/erp_hero.png" alt="Établissements Recevant du Public" class="w-full h-full object-cover opacity-40">
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+  </div>
+  
+  <div class="container-custom relative z-10 py-0">
+    <div class="max-w-3xl">
+      <div class="inline-flex items-center gap-3 mb-6 px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
+        Secteur d'Intervention
+      </div>
+      <h1 class="font-heading text-5xl md:text-7xl font-bold mb-6 leading-tight uppercase tracking-tight">
+        ERP : Établissements <br><span class="text-[var(--a2ci-red)]">Recevant du Public.</span>
+      </h1>
+      <p class="text-xl text-gray-300 font-light max-w-2xl leading-relaxed mb-10">
+        Commerces, administrations, écoles, hôpitaux... A2CI assure la mise en conformité et la sécurité de tous les ERP des catégories 1 à 5.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="px-8 py-4 bg-[var(--a2ci-red)] hover:bg-white hover:text-black text-white rounded-lg font-bold text-xs uppercase tracking-widest transition-all">Consulter un expert</a>
+        <a href="#details" class="px-8 py-4 border border-white/20 hover:bg-white/10 text-white rounded-lg font-bold text-xs uppercase tracking-widest transition-all">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+<section id="details" class="bg-white py-24 border-b border-gray-100">
+  <div class="container-custom py-0">
+    <div class="section-custom lg:items-start">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900 tracking-tight uppercase">La Sécurité au cœur <br><span class="text-[var(--a2ci-red)]">du public</span>.</h2>
+        </div>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          Les ERP sont soumis à une réglementation stricte visant à assurer l'évacuation rapide et safe de toutes les personnes, y compris les plus vulnérables. La complexité réside dans l'hétérogénéité des établissements et des publics accueillis.
+        </p>
+        <div class="grid sm:grid-cols-2 gap-8">
+          <div class="p-6 bg-gray-50 rounded-xl border border-gray-100 italic font-light text-gray-600 border-l-4 border-l-[var(--a2ci-red)]">
+            "La maîtrise des flux et la fiabilité du désenfumage sont les clés d'un ERP sécurisé selon les normes CCH."
+          </div>
+          <div class="space-y-4">
+            <h4 class="font-bold text-gray-900">Nos engagements :</h4>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> Respect strict du règlement de sécurité</li>
+              <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> Solutions adaptées à chaque type (L, M, N...)</li>
+              <li class="flex items-center gap-2 text-sm text-gray-600"><span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span> Accompagnement face aux commissions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="section-img lg:mt-12">
+        <div class="img-wrapper">
+          <img src="https://images.unsplash.com/photo-1517502474097-f9b30659dadb?q=80&w=1000&auto=format&fit=crop" alt="Intérieur ERP">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="bg-gray-50 py-24">
+  <div class="container-custom py-0">
+    <div class="max-w-3xl mb-16">
+      <span class="text-[var(--a2ci-red)] font-bold text-xs uppercase tracking-widest mb-4 block">Classification</span>
+      <h2 class="font-heading text-4xl font-bold text-gray-900 tracking-tight uppercase">Les 5 Catégories <span class="text-[var(--a2ci-red)]">d'ERP</span>.</h2>
+      <p class="text-gray-500 font-light mt-4">Le niveau d'exigence dépend de l'effectif admissible dans l'établissement.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <div class="category-card">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-4 opacity-20">01</div>
+        <h3 class="font-bold text-gray-900 mb-2">Catégorie 1</h3>
+        <p class="text-xs text-gray-500 font-light">Effectif supérieur à 1500 personnes.</p>
+      </div>
+      <div class="category-card italic">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-4 opacity-20">02</div>
+        <h3 class="font-bold text-gray-900 mb-2">Catégorie 2</h3>
+        <p class="text-xs text-gray-500 font-light">Effectif entre 701 et 1500 personnes.</p>
+      </div>
+      <div class="category-card">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-4 opacity-20">03</div>
+        <h3 class="font-bold text-gray-900 mb-2">Catégorie 3</h3>
+        <p class="text-xs text-gray-500 font-light">Effectif entre 301 et 700 personnes.</p>
+      </div>
+      <div class="category-card">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-4 opacity-20">04</div>
+        <h3 class="font-bold text-gray-900 mb-2">Catégorie 4</h3>
+        <p class="text-xs text-gray-500 font-light">Effectif inférieur à 300 personnes (hors 5e cat).</p>
+      </div>
+      <div class="category-card bg-[var(--a2ci-red)] !text-white">
+        <div class="text-4xl font-bold text-white mb-4 opacity-30">05</div>
+        <h3 class="font-bold mb-2">Catégorie 5</h3>
+        <p class="text-xs opacity-80 font-light">Petits établissements sans locaux à sommeil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Types Section (Grid with Icons/Images) -->
+<section class="bg-white py-24">
+  <div class="container-custom py-0">
+    <div class="text-center mb-16">
+      <h2 class="font-heading text-4xl font-bold text-gray-900 tracking-tight uppercase">Types et <span class="text-[var(--a2ci-red)]">Activités</span>.</h2>
+      <p class="text-gray-500 font-light mt-4 max-w-2xl mx-auto">Chaque type d'activité (désigné par une lettre) possède ses propres dispositions particulières.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+      <div class="p-8 group hover:bg-gray-50 rounded-2xl transition-all border border-transparent hover:border-gray-100">
+        <div class="w-16 h-16 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-[var(--a2ci-red)] group-hover:text-white transition-all italic">L</div>
+        <h4 class="font-bold text-gray-900 mb-2">Salles d'auditions</h4>
+        <p class="text-xs text-gray-500 font-light">Théâtres, cinémas, salles de conférences et de spectacles.</p>
+      </div>
+      <div class="p-8 group hover:bg-gray-50 rounded-2xl transition-all border border-transparent hover:border-gray-100">
+        <div class="w-16 h-16 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-[var(--a2ci-red)] group-hover:text-white transition-all italic">M</div>
+        <h4 class="font-bold text-gray-900 mb-2">Commerces</h4>
+        <p class="text-xs text-gray-500 font-light">Magasins de vente, centres commerciaux, boutiques.</p>
+      </div>
+      <div class="p-8 group hover:bg-gray-50 rounded-2xl transition-all border border-transparent hover:border-gray-100">
+        <div class="w-16 h-16 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-[var(--a2ci-red)] group-hover:text-white transition-all italic">R</div>
+        <h4 class="font-bold text-gray-900 mb-2">Écoles</h4>
+        <p class="text-xs text-gray-500 font-light">Établissements d'enseignement, centres de formation.</p>
+      </div>
+      <div class="p-8 group hover:bg-gray-50 rounded-2xl transition-all border border-transparent hover:border-gray-100">
+        <div class="w-16 h-16 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-[var(--a2ci-red)] group-hover:text-white transition-all italic">W</div>
+        <h4 class="font-bold text-gray-900 mb-2">Administrations</h4>
+        <p class="text-xs text-gray-500 font-light">Bureaux, banques, administrations ouvertes au public.</p>
+      </div>
+      <div class="p-8 group hover:bg-gray-50 rounded-2xl transition-all border border-transparent hover:border-gray-100">
+        <div class="w-16 h-16 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-[var(--a2ci-red)] group-hover:text-white transition-all italic">N</div>
+        <h4 class="font-bold text-gray-900 mb-2">Restauration</h4>
+        <p class="text-xs text-gray-500 font-light">Restaurants, débits de boissons, cafétérias.</p>
+      </div>
+      <div class="p-8 group hover:bg-gray-50 rounded-2xl transition-all border border-transparent hover:border-gray-100">
+        <div class="w-16 h-16 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mx-auto mb-6 text-2xl font-bold group-hover:bg-[var(--a2ci-red)] group-hover:text-white transition-all italic">U</div>
+        <h4 class="font-bold text-gray-900 mb-2">Santé</h4>
+        <p class="text-xs text-gray-500 font-light">Établissements de soins, hôpitaux, cliniques.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="section-cta">
+  <div class="container-custom py-0">
+    <div class="cta">
+      <h2 class="font-heading text-4xl font-bold mb-6 tracking-tight uppercase">Un projet en <span class="text-[var(--a2ci-red)]">ERP</span> ?</h2>
+      <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto font-light">
+        A2CI vous accompagne de l'esquisse de votre projet jusqu'à l'avis favorable de la commission de sécurité.
+      </p>
+      <a href="index.html#contact" class="cta-button">Contactez-nous</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  particlesJS('particles-js', {
+    "particles": {
+      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5, "random": false },
+      "size": { "value": 3, "random": true },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+      "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+      "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
