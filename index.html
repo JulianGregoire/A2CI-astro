@@ -50,7 +50,53 @@
       box-shadow: 0 24px 48px rgba(0,0,0,0.45);
     }
 
-    /* Motif grille technique pour la section secteur */
+    .container-custom {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .section-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .section-custom.reverse { flex-direction: row-reverse; }
+
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-left: 2px solid var(--a2ci-red);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
+
+    .section-img img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* Motif grille technique */
     .bg-tech-grid {
         background-size: 40px 40px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
@@ -212,7 +258,7 @@
         </div>
       </div>
 
-      <h1 class="mb-6 font-heading text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+      <h1 class="mb-6 font-heading text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-7xl">
         Maîtriser le risque incendie,<br />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">
           garantir la sécurité.
@@ -261,105 +307,79 @@
   </div>
 </section>
 
-  <!-- Notre savoir-faire -->
-  <section class="bg-white py-16 lg:py-20 scroll-reveal" data-animate="fade-up">
-    <div class="mx-auto max-w-6xl px-4">
+  <!-- Notre savoir-faire (Steps model from audit.html) -->
+  <section class="bg-gray-50 py-20 overflow-hidden">
+    <div class="container-custom">
       
-      <div class="mx-auto mb-16 max-w-3xl text-center scroll-reveal" data-animate="zoom">
-        <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--a2ci-red)]">
-          Notre savoir-faire
-        </p>
-        <h2 class="font-heading text-2xl font-bold text-gray-900 sm:text-3xl mb-4">
-          Des prestations techniques et organisationnelles.
-        </h2>
-        <p class="text-sm text-gray-600 sm:text-base leading-relaxed">
-          A2Ci intervient à tous les niveaux de la maîtrise des risques : de l'audit réglementaire à l'ingénierie, jusqu'à la formation de vos équipes.
-        </p>
+      <div class="text-center mb-16 scroll-reveal">
+        <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--a2ci-red)]">Notre expertise</p>
+        <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 text-center">Une approche globale & technique</h2>
+        <div class="h-1 w-20 bg-[var(--a2ci-red)] mx-auto rounded-full"></div>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-3 scroll-reveal" data-animate="fade-up" style="--reveal-delay: 120ms;">
+      <div class="grid gap-12 md:grid-cols-3">
         
-        <a href="#audit-conseil" class="group text-center block hover:scale-105 transition-transform">
-          <div class="mb-6 flex items-center justify-center">
-            <div class="rounded-2xl bg-gray-50 p-8 transition-all duration-300 group-hover:bg-[var(--a2ci-red)]/10">
-              <img src="images/A2CI_Audit.svg" alt="Audit & Conseil" class="h-20 w-20 transition-transform duration-300 group-hover:scale-110" />
+        <!-- Step 1 -->
+        <div class="text-center scroll-reveal">
+          <div class="mb-6 relative">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+              <span class="text-[var(--a2ci-red)] font-extrabold text-xl font-heading">01</span>
             </div>
+            <div class="absolute top-1/2 left-1/2 w-full h-[1px] bg-gray-200 -z-0 hidden md:block"></div>
           </div>
-          <h3 class="mb-3 font-heading text-xl font-semibold text-gray-900">
-            Audit &amp; Conseil
-          </h3>
-          <p class="text-sm text-gray-700 leading-relaxed">
-            Analyse de conformité avec plan d'actions priorisé et exploitable.
-          </p>
-        </a>
+          <h3 class="font-heading text-xl font-bold text-gray-900 mb-3 uppercase tracking-tight">Audit & Conseil</h3>
+          <p class="text-sm text-gray-600 leading-relaxed px-4">Analyse de conformité, diagnostics techniques et préconisations prioritaires.</p>
+        </div>
 
-        <a href="#coordination-ssi" class="group text-center block hover:scale-105 transition-transform">
-          <div class="mb-6 flex items-center justify-center">
-            <div class="rounded-2xl bg-gray-50 p-8 transition-all duration-300 group-hover:bg-[var(--a2ci-red)]/10">
-              <img src="images/A2CI_Coordination%20SSI.svg" alt="Coordination SSI" class="h-20 w-20 transition-transform duration-300 group-hover:scale-110" />
+        <!-- Step 2 -->
+        <div class="text-center scroll-reveal">
+          <div class="mb-6 relative">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+              <span class="text-[var(--a2ci-red)] font-extrabold text-xl font-heading">02</span>
             </div>
+            <div class="absolute top-1/2 left-1/2 w-full h-[1px] bg-gray-200 -z-0 hidden md:block"></div>
           </div>
-          <h3 class="mb-3 font-heading text-xl font-semibold text-gray-900">
-            Coordination SSI &amp; ingénierie
-          </h3>
-          <p class="text-sm text-gray-700 leading-relaxed">
-            Conception et coordination de vos systèmes SSI et désenfumage, de l'esquisse à la réception.
-          </p>
-        </a>
+          <h3 class="font-heading text-xl font-bold text-gray-900 mb-3 uppercase tracking-tight">Ingénierie SSI</h3>
+          <p class="text-sm text-gray-600 leading-relaxed px-4">Conception, coordination et suivi technique de vos systèmes de sécurité.</p>
+        </div>
 
-        <a href="#formations" class="group text-center block hover:scale-105 transition-transform">
-          <div class="mb-6 flex items-center justify-center">
-            <div class="rounded-2xl bg-gray-50 p-8 transition-all duration-300 group-hover:bg-[var(--a2ci-red)]/10">
-              <img src="images/A2CI_Formation.svg" alt="Formations" class="h-20 w-20 transition-transform duration-300 group-hover:scale-110" />
+        <!-- Step 3 -->
+        <div class="text-center scroll-reveal">
+          <div class="mb-6 relative">
+            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+              <span class="text-[var(--a2ci-red)] font-extrabold text-xl font-heading">03</span>
             </div>
           </div>
-          <h3 class="mb-3 font-heading text-xl font-semibold text-gray-900">
-            Formations
-          </h3>
-          <p class="text-sm text-gray-700 leading-relaxed">
-            Formations incendie, 1ers secours et exercices d'évacuation.
-          </p>
-        </a>
+          <h3 class="font-heading text-xl font-bold text-gray-900 mb-3 uppercase tracking-tight">Formations</h3>
+          <p class="text-sm text-gray-600 leading-relaxed px-4">Transfert de compétences opérationnelles pour sauver des vies au quotidien.</p>
+        </div>
 
       </div>
     </div>
   </section>
 
 <!-- À propos de A2CI -->
-<section id="apropos" class="bg-white py-20 lg:py-24 relative overflow-hidden scroll-reveal" data-animate="fade-up">
-  
-  <!-- Background removed for consistency with specialty pages -->
-
-  <div class="mx-auto max-w-7xl px-4 relative z-10">
-    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16 scroll-reveal" data-animate="fade-up" style="--reveal-delay: 120ms;">
+<section id="apropos" class="bg-white overflow-hidden scroll-reveal">
+  <div class="container-custom">
+    <div class="section-custom scroll-reveal">
       
-      <div class="relative group scroll-reveal" data-animate="fade-right">
-        <div class="absolute -top-4 -left-4 w-2/3 h-2/3 border-2 border-[var(--a2ci-red)]/20 rounded-xl z-0 transition-transform duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2"></div>
-        
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+      <div class="section-img">
+        <div class="img-wrapper">
           <img 
             src="https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=1000&auto=format&fit=crop" 
             alt="Bureau A2CI" 
-            class="h-full w-full object-cover transform transition-transform duration-700 group-hover:scale-105"
           />
-          
-          <div class="absolute bottom-6 left-6 right-auto bg-white/95 backdrop-blur-md px-6 py-4 rounded-lg shadow-lg border-l-4 border-[var(--a2ci-red)] max-w-xs">
-            <p class="font-heading text-3xl font-bold text-gray-900 mb-0 leading-none">20<span class="text-[var(--a2ci-red)] text-lg">+</span></p>
-            <p class="text-xs font-bold text-gray-500 uppercase tracking-wide mt-1">Années d'expérience</p>
-          </div>
         </div>
       </div>
 
-      <div>
-        <div class="flex items-center gap-2 mb-4">
-          <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-[var(--a2ci-red)]">
-            À propos de A2CI
-          </p>
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-[var(--a2ci-red)] mb-0 font-heading">À propos de A2CI</p>
         </div>
 
-        <h2 class="font-heading text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl mb-6">
-          Votre partenaire incendie dans le <br> <span class="text-[var(--a2ci-red)]">Grand Sud-Ouest</span>.
+        <h2 class="font-heading text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">
+          Votre partenaire incendie dans le <span class="text-[var(--a2ci-red)]">Grand Sud-Ouest</span>.
         </h2>
 
         <div class="space-y-6 text-gray-600 leading-relaxed">
@@ -373,21 +393,20 @@
 
         <div class="mt-10 grid grid-cols-2 gap-6 border-t border-gray-100 pt-8">
           <div>
-            <div class="mb-2 flex items-center gap-2 text-[var(--a2ci-red)]">
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              <span class="font-bold text-gray-900">Indépendance</span>
+            <div class="mb-2 flex items-center gap-2 text-[var(--a2ci-red)] font-heading font-bold uppercase tracking-tight text-sm">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+              Indépendance
             </div>
-            <p class="text-xs text-gray-500">Un conseil neutre et objectif, sans conflit d'intérêt avec les installateurs.</p>
+            <p class="text-xs text-gray-500">Un conseil neutre et objectif, sans conflit d'intérêt.</p>
           </div>
           <div>
-            <div class="mb-2 flex items-center gap-2 text-[var(--a2ci-red)]">
-              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
-              <span class="font-bold text-gray-900">Expertise Terrain</span>
+            <div class="mb-2 flex items-center gap-2 text-[var(--a2ci-red)] font-heading font-bold uppercase tracking-tight text-sm">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+              Expertise Terrain
             </div>
-            <p class="text-xs text-gray-500">Une équipe issue du milieu opérationnel (Sapeurs-Pompiers, Préventionnistes).</p>
+            <p class="text-xs text-gray-500">Une équipe issue du milieu opérationnel.</p>
           </div>
         </div>
-
       </div>
 
     </div>
@@ -404,15 +423,14 @@
   </div>
   <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_20%,_black_100%)] z-0 pointer-events-none"></div>
   
-  <div class="relative z-10 mx-auto max-w-7xl px-4">
+  <div class="container-custom relative z-10 !py-24">
     
     <div class="mx-auto mb-16 max-w-3xl text-center scroll-reveal" data-animate="zoom">
-      <div class="flex items-center justify-center gap-2 mb-3">
-        <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--a2ci-red)]">
+      <div class="flex items-center justify-center gap-3 mb-4">
+        <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--a2ci-red)] font-heading mb-0">
           Domaines d'intervention
         </p>
-        <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
       </div>
       
       <h2 class="font-heading text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl mb-6">
@@ -545,183 +563,21 @@
         </div>
       </div>
 
-    </div>
-
-    <div class="mt-16 text-center">
-        <p class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2 text-sm font-medium text-gray-300 shadow-sm backdrop-blur-sm">
-            <span class="block h-2 w-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></span>
-            Maîtrise complète des normes APSAD et du règlement de sécurité.
-        </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Expertises -->
-<section id="expertises" class="bg-white py-20 lg:py-24 relative overflow-hidden">
-  
-  <!-- Background removed for consistency with specialty pages -->
-
-  <div class="relative z-10 mx-auto max-w-7xl px-4">
-    
-    <div class="mx-auto mb-20 max-w-3xl text-center">
-      <div class="flex items-center justify-center gap-2 mb-3">
-        <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
-        <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--a2ci-red)]">
-          Nos Prestations
-        </p>
-        <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
-      </div>
-      <h2 class="font-heading text-3xl font-extrabold text-gray-900 sm:text-4xl lg:text-5xl mb-6">
-        Atteindre &amp; maintenir le<br>meilleur niveau de sécurité.
-      </h2>
-      <p class="text-gray-600 sm:text-lg leading-relaxed">
-        A2CI vous accompagne sur l'ensemble du cycle de vie du bâtiment : de l'audit initial à la coordination des travaux, jusqu'à l'exploitation quotidienne.
-      </p>
-    </div>
-
-    <div class="space-y-24">
-      
-      <div id="audit-conseil" class="grid items-center gap-12 lg:grid-cols-2">
-        <div class="order-2 lg:order-1 relative group">
-          <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-[16/10]">
-            <img
-              src="images/photo-audit-conseil.avif"
-              alt="Audit de sécurité incendie"
-              class="h-full w-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-            />
-          </div>
-        </div>
-        
-        <div class="order-1 lg:order-2">
-          <span class="inline-block mb-4 rounded border border-gray-200 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 font-tech shadow-sm">
-            Analyse & Conformité
-          </span>
-          <h3 class="font-heading text-3xl font-bold mb-4 text-gray-900">Audit &amp; Conseil</h3>
-          <p class="mb-6 text-base text-gray-600 leading-relaxed border-l-4 border-[var(--a2ci-red)] pl-4">
-            Une photographie précise de votre niveau de sécurité à un instant T. Nous identifions les écarts réglementaires et chiffrons les solutions.
-          </p>
-          
-          <ul class="mb-8 space-y-4">
-            <li class="flex items-start gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C00000]/10 text-[var(--a2ci-red)]">
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span class="text-sm text-gray-700 font-medium">Audit technique des installations et de l'organisation</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C00000]/10 text-[var(--a2ci-red)]">
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span class="text-sm text-gray-700 font-medium">Rapports détaillés avec plan d'actions priorisé</span>
-            </li>
-          </ul>
-
-          <a href="#contact" class="group inline-flex items-center gap-2 text-sm font-bold text-[var(--a2ci-red)] hover:text-black transition-colors">
-            Demander un audit
-            <span class="block h-[1px] w-8 bg-[var(--a2ci-red)] group-hover:w-12 transition-all"></span>
-          </a>
-        </div>
-      </div>
-
-      <div id="coordination-ssi" class="grid items-center gap-12 lg:grid-cols-2">
-        <div class="order-2 lg:order-1">
-          <span class="inline-block mb-4 rounded border border-gray-200 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 font-tech shadow-sm">
-            Ingénierie & Travaux
-          </span>
-          <h3 class="font-heading text-3xl font-bold mb-4 text-gray-900">Coordination SSI</h3>
-          <p class="mb-6 text-base text-gray-600 leading-relaxed border-l-4 border-[var(--a2ci-red)] pl-4">
-            Garantir la cohérence technique, normative et fonctionnelle de votre Système de Sécurité Incendie, de la conception à la réception.
-          </p>
-          
-          <ul class="mb-8 space-y-4">
-            <li class="flex items-start gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C00000]/10 text-[var(--a2ci-red)]">
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span class="text-sm text-gray-700 font-medium">Conception et cahier des charges (CCTP)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C00000]/10 text-[var(--a2ci-red)]">
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span class="text-sm text-gray-700 font-medium">Suivi d'exécution et réception technique</span>
-            </li>
-          </ul>
-
-          <a href="#contact" class="group inline-flex items-center gap-2 text-sm font-bold text-[var(--a2ci-red)] hover:text-black transition-colors">
-            Parler de mon projet SSI
-            <span class="block h-[1px] w-8 bg-[var(--a2ci-red)] group-hover:w-12 transition-all"></span>
-          </a>
-        </div>
-
-        <div class="order-1 lg:order-2 relative group">
-          <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-[16/10]">
-            <img
-              src="images/SSI,inge-desenfumage.avif"
-              alt="Coordination SSI"
-              class="h-full w-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="grid items-center gap-12 lg:grid-cols-2">
-        <div class="order-2 lg:order-1 relative group">
-          <div class="relative overflow-hidden rounded-2xl shadow-xl aspect-[16/10]">
-            <img
-              src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg"
-              alt="Accompagnement opérationnel"
-              class="h-full w-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-            />
-          </div>
-        </div>
-        
-        <div class="order-1 lg:order-2">
-          <span class="inline-block mb-4 rounded border border-gray-200 bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-gray-500 font-tech shadow-sm">
-            Exploitation & RUS
-          </span>
-          <h3 class="font-heading text-3xl font-bold mb-4 text-gray-900">Mandat de Sécurité</h3>
-          <p class="mb-6 text-base text-gray-600 leading-relaxed border-l-4 border-[var(--a2ci-red)] pl-4">
-            Nous agissons comme votre interlocuteur unique face aux autorités. Mandataire de sécurité et Responsable Unique de Sécurité (RUS).
-          </p>
-          
-          <ul class="mb-8 space-y-4">
-            <li class="flex items-start gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C00000]/10 text-[var(--a2ci-red)]">
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span class="text-sm text-gray-700 font-medium">Mission de Responsable Unique de Sécurité (RUS)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#C00000]/10 text-[var(--a2ci-red)]">
-                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
-              </span>
-              <span class="text-sm text-gray-700 font-medium">Veille réglementaire et suivi administratif</span>
-            </li>
-          </ul>
-
-          <a href="#contact" class="group inline-flex items-center gap-2 text-sm font-bold text-[var(--a2ci-red)] hover:text-black transition-colors">
-            Sécuriser mon établissement
-            <span class="block h-[1px] w-8 bg-[var(--a2ci-red)] group-hover:w-12 transition-all"></span>
-          </a>
-        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- Formations -->
-<section id="formations" class="bg-white py-20 lg:py-24 relative">
-  <div class="mx-auto max-w-7xl px-4">
+<section id="formations" class="bg-white relative overflow-hidden">
+  <div class="container-custom">
     
-    <div class="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-8 border-b border-gray-100 pb-8">
+    <div class="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-8 border-b border-gray-100 pb-12">
       
       <div class="max-w-3xl relative">
-        <div class="flex items-center gap-2 mb-3">
-            <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
-            <span class="block text-xs font-bold uppercase tracking-widest text-[var(--a2ci-red)]">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+            <span class="block text-xs font-bold uppercase tracking-widest text-[var(--a2ci-red)] font-heading">
             Pédagogie &amp; Prévention
             </span>
         </div>
@@ -733,7 +589,7 @@
               class="hidden sm:block h-20 w-20 opacity-90" 
             />
             <div>
-                <h2 class="font-heading text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+                <h2 class="font-heading text-4xl font-extrabold text-gray-900 mb-6">
                   Former vos équipes pour <span class="text-[var(--a2ci-red)]">sauver des vies</span>.
                 </h2>
                 <p class="text-lg text-gray-600 leading-relaxed max-w-2xl">
@@ -1225,13 +1081,13 @@
     
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
       <div class="max-w-2xl">
-        <div class="flex items-center gap-2 mb-3">
-          <span class="h-[1px] w-8 bg-[var(--a2ci-red)]"></span>
-          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--a2ci-red)]">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-[var(--a2ci-red)] font-heading">
             Veille & Actualités
           </p>
         </div>
-        <h2 class="font-heading text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h2 class="font-heading text-3xl font-extrabold text-gray-900 sm:text-4xl">
           L'actualité de la prévention <br class="hidden sm:block"> et de la réglementation.
         </h2>
       </div>
@@ -1336,11 +1192,12 @@
     
     <!-- Header -->
     <div class="text-center mb-16 scroll-reveal">
-      <div class="flex items-center justify-center gap-2 mb-4">
+      <div class="flex items-center justify-center gap-3 mb-4">
         <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="h-6 filter grayscale opacity-50 contrast-125">
-        <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Avis Clients</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-gray-400 font-heading">Avis Clients</span>
       </div>
-      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-6">L'excellence au service de votre <span class="text-[var(--a2ci-red)]">sécurité.</span></h2>
+      <h2 class="font-heading text-4xl font-extrabold text-gray-900 mb-6">L'excellence au service de votre <span class="text-[var(--a2ci-red)]">sécurité.</span></h2>
+    </div>
       
       <!-- Aggregated Score -->
       <div class="flex flex-col items-center justify-center gap-3">
