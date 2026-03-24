@@ -78,10 +78,11 @@ body {
   margin-bottom: 24px;
 }
 
-.h2-bar span {
+.h2-bar > span {
   height: 2px;
   width: 32px;
   background-color: var(--a2ci-red);
+  display: block; /* Ensure it's a block to respect dimensions */
 }
 
 .section-title {
