@@ -7,8 +7,24 @@
   <meta name="description" content="Formations Secourisme et Santé au Travail (SST), Initiation DAE par A2CI. Les gestes qui sauvent en milieu professionnel." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style-da.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
+    /* Particles Background */
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0.25;
+    }
+
+    .hero {
+      background: #000;
+      color: #fff;
+    }
     .formation-card {
       background: white;
       border-radius: 2.5rem;
@@ -57,18 +73,23 @@
 
 <div id="header-component"></div>
 
-<section class="relative pt-32 pb-20 bg-black">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
   <div class="absolute inset-0 z-0 opacity-40">
     <img src="images/secourisme.png" alt="Formation Secourisme A2CI" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
-  <div class="relative z-10 container-custom !py-24">
-    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest font-heading">
+  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
+    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 text-sm font-medium uppercase tracking-widest font-heading">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
       Catalogue complet
     </a>
-    <h1 class="font-heading text-5xl md:text-7xl font-extrabold text-white mb-6">Formations <br><span class="text-[var(--a2ci-red)]">SECOURISME.</span></h1>
-    <p class="max-w-2xl text-xl text-gray-400 font-light">Maîtrisez les gestes d'urgence et la conduite à tenir pour porter secours en toutes circonstances.</p>
+    <div class="mb-4 flex flex-col items-center">
+      <span class="inline-block px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">Santé au Travail</span>
+    </div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">Formations<br /><span class="text-[var(--a2ci-red)]">SECOURISME.</span></h1>
+    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed">Maîtrisez les gestes d'urgence et la conduite à tenir pour porter secours en toutes circonstances.</p>
   </div>
 </section>
 
@@ -304,6 +325,19 @@
         }, 300);
       });
     });
+  });
+
+  // Particles Config
+  particlesJS('particles-js', {
+    "particles": {
+      "number": { "value": 80 },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5 },
+      "size": { "value": 3 },
+      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+      "move": { "enable": true, "speed": 2 }
+    }
   });
 </script>
 
