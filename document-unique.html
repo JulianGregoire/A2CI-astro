@@ -10,16 +10,6 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
-    /* Particles Background */
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      opacity: 0.25;
-    }
 
     .hero {
       margin-bottom: 0;
@@ -175,48 +165,21 @@
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
   
-  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
-
-  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
-    <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">
-      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
-      Hygiène & Sécurité
-    </div>
-    
-    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">
+  <div class="relative z-10 mx-auto max-w-4xl px-4 py-24 lg:py-32 text-center">
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight uppercase tracking-tight">
       Document Unique <br><span class="text-[var(--a2ci-red-light)]">d’Évaluation des Risques.</span>
     </h1>
     
-    <p class="mx-auto max-w-3xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
       Identifier, évaluer et analyser les risques auxquels sont exposés les salariés durant leur travail pour mettre en place une prévention efficace.
     </p>
 
-    <div class="flex flex-wrap justify-center gap-4 mb-10">
-      <div class="glass-card px-8 py-5 rounded-[2rem] bg-white/5 border-white/10 backdrop-blur-md text-white">
-        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Identifier</div>
-        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Risques</div>
-      </div>
-      <div class="glass-card px-8 py-5 rounded-[2rem] bg-white/5 border-white/10 backdrop-blur-md text-white">
-        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Évaluer</div>
-        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Analyse</div>
-      </div>
-      <div class="glass-card px-8 py-5 rounded-[2rem] bg-white/5 border-white/10 backdrop-blur-md text-white">
-        <div class="text-[var(--a2ci-red-light)] font-black text-xl mb-1">Prévenir</div>
-        <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Actions</div>
-      </div>
-    </div>
-
-    <div class="flex flex-wrap justify-center gap-5">
+    <div class="flex justify-center">
       <a href="index.html#contact" class="cta-button">
         Demander un accompagnement
       </a>
-      <a href="#procede" class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
-        Notre méthodologie
-      </a>
     </div>
   </div>
-
-
 </section>
 
 <!-- TIMELINE SECTION (White) -->
@@ -447,25 +410,6 @@
 
   document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
-  // Particles.js
-  if (typeof particlesJS !== 'undefined') {
-    particlesJS('particles-js', {
-      "particles": {
-        "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#ffffff" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.5, "random": false },
-        "size": { "value": 2, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
-        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }
-      },
-      "retina_detect": true
-    });
-  }
 </script>
 
 </body>

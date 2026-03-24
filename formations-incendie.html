@@ -10,16 +10,6 @@
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
-    /* Particles Background */
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      opacity: 0.25;
-    }
 
     .hero {
       background: #000;
@@ -79,17 +69,19 @@
     <img src="images/formation incendie.png" alt="Formation Incendie A2CI" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
-  <div id="particles-js" class="absolute inset-0 z-0 opacity-20"></div>
-  <div class="relative z-10 mx-auto max-w-6xl px-4 text-center">
-    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 text-sm font-medium uppercase tracking-widest font-heading">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-      Catalogue complet
-    </a>
-    <div class="mb-4 flex flex-col items-center">
-      <span class="inline-block px-3 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded">Expertise Technique</span>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 py-24 lg:py-32 text-center">
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight uppercase tracking-tight">
+      Formations<br /><span class="text-[var(--a2ci-red)]">INCENDIE.</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Maîtrisez les risques, les procédures d'évacuation et l'usage des équipements de sécurité incendie.
+    </p>
+
+    <div class="flex justify-center">
+      <a href="formations.html" class="inline-flex items-center justify-center rounded-md bg-[var(--a2ci-red)] px-8 py-4 text-base font-semibold text-white transition duration-300 hover:bg-[#C00000] hover:shadow-lg hover:shadow-[#C00000]/20">
+        Voir le catalogue
+      </a>
     </div>
-    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight">Formations<br /><span class="text-[var(--a2ci-red)]">INCENDIE.</span></h1>
-    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed">Maîtrisez les risques, les procédures d'évacuation et l'usage des équipements de sécurité incendie.</p>
   </div>
 </section>
 
@@ -535,18 +527,6 @@
     });
   });
 
-  // Particles Config
-  particlesJS('particles-js', {
-    "particles": {
-      "number": { "value": 80 },
-      "color": { "value": "#ffffff" },
-      "shape": { "type": "circle" },
-      "opacity": { "value": 0.5 },
-      "size": { "value": 3 },
-      "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
-      "move": { "enable": true, "speed": 2 }
-    }
-  });
 </script>
 
 </body>
