@@ -7,81 +7,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
 
   <style>
-    :root {
-      --a2ci-red: #C00000;
-      --a2ci-black: #000000;
-      --a2ci-grey: #DEDEDD;
-      --a2ci-white: #FFFFFF;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-    body {
-      font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .font-heading {
-      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .font-tech {
-        font-family: 'JetBrains Mono', monospace;
-    }
-    .card-shadow {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-    .hero-card {
-      box-shadow: 0 24px 48px rgba(0,0,0,0.45);
-    }
-    #particles-js {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-    @keyframes slideDownHeader {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    .header-animate-entry {
-      animation: slideDownHeader 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    }
-    .header-scrolled {
-      padding-top: 0.5rem !important;
-      padding-bottom: 0.5rem !important;
-      background-color: rgba(255, 255, 255, 0.95) !important;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.1) !important;
-    }
-    .scroll-reveal {
-      opacity: 1;
-      transform: none;
-    }
-    @supports (animation-timeline: view()) {
-      .scroll-reveal {
-        opacity: 0;
-        transform: translateY(18px) scale(0.99);
-        animation: reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-        animation-timeline: view();
-        animation-range: entry 10% cover 30%;
-      }
-      @keyframes reveal-up {
-        from { opacity: 0; transform: translateY(18px) scale(0.99); }
-        to { opacity: 1; transform: translateY(0) scale(1); }
-      }
-    }
-    /* Timeline styles */
+    /* Timeline styles override */
     .timeline-item::before {
       content: '';
       position: absolute;
@@ -107,53 +41,6 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
-
-    /* SECTIONS (for Presentation page) */
-    .container-custom {
-      max-width: 1150px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    .section-custom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .section-custom.reverse { flex-direction: row-reverse; }
-
-    .section-text { flex: 1.2; min-width: 320px; }
-    .section-img { flex: 1; min-width: 320px; }
-
-    .section-img .img-wrapper {
-      position: relative;
-      padding: 10px;
-    }
-
-    .section-img .img-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60%;
-      height: 60%;
-      border-top: 2px solid var(--a2ci-red);
-      border-left: 2px solid var(--a2ci-red);
-      z-index: 0;
-      opacity: 0.3;
-      border-radius: 20px 0 0 0;
-    }
-
-    .section-img img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      position: relative;
-      z-index: 1;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
   </style>
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden w-full">
@@ -177,10 +64,12 @@
 <!-- Historique -->
 <section id="historique" class="py-20 bg-gray-50">
   <div class="mx-auto max-w-[90rem] px-6 lg:px-12">
-    <div class="text-center mb-12">
-      <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--a2ci-red)]">Notre Parcours</p>
-      <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4">Historique de l’entreprise</h2>
-      <div class="h-1 w-20 bg-[var(--a2ci-red)] mx-auto rounded-full"></div>
+    <div class="mb-12">
+      <div class="h2-bar">
+        <span></span>
+        <p class="mb-0 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--a2ci-red)] font-heading">Notre Parcours</p>
+      </div>
+      <h2 class="section-title">Historique de l’entreprise</h2>
     </div>
 
     <!-- Timeline Container -->
@@ -417,9 +306,9 @@
         <div class="container-custom">
           <div class="section-custom scroll-reveal">
             <div class="section-text text-right">
-              <div class="flex items-center justify-end gap-3 mb-4">
-                <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Veille <span class="text-[var(--a2ci-red)]">règlementaire</span></h2>
-                <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+              <div class="h2-bar justify-end">
+                <h2 class="section-title text-right">Veille <span class="text-[var(--a2ci-red)]">règlementaire</span></h2>
+                <span></span>
               </div>
               <p class="text-gray-600 leading-relaxed">
                 Nous déployons des outils de veille continue sur les normes françaises et européennes. Cette anticipation nous permet de mesurer les évolutions administratives et techniques pour vous assister avec précision lors de vos phases de travaux ou d'exploitation.
@@ -439,9 +328,9 @@
         <div class="container-custom">
           <div class="section-custom reverse scroll-reveal">
             <div class="section-text">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-                <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Études & <span class="text-[var(--a2ci-red)]">Ingénierie</span></h2>
+              <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Études & <span class="text-[var(--a2ci-red)]">Ingénierie</span></h2>
               </div>
               <p class="text-gray-600 leading-relaxed">
                 Conception de solutions sur-mesure répondant aux exigences réglementaires tout en s'adaptant à l'évolution de vos infrastructures. Nos études intègrent vos contraintes d'exploitation pour une sécurité opérationnelle et pérenne.
@@ -461,9 +350,9 @@
         <div class="container-custom">
           <div class="section-custom scroll-reveal">
             <div class="section-text text-right">
-              <div class="flex items-center justify-end gap-3 mb-4">
-                <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Analyse des <span class="text-[var(--a2ci-red)]">Risques</span></h2>
-                <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+              <div class="h2-bar justify-end">
+                <h2 class="section-title text-right">Analyse des <span class="text-[var(--a2ci-red)]">Risques</span></h2>
+                <span></span>
               </div>
               <p class="text-gray-600 leading-relaxed">
                 Audits de sécurité complets et évaluation des risques pour tous types d'organisations (Industrie, ERP, IGH, Logement). Nous vous aidons à organiser l’évacuation et l'intervention de secours avec une approche pragmatique.
@@ -483,9 +372,9 @@
         <div class="container-custom">
           <div class="section-custom reverse scroll-reveal">
             <div class="section-text">
-              <div class="flex items-center gap-3 mb-4">
-                <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-                <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Réception <span class="text-[var(--a2ci-red)]">Technique</span></h2>
+              <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Réception <span class="text-[var(--a2ci-red)]">Technique</span></h2>
               </div>
               <p class="text-gray-600 leading-relaxed">
                 Test rigoureux des installations en fin de travaux pour valider l'adéquation parfaite entre la conception initiale, les prescriptions des autorités compétentes et la réalisation effective par vos prestataires.

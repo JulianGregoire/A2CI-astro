@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <link rel="stylesheet" href="css/style-da.css">
+  
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
 
@@ -34,68 +35,6 @@
     body {
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    .font-heading {
-      font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    /* Police monospace pour les références techniques */
-    .font-tech {
-        font-family: 'JetBrains Mono', monospace;
-    }
-    .card-shadow {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-
-    /* Ombre sous le hero */
-    .hero-card {
-      box-shadow: 0 24px 48px rgba(0,0,0,0.45);
-    }
-
-    .container-custom {
-      max-width: 1150px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    .section-custom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .section-custom.reverse { flex-direction: row-reverse; }
-
-    .section-text { flex: 1.2; min-width: 320px; }
-    .section-img { flex: 1; min-width: 320px; }
-
-    .section-img .img-wrapper {
-      position: relative;
-      padding: 10px;
-    }
-
-    .section-img .img-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60%;
-      height: 60%;
-      border-top: 2px solid var(--a2ci-red);
-      border-left: 2px solid var(--a2ci-red);
-      z-index: 0;
-      opacity: 0.3;
-      border-radius: 20px 0 0 0;
-    }
-
-    .section-img img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      position: relative;
-      z-index: 1;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
     /* Motif grille technique */
     .bg-tech-grid {
         background-size: 40px 40px;

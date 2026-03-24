@@ -6,9 +6,7 @@
   <title>Audit SSI - A2CI Prévention Incendie</title>
   <meta name="description" content="Expertise en Audit de sécurité incendie par A2CI. Analyse réglementaire, audit de site et rapports détaillés en Gironde." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-da.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
@@ -43,6 +41,7 @@
     h1, h2, h3 { margin-bottom: 20px; }
     p { line-height: 1.7; font-weight: 300; }
     
+    /* Local Component Styles */
     .glass-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(12px);
@@ -165,7 +164,7 @@
       justify-content: space-between;
       align-items: center;
       transition: all 0.3s;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
     }
 
     .accordion-header:hover { background: rgba(255,255,255,0.03); }
@@ -247,7 +246,7 @@
       cursor: pointer;
       transition: all 0.3s;
       display: inline-block;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
     }
     
     .cta-button:hover {
@@ -324,8 +323,12 @@
 <!-- TIMELINE SECTION (White) -->
 <section class="bg-white py-20">
   <div class="container-custom py-0">
-    <div class="text-center mb-20 scroll-reveal">
-      <h2 class="font-heading text-4xl font-bold text-gray-900 mb-4">Notre <span class="text-red">Méthodologie.</span></h2>
+    <div class="mb-20 scroll-reveal">
+      <div class="h2-bar justify-center">
+        <span></span>
+        <h2 class="section-title text-center mb-0">Notre <span class="text-[var(--a2ci-red)]">Méthodologie.</span></h2>
+        <span></span>
+      </div>
       <p class="text-gray-500 font-light max-w-2xl mx-auto">Un accompagnement structuré en 4 étapes clés pour une expertise sans faille.</p>
     </div>
 
@@ -384,9 +387,9 @@
   <div class="container-custom">
     <div class="section-custom scroll-reveal">
       <div class="section-text">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Analyse du <span class="text-red">contexte</span></h2>
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Analyse du <span class="text-[var(--a2ci-red)]">contexte</span></h2>
         </div>
         <p class="mb-4 text-gray-600">
           Avant tout audit, une visite du site est réalisée et des réunions sont organisées avec l’ensemble des protagonistes afin de comprendre les différentes phases de travaux.
@@ -409,9 +412,9 @@
   <div class="container-custom pt-0">
     <div class="section-custom reverse scroll-reveal">
       <div class="section-text">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Audit sur <span class="text-red">site</span></h2>
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Audit sur <span class="text-[var(--a2ci-red)]">site</span></h2>
         </div>
         <p class="mb-4 text-gray-600">
           L’Ingénieur Conseil visite l’ensemble de l’établissement afin de vérifier que les risques sont bien couverts par le SSI existant.

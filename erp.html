@@ -6,57 +6,11 @@
   <title>Sécurité ERP - A2CI Prévention Incendie</title>
   <meta name="description" content="Expertise en sécurité incendie pour les ERP (Établissements Recevant du Public) par A2CI. Commerces, administrations, écoles de catégories 1 à 5." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-da.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
-    :root {
-      --a2ci-red: #C00000;
-      --a2ci-red-light: #C00000;
-      --a2ci-black: #000000;
-      --bg-dark: #0b0b0b;
-      --card-dark: #111111;
-      --border-dark: #222222;
-      --glass-white: rgba(255, 255, 255, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.4);
-    }
-    
-    body { 
-      margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-      background: #fff;
-      color: #333;
-    }
-    
-    .font-heading { 
-      font-family: 'Outfit', system-ui, -apple-system, sans-serif; 
-    }
-
-    .container-custom {
-      max-width: 1150px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    h1, h2, h3 { margin-bottom: 20px; }
-    p { line-height: 1.7; font-weight: 300; }
-    
-    .glass-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
-    }
-
-    /* HERO (Dark) */
-    .hero {
-      margin-bottom: 0;
-      background: var(--bg-dark);
-      color: #fff;
-    }
-    
+    /* Particles Background */
     #particles-js {
       position: absolute;
       width: 100%;
@@ -67,45 +21,10 @@
       opacity: 0.25;
     }
 
-    /* SECTIONS */
-    .section-custom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .section-text { flex: 1.2; min-width: 320px; }
-    .section-img { flex: 1; min-width: 320px; }
-
-    .section-img .img-wrapper {
-      position: relative;
-      padding: 10px;
-    }
-
-    .section-img .img-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60%;
-      height: 60%;
-      border-top: 2px solid var(--a2ci-red);
-      border-left: 2px solid var(--a2ci-red);
-      z-index: 0;
-      opacity: 0.3;
-      border-radius: 20px 0 0 0;
-    }
-
-    .section-img img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      position: relative;
-      z-index: 1;
-      border: 1px solid rgba(0,0,0,0.05);
+    .hero {
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
     }
 
     /* DARK SECTION */
@@ -155,9 +74,9 @@
   <div class="container-custom">
     <div class="section-custom">
       <div class="section-text">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Maîtrise des <span class="text-red">risques.</span></h2>
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Maîtrise des <span class="text-[var(--a2ci-red)]">risques.</span></h2>
         </div>
         <p class="mb-8 text-lg font-light text-gray-600">
           Chaque Établissement Recevant du Public (ERP) est soumis à des règles de sécurité strictes, dépendant de sa catégorie (de 1 à 5) et de son type (L, M, N, X, etc.). A2CI vous aide à naviguer dans cette complexité pour garantir la protection des personnes et des biens.

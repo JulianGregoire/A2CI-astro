@@ -4,20 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Formations INCENDIE - A2CI Prévention</title>
-  <meta name="description" content="Catalogue complet des formations sécurité incendie : SRI, ARI, SSI, Évacuation. Expertise et pédagogie par A2CI." />
+  <meta name="description" content="Catalogue complet des formations sécurité incendie: SRI, ARI, SSI, Évacuation. Expertise et pédagogie par A2CI." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-da.css">
   <script src="js/components.js" defer></script>
   <style>
-    :root {
-      --a2ci-red: #C00000;
-      --a2ci-red-dark: #C00000;
-    }
-    body { font-family: 'Inter', sans-serif; }
-    .font-heading { font-family: 'Outfit', sans-serif; }
-    
     .formation-card {
       background: white;
       border-radius: 2.5rem;
@@ -71,8 +62,8 @@
     <img src="images/formation incendie.png" alt="Formation Incendie A2CI" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-8">
-    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
+  <div class="relative z-10 container-custom !py-24">
+    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest font-heading">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
       Catalogue complet
     </a>
@@ -82,7 +73,7 @@
 </section>
 
 <section class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-8">
+  <div class="container-custom">
     
     <!-- Filtres (Design symétrique au blog) -->
     <div class="flex flex-wrap items-center justify-center gap-4 mb-20 scroll-reveal">
@@ -100,9 +91,10 @@
       <div id="sri" class="formation-card reveal-on-scroll" data-category="Base">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Base & Essentiels</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Sensibilisation au <br>Risque Incendie (SRI)</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Sensibilisation au <br>Risque Incendie (SRI)</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Pédagogiques</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -132,9 +124,10 @@
             <img src="images/sri_handicap.png" alt="Sensibilisation Risque Incendie Handicap" class="w-full h-full object-cover" />
           </div>
           <div class="order-1 lg:order-2">
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Inclusion</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Sensibilisation Risque Incendie <br><span class="text-sm font-medium">(Public en situation de Handicap)</span></h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Sensibilisation Risque Incendie <br><span class="text-sm font-medium">(Handicap)</span></h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs adaptés</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -158,9 +151,10 @@
       <div id="ssi" class="formation-card reveal-on-scroll" data-category="Systemes">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Systèmes</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Exploitation du SSI <br>& Système d’Évacuation</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Exploitation du SSI <br>& Système d’Évacuation</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Connaissances Techniques</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -191,9 +185,10 @@
             <img src="images/ari_formation.png" alt="Formation ARI" class="w-full h-full object-cover" />
           </div>
           <div class="order-1 lg:order-2">
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Équipement Spécifique</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Appareil Respiratoire <br>Isolant (ARI)</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Appareil Respiratoire <br>Isolant (ARI)</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Pédagogiques</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -217,9 +212,10 @@
       <div id="ari-recyclage" class="formation-card reveal-on-scroll" data-category="Specifiques">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Actualisation</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Recyclage <br>ARI</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Recyclage ARI</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Pédagogiques</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -249,9 +245,10 @@
              <img src="images/Robinets Incendie.png" alt="Formation RIA" class="w-full h-full object-cover" />
           </div>
           <div class="order-1 lg:order-2">
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Intervention</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Robinet d’Incendie <br>Armé (RIA)</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Robinet d’Incendie <br>Armé (RIA)</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Opérationnels</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -275,9 +272,10 @@
       <div id="epi" class="formation-card reveal-on-scroll" data-category="Base">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Initial</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Équipier de Première <br>Intervention (EPI)</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Équipier de Première <br>Intervention (EPI)</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Maniement des extincteurs</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -307,9 +305,10 @@
             <img src="images/esi_formation.png" alt="Formation ESI" class="w-full h-full object-cover" />
           </div>
           <div class="order-1 lg:order-2">
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Intervention Avancée</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase text-balance">Équipier de Seconde Intervention (ESI)</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Équipier de Seconde Intervention (ESI)</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Analyse & Action</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -333,9 +332,10 @@
       <div id="transfert" class="formation-card reveal-on-scroll" data-category="Evacuation">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">ERP U & J</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Transfert Horizontal <br>& Mise en Sécurité</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Transfert Horizontal <br>& Mise en Sécurité</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Secours</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">
@@ -365,9 +365,10 @@
             <img src="images/referent_incendie.png" alt="Référent Incendie Site" class="w-full h-full object-cover" />
           </div>
           <div class="order-1 lg:order-2">
-            <span class="inline-block px-4 py-1 bg-[#C00000]/10 text-[var(--a2ci-red)] text-[10px] font-bold uppercase tracking-widest rounded-full mb-4">Référentiel</span>
-            <h2 class="font-heading text-3xl font-bold text-gray-900 mb-4 uppercase">Référent <br>Incendie Site</h2>
-            <div class="h-1 w-20 bg-[var(--a2ci-red)] mb-6 rounded-full"></div>
+            <div class="h2-bar">
+              <span></span>
+              <h2 class="section-title !text-2xl">Référent Incendie Site</h2>
+            </div>
             
             <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Missions du Référent</h4>
             <ul class="premium-list text-gray-600 font-light mb-8">

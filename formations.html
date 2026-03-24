@@ -6,19 +6,9 @@
   <title>Catalogue de Formations - A2CI Prévention Incendie</title>
   <meta name="description" content="Découvrez notre catalogue complet de formations en sécurité incendie et secourisme (SST, SRI, ARI, SSI) par A2CI." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-da.css">
   <script src="js/components.js" defer></script>
   <style>
-    :root {
-      --a2ci-red: #C00000;
-      --a2ci-red-dark: #C00000;
-      --a2ci-dark: #0b0b0b;
-    }
-    body { font-family: 'Inter', sans-serif; }
-    .font-heading { font-family: 'Outfit', sans-serif; }
-    
     .category-card {
       transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -46,7 +36,7 @@
     <img src="images/catalogue_hero.png" alt="Formation A2CI" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-8 text-center">
+  <div class="relative z-10 container-custom text-center !py-24">
     <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-xs font-bold uppercase tracking-widest">
       <span class="w-2 h-2 rounded-full bg-[var(--a2ci-red)]"></span>
       Développement des compétences
@@ -61,8 +51,8 @@
 </section>
 
 <!-- Categories Grid -->
-<section class="py-32 bg-white">
-  <div class="max-w-7xl mx-auto px-8">
+<section class="py-24 bg-white">
+  <div class="container-custom">
     <div class="grid md:grid-cols-2 gap-12">
       
       <!-- Category Incendie -->

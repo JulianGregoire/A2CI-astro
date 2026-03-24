@@ -6,57 +6,11 @@
   <title>Coordination SSI - A2CI Prévention Incendie</title>
   <meta name="description" content="Expertise en Coordination SSI par A2CI. Conception, suivi et réception de vos Systèmes de Sécurité Incendie en Gironde." />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style-da.css">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="js/components.js" defer></script>
   <style>
-    :root {
-      --a2ci-red: #C00000;
-      --a2ci-red-light: #C00000;
-      --a2ci-black: #000000;
-      --bg-dark: #0b0b0b;
-      --card-dark: #111111;
-      --border-dark: #222222;
-      --glass-white: rgba(255, 255, 255, 0.7);
-      --glass-border: rgba(255, 255, 255, 0.4);
-    }
-    
-    body { 
-      margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
-      background: #fff;
-      color: #333;
-    }
-    
-    .font-heading { 
-      font-family: 'Outfit', system-ui, -apple-system, sans-serif; 
-    }
-
-    .container-custom {
-      max-width: 1150px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    h1, h2, h3 { margin-bottom: 20px; }
-    p { line-height: 1.7; font-weight: 300; }
-    
-    .glass-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
-    }
-
-    /* HERO (Dark) */
-    .hero {
-      margin-bottom: 0;
-      background: var(--bg-dark);
-      color: #fff;
-    }
-    
+    /* Particles Background */
     #particles-js {
       position: absolute;
       width: 100%;
@@ -67,50 +21,13 @@
       opacity: 0.25;
     }
 
-    /* SECTIONS */
-    .section-custom {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 60px;
+    .hero {
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
     }
 
-    .section-custom.reverse { flex-direction: row-reverse; }
-
-    .section-text { flex: 1.2; min-width: 320px; }
-    .section-img { flex: 1; min-width: 320px; }
-
-    .section-img .img-wrapper {
-      position: relative;
-      padding: 10px;
-    }
-
-    .section-img .img-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 60%;
-      height: 60%;
-      border-top: 2px solid var(--a2ci-red);
-      border-left: 2px solid var(--a2ci-red);
-      z-index: 0;
-      opacity: 0.3;
-      border-radius: 20px 0 0 0;
-    }
-
-    .section-img img {
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-      position: relative;
-      z-index: 1;
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    /* DOSSIER TECHNIQUE (Dark) */
+    /* DARK SECTION */
     .section-dark {
       background: var(--bg-dark);
       color: #fff;
@@ -122,17 +39,6 @@
       border: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* ACCORDEON (Dark) */
-    .accordion {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border-dark);
-      background: var(--card-dark);
-    }
-
-    .accordion-item { border-bottom: 1px solid var(--border-dark); }
-    .accordion-item:last-child { border-bottom: none; }
-
     .accordion-header {
       padding: 24px;
       cursor: pointer;
@@ -142,7 +48,7 @@
       justify-content: space-between;
       align-items: center;
       transition: all 0.3s;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
     }
 
     .accordion-header:hover { background: rgba(255,255,255,0.03); }
@@ -226,7 +132,7 @@
       cursor: pointer;
       transition: all 0.3s;
       display: inline-block;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
     }
     
     .cta-button:hover {
@@ -335,9 +241,9 @@
   <div class="container-custom">
     <div class="section-custom scroll-reveal">
       <div class="section-text">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Analyse du <span class="text-red">projet</span></h2>
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Analyse du <span class="text-[var(--a2ci-red)]">projet</span></h2>
         </div>
         <p class="mb-4 text-gray-600">
           Visite du site (si bâtiment existant) et participation à des réunions avec le maître d’ouvrage, l’exploitant, le maître d’œuvre et le bureau de contrôle.
@@ -360,9 +266,9 @@
   <div class="container-custom pt-0">
     <div class="section-custom reverse scroll-reveal">
       <div class="section-text">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Validation <span class="text-red">technique</span></h2>
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Validation <span class="text-[var(--a2ci-red)]">technique</span></h2>
         </div>
         <p class="text-gray-600">
           Si nécessaire, consultation du Service Prévention de la Gironde afin de valider les choix techniques ou argumenter les demandes de dérogation.
@@ -445,9 +351,9 @@
   <div class="container-custom">
     <div class="section-custom scroll-reveal">
       <div class="section-text">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Suivi de <span class="text-red">chantier</span></h2>
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Suivi de <span class="text-[var(--a2ci-red)]">chantier</span></h2>
         </div>
         <p class="mb-4 text-gray-600">
           Demande aux entreprises des plans d’exécution, documents techniques, PV des matériels NF et associativité.
@@ -473,9 +379,9 @@
   <div class="container-custom pt-0">
     <div class="section-custom reverse scroll-reveal">
       <div class="section-text">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
-          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Réception & <span class="text-red">fin de chantier</span></h2>
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Réception & <span class="text-[var(--a2ci-red)]">fin de chantier</span></h2>
         </div>
         <p class="mb-4 text-gray-600">
           Collecte des documents du dossier d’identité (DOE, PV de mise en service, autocontrôles des entreprises).
