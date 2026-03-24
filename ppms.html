@@ -72,15 +72,7 @@
       position: relative;
       padding: 40px 0;
     }
-    .timeline-line {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(to bottom, transparent, var(--a2ci-red), transparent);
-      opacity: 0.3;
-    }
+
     .timeline-step {
       position: relative;
       z-index: 2;
@@ -114,6 +106,20 @@
     .section-img .img-wrapper {
       position: relative;
       padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0; /* Changed from Left to Right */
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-right: 2px solid var(--a2ci-red); /* Changed from Left to Right */
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 0 20px 0 0; /* Updated radius for top-right */
     }
 
     .section-img img {
