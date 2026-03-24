@@ -99,29 +99,25 @@
     </div>
 
     <!-- Grid -->
-    <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12" id="blog-grid">
       
-      <!-- Article 9: 20 ans -->
-      <article class="group relative flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100" data-category="Vie de l'agence">
-        <a href="blog-articles/20-ans-a2ci.html" class="absolute inset-0 z-20"></a>
-        <div class="relative h-64 overflow-hidden">
+      <!-- Article 9: 20 Ans -->
+      <article class="blog-card group" data-category="Vie de l'agence">
+        <a href="blog-articles/20-ans-a2ci.html" class="absolute inset-0 z-10"></a>
+        <div class="relative h-64 rounded-[2rem] overflow-hidden mb-8 shadow-lg group-hover:shadow-2xl transition-all duration-500">
           <img src="images/a2ci_20_ans.png" alt="20 ans A2CI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-          <div class="absolute top-6 left-6 z-10">
-            <span class="px-4 py-1.5 bg-black/50 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest rounded-full border border-white/20">Vie de l'agence</span>
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full">Vie de l'agence</span>
           </div>
         </div>
-        <div class="p-10 flex flex-col flex-grow">
-          <div class="flex items-center gap-3 mb-6">
-            <span class="w-8 h-px bg-[var(--a2ci-red)]"></span>
-            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">24 Mars 2026</span>
+        <div class="px-2">
+          <div class="flex items-center gap-4 mb-4 text-[10px] font-bold uppercase tracking-widest text-gray-400">
+            <span>24 Mars 2026</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-gray-200"></span>
+            <span>Équipe A2CI</span>
           </div>
-          <h2 class="font-heading text-2xl font-bold text-gray-900 mb-4 group-hover:text-[var(--a2ci-red)] transition-colors leading-tight uppercase">Évènement : <span class="text-[var(--a2ci-red)]">A2CI fête ses 20 ans !</span></h2>
-          <p class="text-sm text-gray-500 font-light leading-relaxed mb-8 line-clamp-3">
-            En juin prochain, nous célébrerons deux décennies d'expertise et de passion à l'hippodrome de Langon. Un moment que nous avons hâte de partager avec vous.
-          </p>
-          <div class="mt-auto pt-8 border-t border-gray-50 flex items-center justify-between">
-            <span class="text-[10px] font-bold uppercase tracking-widest text-[var(--a2ci-red)] group-hover:translate-x-2 transition-transform duration-300">Lire l'article &rarr;</span>
-          </div>
+          <h2 class="font-heading text-2xl font-bold mb-4 group-hover:text-[var(--a2ci-red)] transition-colors leading-tight uppercase">Événement : <span class="text-red">20 ans</span> d'A2CI.</h2>
+          <p class="text-gray-500 text-sm font-light leading-relaxed line-clamp-2 italic border-l-2 border-red-50 pl-4">Fêtez avec nous deux décennies d'engagement et de passion pour la sécurité incendie à l'Hippodrome de Langon.</p>
         </div>
       </article>
       
