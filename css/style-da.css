@@ -106,3 +106,29 @@ body {
 .hover-lift:hover {
   transform: translateY(-8px);
 }
+
+/* Premium List Style */
+.premium-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.premium-list li {
+  position: relative;
+  padding-left: 28px !important;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  color: #4b5563; /* gray-600 */
+}
+
+.premium-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 14px;
+  height: 2px;
+  background-color: var(--a2ci-red);
+}
