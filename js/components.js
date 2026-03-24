@@ -165,7 +165,7 @@ function highlightActiveLink() {
   links.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath) {
-      link.classList.add('text-[#E30613]', 'font-bold');
+      link.classList.add('text-[#C00000]', 'font-bold');
       const underline = link.querySelector('span');
       if (underline) underline.classList.replace('w-0', 'w-full');
     }

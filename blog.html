@@ -11,8 +11,8 @@
   <script src="js/components.js" defer></script>
   <style>
     :root {
-      --a2ci-red: #E30613;
-      --a2ci-red-dark: #960606;
+      --a2ci-red: #C00000;
+      --a2ci-red-dark: #C00000;
     }
     body { font-family: 'Inter', sans-serif; }
     .font-heading { font-family: 'Outfit', sans-serif; }
@@ -92,10 +92,10 @@
     <!-- Filtres -->
     <div class="flex flex-wrap items-center gap-4 mb-16">
       <button data-filter="all" class="filter-btn active px-6 py-2.5 bg-black text-white rounded-full text-xs font-bold uppercase tracking-widest transition-all">Tous les articles</button>
-      <button data-filter="Incendie" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-red-200 hover:text-red-500 transition-all">Sécurité Incendie</button>
-      <button data-filter="Secourisme" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-red-200 hover:text-red-500 transition-all">Secourisme</button>
-      <button data-filter="Réglementation" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-red-200 hover:text-red-500 transition-all">Réglementation</button>
-      <button data-filter="Distinction" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-red-200 hover:text-red-500 transition-all">Distinctions</button>
+      <button data-filter="Incendie" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-[#C00000]/30 hover:text-[#C00000] transition-all">Sécurité Incendie</button>
+      <button data-filter="Secourisme" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-[#C00000]/30 hover:text-[#C00000] transition-all">Secourisme</button>
+      <button data-filter="Réglementation" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-[#C00000]/30 hover:text-[#C00000] transition-all">Réglementation</button>
+      <button data-filter="Distinction" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-xs font-bold uppercase tracking-widest border border-gray-100 hover:border-[#C00000]/30 hover:text-[#C00000] transition-all">Distinctions</button>
     </div>
 
     <!-- Grid -->
@@ -322,8 +322,8 @@
     <!-- Pagination -->
     <div class="mt-20 flex justify-center gap-3">
       <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-black text-white font-bold text-sm">1</button>
-      <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-white border border-gray-100 hover:border-red-500 hover:text-red-500 transition-all font-bold text-sm text-gray-400">2</button>
-      <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-white border border-gray-100 hover:border-red-500 hover:text-red-500 transition-all font-bold text-sm text-gray-400">
+      <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-white border border-gray-100 hover:border-red-500 hover:text-[#C00000] transition-all font-bold text-sm text-gray-400">2</button>
+      <button class="w-12 h-12 flex items-center justify-center rounded-xl bg-white border border-gray-100 hover:border-red-500 hover:text-[#C00000] transition-all font-bold text-sm text-gray-400">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
       </button>
     </div>
@@ -341,7 +341,7 @@
       
       <form class="flex flex-col sm:flex-row gap-4">
         <input type="email" placeholder="Votre adresse email" class="flex-grow px-8 py-5 bg-white/5 border border-white/10 rounded-2xl text-white focus:outline-none focus:border-red-500 transition-all font-light" />
-        <button type="submit" class="px-10 py-5 bg-[var(--a2ci-red)] text-white font-bold rounded-2xl hover:bg-red-700 transition-all uppercase tracking-widest text-xs">S'abonner</button>
+        <button type="submit" class="px-10 py-5 bg-[var(--a2ci-red)] text-white font-bold rounded-2xl hover:bg-[#900000] transition-all uppercase tracking-widest text-xs">S'abonner</button>
       </form>
     </div>
   </div>
