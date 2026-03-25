@@ -16,19 +16,29 @@
 
 <div id="header-component"></div>
 
-<article class="pt-40 pb-24">
+<!-- Hero Section (Dark) -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="../images/b278f7cfa2a384f8-1a792.jpg" alt="Equipe A2CI en télétravail/bureau" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 py-24 lg:py-32 text-center">
+    <a href="../blog.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+      Retour au Mag
+    </a>
+    <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight">
+      Information <br /><span class="text-[var(--a2ci-red)]">Covid-19.</span>
+    </h1>
+    <div class="flex items-center justify-center gap-4">
+      <span class="px-4 py-1 bg-white/10 text-white border border-white/20 text-[10px] font-bold uppercase tracking-widest rounded-full">Information</span>
+      <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">15 Mai 2020</span>
+    </div>
+  </div>
+</section>
+
+<article class="py-24">
   <div class="max-w-4xl mx-auto px-8">
-    <header class="mb-16 text-center md:text-left">
-      <a href="../blog.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-[var(--a2ci-red)] transition-colors mb-8 text-sm font-bold uppercase tracking-widest">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-        Retour au Mag
-      </a>
-      <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
-        <span class="px-4 py-1 bg-gray-50 text-gray-500 border border-gray-100 text-[10px] font-bold uppercase tracking-widest rounded-full">Information</span>
-        <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest">15 Mai 2020</span>
-      </div>
-      <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight uppercase tracking-tight">Information <span class="text-[var(--a2ci-red)]">Covid-19.</span></h1>
-    </header>
 
     <div class="rounded-[2.5rem] overflow-hidden mb-16 shadow-2xl">
       <img src="../images/b278f7cfa2a384f8-1a792.jpg" alt="Equipe A2CI en télétravail/bureau" class="w-full h-auto" />
