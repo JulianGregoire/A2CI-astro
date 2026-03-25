@@ -75,7 +75,7 @@ body {
 /* Heading Accents */
 .h2-bar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   margin-bottom: 24px;
 }
@@ -84,7 +84,9 @@ body {
   height: 2px;
   width: 32px;
   background-color: var(--a2ci-red);
-  display: block; /* Ensure it's a block to respect dimensions */
+  display: block;
+  margin-top: 0.55em; /* aligns with cap-height of first text line */
+  flex-shrink: 0;
 }
 
 .section-title {
