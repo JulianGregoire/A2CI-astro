@@ -84,47 +84,39 @@
     }
 
 
-    /* --- Scroll reveal animations (CSS-only, light) --- */
+    /* --- Scroll reveal animations (Intersection Observer) --- */
     .scroll-reveal {
-      opacity: 1;
-      transform: none;
+      opacity: 0;
+      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity;
+      pointer-events: none;
     }
-    @supports (animation-timeline: view()) {
-      .scroll-reveal {
-        opacity: 0;
-        transform: translateY(18px) scale(0.99);
-        animation: reveal-up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
-        animation-timeline: view();
-        animation-range: entry 10% cover 30%;
-      }
-      .scroll-reveal[data-animate="fade-right"] {
-        animation-name: reveal-right;
-      }
-      .scroll-reveal[data-animate="fade-left"] {
-        animation-name: reveal-left;
-      }
-      .scroll-reveal[data-animate="fade-up"] {
-        animation-name: reveal-up;
-      }
-      .scroll-reveal[data-animate="zoom"] {
-        animation-name: reveal-zoom;
-      }
-      @keyframes reveal-up {
-        from { opacity: 0; transform: translateY(18px) scale(0.99); }
-        to { opacity: 1; transform: translateY(0) scale(1); }
-      }
-      @keyframes reveal-left {
-        from { opacity: 0; transform: translateX(22px) scale(0.99); }
-        to { opacity: 1; transform: translateX(0) scale(1); }
-      }
-      @keyframes reveal-right {
-        from { opacity: 0; transform: translateX(-22px) scale(0.99); }
-        to { opacity: 1; transform: translateX(0) scale(1); }
-      }
-      @keyframes reveal-zoom {
-        from { opacity: 0; transform: scale(0.94); }
-        to { opacity: 1; transform: scale(1); }
-      }
+    
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translate(0, 0) scale(1) !important;
+      pointer-events: auto;
+    }
+
+    /* Variantes d'animation */
+    .scroll-reveal[data-animate="fade-up"] { transform: translateY(30px); }
+    .scroll-reveal[data-animate="fade-left"] { transform: translateX(30px); }
+    .scroll-reveal[data-animate="fade-right"] { transform: translateX(-30px); }
+    .scroll-reveal[data-animate="zoom"] { transform: scale(0.95); }
+
+    /* Fix pour les éléments en absolute centré (Méthode A2Ci) */
+    .absolute.scroll-reveal {
+      /* On utilise margin pour l'offset de l'animation pour ne pas casser le translate-y-1/2 */
+      opacity: 0;
+      transform: none; 
+      transition: opacity 1.2s ease-out, margin 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .absolute.scroll-reveal[data-animate="fade-left"] { margin-left: 40px; }
+    .absolute.scroll-reveal[data-animate="fade-right"] { margin-left: -40px; }
+    
+    .absolute.scroll-reveal.active {
+      opacity: 1;
+      margin-left: 0;
     }
 
     /* --- Load-in animation for hero (CSS-only) --- */
@@ -1496,6 +1488,26 @@
       btnClose.classList.add('opacity-0', 'rotate-90');
     }
   }
+
+  // --- Scroll Reveal Logic (Intersection Observer) ---
+  const revealCallback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target); 
+      }
+    });
+  };
+
+  const revealOptions = {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px' // Petite marge en bas pour déclencher plus tôt
+  };
+
+  const observer = new IntersectionObserver(revealCallback, revealOptions);
+  document.querySelectorAll('.scroll-reveal').forEach(el => {
+    observer.observe(el);
+  });
 
   function startChatScenario() {
     const messagesContainer = document.getElementById('chat-messages');
