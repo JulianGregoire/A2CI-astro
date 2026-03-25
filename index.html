@@ -127,6 +127,28 @@
       }
     }
 
+    /* Fallback JS + Transition (Older browsers & Safari) */
+    @supports not (animation-timeline: view()) {
+      .scroll-reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+      }
+      .scroll-reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .scroll-reveal[data-animate="fade-right"] { transform: translateX(-25px); }
+      .scroll-reveal[data-animate="fade-left"] { transform: translateX(25px); }
+      .scroll-reveal[data-animate="zoom"] { transform: scale(0.95); }
+      .scroll-reveal.active[data-animate="fade-right"],
+      .scroll-reveal.active[data-animate="fade-left"],
+      .scroll-reveal.active[data-animate="zoom"] {
+        transform: translate(0) scale(1);
+      }
+    }
+
     /* --- Load-in animation for hero (CSS-only) --- */
     @media (prefers-reduced-motion: no-preference) {
       .load-reveal {
@@ -1549,6 +1571,22 @@
       messagesContainer.scrollTop = messagesContainer.scrollHeight;
     }, 1500);
   }
+
+  // --- Scroll Reveal JS Fallback ---
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        // Optionnel : arrêter d'observer une fois révélé
+        // scrollObserver.unobserve(entry.target);
+      }
+    });
+  }, { 
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px' 
+  });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => scrollObserver.observe(el));
 </script>
 
 <style>
