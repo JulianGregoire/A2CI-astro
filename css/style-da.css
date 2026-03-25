@@ -85,8 +85,8 @@ body {
   width: 32px;
   background-color: var(--a2ci-red);
   display: block;
-  margin-top: 0.55em; /* aligns with cap-height of first text line */
   flex-shrink: 0;
+  margin-top: 20px; /* Center with first line of text (~40px line-height) */
 }
 
 .section-title {
