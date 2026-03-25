@@ -9,21 +9,6 @@
   <link rel="stylesheet" href="css/style-da.css">
   <script src="js/components.js" defer></script>
   <style>
-    .cert-card {
-      background: white;
-      border-radius: 2.5rem;
-      padding: 3rem;
-      border: 1px solid #f1f1f1;
-      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .cert-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.05);
-      border-color: var(--a2ci-red);
-    }
     .reveal-on-scroll {
       opacity: 0;
       transform: translateY(30px);
@@ -74,65 +59,88 @@
   </div>
 </section>
 
-<section id="engagement" class="py-24 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-8">
-    <div class="grid lg:grid-cols-2 gap-12">
+<section id="engagement" class="py-24 bg-white relative overflow-hidden">
+  <!-- Subtle pattern -->
+  <div class="absolute inset-0 opacity-[0.03] z-0 pointer-events-none" style="background-image: radial-gradient(var(--a2ci-red) 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+  <div class="max-w-7xl mx-auto px-8 relative z-10">
+    
+    <div class="mb-20 max-w-3xl">
+      <div class="h2-bar">
+        <span></span>
+        <h2 class="section-title mb-6">Un engagement total pour<br/><span class="text-[var(--a2ci-red)]">votre satisfaction.</span></h2>
+      </div>
+      <p class="text-gray-600 lg:text-lg font-light leading-relaxed">
+        Au-delà de nos certifications réglementaires, nous plaçons la réussite de vos stagiaires et la satisfaction de nos clients au cœur de notre démarche d'amélioration continue.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
       
       <!-- Certification Qualiopi -->
-      <div class="cert-card reveal-on-scroll">
-        <div class="flex items-center gap-6 mb-8">
-          <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100 p-2">
-            <img src="https://www.a2ci-prevention-incendie.fr/local/cache-vignettes/L120xH60/qualiopi-9b98c.png?1635338303" alt="Logo Qualiopi" class="w-full h-auto" />
+      <div class="group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-gray-50 border border-gray-100 p-10 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--a2ci-red)] hover:shadow-2xl hover:bg-white">
+        <div>
+          <div class="flex items-center gap-6 mb-10">
+            <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center border border-gray-100 p-3 shadow-sm transition-transform group-hover:scale-105">
+              <img src="images/qualiopi.png" alt="Logo Qualiopi" class="w-full h-auto" />
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-[var(--a2ci-red)] uppercase tracking-widest bg-[var(--a2ci-red)]/10 px-3 py-1 rounded-full">Certification d'État</span>
+              <h3 class="text-2xl font-black uppercase mt-3 tracking-tight text-gray-900 group-hover:text-[var(--a2ci-red)] transition-colors">Qualiopi</h3>
+            </div>
           </div>
-          <div>
-            <span class="text-[10px] font-bold text-[var(--a2ci-red)] uppercase tracking-widest">Certification d'État</span>
-            <h3 class="text-2xl font-bold uppercase mt-1">Certification Qualiopi</h3>
+          <p class="text-gray-600 font-light leading-relaxed mb-10 text-lg">
+            A2CI est certifié <strong>QUALIOPI</strong> pour ses actions de formation. Cette certification nationale atteste de la qualité du processus mis en œuvre pour le développement des compétences.
+          </p>
+          <div class="space-y-4 mb-12">
+            <div class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span class="text-sm font-bold text-gray-700">Certificat de conformité COFRAC</span>
+            </div>
+            <div class="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+              <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span class="text-sm font-bold text-gray-700">Processus pédagogique audité & validé</span>
+            </div>
           </div>
         </div>
-        <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">
-          A2CI est certifié QUALIOPI pour ses actions de formation. Cette certification atteste de la qualité du processus mis en œuvre par les prestataires d'actions concourant au développement des compétences.
-        </p>
-        <div class="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100">
-          <p class="text-xs font-bold text-gray-400 uppercase mb-3 tracking-widest">Détails du certificat</p>
-          <ul class="premium-list space-y-2 text-sm text-gray-700">
-             <li>Certificat COFRAC</li>
-             <li>Renouvellement de certification</li>
-          </ul>
-        </div>
-        <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/522726-48323_-_certificat_qualiopi_renouvellement_cofrac_.pdf?117/b883d9075d4a6fdd0688e7e59d784c4a798ad477" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl font-bold text-xs hover:bg-[#C00000] transition-all uppercase tracking-widest shadow-lg">
-          Voir le certificat Qualiopi
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+        <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/522726-48323_-_certificat_qualiopi_renouvellement_cofrac_.pdf?117/b883d9075d4a6fdd0688e7e59d784c4a798ad477" target="_blank" class="inline-flex items-center justify-center gap-4 px-10 py-5 bg-black text-white rounded-2xl font-bold text-xs hover:bg-[var(--a2ci-red)] transition-all uppercase tracking-widest shadow-xl group/btn">
+          <span>Consulter le certificat</span>
+          <svg class="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
         </a>
       </div>
 
       <!-- Satisfaction Stagiaires -->
-      <div class="cert-card reveal-on-scroll" style="transition-delay: 100ms;">
-        <div class="flex items-center gap-6 mb-8">
-          <div class="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center border border-gray-100">
-            <svg class="w-8 h-8 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+      <div class="group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-gray-50 border border-gray-100 p-10 transition-all duration-300 hover:-translate-y-2 hover:border-[var(--a2ci-red)] hover:shadow-2xl hover:bg-white text-dark">
+        <div>
+          <div class="flex items-center gap-6 mb-10">
+            <div class="w-20 h-20 bg-white rounded-2xl flex items-center justify-center border border-gray-100 text-[var(--a2ci-red)] shadow-sm">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-[var(--a2ci-red)] uppercase tracking-widest bg-[var(--a2ci-red)]/10 px-3 py-1 rounded-full">Reporting 2025</span>
+              <h3 class="text-2xl font-black uppercase mt-3 tracking-tight text-gray-900 group-hover:text-[var(--a2ci-red)] transition-colors">Performance</h3>
+            </div>
           </div>
-          <div>
-            <span class="text-[10px] font-bold text-[var(--a2ci-red)] uppercase tracking-widest">Performance Pédagogique</span>
-            <h3 class="text-2xl font-bold uppercase mt-1">Satisfaction Clients</h3>
+          <p class="text-gray-600 font-light leading-relaxed mb-10 text-lg">
+            Nous analysons semestriellement les retours d'expérience de chaque stagiaire pour ajuster nos contenus et améliorer continuellement la qualité de nos interventions.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 mb-12">
+            <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
+              <p class="text-[10px] font-bold text-gray-400 uppercase mb-2 tracking-widest">Satisfaction</p>
+              <p class="text-5xl font-black text-[var(--a2ci-red)] tracking-tighter">98<span class="text-2xl ml-0.5">%</span></p>
+              <p class="text-[9px] font-medium text-gray-500 mt-2 italic">1er Semestre 2025</p>
+            </div>
+            <div class="p-8 bg-white rounded-2xl border border-gray-100 shadow-sm text-center">
+              <p class="text-[10px] font-bold text-gray-400 uppercase mb-2 tracking-widest">Réussite</p>
+              <p class="text-5xl font-black text-gray-900 tracking-tighter">100<span class="text-2xl ml-0.5">%</span></p>
+              <p class="text-[9px] font-medium text-gray-500 mt-2 italic">Validation acquis</p>
+            </div>
           </div>
         </div>
-        <p class="text-gray-600 font-light leading-relaxed mb-8 flex-grow">
-          La réussite de nos stagiaires et la satisfaction de nos clients sont au cœur de notre démarche. Nous analysons semestriellement les retours d'expérience pour améliorer nos programmes.
-        </p>
-        <div class="bg-gray-50 rounded-2xl p-6 mb-8 border border-gray-100 flex items-center justify-around text-center">
-          <div>
-            <p class="text-3xl font-heading font-extrabold text-[var(--a2ci-red)]">98%</p>
-            <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">Taux de Satisfaction</p>
-          </div>
-          <div class="h-10 w-px bg-gray-200"></div>
-          <div>
-            <p class="text-3xl font-heading font-extrabold text-[var(--a2ci-red)]">2025</p>
-            <p class="text-[9px] font-bold text-gray-400 uppercase tracking-tighter">1er Semestre</p>
-          </div>
-        </div>
-        <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/recap_satisfaction_1er_semestre_2025.pdf?130/36c3504727fd3a93fb0cf5896df13732931776bd" target="_blank" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-black text-white rounded-xl font-bold text-xs hover:bg-[var(--a2ci-red)] transition-all uppercase tracking-widest shadow-lg">
-          Consulter le rapport 2025
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/recap_satisfaction_1er_semestre_2025.pdf?130/36c3504727fd3a93fb0cf5896df13732931776bd" target="_blank" class="inline-flex items-center justify-center gap-4 px-10 py-5 bg-white text-black border border-gray-900 rounded-2xl font-bold text-xs hover:bg-black hover:text-white transition-all uppercase tracking-widest shadow-xl group/btn2">
+          <span>Rapport Complet</span>
+          <svg class="w-4 h-4 transition-transform group-hover/btn2:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
         </a>
       </div>
 

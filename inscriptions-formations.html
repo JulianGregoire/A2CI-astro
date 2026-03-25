@@ -9,35 +9,6 @@
   <link rel="stylesheet" href="css/style-da.css">
   <script src="js/components.js" defer></script>
   <style>
-    .step-card {
-      background: white;
-      border-radius: 2rem;
-      padding: 2.5rem;
-      border: 1px solid #f1f1f1;
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-    }
-    .step-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.03);
-      border-color: var(--a2ci-red);
-    }
-    .step-number {
-      position: absolute;
-      top: -1.5rem;
-      left: 2.5rem;
-      width: 3rem;
-      height: 3rem;
-      background: var(--a2ci-red);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.25rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(227, 6, 19, 0.2);
-    }
     .reveal-on-scroll {
       opacity: 0;
       transform: translateY(20px);
@@ -77,62 +48,98 @@
   </div>
 </section>
 
-<section id="steps" class="py-24 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-8">
+<section id="steps" class="py-24 bg-white relative overflow-hidden">
+  <!-- Subtle background accent -->
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-gray-50/50 skew-x-12 translate-x-20 z-0"></div>
+
+  <div class="max-w-7xl mx-auto px-8 relative z-10">
     
-    <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+    <div class="mb-16 max-w-3xl">
+      <div class="h2-bar">
+        <span></span>
+        <h2 class="section-title mb-6">Un processus d'inscription<br/><span class="text-[var(--a2ci-red)]">clair & structuré.</span></h2>
+      </div>
+      <p class="text-gray-600 lg:text-lg font-light leading-relaxed">
+        Nous avons simplifié nos démarches pour vous permettre de lancer vos formations dans les meilleures conditions et les plus brefs délais.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
       
       <!-- Étape 1 -->
-      <div class="step-card reveal-on-scroll">
-        <div class="step-number">01</div>
-        <h3 class="text-xl font-bold mb-4 mt-2">Dossier Client</h3>
-        <p class="text-gray-600 font-light leading-relaxed mb-6">Si vous êtes nouveau client, la première étape consiste à enregistrer votre fiche établissement pour faciliter vos futures demandes.</p>
-        <a href="index.html#contact" class="inline-flex items-center gap-2 text-[var(--a2ci-red)] font-bold text-sm hover:underline">
-          Compléter le formulaire ici
+      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+          <span class="text-6xl font-black italic">01</span>
+        </div>
+        <div class="relative z-10">
+          <h3 class="text-lg font-bold mb-4 uppercase tracking-tight text-gray-900 group-hover:text-[var(--a2ci-red)] transition-colors">Dossier Client</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-8">Identification de votre structure et enregistrement de votre fiche établissement pour faciliter vos demandes.</p>
+        </div>
+        <a href="index.html#contact" class="inline-flex items-center gap-2 text-[var(--a2ci-red)] font-bold text-xs uppercase tracking-widest hover:translate-x-1 transition-transform">
+          Compléter ici
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
         </a>
       </div>
 
       <!-- Étape 2 -->
-      <div class="step-card reveal-on-scroll" style="transition-delay: 100ms;">
-        <div class="step-number">02</div>
-        <h3 class="text-xl font-bold mb-4 mt-2">Étude & Devis</h3>
-        <p class="text-gray-600 font-light leading-relaxed">Nos experts analysent vos besoins spécifiques, vos contraintes et vos effectifs pour vous transmettre un devis détaillé et adapté à votre structure sous un délai moyen de quelques heures.</p>
+      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+          <span class="text-6xl font-black italic">02</span>
+        </div>
+        <div class="relative z-10">
+          <h3 class="text-lg font-bold mb-4 uppercase tracking-tight text-gray-900 group-hover:text-[var(--a2ci-red)] transition-colors">Étude & Devis</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-8">Analyse de vos besoins et transmission d'un devis détaillé sous un délai moyen de quelques heures.</p>
+        </div>
       </div>
 
       <!-- Étape 3 -->
-      <div class="step-card reveal-on-scroll" style="transition-delay: 200ms;">
-        <div class="step-number">03</div>
-        <h3 class="text-xl font-bold mb-4 mt-2">Pré-inscription</h3>
-        <p class="text-gray-600 font-light leading-relaxed mb-4">Votre pré-inscription devient valide dès que les éléments suivants sont confirmés :</p>
-        <ul class="premium-list space-y-2 text-sm text-gray-700 font-medium">
-          <li>Date(s) et horaire(s) défini(s) d'un commun accord</li>
-          <li>Réception du devis signé avec bon pour accord</li>
-        </ul>
+      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+          <span class="text-6xl font-black italic">03</span>
+        </div>
+        <div class="relative z-10">
+          <h3 class="text-lg font-bold mb-4 uppercase tracking-tight text-gray-900 group-hover:text-[var(--a2ci-red)] transition-colors">Pré-inscription</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-6">Validation des dates et horaires. Réception du devis signé avec bon pour accord.</p>
+        </div>
       </div>
 
       <!-- Étape 4 -->
-      <div class="step-card reveal-on-scroll" style="transition-delay: 300ms;">
-        <div class="step-number">04</div>
-        <h3 class="text-xl font-bold mb-4 mt-2">Validation Finale</h3>
-        <p class="text-gray-600 font-light leading-relaxed">Pour finaliser et sécuriser définitivement votre session, vous devrez nous retourner la <strong>Convention de Formation Professionnelle</strong> signée, qui fait acte d'engagement réciproque.</p>
+      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+          <span class="text-6xl font-black italic">04</span>
+        </div>
+        <div class="relative z-10">
+          <h3 class="text-lg font-bold mb-4 uppercase tracking-tight text-gray-900 group-hover:text-[var(--a2ci-red)] transition-colors">Validation Finale</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-8">Retour de la Convention de Formation signée pour sécuriser définitivement votre session.</p>
+        </div>
       </div>
 
     </div>
 
-    <!-- Délais et Engagement -->
-    <div class="mt-24 bg-gray-50 rounded-[3rem] p-10 lg:p-16 border border-gray-100 flex flex-col md:flex-row gap-12 items-center reveal-on-scroll">
-      <div class="md:w-1/3">
-        <div class="w-20 h-20 bg-[#0b0b0b] rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-10 h-10 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-        </div>
-        <h4 class="text-2xl font-bold uppercase mb-4">Délais de traitement</h4>
-        <p class="text-gray-500 text-sm font-light">Réactivité et planification stratégique pour votre sécurité.</p>
+    <!-- Délais et Engagement (Modernized) -->
+    <div class="mt-24 bg-gray-900 rounded-3xl p-10 lg:p-16 border border-white/5 relative overflow-hidden flex flex-col md:flex-row gap-12 items-center">
+      <!-- Decorative background -->
+      <div class="absolute inset-0 z-0 opacity-20">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[var(--a2ci-red)]/20 to-transparent"></div>
       </div>
-      <div class="md:w-2/3 space-y-6">
-        <p class="text-xl text-gray-800 font-medium leading-relaxed">Dès réception de votre demande, l’inscription sera traitée sous un délai allant de <span class="text-[var(--a2ci-red)] font-bold">quelques heures à 6 mois</span> selon la complexité du programme.</p>
-        <div class="h-px w-full bg-gray-200"></div>
-        <p class="text-gray-600 italic">"Nous nous adaptons à vos attentes, en fonction de nos disponibilités et de vos contraintes techniques et opérationnelles."</p>
+
+      <div class="relative z-10 md:w-1/3">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-[var(--a2ci-red)] rounded-2xl mb-8 shadow-lg shadow-[var(--a2ci-red)]/20">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <h4 class="text-2xl font-extrabold text-white uppercase mb-4 tracking-tight">Délais de traitement</h4>
+        <p class="text-gray-400 text-sm font-medium leading-relaxed">Réactivité immédiate et planification stratégique pour vos formations.</p>
+      </div>
+      
+      <div class="relative z-10 md:w-2/3 space-y-8">
+        <div class="p-8 bg-white/5 rounded-2xl border border-white/10 backdrop-blur-sm">
+          <p class="text-xl md:text-2xl text-white font-bold leading-tight">
+            Inscriptions traitées sous un délai allant de <span class="text-[var(--a2ci-red)]">quelques heures à 6 mois</span>.
+          </p>
+        </div>
+        <p class="text-gray-400 italic font-light text-lg">
+          "Nous nous adaptons en permanence à vos disponibilités et aux contraintes opérationnelles de votre secteur."
+        </p>
       </div>
     </div>
 
