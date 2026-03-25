@@ -53,22 +53,31 @@
 
 <div id="header-component"></div>
 
-<section class="relative pt-32 pb-20 bg-black">
-  <div class="absolute inset-0 z-0 opacity-20">
+<!-- Hero Section (Dark) -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-40">
     <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="S'inscrire aux formations A2CI" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
   </div>
-  <div class="relative z-10 max-w-7xl mx-auto px-8">
+  <div class="relative z-10 mx-auto max-w-4xl px-4 py-24 lg:py-32 text-center">
     <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
       Retour au catalogue
     </a>
-    <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white mb-6 uppercase tracking-tight">Modalités <br><span class="text-[var(--a2ci-red)]">d'inscription.</span></h1>
-    <p class="max-w-2xl text-lg text-gray-400 font-light leading-relaxed">Retrouvez ci-dessous les étapes clés et les modalités d'accès à nos sessions de formation professionnelle.</p>
+    <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight">
+      Modalités <br><span class="text-[var(--a2ci-red)]">d'inscription.</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed font-light mb-10">Retrouvez ci-dessous les étapes clés et les modalités d'accès à nos sessions de formation professionnelle.</p>
+    
+    <div class="flex justify-center">
+      <a href="#steps" class="cta-button">
+        Découvrir les étapes
+      </a>
+    </div>
   </div>
 </section>
 
-<section class="py-24 bg-gray-50">
+<section id="steps" class="py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-8">
     
     <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
