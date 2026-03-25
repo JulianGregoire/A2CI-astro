@@ -116,12 +116,44 @@ function initHeaderLogic() {
     link.addEventListener('click', closeMenu);
   });
 
-  // Header shadow on scroll (Optional: keep only the shadow for depth)
+  // Header scroll effect
+  const globalWrapper = document.getElementById('global-header-wrapper');
+  const topBar = document.getElementById('top-bar');
+  const logo = document.getElementById('header-logo');
+  
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      if (mainHeader) mainHeader.classList.add('shadow-md');
+    if (window.scrollY > 20) {
+      // Hide top bar
+      if (topBar) {
+        topBar.style.maxHeight = '0px';
+        topBar.style.borderBottomWidth = '0px';
+        topBar.style.opacity = '0';
+      }
+      
+      // Scale logo and reduce padding
+      if (logo) logo.classList.add('h-10', 'sm:h-12');
+      if (logo) logo.classList.remove('h-12', 'sm:h-14');
+      
+      if (mainHeader) {
+        mainHeader.classList.add('shadow-md', 'py-1');
+        mainHeader.classList.remove('py-3');
+      }
     } else {
-      if (mainHeader) mainHeader.classList.remove('shadow-md');
+      // Show top bar
+      if (topBar) {
+        topBar.style.maxHeight = '100px';
+        topBar.style.borderBottomWidth = '1px';
+        topBar.style.opacity = '1';
+      }
+      
+      // Restore logo and padding
+      if (logo) logo.classList.add('h-12', 'sm:h-14');
+      if (logo) logo.classList.remove('h-10', 'sm:h-12');
+      
+      if (mainHeader) {
+        mainHeader.classList.remove('shadow-md', 'py-1');
+        mainHeader.classList.add('py-3');
+      }
     }
   });
 }
