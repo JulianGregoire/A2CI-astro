@@ -67,6 +67,131 @@
   </div>
 </section>
 
+<!-- Notre équipe (Reused from index) -->
+<section id="equipe" class="bg-gray-50 py-16 lg:py-24 overflow-hidden relative">
+  <div class="container-custom py-0 mb-12">
+    <div class="max-w-3xl text-left scroll-reveal" data-animate="zoom">
+        <div class="h2-bar mb-4">
+            <span></span>
+            <h2 class="section-title">Notre <span class="text-[var(--a2ci-red)]">Équipe.</span></h2>
+        </div>
+        <p class="text-sm text-gray-600 sm:text-base leading-relaxed">L'alliance de l'ingénierie et de l'expérience opérationnelle.</p>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-[1150px] px-4">
+
+    <div class="relative w-full group">
+      <button onclick="scrollTeam('left')" class="absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-100 text-gray-800 hover:text-[var(--a2ci-red)] shadow-lg transition-opacity opacity-70 hover:opacity-100">
+        <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+
+      <button onclick="scrollTeam('right')" class="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-100 text-gray-800 hover:text-[var(--a2ci-red)] shadow-lg transition-opacity opacity-70 hover:opacity-100">
+        <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <div id="team-scroll-container" class="flex overflow-x-auto gap-6 sm:gap-8 px-4 sm:px-12 pb-16 pt-8 scrollbar-hide scroll-smooth items-center snap-x snap-mandatory" style="-webkit-overflow-scrolling: touch;">
+        
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Jérôme Texier" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Jérôme TEXIER</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Président</p>
+          </div>
+        </div>
+
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col mt-8 lg:mt-16 snap-center">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Géraldine Buy" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Géraldine BUY</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Associée & RH</p>
+          </div>
+        </div>
+
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Magalie Czeski" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Magalie CZESKI</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Responsable BE</p>
+          </div>
+        </div>
+
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center mt-8 lg:mt-16">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" alt="David Zerbib" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">David ZERBIB</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Responsable Activité</p>
+          </div>
+        </div>
+
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="William Massias" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">William MASSIAS</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Coordination SSI</p>
+          </div>
+        </div>
+
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center mt-8 lg:mt-16">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Emmanuel Lambert" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Emmanuel LAMBERT</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Formation & Conseil</p>
+          </div>
+        </div>
+
+        <!-- Thibault -->
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Thibault Chaussier" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Thibault CHAUSSIER</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Technicien BE</p>
+          </div>
+        </div>
+
+        <!-- Angélique -->
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col mt-8 lg:mt-16 snap-center">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Angélique Etcheberigaray" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Angélique ETCHEBERIGARAY</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Technicienne BE</p>
+          </div>
+        </div>
+
+        <!-- Caroline -->
+        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
+          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
+             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Caroline Moreau" class="h-full w-full object-cover">
+          </div>
+          <div class="mt-5 text-center">
+            <h3 class="text-xl font-bold text-gray-900">Caroline MOREAU</h3>
+            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Technicienne BE</p>
+          </div>
+        </div>
+
+        <div class="min-w-[20px] snap-center"></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Historique -->
 <section id="historique" class="py-20 bg-gray-50">
   <div class="mx-auto max-w-[90rem] px-6 lg:px-12">
@@ -495,130 +620,6 @@
   </div>
 </section>
 
-<!-- Notre équipe (Reused from index) -->
-<section id="equipe" class="bg-gray-50 py-16 lg:py-24 overflow-hidden relative">
-  <div class="container-custom py-0 mb-12">
-    <div class="max-w-3xl text-left scroll-reveal" data-animate="zoom">
-        <div class="h2-bar mb-4">
-            <span></span>
-            <h2 class="section-title">Notre <span class="text-[var(--a2ci-red)]">Équipe.</span></h2>
-        </div>
-        <p class="text-sm text-gray-600 sm:text-base leading-relaxed">L'alliance de l'ingénierie et de l'expérience opérationnelle.</p>
-    </div>
-  </div>
-
-  <div class="mx-auto max-w-[1150px] px-4">
-
-    <div class="relative w-full group">
-      <button onclick="scrollTeam('left')" class="absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-100 text-gray-800 hover:text-[var(--a2ci-red)] shadow-lg transition-opacity opacity-70 hover:opacity-100">
-        <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
-      </button>
-
-      <button onclick="scrollTeam('right')" class="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 lg:h-14 lg:w-14 items-center justify-center rounded-full bg-white/90 backdrop-blur-sm border border-gray-100 text-gray-800 hover:text-[var(--a2ci-red)] shadow-lg transition-opacity opacity-70 hover:opacity-100">
-        <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
-      </button>
-
-      <div id="team-scroll-container" class="flex overflow-x-auto gap-6 sm:gap-8 px-4 sm:px-12 pb-16 pt-8 scrollbar-hide scroll-smooth items-center snap-x snap-mandatory" style="-webkit-overflow-scrolling: touch;">
-        
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Jérôme Texier" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">Jérôme TEXIER</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Président</p>
-          </div>
-        </div>
-
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col mt-8 lg:mt-16 snap-center">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Géraldine Buy" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">Géraldine BUY</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Associée & RH</p>
-          </div>
-        </div>
-
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Magalie Czeski" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">Magalie CZESKI</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Responsable BE</p>
-          </div>
-        </div>
-
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center mt-8 lg:mt-16">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop" alt="David Zerbib" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">David ZERBIB</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Responsable Activité</p>
-          </div>
-        </div>
-
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="William Massias" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">William MASSIAS</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Coordination SSI</p>
-          </div>
-        </div>
-
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center mt-8 lg:mt-16">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Emmanuel Lambert" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">Emmanuel LAMBERT</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Formation & Conseil</p>
-          </div>
-        </div>
-
-        <!-- Thibault -->
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Thibault Chaussier" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">Thibault CHAUSSIER</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Technicien BE</p>
-          </div>
-        </div>
-
-        <!-- Angélique -->
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col mt-8 lg:mt-16 snap-center">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Angélique Etcheberigaray" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">Angélique ETCHEBERIGARAY</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Technicienne BE</p>
-          </div>
-        </div>
-
-        <!-- Caroline -->
-        <div class="min-w-[260px] sm:min-w-[300px] flex flex-col snap-center">
-          <div class="relative aspect-[3/4] w-full overflow-hidden rounded-2xl shadow-lg">
-             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Caroline Moreau" class="h-full w-full object-cover">
-          </div>
-          <div class="mt-5 text-center">
-            <h3 class="text-xl font-bold text-gray-900">Caroline MOREAU</h3>
-            <p class="text-xs font-bold text-[var(--a2ci-red)] uppercase tracking-widest mt-1">Technicienne BE</p>
-          </div>
-        </div>
-
-        <div class="min-w-[20px] snap-center"></div>
-
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- Footer Identique -->
