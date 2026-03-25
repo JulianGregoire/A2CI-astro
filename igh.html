@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sécurité IGH - A2CI Prévention Incendie</title>
+  <meta name="description" content="Expertise en sécurité incendie pour les Immeubles de Grande Hauteur (IGH) par A2CI. Conformité, audit et coordination SSI pour les tours de grande hauteur." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #C00000;
+      --a2ci-red-light: #C00000;
+      --a2ci-black: #000000;
+      --bg-dark: #0b0b0b;
+      --card-dark: #111111;
+      --border-dark: #222222;
+    }
+    
+    body { 
+      margin: 0;
+      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif; 
+      background: #fff;
+      color: #333;
+    }
+    
+    .font-heading { 
+      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif; 
+    }
+
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { line-height: 1.7; font-weight: 300; }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    /* DARK SECTION */
+    .section-dark {
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
+    .section-dark p { color: #d1d5db; }
+  </style>
+</head>
+<body class="overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<!-- HERO (Dark) -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="images/hero_fire_night.jpg" alt="Sécurité IGH A2CI" class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+  
+  <div class="relative z-10 mx-auto max-w-4xl px-4 py-24 lg:py-32 text-center">
+    
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight uppercase tracking-tight">
+      Sécurité des <br><span class="text-[var(--a2ci-red-light)]">IGH (Immeubles de Grande Hauteur).</span>
+    </h1>
+    
+    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Maîtriser les risques spécifiques liés à la hauteur. Un accompagnement expert pour la conformité réglementaire et la sécurité des occupants de vos tours.
+    </p>
+
+    <div class="flex justify-center flex-wrap gap-4">
+      <a href="index.html#contact" class="cta-button">
+        Demander une étude
+      </a>
+      <a href="#procede" class="inline-flex items-center justify-center rounded-md border border-white/20 bg-white/5 px-8 py-4 font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10">
+        Nos solutions
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Content Section -->
+<section id="procede" class="bg-white py-20">
+  <div class="container-custom">
+    <div class="section-custom">
+      <div class="section-text">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+          <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900">Gestion des <span class="text-red">risques IGH.</span></h2>
+        </div>
+        <p class="mb-8 text-lg font-light text-gray-600">
+          Les Immeubles de Grande Hauteur (IGH) sont soumis à une réglementation spécifique extrêmement rigoureuse en raison des difficultés d'évacuation et d'intervention des secours. A2CI vous accompagne dans la gestion de ces contraintes.
+        </p>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 transition-all hover:bg-white hover:shadow-md">
+            <div class="h-6 w-6 rounded-full bg-[var(--a2ci-red)]/10 flex items-center justify-center text-[var(--a2ci-red)] shrink-0 mt-1">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <div>
+              <span class="font-bold text-gray-900 block">Respect du Règlement de Sécurité</span>
+              <span class="text-sm text-gray-500">Analyse de la conformité aux arrêtés spécifiques IGH (GHW, GHA, GHR, etc.).</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 transition-all hover:bg-white hover:shadow-md">
+            <div class="h-6 w-6 rounded-full bg-[var(--a2ci-red)]/10 flex items-center justify-center text-[var(--a2ci-red)] shrink-0 mt-1">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <div>
+              <span class="font-bold text-gray-900 block">Coordination SSI Spécifique</span>
+              <span class="text-sm text-gray-500">Mise en œuvre de systèmes de sécurité adaptés aux contraintes de compartimentage.</span>
+            </div>
+          </li>
+          <li class="flex items-start gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 transition-all hover:bg-white hover:shadow-md">
+            <div class="h-6 w-6 rounded-full bg-[var(--a2ci-red)]/10 flex items-center justify-center text-[var(--a2ci-red)] shrink-0 mt-1">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+            </div>
+            <div>
+              <span class="font-bold text-gray-900 block">Audit de Maintenance IGH</span>
+              <span class="text-sm text-gray-500">Contrôle périodique des équipements de désenfumage et de détection.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="images/A2CI_Immeubles de Grande Hauteur (IGH).svg" alt="Sécurité IGH" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section (Catalogue Style) -->
+<section class="py-20 bg-gray-50 border-y border-gray-100">
+  <div class="max-w-7xl mx-auto px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+      <div class="reveal-on-scroll">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">CAT 1-5</div>
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">Couverture complète</div>
+      </div>
+      <div class="reveal-on-scroll" style="transition-delay: 100ms;">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">100%</div>
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">Réglementaire</div>
+      </div>
+      <div class="reveal-on-scroll" style="transition-delay: 200ms;">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">20 ANS</div>
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">D'expérience</div>
+      </div>
+      <div class="reveal-on-scroll" style="transition-delay: 300ms;">
+        <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">EXPERT</div>
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">Terrain</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-component"></div>
+
+
+</body>
+</html>
