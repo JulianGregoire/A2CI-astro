@@ -116,12 +116,14 @@ function initHeaderLogic() {
     link.addEventListener('click', closeMenu);
   });
 
-  // Header scroll effect (Désactivé pour un header fixe et compact)
-  /*
+  // Header shadow on scroll (Optional: keep only the shadow for depth)
   window.addEventListener('scroll', () => {
-    ...
+    if (window.scrollY > 10) {
+      if (mainHeader) mainHeader.classList.add('shadow-md');
+    } else {
+      if (mainHeader) mainHeader.classList.remove('shadow-md');
+    }
   });
-  */
 }
 
 function highlightActiveLink() {
