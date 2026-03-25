@@ -87,36 +87,23 @@
     /* --- Scroll reveal animations (Intersection Observer) --- */
     .scroll-reveal {
       opacity: 0;
-      transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-      will-change: transform, opacity;
+      transition: opacity 1.2s ease-out, translate 1.2s cubic-bezier(0.16, 1, 0.3, 1), scale 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: translate, opacity, scale;
       pointer-events: none;
     }
     
     .scroll-reveal.active {
       opacity: 1;
-      transform: translate(0, 0) scale(1) !important;
+      translate: 0 0;
+      scale: 1;
       pointer-events: auto;
     }
 
-    /* Variantes d'animation */
-    .scroll-reveal[data-animate="fade-up"] { transform: translateY(30px); }
-    .scroll-reveal[data-animate="fade-left"] { transform: translateX(30px); }
-    .scroll-reveal[data-animate="fade-right"] { transform: translateX(-30px); }
-    .scroll-reveal[data-animate="zoom"] { transform: scale(0.95); }
-
-    /* Fix pour les éléments en absolute centré (Méthode A2Ci) */
-    .absolute.scroll-reveal {
-      /* On ne touche pas à transform pour ne pas casser le centrage vertical (-translate-y-1/2) */
-      opacity: 0;
-      transition: opacity 1.2s ease-out, margin 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .absolute.scroll-reveal[data-animate="fade-left"] { margin-left: 40px; }
-    .absolute.scroll-reveal[data-animate="fade-right"] { margin-left: -40px; }
-    
-    .absolute.scroll-reveal.active {
-      opacity: 1;
-      margin-left: 0;
-    }
+    /* Variantes d'animation (via propriétés indépendantes pour éviter les conflits avec transform) */
+    .scroll-reveal[data-animate="fade-up"] { translate: 0 30px; }
+    .scroll-reveal[data-animate="fade-left"] { translate: 60px 0; }
+    .scroll-reveal[data-animate="fade-right"] { translate: -60px 0; }
+    .scroll-reveal[data-animate="zoom"] { scale: 0.95; }
 
     /* --- Load-in animation for hero (CSS-only) --- */
     @media (prefers-reduced-motion: no-preference) {
