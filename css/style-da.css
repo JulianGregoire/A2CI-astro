@@ -138,3 +138,27 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+/* Standard CTA Button */
+.cta-button {
+  background: var(--a2ci-red);
+  border: none;
+  padding: 16px 40px;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #960606; /* shade of C00000 */
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(150, 6, 6, 0.3);
+  color: white;
+}
