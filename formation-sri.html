@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SRI : Sensibilisation au Risque Incendie - A2CI Prévention</title>
-  <meta name="description" content="Formation Sensibilisation au Risque Incendie (SRI) par A2CI. Apprenez les réflexes essentiels, l'utilisation des extincteurs et les procédures d'évacuation." />
+  <title>Sensibilisation au Risque Incendie (SRI) - A2CI Prévention</title>
+  <meta name="description" content="Formation Sensibilisation au Risque Incendie (SRI). Apprenez les réflexes essentiels, l'utilisation des extincteurs et les procédures d'évacuation avec A2CI." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style-da.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,20 +12,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="js/components.js" defer></script>
   <style>
-    :root {
-      --a2ci-red: #C00000;
-      --a2ci-black: #000000;
+    .hero {
+      background: #000;
+      color: #fff;
     }
-    body { 
-      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif; 
+    .feature-card {
+      background: white;
+      border-radius: 2rem;
+      padding: 3rem;
+      border: 1px solid #f1f1f1;
+      height: 100%;
+      transition: all 0.4s ease;
     }
-    .font-heading { 
-      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif; 
+    .feature-card:hover {
+      border-color: var(--a2ci-red);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+    }
+    .check-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: 700;
     }
     .reveal-on-scroll {
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal-on-scroll.active {
       opacity: 1;
@@ -33,185 +51,188 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-900 overflow-x-hidden w-full">
+<body class="bg-white text-gray-900 w-full">
 
 <div id="header-component"></div>
 
 <!-- Hero Section -->
-<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[500px] lg:min-h-[600px]">
-  <div class="absolute inset-0 z-0 opacity-40">
+<section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[600px] lg:min-h-[700px]">
+  <div class="absolute inset-0 z-0 opacity-50">
     <img src="images/formation incendie.png" alt="Formation SRI A2CI" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
   </div>
   <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
-    <div class="inline-block px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-6">Formation Initiale</div>
-    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight uppercase tracking-tight">
-      Sensibilisation au <br><span class="text-[var(--a2ci-red)]">Risque Incendie (SRI).</span>
+    <div class="inline-block px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Formation Incendie</div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
+      Sensibilisation au<br /><span class="text-[var(--a2ci-red)]">Risque Incendie.</span>
     </h1>
-    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed font-light">
-      Acquérir les réflexes essentiels et les conduites à tenir face à un départ de feu dans votre environnement professionnel.
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">
+      Développez les réflexes vitaux et la maîtrise des moyens d'extinction pour assurer la sécurité de votre environnement de travail.
     </p>
+    <div class="flex justify-center gap-6">
+      <a href="#objectifs" class="cta-button">Découvrir le programme</a>
+    </div>
   </div>
 </section>
 
-<!-- Content Section -->
-<section class="py-20 bg-white">
-  <div class="container-custom py-0">
-    <div class="grid lg:grid-cols-12 gap-16 items-start">
-      
-      <!-- Left Column: Details -->
-      <div class="lg:col-span-7 space-y-12">
-        
-        <div class="reveal-on-scroll">
-          <div class="h2-bar">
-            <span></span>
-            <h2 class="section-title">Objectifs <span class="text-[var(--a2ci-red)]">Pédagogiques.</span></h2>
+<!-- Introduction Sections (Aéré) -->
+<section id="objectifs" class="py-24 bg-white">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-20 scroll-reveal">
+      <h2 class="section-title mb-6">Objectifs <span class="text-[var(--a2ci-red)]">Pédagogiques.</span></h2>
+      <p class="text-lg text-gray-600 font-light leading-relaxed">
+        Notre stage SRI permet à chaque collaborateur de devenir un acteur engagé de la sécurité incendie au sein de son entreprise.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12 items-stretch">
+      <div class="feature-card reveal-on-scroll">
+          <div class="h-12 w-12 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mb-8">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
           </div>
-          <p class="text-gray-600 mb-6 leading-relaxed">
-            Cette formation vise à rendre chaque collaborateur acteur de la sécurité au sein de son établissement. À l'issue du stage, les participants seront capables de :
-          </p>
-          <ul class="premium-list grid sm:grid-cols-2 gap-x-8">
-            <li>Observer et analyser la situation</li>
-            <li>Alarmer et déclencher l'évacuation</li>
-            <li>Alerter les secours externes</li>
-            <li>Éteindre un feu naissant</li>
-            <li>Connaître les modalités d'évacuation</li>
-            <li>Maîtriser l'organisation interne</li>
+          <h3 class="text-2xl font-bold mb-6">Observer & Réagir</h3>
+          <ul class="premium-list text-gray-600">
+              <li>Sensibilisation aux réflexes et conduites à tenir en cas de départ de feu.</li>
+              <li>Réaction immédiate au déclenchement d'une évacuation.</li>
+              <li>Compréhension de l'arbre décisionnel en situation d'urgence.</li>
           </ul>
-        </div>
-
-        <div class="reveal-on-scroll">
-          <div class="h2-bar">
-            <span></span>
-            <h2 class="section-title">Programme de la <span class="text-[var(--a2ci-red)]">Formation.</span></h2>
-          </div>
-          <div class="space-y-6">
-            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-              <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-3">
-                <span class="w-8 h-8 rounded-full bg-[var(--a2ci-red)] text-white flex items-center justify-center text-xs">01</span>
-                Théorie & Arbre décisionnel
-              </h3>
-              <p class="text-sm text-gray-600 leading-relaxed">
-                Étude de la conduite à tenir selon le schéma de sécurité de l'entreprise, identification des agents extincteurs et compréhension des classes de feux.
-              </p>
-            </div>
-            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-              <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-3">
-                <span class="w-8 h-8 rounded-full bg-[var(--a2ci-red)] text-white flex items-center justify-center text-xs">02</span>
-                Exercices Pratiques
-              </h3>
-              <p class="text-sm text-gray-600 leading-relaxed">
-                Mise en situation réelle pour acquérir les attitudes réflexes face à un feu naissant avec manipulation d'extincteurs sur bac à feu écologique.
-              </p>
-            </div>
-            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-              <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-3">
-                <span class="w-8 h-8 rounded-full bg-[var(--a2ci-red)] text-white flex items-center justify-center text-xs">03</span>
-                Reconnaissance de site
-              </h3>
-              <p class="text-sm text-gray-600 leading-relaxed">
-                Visite de l'établissement pour identifier les organes de sécurité, les cheminements d'évacuation et les points de rassemblement.
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Right Column: Info Box & Resources -->
-      <div class="lg:col-span-5 space-y-8 sticky top-24">
-        
-        <!-- Practical Info Card -->
-        <div class="bg-black text-white p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-[var(--a2ci-red)] opacity-10 rounded-full -mr-16 -mt-16"></div>
-          <h3 class="text-xl font-bold mb-8 uppercase tracking-wider italic">Infos Pratiques</h3>
-          
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-[var(--a2ci-red)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-              </div>
-              <div>
-                <span class="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Durée</span>
-                <span class="text-lg font-medium">Nous contacter</span>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-[var(--a2ci-red)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-              </div>
-              <div>
-                <span class="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Capacité</span>
-                <span class="text-lg font-medium">10 personnes max.</span>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
-                <svg class="w-5 h-5 text-[var(--a2ci-red)]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              </div>
-              <div>
-                <span class="block text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Lieu</span>
-                <span class="text-lg font-medium">Dans votre établissement</span>
-              </div>
-            </div>
+      <div class="feature-card reveal-on-scroll" style="transition-delay: 150ms;">
+          <div class="h-12 w-12 bg-red-50 text-[var(--a2ci-red)] rounded-2xl flex items-center justify-center mb-8">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
           </div>
-
-          <div class="mt-10 pt-8 border-t border-white/10">
-            <a href="index.html#contact" class="block w-full text-center py-4 bg-[var(--a2ci-red)] text-white font-bold rounded-xl hover:bg-[#960606] transition-all uppercase tracking-widest text-xs">
-              Réserver une session
-            </a>
-          </div>
-        </div>
-
-        <!-- Resources Box -->
-        <div class="p-8 rounded-[2rem] border border-gray-100 bg-gray-50/50">
-          <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">Moyens techniques déployés</h4>
-          <ul class="space-y-3">
-            <li class="flex items-center gap-3 text-sm text-gray-600">
-              <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-              Générateur de fumée
-            </li>
-            <li class="flex items-center gap-3 text-sm text-gray-600">
-              <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-              Bac à feu « écologique »
-            </li>
-            <li class="flex items-center gap-3 text-sm text-gray-600">
-              <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-              Extincteurs pédagogiques
-            </li>
-            <li class="flex items-center gap-3 text-sm text-gray-600">
-              <span class="w-1.5 h-1.5 rounded-full bg-[var(--a2ci-red)]"></span>
-              Support vidéo & multimédia
-            </li>
+          <h3 class="text-2xl font-bold mb-6">Alerter & Agir</h3>
+          <ul class="premium-list text-gray-600">
+              <li>Savoir alarmer et alerter les services de secours externes.</li>
+              <li>Maîtrise des moyens d'extinction appropriés (Extincteurs, RIA).</li>
+              <li>Identifier l'extincteur adapté selon le type de feu.</li>
           </ul>
-          
-          <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri.pdf?113/01aee95830233511884ad10e9b00a39eb2a9ee39" target="_blank" class="mt-8 flex items-center justify-center gap-3 text-xs font-bold text-gray-900 hover:text-[var(--a2ci-red)] transition-colors">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
-            Télécharger la fiche (PDF)
-          </a>
-        </div>
-
       </div>
     </div>
   </div>
 </section>
 
+<!-- Moyens Techniques (Simple & Lisible) -->
+<section class="py-24 bg-gray-50 border-y border-gray-100">
+  <div class="container-custom py-0">
+    <div class="section-custom items-start">
+        <div class="section-text">
+            <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Moyens <span class="text-[var(--a2ci-red)]">Techniques.</span></h2>
+            </div>
+            <p class="text-gray-600 mb-10 leading-relaxed font-light">
+                Nous déployons sur vos sites des équipements pédagogiques de pointe pour une immersion totale et sécurisée.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <span class="block text-sm font-bold text-gray-900 mb-2">Immersion</span>
+                    <p class="text-xs text-gray-500 font-light leading-relaxed">Générateur de fumée & Bac à feu « écologique ».</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <span class="block text-sm font-bold text-gray-900 mb-2">Pratique</span>
+                    <p class="text-xs text-gray-500 font-light leading-relaxed">Extincteurs pédagogiques tous types.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <span class="block text-sm font-bold text-gray-900 mb-2">Théorie</span>
+                    <p class="text-xs text-gray-500 font-light leading-relaxed">Ordinateur portable & Vidéo projecteur mobile.</p>
+                </div>
+                <div class="p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <span class="block text-sm font-bold text-gray-900 mb-2">Audit</span>
+                    <p class="text-xs text-gray-500 font-light leading-relaxed">Visite et repérage des organes de sécurité.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-img">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/sri_base_formation.png" alt="Moyens techniques SRI" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programme & Modalités (Aéré) -->
+<section class="py-24 bg-white">
+  <div class="container-custom">
+    <div class="grid lg:grid-cols-2 gap-24 items-center">
+        <div class="order-2 lg:order-1">
+            <div class="space-y-12">
+                <div class="reveal-on-scroll">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Programme de formation</h4>
+                    <p class="text-gray-600 leading-relaxed font-light italic border-l-2 border-[var(--a2ci-red)] pl-6">
+                        "Un exercice pratique pour acquérir des attitudes réflexes face à un feu naissant tout en respectant l’organisation de secours de l’entreprise."
+                    </p>
+                </div>
+                
+                <div class="reveal-on-scroll" style="transition-delay: 100ms;">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Organisation sur site</h4>
+                    <ul class="premium-list text-gray-600">
+                        <li>Formation par groupe de 10 personnes au maximum.</li>
+                        <li>Durée adaptée à vos besoins (Nous contacter).</li>
+                        <li>Intervention directement dans votre établissement.</li>
+                        <li>Planification selon nos disponibilités communes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 lg:order-2 bg-black rounded-[3rem] p-12 text-white shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-12 opacity-10">
+                <svg class="w-48 h-48" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            </div>
+            <h3 class="text-3xl font-bold mb-8 uppercase tracking-tight">Côté <span class="text-[var(--a2ci-red)]">Réglementation.</span></h3>
+            <p class="text-gray-400 font-light mb-10 leading-relaxed">
+                Chaque collaborateur doit connaître la conduite à tenir en cas de départ de feu selon le schéma de l’organisation interne de sécurité.
+            </p>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="h-1 w-8 bg-[var(--a2ci-red)]"></div>
+                    <span class="text-sm font-bold uppercase tracking-widest">Type de feux & agents extincteurs</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="h-1 w-8 bg-[var(--a2ci-red)]"></div>
+                    <span class="text-sm font-bold uppercase tracking-widest">Rôle des acteurs de la sécurité</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="h-1 w-8 bg-[var(--a2ci-red)]"></div>
+                    <span class="text-sm font-bold uppercase tracking-widest">Identification des organes SSI</span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 bg-gray-50 border-t border-gray-100">
+    <div class="max-w-[1150px] mx-auto px-8 text-center">
+        <h2 class="section-title mb-8">Prêt à sécuriser vos <span class="text-[var(--a2ci-red)]">équipes ?</span></h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri.pdf" target="_blank" class="px-10 py-5 bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">Télécharger la Fiche (PDF)</a>
+            <a href="index.html#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Besoins spécifiques ?</a>
+        </div>
+    </div>
+</section>
+
 <div id="footer-component"></div>
 
 <script>
-  // Simple Scroll Reveal Observer
+  // Simple Scroll Reveal Logic
   const observerOptions = { threshold: 0.1 };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+        if (entry.target.classList.contains('scroll-reveal')) {
+             entry.target.style.opacity = "1";
+             entry.target.style.transform = "translateY(0)";
+        }
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal-on-scroll, .scroll-reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
