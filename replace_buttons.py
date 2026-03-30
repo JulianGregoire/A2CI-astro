@@ -1,41 +1,27 @@
 import re
+import os
 
 files = [
-    "/Users/leanazorzetto/Desktop/site web/A2CI-astro/formations-incendie.html",
-    "/Users/leanazorzetto/Desktop/site web/A2CI-astro/formations-secourisme.html"
+    'formations-secourisme.html',
+    'formations-incendie.html'
 ]
 
-# The regex will target the exact block:
-# <div class="grid grid-cols-2 gap-[23]">
-#   <a href="formation-xxx.html" class="...">En savoir plus</a>
-#   ... anything until </div> of the gap-3 block
-# </div>
+def replace_match(m):
+    href = m.group(1)
+    return f'<a href="{href}" class="w-full py-4 bg-gray-200 text-gray-500 text-center rounded-xl hover:bg-gray-300 hover:text-gray-900 transition-all text-[10px] font-bold uppercase tracking-widest shadow-sm block border border-gray-300">En savoir plus</a>'
 
-pattern = re.compile(
-    r'<div class="grid grid-cols-2 gap-3">\s*'
-    r'<a href="([^"]+)"\s*class="[^"]*">En savoir plus</a>\s*'
-    r'(?:<a [^>]+>.*?</a>|<div class="grid grid-cols-2 gap-2">.*?</div>)\s*'
-    r'</div>',
-    re.DOTALL
-)
+patt1 = re.compile(r'<div class="grid grid-cols-2 gap-3">\s*<a href="([^"]+)"[^>]+>En savoir plus</a>\s*<a href="[^"]+"[^>]+>Fiche \(PDF\)</a>\s*</div>')
+patt2 = re.compile(r'<div class="grid grid-cols-2 gap-3">\s*<a href="([^"]+)"[^>]+>En savoir plus</a>\s*<div class="grid grid-cols-2 gap-2">\s*<a href="[^"]+"[^>]+>Fiche 1</a>\s*<a href="[^"]+"[^>]+>Fiche 2</a>\s*</div>\s*</div>')
 
-for filepath in files:
-    with open(filepath, "r") as f:
-        content = f.read()
+for file in files:
+    with open(file, 'r', encoding='utf-8') as f:
+        text = f.read()
 
-    # We replace it with a single full-width gray button
-    def replacer(match):
-        href = match.group(1)
-        return (f'<a href="{href}" class="block w-full py-4 bg-gray-100 text-gray-900 '
-                f'text-center rounded-xl hover:bg-gray-200 transition-all '
-                f'text-[10px] font-bold uppercase tracking-widest border border-gray-200">'
-                f'En savoir plus</a>')
-
-    new_content, count = pattern.subn(replacer, content)
+    original_length = len(text)
+    text, n1 = patt1.subn(replace_match, text)
+    text, n2 = patt2.subn(replace_match, text)
     
-    if count > 0:
-        with open(filepath, "w") as f:
-            f.write(new_content)
-        print(f"Replaced {count} instances in {filepath}")
-    else:
-        print(f"No instances found in {filepath} or regex failed")
+    with open(file, 'w', encoding='utf-8') as f:
+        f.write(text)
+    
+    print(f"Replaced {n1 + n2} occurrences in {file} (standard: {n1}, complex: {n2})")
