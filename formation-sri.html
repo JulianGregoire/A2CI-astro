@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation SRI - A2CI Prévention Incendie</title>
+  <meta name="description" content="Formation Sensibilisation au Risque Incendie (SRI) par A2CI. Apprenez les réflexes essentiels, la manipulation d'extincteurs et l'organisation des secours." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/components.js" defer></script>
+  <style>
+    :root {
+      --a2ci-red: #C00000;
+      --a2ci-red-light: #C00000;
+      --a2ci-black: #000000;
+      --bg-dark: #0b0b0b;
+      --card-dark: #111111;
+      --border-dark: #222222;
+      --glass-white: rgba(255, 255, 255, 0.7);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+    
+    body { 
+      margin: 0;
+      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif; 
+      background: #fff;
+      color: #333;
+    }
+    
+    .font-heading { 
+      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif; 
+    }
+
+    .container-custom {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { line-height: 1.7; font-weight: 300; }
+    
+    /* Local Component Styles */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    /* HERO (Dark) */
+    .hero {
+      margin-bottom: 0;
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0.25;
+    }
+
+    /* TIMELINE */
+    .timeline-container {
+      position: relative;
+      padding: 40px 0;
+    }
+
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
+    }
+    .step-dot {
+      width: 12px;
+      height: 12px;
+      background: var(--a2ci-red);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      box-shadow: 0 0 15px var(--a2ci-red);
+    }
+
+    /* SECTIONS */
+    .section-custom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .section-custom.reverse { flex-direction: row-reverse; }
+
+    .section-text { flex: 1.2; min-width: 320px; }
+    .section-img { flex: 1; min-width: 320px; }
+
+    .section-img .img-wrapper {
+      position: relative;
+      padding: 10px;
+    }
+
+    .section-img .img-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 60%;
+      border-top: 2px solid var(--a2ci-red);
+      border-left: 2px solid var(--a2ci-red);
+      z-index: 0;
+      opacity: 0.3;
+      border-radius: 20px 0 0 0;
+    }
+
+    .section-img img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* DARK SECTION */
+    .section-dark {
+      background: var(--bg-dark);
+      color: #fff;
+    }
+    
+    .section-dark p { color: #d1d5db; }
+    .section-dark .section-img img {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ACCORDEON (Dark) */
+    .accordion {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      background: var(--card-dark);
+    }
+
+    .accordion-item { border-bottom: 1px solid var(--border-dark); }
+    .accordion-item:last-child { border-bottom: none; }
+
+    .accordion-header {
+      padding: 24px;
+      cursor: pointer;
+      background: transparent;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif;
+    }
+
+    .accordion-header:hover { background: rgba(255,255,255,0.03); }
+
+    .accordion-header svg {
+      transition: transform 0.3s;
+      width: 20px;
+      height: 20px;
+      color: var(--a2ci-red);
+    }
+
+    .accordion-header.active { color: var(--a2ci-red); }
+    .accordion-header.active svg { transform: rotate(180deg); }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 0 24px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .accordion-content.open {
+      max-height: 2000px;
+      padding: 0 24px 24px 24px;
+    }
+
+    /* GLOW BORDER EFFECT */
+    .glow-border {
+      position: relative;
+      overflow: hidden;
+    }
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -150%;
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* CTA */
+    .section-cta { padding-bottom: 80px; }
+    .cta {
+      text-align: center;
+      padding: 80px 40px;
+      background: linear-gradient(145deg, #111 0%, #000 100%);
+      border-radius: 24px;
+      border: 1px solid var(--border-dark);
+      position: relative;
+      color: #fff;
+    }
+
+    .cta::after {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px; right: -1px; bottom: -1px;
+      background: linear-gradient(45deg, transparent 40%, var(--a2ci-red) 50%, transparent 60%);
+      z-index: -1;
+      border-radius: 24px;
+      opacity: 0.1;
+    }
+
+    .cta-button {
+      background: var(--a2ci-red);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+      font-family: Calibri, Candara, 'Segoe UI', Segoe, Optima, Arial, sans-serif;
+    }
+    
+    .cta-button:hover {
+      background: #C00000;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(150, 6, 6, 0.3);
+    }
+
+    .text-red { color: var(--a2ci-red); }
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    
+    .scroll-reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden w-full">
+
+<div id="header-component"></div>
+
+<!-- HERO (Dark) -->
+<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-40">
+    <img src="images/formation incendie.png" alt="Formation SRI A2CI" class="h-full w-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+  </div>
+  
+
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl mb-6 leading-tight uppercase tracking-tight">
+      Sensibilisation au <br><span class="text-[var(--a2ci-red-light)]">Risque Incendie (SRI).</span>
+    </h1>
+    
+    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed mb-10 font-light">
+      Sensibiliser les collaborateurs aux réflexes et conduites à tenir en cas de départ de feu. Une formation pratique pour assurer la sécurité de tous au quotidien.
+    </p>
+
+    <div class="flex justify-center">
+      <a href="index.html#contact" class="cta-button">
+        Demander une formation
+      </a>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- TIMELINE SECTION (White) -->
+<section class="bg-gray-50 py-20">
+  <div class="container-custom py-0">
+    <div class="mb-20 scroll-reveal">
+      <div class="h2-bar justify-center">
+        <span></span>
+        <h2 class="section-title text-center mb-0">Parcours de <span class="text-[var(--a2ci-red)]">Mise en Conformité.</span></h2>
+        <span></span>
+      </div>
+      <p class="text-gray-500 font-light max-w-2xl mx-auto">Une méthodologie rigoureuse pour garantir la sécurité de votre établissement.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-8 relative px-4 text-center">
+
+      
+      <!-- Step 1 -->
+      <div class="text-center scroll-reveal">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">01</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Analyse réglementaire</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Étude du contexte, des normes et du classement de l’établissement.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 100ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">02</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Audit sur site</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Inspection complète du SSI et tests de fonctionnement.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 200ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">03</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Contrôles techniques</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Vérification des installations, réseaux et équipements.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="text-center scroll-reveal" style="transition-delay: 300ms;">
+        <div class="mb-6 relative">
+          <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+            <span class="text-[var(--a2ci-red)] font-bold">04</span>
+          </div>
+        </div>
+        <h3 class="font-bold text-gray-900 mb-2">Rapport d’audit</h3>
+        <p class="text-xs text-gray-500 font-light px-4">Synthèse, écarts et préconisations de mise en conformité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1 (White) -->
+<section class="bg-gray-50">
+  <div class="container-custom">
+    <div class="section-custom scroll-reveal">
+      <div class="section-text">
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Analyse du <span class="text-[var(--a2ci-red)]">contexte</span></h2>
+        </div>
+        <p class="mb-4 text-gray-600">
+          Avant tout audit, une visite du site est réalisée et des réunions sont organisées avec l’ensemble des protagonistes afin de comprendre les différentes phases de travaux.
+        </p>
+        <p class="text-gray-600">
+          L’Ingénieur Conseil prend en compte la réglementation en vigueur à l’époque des travaux et établit une trame d’étude avec les obligations liées au type et au classement de l’établissement.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="images/Analyse du contexte(audit&conseil).png" alt="Analyse du contexte" class="glow-border">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 (White) -->
+<section class="bg-gray-50">
+  <div class="container-custom pt-0">
+    <div class="section-custom reverse scroll-reveal">
+      <div class="section-text">
+        <div class="h2-bar">
+          <span></span>
+          <h2 class="section-title">Audit sur <span class="text-[var(--a2ci-red)]">site</span></h2>
+        </div>
+        <p class="mb-4 text-gray-600">
+          L’Ingénieur Conseil visite l’ensemble de l’établissement afin de vérifier que les risques sont bien couverts par le SSI existant.
+        </p>
+        <p class="text-gray-600">
+          Des essais sont réalisés, si possible en présence de l’entreprise de maintenance et du maître d’ouvrage pour une validation transparente et complète.
+        </p>
+      </div>
+      <div class="section-img">
+        <div class="img-wrapper">
+          <img src="images/Audit sur site(audit&conseil).png" alt="Audit sur site" class="glow-border">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETAIL AUDIT (Dark) -->
+<section id="detail-audit" class="section-dark">
+  <div class="container-custom">
+    <div class="scroll-reveal">
+      <div class="text-center mb-16">
+        <p class="text-[var(--a2ci-red-light)] font-bold uppercase tracking-widest text-xs mb-3">Expertise & Analyse</p>
+        <h2 class="font-heading text-4xl font-bold text-white">Détail de <span class="text-red">l'Audit</span></h2>
+      </div>
+
+      <div class="accordion glow-border">
+        <!-- Item 1 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Tests du système SSI</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <ul class="premium-list !text-gray-400">
+              <li>Toutes les têtes de détection automatique d’incendie</li>
+              <li>Tous les déclencheurs manuels et indicateurs d’action</li>
+              <li>Tous les DAS, DAC, DCM</li>
+              <li>Scénarios de mise en sécurité en manuel et en automatique</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Contrôles visuels</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm border-b border-white/10 pb-4 mb-4">Vérification du cheminement des réseaux SSI et DAS/DAC.</p>
+            <ul class="premium-list !text-gray-400">
+              <li><strong>Séparation des réseaux</strong> (NFC 15-100, NFS 61-932, NFS 61-970)</li>
+              <li>Fixation des réseaux sur <strong>parties stables</strong> du bâtiment</li>
+              <li>Absence de <strong>câbles volants</strong> et conformité des câbles</li>
+              <li>Positionnement des <strong>équipements SSI</strong> (détecteurs, DM, DS)</li>
+              <li><strong>Rebouchage</strong> des traversées coupe-feu</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Rapport après audit</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <p class="text-sm">Rapport comprenant les essais réalisés, les observations sur le fonctionnement du SSI, le référentiel réglementaire et les solutions correctives pour mise en conformité ou remplacement du système.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="accordion-item">
+          <div class="accordion-header">
+            <span>Contenu du rapport d’audit</span>
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <div class="accordion-content">
+            <div class="space-y-4">
+              <div>
+                <p class="text-[9px] font-black uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Analyse comparative</p>
+                <ul class="premium-list !text-gray-400 !text-xs !space-y-1">
+                  <li>Dossier de conception SSI initial</li>
+                  <li>Rapports de (sous)commission de sécurité</li>
+                  <li>Rapport du bureau de contrôle triennal</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-[9px] font-black uppercase tracking-widest text-[var(--a2ci-red)] mb-2">Axes d'amélioration</p>
+                <p class="text-xs text-gray-400">Identification des écarts normatifs, propositions de modifications pour conformité et améliorations selon les normes actuelles (selon faisabilité technique).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-gray-50 section-cta">
+  <div class="container-custom pt-32 pb-0">
+    <div class="cta scroll-reveal">
+      <h2 class="font-heading text-4xl font-bold mb-4 text-white">Besoin d’un <span class="text-red">audit SSI ?</span></h2>
+      <p class="mb-10 text-lg text-gray-400">Assistance stratégique pour l'évaluation rigoureuse de vos installations et la gestion des risques.</p>
+      <a href="index.html#contact" class="cta-button">Demander un audit</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  // Accordion Logic
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains("open");
+      
+      // Close other items
+      document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("open"));
+      document.querySelectorAll(".accordion-header").forEach(h => h.classList.remove("active"));
+      
+      if (!isOpen) {
+        content.classList.add("open");
+        header.classList.add("active");
+      }
+    });
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+  // Particles.js
+  if (typeof particlesJS !== 'undefined') {
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 70, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 2, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 1.5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }
+      },
+      "retina_detect": true
+    });
+  }
+</script>
+
+</body>
+</html>
