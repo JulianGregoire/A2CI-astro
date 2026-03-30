@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maintien et Actualisation des Compétences SST (MAC SST) - A2CI Prévention</title>
+  <meta name="description" content="Formation MAC SST (Recyclage). Actualisez vos compétences de Sauveteur Secouriste du Travail et prolongez votre certification avec A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    .hero {
+      background: #000;
+      color: #fff;
+    }
+    .check-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: 700;
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-50">
+    <img src="images/mac_sst_formation.png" alt="Formation MAC SST A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    <div class="inline-block px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Formation Secourisme</div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
+      Recyclage<br /><span class="text-[var(--a2ci-red)]">MAC SST.</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">
+      Actualisez vos connaissances et maintenez vos compétences de sauveteur secouriste pour garantir une efficacité constante en entreprise.
+    </p>
+    <div class="flex justify-center gap-6">
+      <a href="#objectifs" class="cta-button">Découvrir le programme</a>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Sections -->
+<section id="objectifs" class="pt-24 pb-12 bg-white">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <div class="h2-bar !items-center !justify-center mb-8">
+        <span class="!mt-0"></span>
+        <h2 class="section-title mb-0">Objectifs du <span class="text-[var(--a2ci-red)]">Recyclage.</span></h2>
+        <span class="!mt-0"></span>
+      </div>
+      <p class="text-lg text-gray-600 font-light leading-relaxed">
+        Le MAC SST doit être réalisé tous les 24 mois pour proroger la validité du certificat SST et intégrer les évolutions techniques et pédagogiques.
+      </p>
+    </div>
+  </div>
+
+  <!-- Block 1: Actualisation des Gestes -->
+  <div class="container-custom py-12">
+    <div class="section-custom">
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/mac_sst_formation.png" alt="Actualisation des Gestes A2CI" />
+            </div>
+        </div>
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Actualiser ses <span class="text-[var(--a2ci-red)]">Acquis.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Révision approfondie des gestes de secours (étouffements, hémorragies, plaies...).</li>
+                <li>Mise à jour des protocoles de réanimation (RCP + DAE) selon les dernières recommandations.</li>
+                <li>Évaluation à partir d'études de cas et de mises en situation réelles.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <!-- Block 2: Retour d'Expérience -->
+  <div class="container-custom py-12">
+    <div class="section-custom border-none">
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Prévention & <span class="text-[var(--a2ci-red)]">Expérience.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Partage de retours d'expérience sur les situations rencontrées en entreprise.</li>
+                <li>Renforcement du rôle de contributeur à la prévention des risques professionnels.</li>
+                <li>Mise à jour sur le cadre juridique et les responsabilités du SST.</li>
+            </ul>
+        </div>
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/Secourisme : SST.png" alt="Prévention & Expérience A2CI" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Réglementation Section -->
+<section class="py-24 bg-gray-50">
+  <div class="container-custom">
+    <div class="relative overflow-hidden reveal-on-scroll">
+            <div class="relative z-10 p-4 lg:p-0">
+                <div class="max-w-3xl mb-20">
+                    <div class="h2-bar !items-center mb-8">
+                        <span class="!mt-0"></span>
+                        <h3 class="text-3xl lg:text-4xl font-bold uppercase tracking-tight mb-0 text-gray-900">Validité <span class="text-[var(--a2ci-red)]">Certificative.</span></h3>
+                    </div>
+                    <p class="text-xl text-gray-500 font-light leading-relaxed">
+                        La certification SST est soumise à un recyclage obligatoire pour maintenir son efficacité et sa reconnaissance officielle par l'Assurance Maladie Risques Professionnels / INRS.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+                    <div class="group">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">24</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Mois de <br>Validité</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Le MAC doit être effectué impérativement avant la date de fin de validité du certificat initial.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 100ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">01</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Journée de <br>MAC</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Une session condense les actualisations essentielles sur une journée de formation pratique.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 200ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">100%</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Conforme <br>Référentiel</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">A2CI applique rigoureusement le dernier guide des données techniques de l'INRS.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+<!-- Moyens Techniques -->
+<section class="py-24 bg-white">
+  <div class="container-custom py-0">
+    <div class="section-custom items-start">
+        <div class="section-text">
+            <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Moyens <span class="text-[var(--a2ci-red)]">Techniques.</span></h2>
+            </div>
+            <p class="text-gray-600 mb-10 leading-relaxed font-light">
+                Un équipement complet pour favoriser l'apprentissage par la pratique et la mise en situation réelle.
+            </p>
+            <ul class="premium-list text-gray-600 font-light space-y-4">
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Simulations</strong> : Mannequins de RCP (Adulte/Enfant/Nourrisson) connectés.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Innovation</strong> : Défibrillateurs de formation de dernière génération.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Pédagogie</strong> : Supports interactifs pour l'actualisation des cadres réglementaires.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Certification</strong> : Prorogation immédiate en fin de session validée.</li>
+            </ul>
+        </div>
+        <div class="section-img">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/catalogue_secourisme.png" alt="Moyens techniques MAC SST" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Organisation sur site -->
+<section class="py-16 bg-white">
+    <div class="container-custom">
+        <div class="h2-bar !items-center !justify-center mb-10">
+            <span class="!mt-0"></span>
+            <h2 class="section-title mb-0">Organisation <span class="text-[var(--a2ci-red)]">sur site.</span></h2>
+            <span class="!mt-0"></span>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal-on-scroll">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">7h</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Durée Recyclage</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">10</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Pers. Max / Session</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">24mo</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Périodicité</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">SST</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Pré-requis Certificat</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-[1150px] mx-auto px-8 text-center">
+        <h2 class="section-title mb-8">Votre certificat expire <span class="text-[var(--a2ci-red)]">bientôt ?</span></h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-macsst.pdf" target="_blank" class="px-10 py-5 bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">Télécharger la Fiche (PDF)</a>
+            <a href="index.html#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Réserver une session</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

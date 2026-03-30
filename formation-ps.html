@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestes de Premiers Secours (PS) - A2CI Prévention</title>
+  <meta name="description" content="Formation Sensibilisation aux Gestes de Premiers Secours (PS). Apprenez les bases du secourisme et la conduite à tenir en cas d'urgence avec A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    .hero {
+      background: #000;
+      color: #fff;
+    }
+    .check-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: 700;
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-50">
+    <img src="images/premiers_secours_formation.png" alt="Formation PS A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    <div class="inline-block px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Sensibilisation Secourisme</div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
+      Gestes de<br /><span class="text-[var(--a2ci-red)]">Premiers Secours.</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">
+      Initiez-vous aux gestes essentiels pour savoir réagir calmement et efficacement face aux accidents de la vie courante ou professionnelle.
+    </p>
+    <div class="flex justify-center gap-6">
+      <a href="#objectifs" class="cta-button">Découvrir le programme</a>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Sections -->
+<section id="objectifs" class="pt-24 pb-12 bg-white">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <div class="h2-bar !items-center !justify-center mb-8">
+        <span class="!mt-0"></span>
+        <h2 class="section-title mb-0">Objectifs de <span class="text-[var(--a2ci-red)]">l'Initiation.</span></h2>
+        <span class="!mt-0"></span>
+      </div>
+      <p class="text-lg text-gray-600 font-light leading-relaxed">
+        Cette formation de sensibilisation permet d'acquérir les bases du secourisme pour être capable de porter assistance en attendant l'arrivée des secours.
+      </p>
+    </div>
+  </div>
+
+  <!-- Block 1: Reconnaître l'Urgence -->
+  <div class="container-custom py-12">
+    <div class="section-custom">
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/premiers_secours_formation.png" alt="Reconnaître l'Urgence A2CI" />
+            </div>
+        </div>
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Reconnaître <span class="text-[var(--a2ci-red)]">& Alerter.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Savoir identifier une situation d'urgence et ses dangers potentiels.</li>
+                <li>Apprendre les numéros d'urgence et les informations clés à transmettre.</li>
+                <li>Comprendre la chaîne de survie et le rôle du premier témoin.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <!-- Block 2: Agir face aux accidents -->
+  <div class="container-custom py-12">
+    <div class="section-custom border-none">
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Pratiquer les <span class="text-[var(--a2ci-red)]">Gestes.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Apprendre à réagir face à un étouffement ou une hémorragie externe.</li>
+                <li>Mise en position latérale de sécurité (PLS) pour une victime inconsciente.</li>
+                <li>Sensibilisation au massage cardiaque et à l'utilisation du DAE.</li>
+            </ul>
+        </div>
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/secourisme.png" alt="Pratiquer les Gestes A2CI" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Moyens Techniques -->
+<section class="py-24 bg-white">
+  <div class="container-custom py-0">
+    <div class="section-custom items-start">
+        <div class="section-text">
+            <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Moyens <span class="text-[var(--a2ci-red)]">Techniques.</span></h2>
+            </div>
+            <p class="text-gray-600 mb-10 leading-relaxed font-light">
+                Une pédagogie active reposant sur des exercices pratiques et du matériel de simulation adapté.
+            </p>
+            <ul class="premium-list text-gray-600 font-light space-y-4">
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Ateliers</strong> : Mannequins & bustes pour la pratique du massage cardiaque.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Matériel</strong> : Défibrillateur de formation et kits de simulation de blessures.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Théorie</strong> : Supports multimédias & Mises en situation interactives.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Validation</strong> : Attestation de sensibilisation remise aux participants.</li>
+            </ul>
+        </div>
+        <div class="section-img">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/catalogue_secourisme.png" alt="Moyens techniques PS" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Organisation sur site -->
+<section class="py-16 bg-white">
+    <div class="container-custom">
+        <div class="h2-bar !items-center !justify-center mb-10">
+            <span class="!mt-0"></span>
+            <h2 class="section-title mb-0">Organisation <span class="text-[var(--a2ci-red)]">sur site.</span></h2>
+            <span class="!mt-0"></span>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal-on-scroll">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">3h/7h</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Durée Variable</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">12</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Pers. Max / Session</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">100%</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Pratique</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">Libre</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Format Adaptable</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-[1150px] mx-auto px-8 text-center">
+        <h2 class="section-title mb-8">Initiez vos collaborateurs aux <span class="text-[var(--a2ci-red)]">premiers secours.</span></h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ps.pdf" target="_blank" class="px-10 py-5 bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">Télécharger la Fiche (PDF)</a>
+            <a href="index.html#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Demander un programme</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

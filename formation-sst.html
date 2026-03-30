@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sauveteur Secouriste du Travail (SST) - A2CI Prévention</title>
+  <meta name="description" content="Formation Sauveteur Secouriste du Travail (SST). Maîtrisez les gestes d'urgence et la prévention des risques professionnels avec A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    .hero {
+      background: #000;
+      color: #fff;
+    }
+    .check-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    .check-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--a2ci-red);
+      font-weight: 700;
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-50">
+    <img src="images/Secourisme : SST.png" alt="Formation SST A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    <div class="inline-block px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Formation Secourisme</div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
+      Sauveteur Secouriste<br /><span class="text-[var(--a2ci-red)]">du Travail (SST).</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">
+      Devenez le premier maillon de la chaîne de secours et un acteur majeur de la prévention des risques professionnels dans votre entreprise.
+    </p>
+    <div class="flex justify-center gap-6">
+      <a href="#objectifs" class="cta-button">Découvrir le programme</a>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Sections -->
+<section id="objectifs" class="pt-24 pb-12 bg-white">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-20">
+      <div class="h2-bar !items-center !justify-center mb-8">
+        <span class="!mt-0"></span>
+        <h2 class="section-title mb-0">Objectifs <span class="text-[var(--a2ci-red)]">Pédagogiques.</span></h2>
+        <span class="!mt-0"></span>
+      </div>
+      <p class="text-lg text-gray-600 font-light leading-relaxed">
+        La formation SST permet d'acquérir les compétences nécessaires pour intervenir face à un accident et participer à la prévention des risques professionnels.
+      </p>
+    </div>
+  </div>
+
+  <!-- Block 1: Protéger & Examiner -->
+  <div class="container-custom py-12">
+    <div class="section-custom">
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/Secourisme : SST.png" alt="Protéger & Examiner A2CI" />
+            </div>
+        </div>
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Protéger & <span class="text-[var(--a2ci-red)]">Examiner.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Maîtriser la protection pour éviter le sur-accident.</li>
+                <li>Examiner la victime pour déterminer les actions à entreprendre.</li>
+                <li>Faire alerter ou alerter les secours spécialisés de manière efficace.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <!-- Block 2: Secourir & Prévenir -->
+  <div class="container-custom py-12">
+    <div class="section-custom border-none">
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Secourir & <span class="text-[var(--a2ci-red)]">Prévenir.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Réaliser les gestes de secours face à diverses situations (hémorragies, étouffements, malaises, plaies, brûlures, traumatismes).</li>
+                <li>Prendre en charge une victime inconsciente qui respire (PLS) ou qui ne respire pas (RCP + DAE).</li>
+                <li>Situer son rôle d'acteur de la prévention des risques professionnels au sein de l'entreprise.</li>
+            </ul>
+        </div>
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/secourisme.png" alt="Secourir & Prévenir A2CI" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Réglementation Section -->
+<section class="py-24 bg-gray-50">
+  <div class="container-custom">
+    <div class="relative overflow-hidden reveal-on-scroll">
+            <div class="relative z-10 p-4 lg:p-0">
+                <div class="max-w-3xl mb-20">
+                    <div class="h2-bar !items-center mb-8">
+                        <span class="!mt-0"></span>
+                        <h3 class="text-3xl lg:text-4xl font-bold uppercase tracking-tight mb-0 text-gray-900">Cadre <span class="text-[var(--a2ci-red)]">Réglementaire.</span></h3>
+                    </div>
+                    <p class="text-xl text-gray-500 font-light leading-relaxed">
+                        La formation SST est encadrée par l'INRS et répond aux obligations du Code du Travail concernant la présence de secouristes sur le lieu de travail.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+                    <div class="group">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">01</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Certification <br>INRS</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Délivrance du certificat de Sauveteur Secouriste du Travail valable 24 mois sur tout le territoire national.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 100ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">02</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Code du <br>Travail</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Réponse aux articles R4224-15 et R4224-16 du Code du Travail imposant une organisation des secours.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 200ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">03</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Prévention <br>Active</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Le SST contribue à la mise en œuvre d'actions de prévention et à la remontée d'informations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+<!-- Moyens Techniques -->
+<section class="py-24 bg-white">
+  <div class="container-custom py-0">
+    <div class="section-custom items-start">
+        <div class="section-text">
+            <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Moyens <span class="text-[var(--a2ci-red)]">Techniques.</span></h2>
+            </div>
+            <p class="text-gray-600 mb-10 leading-relaxed font-light">
+                Utilisation de matériel pédagogique conforme aux exigences de l'INRS pour une formation pratique et réaliste.
+            </p>
+            <ul class="premium-list text-gray-600 font-light space-y-4">
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Simulations</strong> : Mannequins (adulte, enfant, nourrisson) & Défibrillateurs de formation.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Accessoires</strong> : Maquillages et accessoires de simulation de blessures.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Théorie</strong> : Supports multimédias interactifs & Plan d'intervention.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Documentation</strong> : Remise du mémento SST de l'INRS.</li>
+            </ul>
+        </div>
+        <div class="section-img">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/catalogue_secourisme.png" alt="Moyens techniques SST" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programme Quote -->
+<section class="py-16 bg-white">
+    <div class="container-custom py-0 text-center">
+        <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-10">Programme de formation</h4>
+        <div class="max-w-4xl mx-auto relative px-8">
+            <span class="absolute -top-10 -left-4 text-8xl text-red-500/10 font-serif leading-none">“</span>
+            <p class="text-2xl md:text-3xl lg:text-4xl text-gray-800 font-light italic leading-relaxed">
+                Apprendre à protéger, examiner et secourir pour <span class="text-[var(--a2ci-red)] font-normal">sauver des vies</span> tout en agissant sur la prévention des risques professionnels.
+            </p>
+            <span class="absolute -bottom-10 -right-4 text-8xl text-red-500/10 font-serif leading-none rotate-180">“</span>
+        </div>
+    </div>
+</section>
+
+<!-- Organisation sur site -->
+<section class="py-16 bg-white">
+    <div class="container-custom">
+        <div class="h2-bar !items-center !justify-center mb-10">
+            <span class="!mt-0"></span>
+            <h2 class="section-title mb-0">Organisation <span class="text-[var(--a2ci-red)]">sur site.</span></h2>
+            <span class="!mt-0"></span>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal-on-scroll">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">14h</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Durée Initiale</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">10</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Pers. Max / Session</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">100%</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Opérationnel</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">INRS</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Référentiel National</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-[1150px] mx-auto px-8 text-center">
+        <h2 class="section-title mb-8">Besoin de former vos <span class="text-[var(--a2ci-red)]">collaborateurs ?</span></h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sst.pdf" target="_blank" class="px-10 py-5 bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">Télécharger la Fiche (PDF)</a>
+            <a href="index.html#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Demander un devis</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
