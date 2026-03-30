@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice d'Évacuation périodique - A2CI Prévention</title>
+  <meta name="description" content="Exercice d'évacuation périodique. Testez votre organisation de sécurité, améliorez les temps de réponse et assurez la sécurité avec A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    .hero {
+      background: #000;
+      color: #fff;
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-50">
+    <img src="images/evacuation.png" alt="Exercice évacuation A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    <div class="inline-block px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Test & Validation</div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
+      Exercice d'<br /><span class="text-[var(--a2ci-red)]">Évacuation.</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">
+      Mettez à l'épreuve votre organisation de sécurité et assurez-vous que chaque collaborateur connaît les gestes qui sauvent.
+    </p>
+    <div class="flex justify-center gap-6">
+      <a href="#objectifs" class="cta-button">Découvrir le programme</a>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Sections -->
+<section id="objectifs" class="pt-24 pb-12 bg-white">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-20 scroll-reveal">
+      <div class="h2-bar !items-center !justify-center mb-8">
+        <span class="!mt-0"></span>
+        <h2 class="section-title mb-0">Objectifs de <span class="text-[var(--a2ci-red)]">Terrain.</span></h2>
+        <span class="!mt-0"></span>
+      </div>
+      <p class="text-lg text-gray-600 font-light leading-relaxed">
+        Un test grandeur nature pour évaluer l'efficacité de vos procédures, la réactivité de vos équipes et le bon fonctionnement de vos équipements de mise en sécurité.
+      </p>
+    </div>
+  </div>
+
+  <!-- Block 1 -->
+  <div class="container-custom py-12">
+    <div class="section-custom">
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/evacuation.png" alt="Déroulement exercice évacuation A2CI" />
+            </div>
+        </div>
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Tester & <span class="text-[var(--a2ci-red)]">Ajuster.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Tester la réactivité du personnel face à un signal d'alarme.</li>
+                <li>Vérifier la bonne exécution des missions des Guides et Serre-Files.</li>
+                <li>Identifier les points d'amélioration de l'organisation interne.</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <!-- Block 2 -->
+  <div class="container-custom py-12">
+    <div class="section-custom border-none">
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Analyser & <span class="text-[var(--a2ci-red)]">Certifier.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Observation neutre par un expert prévention externe (A2CI).</li>
+                <li>Bilan à chaud avec les responsables après l'exercice.</li>
+                <li>Rédaction d’un "Compte-rendu d'exercice" détaillé pour le registre de sécurité.</li>
+            </ul>
+        </div>
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/transfert_horizontal.png" alt="Bilan exercice évacuation A2CI" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Réglementation Section -->
+<section class="py-24 bg-gray-50">
+  <div class="container-custom">
+    <div class="relative overflow-hidden reveal-on-scroll">
+            <div class="relative z-10 p-4 lg:p-0">
+                <div class="max-w-3xl mb-20">
+                    <div class="h2-bar !items-center mb-8">
+                        <span class="!mt-0"></span>
+                        <h3 class="text-3xl lg:text-4xl font-bold uppercase tracking-tight mb-0 text-gray-900">Points de <span class="text-[var(--a2ci-red)]">Contrôle.</span></h3>
+                    </div>
+                    <p class="text-xl text-gray-500 font-light leading-relaxed">
+                        L'exercice permet de valider concrètement les piliers de votre stratégie d'évacuation.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+                    <div class="group">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">01</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Temps de <br>réponse</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Mesure du délai entre l'alarme et le vidage complet de l'établissement.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 100ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">02</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Audibilité <br>Alarme</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Vérification de la perception du signal dans toutes les zones du bâtiment.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 200ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">03</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Point de <br>rassemblement</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Évaluation de la gestion des flux et du comptage des collaborateurs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+<!-- Moyens Techniques -->
+<section class="py-24 bg-white">
+  <div class="container-custom py-0">
+    <div class="section-custom items-start">
+        <div class="section-text">
+            <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Outils d'<span class="text-[var(--a2ci-red)]">Expertise.</span></h2>
+            </div>
+            <p class="text-gray-600 mb-10 leading-relaxed font-light">
+                Nous apportons un regard extérieur professionnel pour un audit de sécurité objectif.
+            </p>
+            <ul class="premium-list text-gray-600 font-light space-y-4">
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée pour simuler l'obstruction d'une issue.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Analyse</strong> : Grilles d'évaluation précises (norme NF S 61-931).</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Certification</strong> : Inscription officielle au registre de sécurité de l'entreprise.</li>
+            </ul>
+        </div>
+        <div class="section-img">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/evacuation.png" alt="Moyens techniques exercice" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Organisation sur site -->
+<section class="py-16 bg-white">
+    <div class="container-custom">
+        <div class="h2-bar !items-center !justify-center mb-10">
+            <span class="!mt-0"></span>
+            <h2 class="section-title mb-0">Organisation <span class="text-[var(--a2ci-red)]">sur site.</span></h2>
+            <span class="!mt-0"></span>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal-on-scroll">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">15+</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Programmes</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">Totalité</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Personnel impliqué</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">100%</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Réalité terrain</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">Expert</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Bilan certifié</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-[1150px] mx-auto px-8 text-center">
+        <h2 class="section-title mb-8">Testez votre plan d'<span class="text-[var(--a2ci-red)]">Évacuation ?</span></h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-exe_eva.pdf" target="_blank" class="px-10 py-5 bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">Télécharger la Fiche (PDF)</a>
+            <a href="index.html#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Planifier un exercice</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        if (entry.target.classList.contains('scroll-reveal')) {
+             entry.target.style.opacity = "1";
+             entry.target.style.transform = "translateY(0)";
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll, .scroll-reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

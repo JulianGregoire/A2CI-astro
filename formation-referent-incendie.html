@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Référent Incendie Site - A2CI Prévention</title>
+  <meta name="description" content="Formation Référent Incendie Site. Devenez le garant de la sécurité incendie, maîtrisez le SSI et l'organisation des secours avec A2CI." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style-da.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="js/components.js" defer></script>
+  <style>
+    .hero {
+      background: #000;
+      color: #fff;
+    }
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 w-full">
+
+<div id="header-component"></div>
+
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-50">
+    <img src="images/referent_incendie.png" alt="Référent Incendie A2CI" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
+    <div class="inline-block px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Responsabilité & Conseil</div>
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
+      Référent<br /><span class="text-[var(--a2ci-red)]">Incendie Site.</span>
+    </h1>
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">
+      Devenez l'interlocuteur privilégié de la sécurité incendie au sein de votre établissement et garantissez le maintien du niveau de protection.
+    </p>
+    <div class="flex justify-center gap-6">
+      <a href="#objectifs" class="cta-button">Découvrir le programme</a>
+    </div>
+  </div>
+</section>
+
+<!-- Introduction Sections -->
+<section id="objectifs" class="pt-24 pb-12 bg-white">
+  <div class="container-custom">
+    <div class="max-w-3xl mx-auto text-center mb-20 scroll-reveal">
+      <div class="h2-bar !items-center !justify-center mb-8">
+        <span class="!mt-0"></span>
+        <h2 class="section-title mb-0">Missions du <span class="text-[var(--a2ci-red)]">Référent.</span></h2>
+        <span class="!mt-0"></span>
+      </div>
+      <p class="text-lg text-gray-600 font-light leading-relaxed">
+        Le référent incendie assure la surveillance quotidienne, l'exploitation du SSI et la transmission de l'organisation des secours à l'ensemble des collaborateurs.
+      </p>
+    </div>
+  </div>
+
+  <!-- Block 1 -->
+  <div class="container-custom py-12">
+    <div class="section-custom">
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/referent_incendie.png" alt="Missions référent incendie A2CI" />
+            </div>
+        </div>
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Transmettre & <span class="text-[var(--a2ci-red)]">Surveiller.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Transmettre l’organisation des secours prescrite dans l’établissement.</li>
+                <li>Apprendre les règles de base de maintien du niveau de sécurité incendie.</li>
+                <li>Gérer les points de vulnérabilité au quotidien (Permis de feu, travaux).</li>
+            </ul>
+        </div>
+    </div>
+  </div>
+
+  <!-- Block 2 -->
+  <div class="container-custom py-12">
+    <div class="section-custom border-none">
+        <div class="section-text reveal-on-scroll" style="transition-delay: 100ms;">
+            <div class="h2-bar">
+                <span></span>
+                <h3 class="text-3xl font-bold uppercase tracking-tight mb-8">Exploiter & <span class="text-[var(--a2ci-red)]">Identifier.</span></h3>
+            </div>
+            <ul class="premium-list text-gray-600">
+                <li>Opérations d’exploitation sur le Système de Sécurité Incendie (SSI).</li>
+                <li>Identifier les différents organes de sécurité via visite technique.</li>
+                <li>Accompagner les prestataires de maintenance lors de leurs passages.</li>
+            </ul>
+        </div>
+        <div class="section-img reveal-on-scroll">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/ssi_hero.png" alt="Exploitation SSI Référent A2CI" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Réglementation Section -->
+<section class="py-24 bg-gray-50">
+  <div class="container-custom">
+    <div class="relative overflow-hidden reveal-on-scroll">
+            <div class="relative z-10 p-4 lg:p-0">
+                <div class="max-w-3xl mb-20">
+                    <div class="h2-bar !items-center mb-8">
+                        <span class="!mt-0"></span>
+                        <h3 class="text-3xl lg:text-4xl font-bold uppercase tracking-tight mb-0 text-gray-900">Expertise <br>Garantie.</h3>
+                    </div>
+                    <p class="text-xl text-gray-500 font-light leading-relaxed">
+                        Le référent est le pivot de la prévention, assurant le lien entre la direction, les collaborateurs et les secours.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+                    <div class="group">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">01</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Veille <br>Réglementaire</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Vérification de la conformité des registres et de la visibilité des consignes.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 100ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">02</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Suivi des <br>Matériels</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Contrôle visuel des extincteurs, des RIA et des dégagements des issues.</p>
+                    </div>
+                    
+                    <div class="group" style="transition-delay: 200ms;">
+                        <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">03</div>
+                        <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight">Sensibilisation <br>continue</h4>
+                        <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                        <p class="text-sm text-gray-600 font-light leading-relaxed">Rappel constant des bonnes pratiques aux nouveaux arrivants et prestataires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </div>
+</section>
+
+<!-- Moyens Techniques -->
+<section class="py-24 bg-white">
+  <div class="container-custom py-0">
+    <div class="section-custom items-start">
+        <div class="section-text">
+            <div class="h2-bar">
+                <span></span>
+                <h2 class="section-title">Outils & <span class="text-[var(--a2ci-red)]">Pédagogie.</span></h2>
+            </div>
+            <p class="text-gray-600 mb-10 leading-relaxed font-light">
+                Une formation mêlant théorie administrative et réalité terrain.
+            </p>
+            <ul class="premium-list text-gray-600 font-light space-y-4">
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Visite</strong> : Visite technique complète (Extincteurs, SSI, issues).</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée & bac à feu pour la sensibilisation.</li>
+                <li><strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Support</strong> : Logiciel d'exploitation SSI & PC portable.</li>
+            </ul>
+        </div>
+        <div class="section-img">
+            <div class="img-wrapper !h-[450px]">
+                <img src="images/referent_incendie.png" alt="Moyens techniques Référent" />
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Organisation sur site -->
+<section class="py-16 bg-white">
+    <div class="container-custom">
+        <div class="h2-bar !items-center !justify-center mb-10">
+            <span class="!mt-0"></span>
+            <h2 class="section-title mb-0">Organisation <span class="text-[var(--a2ci-red)]">sur site.</span></h2>
+            <span class="!mt-0"></span>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div class="reveal-on-scroll">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">15+</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Programmes</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 100ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">10</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Pers. Max / Session</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 200ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">100%</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Responsable</div>
+            </div>
+            <div class="reveal-on-scroll" style="transition-delay: 300ms;">
+                <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">Audit</div>
+                <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">Accompagnement site</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-[1150px] mx-auto px-8 text-center">
+        <h2 class="section-title mb-8">Devenez le garant de la <span class="text-[var(--a2ci-red)]">Sécurité ?</span></h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ref_inc.pdf" target="_blank" class="px-10 py-5 bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">Télécharger la Fiche (PDF)</a>
+            <a href="index.html#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Consulter nos experts</a>
+        </div>
+    </div>
+</section>
+
+<div id="footer-component"></div>
+
+<script>
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        if (entry.target.classList.contains('scroll-reveal')) {
+             entry.target.style.opacity = "1";
+             entry.target.style.transform = "translateY(0)";
+        }
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll, .scroll-reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
