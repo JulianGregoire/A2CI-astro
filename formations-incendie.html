@@ -46,7 +46,7 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 w-full">
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
 
 <div id="header-component"></div>
 
@@ -85,424 +85,342 @@
       <button data-filter="Conseil" class="filter-btn px-6 py-2.5 bg-white text-gray-500 rounded-full text-[10px] font-bold uppercase tracking-widest border border-gray-100 hover:border-[#C00000]/30 hover:text-[#C00000] transition-all">Conseil & Référents</button>
     </div>
 
-    <div class="space-y-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- 1. SRI -->
-      <div id="sri" class="formation-card reveal-on-scroll" data-category="Base">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Sensibilisation au <br>Risque <span class="text-[var(--a2ci-red)]">Incendie (SRI)</span></h2>
-            </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Pédagogiques</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Sensibiliser aux <strong>réflexes</strong> et <strong>conduites à tenir</strong> en cas de <strong>départ de feu</strong></li>
-              <li>Réagir à une <strong>évacuation</strong> selon l'organisation de secours de l'entreprise</li>
-              <li>Capacité d'observer, d'alarmer, d'alerter et d'éteindre avec les <strong>moyens appropriés</strong></li>
-              <li>Maîtrise de l'<strong>arbre décisionnel</strong> et visite des <strong>organes de sécurité</strong></li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Générateur de fumée, bac à feu "écologique", extincteurs pédagogiques, PC portable, vidéo projecteur.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-sri.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri.pdf?113/01aee95830233511884ad10e9b00a39eb2a9ee39" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
-            </div>
-          </div>
-          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/sri_base_formation.png" alt="Formation SRI" class="w-full h-full object-cover" />
+      <!-- SRI -->
+      <div id="sri" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Base">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/sri_base_formation.png" alt="Formation SRI" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-gray-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Fondamentaux</span>
           </div>
         </div>
-      </div>
-
-      <!-- 2. SRI-Handicap -->
-      <div id="sri-handicap" class="formation-card reveal-on-scroll" data-category="Base">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1 relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/sri_handicap.png" alt="Sensibilisation Risque Incendie Handicap" class="w-full h-full object-cover" />
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Sensibilisation au <br><span class="text-[var(--a2ci-red)]">Risque Incendie (SRI)</span></h3>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Sensibilisation Risque Incendie <br><span class="text-[var(--a2ci-red)]">(Handicap)</span></h2>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Acquérez les réflexes essentiels et les conduites à tenir en cas de départ de feu pour garantir votre sécurité.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1 JOURNÉE (7H)</span>
             </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs adaptés</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Sensibiliser aux <strong>réflexes incendie</strong> selon le <strong>type de handicap</strong></li>
-              <li>Appréhender la situation, alarmer, alerter et lutter avec <strong>moyens appropriés</strong></li>
-              <li>Familiarisation avec les <strong>modalités d'évacuation spécifiques</strong></li>
-              <li><strong>Exercice pratique</strong> et repérage des <strong>organes de sécurité</strong></li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Bac à feu "écologique", extincteurs pédagogiques, PC portable, vidéo projecteur.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-sri-handicap.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri_aux_profits_de_personne_presentant_un_handicap.pdf?114/cad712513d0c9f70544d9ae097c590276fcd8801" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-sri.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri.pdf?113/01aee95830233511884ad10e9b00a39eb2a9ee39" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 3. SSI -->
-      <div id="ssi" class="formation-card reveal-on-scroll" data-category="Systemes">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Exploitation du <span class="text-[var(--a2ci-red)]">SSI</span> <br>& Système d’Évacuation</h2>
+      <!-- SRI-Handicap -->
+      <div id="sri-handicap" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Base">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/sri_handicap.png" alt="Formation SRI Handicap" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-gray-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Fondamentaux</span>
+          </div>
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Risque Incendie <br><span class="text-[var(--a2ci-red)]">(Handicap)</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Sensibilisation adaptée aux types de handicap pour alarmer, alerter et évacuer en toute sécurité.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1/2 JOURNÉE</span>
             </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Connaissances Techniques</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Fonctionnement des matériels du <strong>SSI</strong> (<strong>DAI</strong>, <strong>DM</strong>, <strong>DAS</strong>, <strong>DAC</strong>, <strong>DCM</strong>)</li>
-              <li>Manipulation et réarmement des <strong>ECS/CMSI</strong>, <strong>DM</strong> et <strong>exutoires</strong></li>
-              <li>Analyse des évènements de <strong>mise en sécurité</strong> du site</li>
-              <li><strong>Visite technique</strong> avec identification et localisation des matériels</li>
-            </ul>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-sri-handicap.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri_aux_profits_de_personne_presentant_un_handicap.pdf?114/cad712513d0c9f70544d9ae097c590276fcd8801" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Déclencheur de détecteur, générateur de fumée, PC portable, vidéo projecteur.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-ssi.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <div class="flex gap-2">
-                <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ssi_no1.pdf?103/00a1faf4c30a0d65f0485df0788f5bac12237bb9" target="_blank" class="px-4 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-[10px] font-bold shadow-lg uppercase tracking-widest">Fiche 1</a>
-                <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ssi_no2.pdf?104/7d0a1d2b67c5cac8d04b3b5b513e44f2e456df4f" target="_blank" class="px-4 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-[10px] font-bold shadow-lg uppercase tracking-widest">Fiche 2</a>
+      <!-- SSI -->
+      <div id="ssi" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Systemes">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/ssi_hero.png" alt="Exploitation SSI" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Matériel & Systèmes</span>
+          </div>
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Exploitation du <br><span class="text-[var(--a2ci-red)]">SSI & Évacuation</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Maîtrisez le fonctionnement des organes de sécurité incendie et analysez les événements de mise en sécurité.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1 JOURNÉE (7H)</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-ssi.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ssi_no1.pdf?103/00a1faf4c30a0d65f0485df0788f5bac12237bb9" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[7px] font-bold uppercase tracking-tight border border-gray-200">Fiche 1</a>
+                <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ssi_no2.pdf?104/7d0a1d2b67c5cac8d04b3b5b513e44f2e456df4f" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[7px] font-bold uppercase tracking-tight border border-gray-200">Fiche 2</a>
               </div>
             </div>
           </div>
-          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/ssi_hero.png" alt="Exploitation SSI" class="w-full h-full object-cover" />
-          </div>
         </div>
       </div>
 
-      <!-- 4. ARI -->
-      <div id="ari" class="formation-card reveal-on-scroll" data-category="Specifiques">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1 relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/ari_formation.png" alt="Formation ARI" class="w-full h-full object-cover" />
+      <!-- ARI -->
+      <div id="ari" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Specifiques">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/ari_formation.png" alt="Formation ARI" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">ARI Spécialisés</span>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Appareil Respiratoire <br><span class="text-[var(--a2ci-red)]">Isolant (ARI)</span></h2>
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Appareil Respiratoire <br><span class="text-[var(--a2ci-red)]">Isolant (ARI)</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Maîtrisez l'utilisation de l'ARI en binôme et comprenez les contraintes physiologiques liées à son port.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1 JOURNÉE (7H)</span>
             </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Pédagogiques</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Informer sur les <strong>contraintes physiologiques</strong></li>
-              <li>Connaître les <strong>principes d’utilisation</strong> et maîtriser le matériel</li>
-              <li>Apprendre à <strong>manipuler l’ARI</strong> en binôme</li>
-              <li>Remise d’un "<strong>mémento pratique</strong>" personnalisé</li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">ARI (charge établissement), générateur de fumée, bac à feu "écologique", PC portable.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-ari.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ari.pdf?100/23c39743f0aefb863393a3ab607b6e213772fa8b" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-ari.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ari.pdf?100/23c39743f0aefb863393a3ab607b6e213772fa8b" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 5. Recyclage ARI -->
-      <div id="ari-recyclage" class="formation-card reveal-on-scroll" data-category="Specifiques">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Recyclage <span class="text-[var(--a2ci-red)]">ARI</span></h2>
-            </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Pédagogiques</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Maintenir la <strong>capacité d’intervention</strong> des porteurs d'ARI</li>
-              <li>Révision des <strong>principes d'utilisation</strong> et sécurité</li>
-              <li><strong>Mises en situation pratique</strong> et remise d'un mémento</li>
-            </ul>
-
-            <div class="flex items-center gap-4 mb-8">
-              <div class="px-4 py-2 bg-[#C00000]/10 text-[var(--a2ci-red)] rounded-xl text-xs font-bold uppercase tracking-widest">Durée : 1/2 Journée</div>
-            </div>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-ari-recyclage.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ari_rec.pdf?99/87c63f9a25177f291d0bb88007f77ae67e9308e1" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
-            </div>
-          </div>
-          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-            <img src="images/ari_recyclage.png" alt="Recyclage ARI" class="w-full h-full object-cover" />
+      <!-- Recyclage ARI -->
+      <div id="ari-recyclage" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Specifiques">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/ari_recyclage.png" alt="Recyclage ARI" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">ARI Spécialisés</span>
           </div>
         </div>
-      </div>
-
-      <!-- 6. RIA -->
-      <div id="ria" class="formation-card reveal-on-scroll" data-category="Systemes">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1 relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-             <img src="images/Robinets Incendie.png" alt="Formation RIA" class="w-full h-full object-cover" />
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Recyclage <br><span class="text-[var(--a2ci-red)]">ARI</span></h3>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Robinet d’Incendie <br><span class="text-[var(--a2ci-red)]">Armé (RIA)</span></h2>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Maintenez votre capacité d'intervention et révisez les principes d'utilisation et de sécurité de l'ARI.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1/2 JOURNÉE</span>
             </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Opérationnels</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Capacité d'<strong>observer la situation</strong> et d'appliquer l'<strong>organisation de secours</strong></li>
-              <li>Connaître les <strong>règles de sécurité</strong> (avant/pendant/après engagement)</li>
-              <li><strong>Exercice pratique</strong> d'utilisation du <strong>RIA</strong> (individuel ou binôme)</li>
-              <li>Visite des différents <strong>moyens d'extinction</strong> du site</li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Générateur de fumée, bac à feu "écologique", PC portable, vidéo projecteur.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-ria.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ria.pdf?116/5069b963715699be219d610c2b91eef9ba52bef1" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-ari-recyclage.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ari_rec.pdf?99/87c63f9a25177f291d0bb88007f77ae67e9308e1" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 7. EPI -->
-      <div id="epi" class="formation-card reveal-on-scroll" data-category="Base">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Équipier de Première <br><span class="text-[var(--a2ci-red)]">Intervention (EPI)</span></h2>
-            </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Maniement des extincteurs</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Analyser la <strong>combustion</strong>, les <strong>agents extincteurs</strong> et les <strong>classes de feux</strong></li>
-              <li>Maîtriser les <strong>règles de sécurité</strong> pour aborder un <strong>début d'incendie</strong></li>
-              <li><strong>Exercices pratiques</strong> sur <strong>feux réels</strong> avec manipulation par participant</li>
-              <li>Remise d’un <strong>mémento pratique</strong> à chaque participant</li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Générateur de feu "écologique", extincteurs pédagogiques, PC portable.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-epi.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-epi.pdf?107/197edc5a0a727c02fde00629ce7d198a07faae7a" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
-            </div>
-          </div>
-          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/Formation extincteur.png" alt="Formation EPI" class="w-full h-full object-cover" />
+      <!-- RIA -->
+      <div id="ria" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Systemes">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/Robinets Incendie.png" alt="Formation RIA" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Matériel & Systèmes</span>
           </div>
         </div>
-      </div>
-
-      <!-- 8. ESI -->
-      <div id="esi" class="formation-card reveal-on-scroll" data-category="Systemes">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1 relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/esi_formation.png" alt="Formation ESI" class="w-full h-full object-cover" />
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Robinet d’Incendie <br><span class="text-[var(--a2ci-red)]">Armé (RIA)</span></h3>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Équipier de Seconde <span class="text-[var(--a2ci-red)]">Intervention (ESI)</span></h2>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Apprenez à utiliser efficacement le RIA et maîtrisez les règles de sécurité lors de son engagement.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1/2 JOURNÉE</span>
             </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Analyse & Action</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Analyse du <strong>risque incendie</strong> du site et <strong>consignes internes</strong></li>
-              <li>Étude des <strong>5 concepts de sécurité</strong> (Prévention, Humain, Matériel, etc.)</li>
-              <li><strong>Exercice pratique</strong> sur l’utilisation du <strong>RIA</strong> et <strong>visite technique</strong></li>
-              <li>Analyse du local <strong>SPRINKLER</strong> (Extinction Automatique)</li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">PC portable, vidéo projecteur et écran sur pied.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-esi.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-esi.pdf?105/f6bfbedc1754bf7f8268520c325f9d8ae33cb8a1" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-ria.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ria.pdf?116/5069b963715699be219d610c2b91eef9ba52bef1" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 9. Transfert Horizontal -->
-      <div id="transfert" class="formation-card reveal-on-scroll" data-category="Evacuation">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Transfert <span class="text-[var(--a2ci-red)]">Horizontal</span> <br>& Mise en Sécurité</h2>
-            </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Secours</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li><strong>Mettre en sécurité</strong> les occupants du site (Type U et J)</li>
-              <li>Appliquer la <strong>réglementation ERP</strong> et exercices de <strong>levée de doute</strong></li>
-              <li>Exploitation du <strong>système de détection</strong> et déclenchement des dispositions</li>
-              <li>Remise d’un "<strong>mémento pratique</strong>" à chaque participant</li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Générateur de fumée, PC portable, vidéo projecteur.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-transfert-horizontal.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-th.pdf?101/b3b613a6c320f8c4381f4fcd43b93bd3ecd307bb" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
-            </div>
-          </div>
-          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-             <img src="images/transfert_horizontal.png" alt="Transfert Horizontal" class="w-full h-full object-cover" />
+      <!-- EPI -->
+      <div id="epi" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Base">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/Formation extincteur.png" alt="Formation EPI" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-gray-500 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Fondamentaux</span>
           </div>
         </div>
-      </div>
-
-      <!-- 10. Référent Incendie -->
-      <div id="referent" class="formation-card reveal-on-scroll" data-category="Conseil">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1 relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/referent_incendie.png" alt="Référent Incendie Site" class="w-full h-full object-cover" />
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Équipier de Première <br><span class="text-[var(--a2ci-red)]">Intervention (EPI)</span></h3>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Référent <span class="text-[var(--a2ci-red)]">Incendie Site</span></h2>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Maîtrisez le maniement des extincteurs sur feux réels et apprenez à analyser les classes de feux.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1/2 JOURNÉE</span>
             </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Missions du Référent</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li>Transmettre l’<strong>organisation des Secours</strong> prescrite dans l’établissement</li>
-              <li>Apprendre les <strong>règles de base</strong> de maintien du niveau de <strong>sécurité incendie</strong></li>
-              <li>Opérations d’<strong>exploitation</strong> sur le <strong>Système de Sécurité Incendie (SSI)</strong></li>
-              <li>Identifier les différents <strong>organes de sécurité</strong> via <strong>visite technique</strong></li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Générateur de fumée, bac à feu "écologique", extincteurs, PC portable.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-referent-incendie.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ref_inc.pdf?131/a93ba9dbe723442b78c1a5529283f60bde6c497d" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-epi.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-epi.pdf?107/197edc5a0a727c02fde00629ce7d198a07faae7a" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 11. Evacuation GSF -->
-      <div id="evacuation" class="formation-card reveal-on-scroll" data-category="Evacuation">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Guides & <span class="text-[var(--a2ci-red)]">Serre-Files</span> <br>(Evacuation GSF)</h2>
-            </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Objectifs Pédagogiques</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li><strong>Mettre en sécurité</strong> les occupants via objectifs, délais et décisions</li>
-              <li>Répartir les <strong>rôles spécifiques</strong> des <strong>guides</strong> et <strong>serre-files</strong></li>
-              <li>Gérer le <strong>recensement</strong> en zone de sécurité (<strong>Point de rassemblement</strong>)</li>
-              <li>Remise d’un "<strong>mémento pratique</strong>" à chacun des participants</li>
-            </ul>
-
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Moyens Techniques</h4>
-            <p class="text-[10px] text-gray-500 mb-6 italic">Générateur de fumée, PC portable, vidéo projecteur.</p>
-
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-evacuation-gsf.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-gsf_evacuation.pdf?111/3adb88267eb8d590ca5615f788d529abfded94c5" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
-            </div>
+      <!-- ESI -->
+      <div id="esi" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Systemes">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/esi_formation.png" alt="Formation ESI" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Matériel & Systèmes</span>
           </div>
-          <div class="relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl">
-            <img src="images/evacuation.png" alt="Formation GSF" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Équipier de Seconde <br><span class="text-[var(--a2ci-red)]">Intervention (ESI)</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Analyse approfondie du risque incendie, utilisation du RIA et étude des systèmes d'extinction automatique.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1 JOURNÉE (7H)</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-esi.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-esi.pdf?105/f6bfbedc1754bf7f8268520c325f9d8ae33cb8a1" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- 12. Exercice d'évacuation -->
-      <div id="exercice" class="formation-card reveal-on-scroll" data-category="Evacuation">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="order-2 lg:order-1 relative h-[350px] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white">
-            <img src="images/entrenement-incendie.png" alt="Exercice Evacuation Réel" class="w-full h-full object-cover" />
+      <!-- Transfert Horizontal -->
+      <div id="transfert" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Evacuation">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/transfert_horizontal.png" alt="Transfert Horizontal" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Évacuation</span>
           </div>
-          <div class="order-1 lg:order-2">
-            <div class="h2-bar">
-              <span></span>
-              <h2 class="section-title !text-2xl">Exercice <br><span class="text-[var(--a2ci-red)]">d’Évacuation</span></h2>
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Transfert Horizontal <br><span class="text-[var(--a2ci-red)]">& Mise en Sécurité</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Mise en œuvre des procédures de sécurité pour les types U et J, et exploitation du système de détection.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1 JOURNÉE (7H)</span>
             </div>
-            
-            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Validation de terrain</h4>
-            <ul class="premium-list text-gray-600 font-light mb-8">
-              <li><strong>Mettre en sécurité</strong> les occupants avec <strong>exercice pratique réel</strong></li>
-              <li>Remise d’un <strong>rapport d’exercice d’évacuation</strong> détaillé</li>
-              <li>Mise en œuvre réelle de l'<strong>alarme incendie</strong> du bâtiment</li>
-            </ul>
-
-            <div class="flex items-center gap-4 mb-8">
-              <div class="px-4 py-2 bg-[#C00000]/10 text-[var(--a2ci-red)] rounded-xl text-xs font-bold uppercase tracking-widest">Durée : 1/2 Journée</div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-transfert-horizontal.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-th.pdf?101/b3b613a6c320f8c4381f4fcd43b93bd3ecd307bb" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="flex flex-wrap gap-4">
-              <a href="formation-exercice-evacuation.html" class="px-6 py-3 bg-[var(--a2ci-red)] text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#C00000] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                En savoir plus
-              </a>
-              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-exe.pdf?102/992f798ea05f97cc0b5da6b38a8961afae1013ca" target="_blank" class="px-6 py-3 bg-black text-white rounded-xl inline-flex items-center gap-3 hover:bg-[#111] transition-all text-xs font-bold shadow-lg uppercase tracking-widest">
-                Voir Fiche (PDF)
-              </a>
+      <!-- Référent Incendie -->
+      <div id="referent" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Conseil">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/referent_incendie.png" alt="Référent Incendie" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-indigo-600 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Conseil & Référents</span>
+          </div>
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Référent <br><span class="text-[var(--a2ci-red)]">Incendie Site</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Devenez le garant de la sécurité incendie de votre établissement et maîtrisez l'exploitation du SSI.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : SUR-MESURE</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-referent-incendie.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ref_inc.pdf?131/a93ba9dbe723442b78c1a5529283f60bde6c497d" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Evacuation GSF -->
+      <div id="evacuation" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Evacuation">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/evacuation.png" alt="Formation GSF" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Évacuation</span>
+          </div>
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Guides & <br><span class="text-[var(--a2ci-red)]">Serre-Files (GSF)</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Répartissez les rôles et gérez le recensement en zone de sécurité pour une évacuation maîtrisée.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1/2 JOURNÉE</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-evacuation-gsf.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-gsf_evacuation.pdf?111/3adb88267eb8d590ca5615f788d529abfded94c5" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Exercice d'évacuation -->
+      <div id="exercice" class="formation-card reveal-on-scroll !p-0 flex flex-col h-full" data-category="Evacuation">
+        <div class="relative h-64 overflow-hidden">
+          <img src="images/entrenement-incendie.png" alt="Exercice Evacuation" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+          <div class="absolute top-6 left-6">
+            <span class="px-4 py-1.5 bg-emerald-600 text-white text-[10px] font-bold uppercase tracking-widest rounded-full shadow-lg">Évacuation</span>
+          </div>
+        </div>
+        <div class="p-10 flex flex-col flex-grow">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold uppercase tracking-tight leading-tight">Exercice <br><span class="text-[var(--a2ci-red)]">d’Évacuation Réel</span></h3>
+          </div>
+          <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 line-clamp-3">
+            Validation de terrain avec mise en situation réelle pour tester l'alarme et les délais de mise en sécurité.
+          </p>
+          <div class="mt-auto">
+            <div class="flex items-center gap-3 mb-8 text-gray-400">
+              <svg class="w-4 h-4 text-[var(--a2ci-red)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-[10px] font-bold uppercase tracking-[0.2em]">Durée : 1/2 JOURNÉE</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="formation-exercice-evacuation.html" class="py-4 bg-black text-white text-center rounded-xl hover:bg-gray-900 transition-all text-[8px] font-bold uppercase tracking-widest shadow-xl">En savoir plus</a>
+              <a href="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-exe.pdf?102/992f798ea05f97cc0b5da6b38a8961afae1013ca" target="_blank" class="py-4 bg-gray-100 text-gray-900 text-center rounded-xl hover:bg-gray-200 transition-all text-[8px] font-bold uppercase tracking-widest border border-gray-200">Fiche (PDF)</a>
             </div>
           </div>
         </div>
