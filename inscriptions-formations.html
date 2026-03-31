@@ -7,6 +7,9 @@
   <meta name="description" content="Découvrez les étapes et modalités d'accès à nos formations sécurité incendie et secourisme." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style-da.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="js/components.js" defer></script>
   <style>
     .reveal-on-scroll {
@@ -20,7 +23,7 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 overflow-x-hidden w-full">
+<body class="bg-white text-gray-900 overflow-x-hidden w-full">
 
 <div id="header-component"></div>
 
@@ -42,26 +45,19 @@
 
 
 
-<!-- Hero Section (Dark) -->
-<section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
-  <div class="absolute inset-0 z-0 opacity-40">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
+  <div class="absolute inset-0 z-0 opacity-50">
     <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="S'inscrire aux formations A2CI" class="w-full h-full object-cover" />
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
   </div>
   <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
-    <a href="formations.html" class="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-8 text-sm font-medium uppercase tracking-widest">
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
-      Retour au catalogue
-    </a>
-    <h1 class="font-heading text-4xl md:text-6xl font-extrabold text-white mb-6 uppercase tracking-tight leading-tight">
+    <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
       Modalités <br><span class="text-[var(--a2ci-red)]">d'inscription.</span>
     </h1>
-    <p class="mx-auto max-w-2xl text-lg text-gray-300 leading-relaxed font-light mb-10">Retrouvez ci-dessous les étapes clés et les modalités d'accès à nos sessions de formation professionnelle.</p>
-    
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">Retrouvez ci-dessous les étapes clés et les modalités d'accès à nos sessions de formation professionnelle.</p>
     <div class="flex justify-center">
-      <a href="#steps" class="cta-button">
-        Découvrir les étapes
-      </a>
+      <a href="#steps" class="cta-button">Découvrir les étapes</a>
     </div>
   </div>
 </section>
@@ -166,11 +162,13 @@
 </section>
 
 <!-- CTA Final -->
-<section class="py-24 bg-black text-white text-center">
-  <div class="max-w-4xl mx-auto px-8">
-    <h2 class="font-heading text-3xl font-bold mb-8 uppercase">Prêt à planifier votre session ?</h2>
-    <p class="text-gray-400 mb-10 font-light">Prenez contact avec notre responsable pédagogique pour une étude personnalisée de votre plan de formation.</p>
-    <a href="index.html#contact" class="inline-block px-10 py-5 bg-[var(--a2ci-red)] rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all hover:scale-105">Nous contacter</a>
+<section class="py-16 bg-white">
+  <div class="max-w-[1150px] mx-auto px-8 text-center">
+    <h2 class="section-title mb-8">Prêt à planifier votre <span class="text-[var(--a2ci-red)]">session ?</span></h2>
+    <p class="text-gray-500 mb-10 font-light">Prenez contact avec notre responsable pédagogique pour une étude personnalisée de votre plan de formation.</p>
+    <div class="flex flex-wrap justify-center gap-6">
+      <a href="index.html#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Nous contacter</a>
+    </div>
   </div>
 </section>
 
