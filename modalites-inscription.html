@@ -12,10 +12,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="js/components.js" defer></script>
   <style>
+    .hero {
+      background: #000;
+      color: #fff;
+    }
     .reveal-on-scroll {
       opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .reveal-on-scroll.active {
       opacity: 1;
@@ -23,11 +27,9 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-900 overflow-x-hidden w-full">
+<body class="bg-white text-gray-900 w-full overflow-x-hidden">
 
 <div id="header-component"></div>
-
-
 
 <nav aria-label="Breadcrumb" class="mt-[104px] bg-gray-50 border-b border-gray-200 py-3 px-8 text-xs font-medium text-gray-500 w-full z-20 relative">
   <div class="max-w-[1440px] mx-auto flex items-center gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide">
@@ -39,36 +41,64 @@
     <span class="text-gray-300">/</span>
     <a href="formations.html" class="hover:text-[var(--a2ci-red)] transition-colors font-semibold">Formations</a>
     <span class="text-gray-300">/</span>
-    <span class="text-gray-900 font-bold" aria-current="page">Modalités  d'inscription</span>
+    <span class="text-gray-900 font-bold" aria-current="page">Modalités d'inscription</span>
   </div>
 </nav>
-
-
 
 <!-- Hero Section -->
 <section class="relative w-full overflow-hidden bg-black py-24 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
   <div class="absolute inset-0 z-0 opacity-50">
-    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="S'inscrire aux formations A2CI" class="w-full h-full object-cover" />
+    <img src="images/catalogue_hero.png" alt="S'inscrire aux formations A2CI" class="w-full h-full object-cover" />
     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
   </div>
   <div class="relative z-10 mx-auto max-w-4xl px-4 text-center">
     <h1 class="font-heading text-4xl font-extrabold text-white sm:text-5xl lg:text-7xl mb-8 leading-tight tracking-tight uppercase">
       Modalités <br><span class="text-[var(--a2ci-red)]">d'inscription.</span>
     </h1>
-    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">Retrouvez ci-dessous les étapes clés et les modalités d'accès à nos sessions de formation professionnelle.</p>
+    <p class="mx-auto max-w-2xl text-xl text-gray-200 leading-relaxed mb-12 font-light">
+      Retrouvez ci-dessous les étapes clés et les modalités d'accès à nos sessions de formation professionnelle.
+    </p>
     <div class="flex justify-center">
-      <a href="#steps" class="cta-button">Découvrir les étapes</a>
+      <a href="#steps" class="rounded-full bg-[var(--a2ci-red)] px-10 py-4 font-bold text-white transition-all hover:bg-white hover:text-black uppercase tracking-widest text-sm shadow-xl">
+        Découvrir les étapes
+      </a>
     </div>
   </div>
 </section>
 
+<!-- Qualiopi Certification Section -->
+<section class="py-12 bg-white border-b border-gray-100">
+  <div class="max-w-[1440px] mx-auto px-8">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center md:text-left">
+      <div class="flex items-center gap-5 group">
+        <div class="p-3 bg-gray-50 rounded-2xl group-hover:bg-white group-hover:shadow-xl transition-all duration-500 border border-gray-100">
+          <img src="images/qualiopi.png" alt="Qualiopi" class="h-14 w-auto object-contain" />
+        </div>
+        <div class="flex flex-col">
+          <div class="text-sm font-bold text-gray-900 uppercase tracking-widest leading-tight mb-1">Certifié Qualiopi</div>
+          <div class="text-[10px] text-gray-500 uppercase leading-relaxed max-w-[400px]">
+            La certification qualité a été délivrée au titre de la catégorie d'action suivante : <span class="text-gray-900 font-bold">actions de formation</span>
+          </div>
+        </div>
+      </div>
+      <div class="hidden md:block h-12 w-px bg-gray-200"></div>
+      <div class="flex items-center gap-6">
+        <div class="text-center">
+            <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em] mb-2">Organisme de formation</div>
+            <div class="font-heading text-xl font-black text-gray-900 tracking-tighter uppercase">Data Docké</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Steps Section -->
 <section id="steps" class="py-24 bg-white relative overflow-hidden">
   <!-- Subtle background accent -->
-  <div class="absolute top-0 right-0 w-1/3 h-full bg-gray-50/50 skew-x-12 translate-x-20 z-0"></div>
+  <div class="absolute top-0 right-0 w-1/3 h-full bg-gray-50/50 skew-x-12 translate-x-20 z-0 text-white">.</div>
 
   <div class="max-w-[1150px] mx-auto px-8 relative z-10">
-    
-    <div class="mb-16 max-w-3xl">
+    <div class="mb-16 max-w-3xl scroll-reveal">
       <div class="h2-bar">
         <span></span>
         <h2 class="section-title mb-6">Un processus d'inscription<br/><span class="text-[var(--a2ci-red)]">clair & structuré.</span></h2>
@@ -80,9 +110,8 @@
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      
       <!-- Étape 1 -->
-      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+      <div class="reveal-on-scroll group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white text-gray-900">
         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
           <span class="text-6xl font-black italic">01</span>
         </div>
@@ -97,7 +126,7 @@
       </div>
 
       <!-- Étape 2 -->
-      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+      <div class="reveal-on-scroll group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white text-gray-900" style="transition-delay: 100ms;">
         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
           <span class="text-6xl font-black italic">02</span>
         </div>
@@ -108,7 +137,7 @@
       </div>
 
       <!-- Étape 3 -->
-      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+      <div class="reveal-on-scroll group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white text-gray-900" style="transition-delay: 200ms;">
         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
           <span class="text-6xl font-black italic">03</span>
         </div>
@@ -119,7 +148,7 @@
       </div>
 
       <!-- Étape 4 -->
-      <div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white">
+      <div class="reveal-on-scroll group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--a2ci-red)] hover:shadow-xl hover:bg-white text-gray-900" style="transition-delay: 300ms;">
         <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
           <span class="text-6xl font-black italic">04</span>
         </div>
@@ -128,12 +157,10 @@
           <p class="text-sm text-gray-600 leading-relaxed mb-8">Retour de la Convention de Formation signée pour sécuriser définitivement votre session.</p>
         </div>
       </div>
-
     </div>
 
-    <!-- Délais et Engagement (Modernized) -->
-    <div class="mt-24 bg-gray-900 rounded-3xl p-10 lg:p-16 border border-white/5 relative overflow-hidden flex flex-col md:flex-row gap-12 items-center">
-      <!-- Decorative background -->
+    <!-- Délais et Engagement -->
+    <div class="mt-24 reveal-on-scroll bg-gray-900 rounded-3xl p-10 lg:p-16 border border-white/5 relative overflow-hidden flex flex-col md:flex-row gap-12 items-center">
       <div class="absolute inset-0 z-0 opacity-20">
         <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[var(--a2ci-red)]/20 to-transparent"></div>
       </div>
@@ -157,13 +184,12 @@
         </p>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- CTA Final -->
 <section class="py-16 bg-white">
-  <div class="max-w-[1150px] mx-auto px-8 text-center">
+  <div class="max-w-[1150px] mx-auto px-8 text-center reveal-on-scroll">
     <h2 class="section-title mb-8">Prêt à planifier votre <span class="text-[var(--a2ci-red)]">session ?</span></h2>
     <p class="text-gray-500 mb-10 font-light">Prenez contact avec notre responsable pédagogique pour une étude personnalisée de votre plan de formation.</p>
     <div class="flex flex-wrap justify-center gap-6">
@@ -175,7 +201,6 @@
 <div id="footer-component"></div>
 
 <script>
-  // Reveal animations
   const observerOptions = { threshold: 0.1 };
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -185,7 +210,7 @@
     });
   }, observerOptions);
 
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal-on-scroll, .scroll-reveal').forEach(el => observer.observe(el));
 </script>
 
 </body>
