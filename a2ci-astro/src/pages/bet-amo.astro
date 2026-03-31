@@ -1,0 +1,176 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import TimelineSteps from '../components/TimelineSteps.astro';
+import Accordion from '../components/Accordion.astro';
+---
+
+<ServiceLayout
+  title="BET & AMO - A2CI Prévention Incendie"
+  description="Bureau d'Études Techniques et Assistance à Maîtrise d'Ouvrage (AMO) par A2CI. Expertise en conception, suivi et réception SSI en Gironde."
+  heroTitle={"Bureau d'Études Technique <br><span class=\"text-[var(--a2ci-red)]\">& AMO SSI.</span>"}
+  heroSubtitle="Assistance à la maîtrise d'ouvrage pour la consultation des entreprises, le suivi et la réception des travaux liés aux systèmes de sécurité incendie (SSI)."
+  heroImage="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg"
+  breadcrumbs={[
+    { label: "Accueil", href: "/" },
+    { label: "Sécurité Incendie", href: "/#audit-conseil" },
+    { label: "Bureau d'Études Technique & AMO SSI" }
+  ]}
+  ctaTitle={"Besoin d'un <span class=\"text-a2ci-red\">accompagnement AMO SSI ?</span>"}
+>
+
+  <!-- Timeline -->
+  <TimelineSteps
+    title='Notre <span class="text-[var(--a2ci-red)]">Accompagnement.</span>'
+    subtitle="Un suivi rigoureux du projet de la conception à la réception finale."
+    steps={[
+      { number: "01", title: "Phase étude", description: "Préparation technique et administrative du projet." },
+      { number: "02", title: "Phase réalisation", description: "Suivi des travaux et coordination des acteurs." },
+      { number: "03", title: "Phase réception", description: "Accompagnement à la réception des installations." }
+    ]}
+  />
+
+  <!-- Section 1: Analyse du contexte -->
+  <section class="bg-gray-50">
+    <div class="container-custom">
+      <div class="section-custom scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Analyse du <span class="text-[var(--a2ci-red)]">contexte</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Rencontre avec les différents intervenants (<strong>maîtrise d'ouvrage</strong>, <strong>maîtrise d'œuvre</strong>, <strong>bureaux de contrôle</strong>) afin de définir le <strong>phasage des travaux</strong> et la <strong>coordination</strong> entre les corps d'état.
+          </p>
+          <p class="text-gray-600">
+            Visite du site par notre <strong>ingénieur conseil</strong> pour analyser les <strong>équipements existants</strong>, les <strong>contraintes techniques</strong>, <strong>structurelles</strong> et liées à l'activité.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Phase Etude(BET&AMO).png" alt="Phase étude" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Étude Technique -->
+  <section class="bg-gray-50">
+    <div class="container-custom pt-0">
+      <div class="section-custom reverse scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Étude <span class="text-[var(--a2ci-red)]">Technique</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Récupération des <strong>plans AUTOCAD</strong> ou réalisation des plans si nécessaire.
+          </p>
+          <p class="text-gray-600">
+            Création du <strong>dossier de consultation des entreprises (DCE)</strong> avec l'ensemble des <strong>pièces administratives et techniques</strong>.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Preparation du dossier(Bet&amo).png" alt="Préparation du dossier" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Détail étude (Dark) -->
+  <section id="detail-etude" class="section-dark">
+    <div class="container-custom">
+      <div class="scroll-reveal">
+        <div class="text-center mb-16">
+          <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">AMO & AMOE</p>
+          <h2 class="font-heading text-4xl font-bold text-white">Détail de <span class="text-red">l'Accompagnement</span></h2>
+        </div>
+
+        <Accordion items={[
+          {
+            title: "Création du DCE",
+            content: `<ul class="premium-list !text-gray-400">
+              <li>Assistance à la rédaction du <strong>RC</strong> et du <strong>CCAP</strong></li>
+              <li>Création du <strong>CCTP</strong> par l'ingénieur conseil</li>
+              <li>Création du <strong>DPGF</strong> par le chargé d'études</li>
+              <li>Création des <strong>plans d'implantation</strong> (Détection & Mise en sécurité)</li>
+              <li>Intégration du dossier de <strong>conception SSI</strong> et rapport bureau de contrôle</li>
+            </ul>`
+          },
+          {
+            title: "Consultation des entreprises",
+            content: `<ul class="premium-list !text-gray-400">
+              <li>Chiffrage d'une <strong>enveloppe budgétaire</strong></li>
+              <li>Analyse des <strong>offres</strong> et rédaction de questionnaires</li>
+              <li>Classement des <strong>entreprises</strong> selon critères</li>
+              <li>Présence aux <strong>commissions d'appel d'offres</strong></li>
+            </ul>`
+          },
+          {
+            title: "Nota",
+            content: `<p class="text-sm text-gray-400">Les documents CCTP, DPGF et questionnaires sont réalisés par A2CI, sous l'entête du maître d'ouvrage. Les rapports d'analyse utilisent les trames du maître d'ouvrage.</p>`
+          }
+        ]} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Phase réalisation -->
+  <section class="bg-gray-50">
+    <div class="container-custom">
+      <div class="section-custom scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Phase <span class="text-[var(--a2ci-red)]">réalisation</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Organisation et participation aux <strong>réunions de chantier SSI</strong> avec rédaction de <strong>comptes-rendus</strong> diffusés à tous les intervenants.
+          </p>
+          <p class="mb-4 text-gray-600">
+            Suivi des modifications, coordination avec le <strong>coordinateur SSI</strong>, et contrôle du <strong>respect du planning</strong>.
+          </p>
+          <p class="text-gray-600">
+            Validation des <strong>situations mensuelles</strong> des entreprises et sous-traitants.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Phase realisation(bet&amo).png" alt="Phase réalisation" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Phase réception -->
+  <section class="bg-gray-50">
+    <div class="container-custom pt-0">
+      <div class="section-custom reverse scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Phase <span class="text-[var(--a2ci-red)]">réception</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Coordination avec le <strong>coordinateur SSI</strong> et le <strong>bureau de contrôle</strong> pour la préparation des <strong>opérations de réception</strong>.
+          </p>
+          <p class="mb-4 text-gray-600">
+            Les <strong>essais</strong> et <strong>PV SSI</strong> sont réalisés par le <strong>coordinateur SSI</strong> et le <strong>bureau de contrôle</strong>.
+          </p>
+          <p class="text-gray-600">
+            Une <strong>réception finale</strong> est réalisée avec l'ensemble des acteurs du projet.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Phase reception(bet&amo).png" alt="Phase réception" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>

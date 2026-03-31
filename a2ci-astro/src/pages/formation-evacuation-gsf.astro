@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Évacuation Guide-Serre File - A2CI Prévention"
+  description="Formation Évacuation Guide et Serre-File. Organisez votre évacuation, maîtrisez les rôles et les consignes de sécurité avec A2CI."
+  heroTitle='Guide & Serre<br /><span class="text-[var(--a2ci-red)]">File (GSF).</span>'
+  heroSubtitle="Organisez une évacuation fluide et sécurisée en formant vos collaborateurs aux rôles stratégiques de la chaîne de secours."
+  heroImage="/images/evacuation_gsf.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Guide & Serre File (GSF)"
+  objectivesIntro="Savoir réagir vite et bien lors d'un signal d'alarme, diriger les occupants vers les zones sûres et s'assurer que personne ne reste dans les zones à risques."
+  block1Title='Diriger & <span class="text-[var(--a2ci-red)]">Vérifier.</span>'
+  block1Items={["Identifier les objectifs, les délais et les décisions à respecter.","Connaître le rôle des guides et serre-files et le recensement en zone sûre.","Suivre les itinéraires d'évacuation et localiser les issues de secours."]}
+  block1Image="/images/evacuation_gsf.png"
+  block2Title='Alerter & <span class="text-[var(--a2ci-red)]">Rendre Compte.</span>'
+  block2Items={["Maîtriser les procédures d'alerte et de signalement interne.","Savoir rendre compte de l'évacuation de sa zone au responsable.","Remise d'un mémento \"Guide & Serre-file\" à chaque participant."]}
+  block2Image="/images/evacuation.png"
+  reglementationIntro="Chaque seconde compte lors d'un départ de feu. L'organisation GSF garantit un vidage ordonné des locaux."
+  reglementationCards={[
+    { number: "01", title: "Le Guide <br>File", description: "Il conduit le groupe, gère le calme et assure le cheminement vers le point de rassemblement." },
+    { number: "02", title: "Le Serre <br>File", description: "Il ferme la marche, vérifie les locaux (sanitaires, bureaux) et empêche le retour en arrière." },
+    { number: "03", title: "Mise en <br>Sécurité", description: "Actions réflexes : coupure énergies, fermeture portes, aide aux personnes PMR." }
+  ]}
+  moyensIntro="Une visite dynamique de votre site pour valider les acquis théoriques."
+  moyensItems={[
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Visite</strong> : Reconnaissance des itinéraires d'évacuation et du point de rassemblement.`,
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée pour tester la visibilité et le balisage.',
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Support</strong> : Plans d'évacuation du site et documentation interactive.`
+  ]}
+  moyensImage="/images/evacuation_gsf.png"
+  quote='Organiser une évacuation <span class="text-[var(--a2ci-red)] font-normal">fluide et sécurisée</span> en maîtrisant les rôles stratégiques de la chaîne de secours.'
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "15", label: "Pers. Max / Session" },
+    { value: "100%", label: "Pratique terrain" },
+    { value: "Rapport", label: "Bilan évacuation" }
+  ]}
+  ctaTitle={"Sécurisez votre flux d'<span class=\"text-[var(--a2ci-red)]\">évacuation ?</span>"}
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-gsf.pdf"
+/>

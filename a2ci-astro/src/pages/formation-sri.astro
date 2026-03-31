@@ -1,0 +1,43 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+
+<FormationLayout
+  title="Sensibilisation au Risque Incendie (SRI) - A2CI Prévention"
+  description="Formation Sensibilisation au Risque Incendie (SRI). Apprenez les réflexes essentiels, l'utilisation des extincteurs et les procédures d'évacuation avec A2CI."
+  heroTitle='Sensibilisation au<br /><span class="text-[var(--a2ci-red)]">Risque Incendie.</span>'
+  heroSubtitle="Développez les réflexes vitaux et la maîtrise des moyens d'extinction pour assurer la sécurité de votre environnement de travail."
+  heroImage="/images/formation incendie.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Sensibilisation au Risque Incendie"
+  objectivesIntro="Notre stage SRI permet à chaque collaborateur de devenir un acteur engagé de la sécurité incendie au sein de son entreprise."
+  block1Title='Observer & <span class="text-[var(--a2ci-red)]">Réagir.</span>'
+  block1Items={["Sensibiliser aux réflexes et conduites à tenir en cas de départ de feu.","Réagir au déclenchement d'une évacuation selon l'organisation de secours.","Observer la situation, alarmer et alerter les secours externes."]}
+  block1Image="/images/formation incendie.png"
+  block2Title='Alerter & <span class="text-[var(--a2ci-red)]">Agir.</span>'
+  block2Items={["Maîtriser les moyens d'extinction appropriés (Extincteurs, RIA).","Identifier l'extincteur adapté suivant le type de feu.","Visite de l'établissement pour repérer les organes de sécurité."]}
+  block2Image="/images/Formation extincteur.png"
+  reglementationIntro="Chaque collaborateur doit connaître la conduite à tenir en cas de départ de feu selon le schéma de l'organisation interne de sécurité."
+  reglementationCards={[
+    { number: "01", title: "Feux & agents <br>extincteurs", description: "Identification des classes de feux et des agents d'extinction adaptés à chaque situation." },
+    { number: "02", title: "Rôle des acteurs <br>de sécurité", description: "Compréhension approfondie des missions de chacun en cas d'alerte ou d'évacuation." },
+    { number: "03", title: "Identification <br>des organes SSI", description: "Localisation stratégique et utilisation correcte des dispositifs de sécurité du site." }
+  ]}
+  moyensIntro="Nous déployons sur vos sites des équipements pédagogiques de pointe pour une immersion totale et sécurisée."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée & Bac à feu « écologique ».',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Pratique</strong> : Extincteurs pédagogiques tous types.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Théorie</strong> : Vidéo projecteur et écran sur pied.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Audit</strong> : Visite et repérage des organes de sécurité du site.'
+  ]}
+  moyensImage="/images/sri_base_formation.png"
+  quote={"Un exercice pratique pour acquérir des <span class=\"text-[var(--a2ci-red)] font-normal\">attitudes réflexes</span> face à un feu naissant tout en respectant l'organisation de secours de l'entreprise."}
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Opérationnel" },
+    { value: "Sur-mesure", label: "Adaptation locale" }
+  ]}
+  ctaTitle='Prêt à sécuriser vos <span class="text-[var(--a2ci-red)]">équipes ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri.pdf"
+/>

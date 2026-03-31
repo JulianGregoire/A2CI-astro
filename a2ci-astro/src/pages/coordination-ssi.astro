@@ -1,0 +1,161 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import SectionBlock from '../components/SectionBlock.astro';
+import Accordion from '../components/Accordion.astro';
+---
+
+<ServiceLayout
+  title="Coordination SSI - A2CI Prévention Incendie"
+  description="Coordination SSI et dossier de conception SSI par A2CI. Réalisation conforme NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932."
+  heroTitle='Dossier de conception <br><span class="text-[var(--a2ci-red)]">du SSI.</span>'
+  heroSubtitle="Réalisation conforme aux normes NFS 61-930 à 61-940, NFS 61-970 et NFS 61-932. Objectif : mise en conformité, extension ou remplacement du SSI d'un ERP."
+  heroImage="/images/ssi_hero.png"
+  breadcrumbs={[
+    { label: "Accueil", href: "/" },
+    { label: "Sécurité Incendie", href: "/#audit-conseil" },
+    { label: "Coordination SSI" }
+  ]}
+  ctaTitle={"Besoin d'un accompagnement <span class=\"text-a2ci-red\">SSI ?</span>"}
+>
+
+  <!-- Section 1: Analyse du projet -->
+  <section class="bg-gray-50">
+    <div class="container-custom">
+      <div class="section-custom scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Analyse du <span class="text-[var(--a2ci-red)]">projet</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            <strong>Visite du site</strong> (si bâtiment existant) et participation à des <strong>réunions</strong> avec le <strong>maître d'ouvrage</strong>, l'<strong>exploitant</strong>, le <strong>maître d'œuvre</strong> et le <strong>bureau de contrôle</strong>.
+          </p>
+          <p class="text-gray-600">
+            Cette phase permet d'intégrer les <strong>contraintes du bâtiment</strong>, son activité, ainsi que les <strong>obligations réglementaires</strong> selon son <strong>classement et son type</strong>.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Analyse du projet (SSI).png" alt="Analyse de projet SSI" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Validation technique -->
+  <section class="bg-gray-50">
+    <div class="container-custom pt-0">
+      <div class="section-custom reverse scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Validation <span class="text-[var(--a2ci-red)]">technique</span></h2>
+          </div>
+          <p class="text-gray-600">
+            Si nécessaire, consultation du <strong>Service Prévention de la Gironde</strong> afin de valider les <strong>choix techniques</strong> ou argumenter les <strong>demandes de dérogation</strong>.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Validation technique" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dossier technique (Dark) -->
+  <section id="contenu-dossier" class="section-dark">
+    <div class="container-custom">
+      <div class="scroll-reveal">
+        <div class="text-center mb-16">
+          <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Dossier Technique</p>
+          <h2 class="font-heading text-4xl font-bold text-white">Contenu du <span class="text-red">dossier SSI</span></h2>
+        </div>
+
+        <Accordion items={[
+          {
+            title: "Cahier des charges fonctionnel",
+            content: `<p class="text-sm">Présentation du site (description sommaire), activité du bâtiment, historique, travaux envisagés, demandes de dérogation, découpage des zones (ZA/ZC/ZF/ZDA/ZDM), scénario de mise en sécurité, technologie et localisation des matériels, référentiel réglementaire, documents à fournir par les entreprises, détail de la réception, exploitation du SSI et formation du personnel.<br><br>Réalisé selon la trame du SDIS de la Gironde.</p>`
+          },
+          {
+            title: "Plans et schémas",
+            content: `<p class="text-sm">Plan informatique de l'ensemble du site (demande du SDIS).<br>Plans de chaque niveau incluant zones d'alarme, compartimentage, désenfumage, détection automatique et déclenchement manuel.</p>`
+          },
+          {
+            title: "Tableaux de corrélation",
+            content: `<p class="text-sm">Tableaux de corrélation en mode automatique et manuel, réalisés selon la trame du SDIS de la Gironde.</p>`
+          },
+          {
+            title: "Réalisation et diffusion du dossier",
+            content: `<p class="text-sm">Dossier réalisé en 5 exemplaires et remis au maître d'ouvrage pour signature.<br><br>Diffusion :</p>
+              <ul class="premium-list !text-gray-400 !text-xs !mt-3">
+                <li>2 exemplaires pour la <strong>mairie</strong> (dont 1 pour le service instructeur)</li>
+                <li>1 pour le <strong>bureau de contrôle</strong></li>
+                <li>1 pour le <strong>maître d'ouvrage</strong></li>
+                <li>1 pour <strong>A2CI</strong></li>
+              </ul>`
+          }
+        ]} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Suivi de chantier -->
+  <section class="bg-gray-50">
+    <div class="container-custom">
+      <div class="section-custom scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Suivi de <span class="text-[var(--a2ci-red)]">chantier</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Demande aux entreprises des <strong>plans d'exécution</strong>, <strong>documents techniques</strong>, <strong>PV des matériels NF</strong> et <strong>associativité</strong>.
+          </p>
+          <p class="text-gray-600">
+            <strong>Analyse des documents</strong>, rédaction d'un <strong>rapport</strong>, organisation de <strong>réunions</strong> avant et pendant les travaux avec tous les acteurs du projet.
+          </p>
+          <p class="text-gray-600 mt-4">
+            Chaque réunion fait l'objet d'un <strong>compte-rendu</strong> diffusé à l'ensemble des parties.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/ssi_meeting.png" alt="Suivi de chantier" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Réception -->
+  <section class="bg-gray-50">
+    <div class="container-custom pt-0">
+      <div class="section-custom reverse scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Réception & <span class="text-[var(--a2ci-red)]">fin de chantier</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Collecte des documents du <strong>dossier d'identité (DOE)</strong>, <strong>PV de mise en service</strong>, <strong>autocontrôles</strong> des entreprises.
+          </p>
+          <p class="text-gray-600">
+            <strong>Tests de 100 % des équipements</strong> (<strong>détecteurs</strong>, <strong>déclencheurs</strong>, <strong>DAS/DAC/DCM</strong>) et <strong>scénarios de sécurité</strong> selon les <strong>normes NFS 61-932 et NFS 61-970</strong>.
+          </p>
+          <p class="text-gray-600 mt-4">
+            Rédaction du <strong>procès-verbal de réception</strong> et création du dossier d'identité du SSI.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Reception & fin de chantier(ssi).png" alt="Réception et fin de chantier" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>

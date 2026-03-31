@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Sensibilisation au Risque Incendie - Handicap - A2CI Prévention"
+  description="Formation Sensibilisation au Risque Incendie au profit de personnes présentant un handicap. Adaptez votre prévention avec A2CI."
+  heroTitle='SRI<br /><span class="text-[var(--a2ci-red)]">Handicap.</span>'
+  heroSubtitle="Une formation adaptée pour sensibiliser les personnes en situation de handicap aux risques incendie, et former les encadrants à leur accompagnement."
+  heroImage="/images/sri_handicap.png"
+  parentCategory="incendie"
+  breadcrumbLabel="SRI Handicap"
+  objectivesIntro="Chaque personne en situation de handicap a le droit de bénéficier d'une formation adaptée à ses spécificités, conforme à la loi du 11 février 2005."
+  block1Title='Appréhender & <span class="text-[var(--a2ci-red)]">Alerter.</span>'
+  block1Items={["Appréhender le phénomène feu et l'incendie avec méthodes pédagogiques adaptées.","Donner l'alerte externe (18 ou 112) avec un processus simple et mémorisable.","Sensibiliser à l'importance de la prévention au quotidien."]}
+  block1Image="/images/sri_handicap.png"
+  block2Title='Évacuer & <span class="text-[var(--a2ci-red)]">Se Protéger.</span>'
+  block2Items={["Connaître les consignes de sécurité et les points de rassemblement.","Adopter le bon comportement lors d'une évacuation adaptée.","Accompagnement par des exercices pratiques sur site."]}
+  block2Image="/images/evacuation.png"
+  reglementationIntro="La loi impose l'accessibilité et la prise en compte du handicap dans les dispositifs de sécurité incendie."
+  reglementationCards={[
+    { number: "01", title: "Loi du <br>11 février 2005", description: "Obligation d'accessibilité et de formation adaptée pour les personnes en situation de handicap." },
+    { number: "02", title: "Code du <br>Travail", description: "L'employeur doit former l'ensemble des travailleurs, y compris ceux en situation de handicap." },
+    { number: "03", title: "Règlement <br>ERP", description: "Dispositions spécifiques pour l'évacuation et la mise en sécurité des personnes handicapées." }
+  ]}
+  moyensIntro="Nous adaptons chaque session aux capacités et besoins des participants."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Pédagogie</strong> : Supports visuels, sonores et tactiles adaptés au type de handicap.',
+    "<strong class='text-gray-900 font-bold uppercase tracking-widest text-xs'>Pratique</strong> : Exercice d'évacuation adapté avec l'encadrement sur site.",
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Bilan</strong> : Rapport de formation et préconisations personnalisées.'
+  ]}
+  moyensImage="/images/sri_handicap.png"
+  quote={"Garantir l'<span class=\"text-[var(--a2ci-red)] font-normal\">inclusion et la protection</span> de chaque collaborateur face au risque incendie."}
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Pratique" },
+    { value: "Sur-mesure", label: "Adaptation" }
+  ]}
+  ctaTitle={"Garantissez l'inclusion et la <span class=\"text-[var(--a2ci-red)]\">protection ?</span>"}
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-sri_aux_profits_de_personne_presentant_un_handicap.pdf"
+/>

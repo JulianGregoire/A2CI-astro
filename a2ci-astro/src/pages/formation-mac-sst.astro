@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="MAC SST - Recyclage Sauveteur Secouriste du Travail - A2CI"
+  description="Formation Maintien et Actualisation des Compétences SST. Renouvelez votre certificat SST avec A2CI Prévention."
+  heroTitle='MAC<br /><span class="text-[var(--a2ci-red)]">SST.</span>'
+  heroSubtitle="Maintenez vos compétences de Sauveteur Secouriste du Travail à jour et renouvelez votre certificat INRS tous les 24 mois."
+  heroImage="/images/mac_sst_formation.png"
+  parentCategory="secourisme"
+  breadcrumbLabel="MAC SST"
+  objectivesIntro="Le MAC SST est obligatoire tous les 24 mois pour conserver la validité de votre certificat SST délivré par l'INRS/réseau Assurance Maladie."
+  block1Title='Actualiser ses <span class="text-[var(--a2ci-red)]">Acquis.</span>'
+  block1Items={["Réviser les gestes de premiers secours : protéger, examiner, alerter, secourir.","Actualiser ses connaissances sur les évolutions réglementaires et techniques.","Entraînement sur mannequin adulte, enfant et nourrisson."]}
+  block1Image="/images/mac_sst_formation.png"
+  block2Title='Prévention & <span class="text-[var(--a2ci-red)]">Expérience.</span>'
+  block2Items={["Retour d'expérience sur les situations rencontrées depuis la dernière formation.","Actualiser ses compétences en matière de prévention des risques professionnels.","Évaluation certificative conforme au référentiel INRS."]}
+  block2Image="/images/sst_formation.png"
+  reglementationIntro="Le recyclage SST est une obligation légale pour maintenir la validité du certificat et garantir la compétence des sauveteurs."
+  reglementationCards={[
+    { number: "24", title: "Mois de <br>validité", description: "Le certificat SST doit être renouvelé tous les 24 mois par une session MAC SST." },
+    { number: "01", title: "Journée de <br>formation", description: "7 heures minimum de formation pour le maintien et l'actualisation des compétences." },
+    { number: "100%", title: "Évaluation <br>certificative", description: "Validation conforme au référentiel national INRS pour le renouvellement du certificat." }
+  ]}
+  moyensIntro="Nous utilisons des mises en situation réalistes pour réactiver vos réflexes de secourisme."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Mannequins</strong> : Adulte, enfant et nourrisson pour les gestes de réanimation.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">DAE</strong> : Défibrillateurs de formation pour les exercices pratiques.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Certification</strong> : Certificat SST renouvelé après validation INRS.'
+  ]}
+  moyensImage="/images/mac_sst_formation.png"
+  quote={"Renouvelez votre certificat SST pour <span class=\"text-[var(--a2ci-red)] font-normal\">rester opérationnel</span> face à l'urgence."}
+  stats={[
+    { value: "7h", label: "De Formation" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "24mo", label: "Recyclage" },
+    { value: "SST", label: "Certificat INRS" }
+  ]}
+  ctaTitle='Votre certificat expire <span class="text-[var(--a2ci-red)]">bientôt ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-macsst.pdf"
+/>

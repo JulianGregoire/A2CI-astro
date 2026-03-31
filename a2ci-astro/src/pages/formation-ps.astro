@@ -1,0 +1,35 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Premiers Secours - Initiation - A2CI Prévention"
+  description="Formation Initiation aux Premiers Secours. Apprenez les gestes essentiels pour porter secours avec A2CI Prévention."
+  heroTitle='Premiers<br /><span class="text-[var(--a2ci-red)]">Secours.</span>'
+  heroSubtitle="Initiez vos collaborateurs aux gestes de premiers secours pour réagir efficacement face aux situations d'urgence du quotidien."
+  heroImage="/images/premiers_secours_formation.png"
+  parentCategory="secourisme"
+  breadcrumbLabel="Premiers Secours"
+  objectivesIntro="Une formation pratique pour acquérir les gestes élémentaires de secours et savoir réagir face aux situations d'urgence les plus courantes."
+  block1Title='Reconnaître & <span class="text-[var(--a2ci-red)]">Alerter.</span>'
+  block1Items={["Reconnaître une situation d'urgence et évaluer l'état de la victime.","Protéger la zone et alerter les secours (15, 18, 112).","Connaître la chaîne de survie et le rôle du témoin."]}
+  block1Image="/images/premiers_secours_formation.png"
+  block2Title='Pratiquer les <span class="text-[var(--a2ci-red)]">Gestes.</span>'
+  block2Items={["Position Latérale de Sécurité (PLS) pour une victime inconsciente qui respire.","Réanimation Cardio-Pulmonaire (RCP) et utilisation du DAE.","Gestes d'urgence : hémorragies, étouffement, malaises."]}
+  block2Image="/images/secourisme_pratique.png"
+  moyensIntro="Des exercices pratiques sur mannequins et mises en situation réalistes."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Mannequins</strong> : Adulte et enfant pour la pratique de la RCP et PLS.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">DAE</strong> : Défibrillateurs de formation pour exercices pratiques.',
+    "<strong class='text-gray-900 font-bold uppercase tracking-widest text-xs'>Attestation</strong> : Remise d'une attestation de formation à chaque participant."
+  ]}
+  moyensImage="/images/premiers_secours_formation.png"
+  quote='Initiez vos collaborateurs aux <span class="text-[var(--a2ci-red)] font-normal">premiers secours</span> pour sauver des vies au quotidien.'
+  stats={[
+    { value: "3h à 7h", label: "De Formation" },
+    { value: "12", label: "Pers. Max / Session" },
+    { value: "100%", label: "Pratique" },
+    { value: "Libre", label: "Prérequis" }
+  ]}
+  ctaTitle='Initiez vos collaborateurs aux <span class="text-[var(--a2ci-red)]">premiers secours ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ps.pdf"
+/>

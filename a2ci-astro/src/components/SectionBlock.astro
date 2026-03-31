@@ -1,0 +1,27 @@
+---
+interface Props {
+  reverse?: boolean;
+  dark?: boolean;
+  borderedTop?: boolean;
+  id?: string;
+  bgClass?: string;
+}
+
+const { reverse = false, dark = false, borderedTop = false, id, bgClass } = Astro.props;
+---
+
+<section
+  id={id}
+  class:list={[
+    "overflow-hidden",
+    dark ? "section-dark" : "bg-gray-50",
+    borderedTop && !dark ? "border-t border-gray-100" : "",
+    bgClass,
+  ]}
+>
+  <div class="container-custom">
+    <div class:list={["section-custom", reverse ? "reverse" : ""]}>
+      <slot />
+    </div>
+  </div>
+</section>

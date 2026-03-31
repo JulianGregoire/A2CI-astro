@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="ESI - Équipier de Seconde Intervention - A2CI Prévention"
+  description="Formation Équipier de Seconde Intervention (ESI). Maîtrisez le risque incendie, le RIA, le Sprinkler et les consignes internes avec A2CI."
+  heroTitle='Équipier de Seconde<br /><span class="text-[var(--a2ci-red)]">Intervention (ESI).</span>'
+  heroSubtitle="Renforcez votre dispositif de sécurité en formant des équipiers capables d'intervenir sur des systèmes d'extinction complexes et automatiques."
+  heroImage="/images/esi_formation.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Équipier de Seconde Intervention (ESI)"
+  objectivesIntro="L'ESI est un acteur majeur de la sécurité incendie, formé à l'utilisation des moyens d'extinction fixes et à l'analyse globale des risques de son site."
+  block1Title='Étudier & <span class="text-[var(--a2ci-red)]">Comprendre.</span>'
+  block1Items={["Étudier les 5 concepts de sécurité : prévention, humain, matériel, constructif.","Connaître les vecteurs de propagation du feu et les phases de l'incendie.","Compréhension des dispositifs d'extinction automatique (Sprinkler)."]}
+  block1Image="/images/esi_formation.png"
+  block2Title='Maniement & <span class="text-[var(--a2ci-red)]">Immersion.</span>'
+  block2Items={["Exercice pratique sur l'utilisation du RIA et visite technique approfondie.","Analyse locale du poste source SPRINKLER et des vannes de contrôle.","Mise en situation réelle on les scénarios d'urgence du bâtiment."]}
+  block2Image="/images/catalogue_incendie.png"
+  reglementationIntro="L'Équipier de Seconde Intervention intervient avec des moyens plus puissants et une vision stratégique du sinistre."
+  reglementationCards={[
+    { number: "01", title: "Systèmes <br>fixes", description: "Maîtrise opérationnelle des RIA, colonnes sèches et réseaux d'eau." },
+    { number: "02", title: "Extinction <br>Auto.", description: "Compréhension et surveillance des systèmes Sprinkler ou à gaz." },
+    { number: "03", title: "Liaison <br>Secours", description: "Faciliter l'arrivée et l'engagement des sapeurs-pompiers externes." }
+  ]}
+  moyensIntro="Une formation interactive s'appuyant sur les réalités techniques de votre bâtiment."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Technique</strong> : Visite commentée des locaux techniques et sprinkler.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Supports</strong> : PC portable, vidéo projecteur et documentation site.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Pédagogie</strong> : Analyse de plans et de scénarios de mise en sécurité.'
+  ]}
+  moyensImage="/images/esi_formation.png"
+  quote={"Former des équipiers de seconde ligne capables de <span class=\"text-[var(--a2ci-red)] font-normal\">maîtriser les systèmes fixes</span> d'extinction pour une réponse stratégique au sinistre."}
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Opérationnel" },
+    { value: "Bilan", label: "Audit technique" }
+  ]}
+  ctaTitle='Renforcez votre <span class="text-[var(--a2ci-red)]">deuxième ligne ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-esi.pdf"
+/>

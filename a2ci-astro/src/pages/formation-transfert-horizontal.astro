@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Transfert Horizontal & Mise en Sécurité - A2CI Prévention"
+  description="Formation Transfert Horizontal et Mise en Sécurité. Apprenez les protocoles d'évacuation spécifiques pour Type U et J avec A2CI."
+  heroTitle='Transfert<br /><span class="text-[var(--a2ci-red)]">Horizontal.</span>'
+  heroSubtitle="Maîtrisez les procédures de mise en sécurité et de transfert pour protéger les occupants les plus vulnérables de votre établissement."
+  heroImage="/images/transfert_horizontal.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Transfert Horizontal"
+  objectivesIntro="Une formation dédiée aux établissements de Type U (Hôpitaux) et J (EHPAD), où l'évacuation verticale n'est pas toujours la solution prioritaire."
+  block1Title='Protéger & <span class="text-[var(--a2ci-red)]">Isoler.</span>'
+  block1Items={["Mettre en sécurité les occupants du site (Type U et J) par zone.","Appliquer la réglementation ERP spécifique et ses évolutions.","Exercices de levée de doute et transfert horizontal avec enfumage."]}
+  block1Image="/images/transfert_horizontal.png"
+  block2Title='Agir & <span class="text-[var(--a2ci-red)]">Transférer.</span>'
+  block2Items={["Exploitation du système de détection et déclenchement des dispositions.","Techniques de transfert horizontal des personnes à mobilité réduite.","Remise d'un \"mémento pratique\" spécifique à chaque participant."]}
+  block2Image="/images/evacuation.png"
+  reglementationIntro="Le transfert horizontal permet de déplacer les occupants d'une zone sinistrée vers une zone protégée sur le même niveau."
+  reglementationCards={[
+    { number: "01", title: "Compartimentage <br>coupe-feu", description: "Vérification de l'intégrité des barrières et portes CF pour isoler le sinistre." },
+    { number: "02", title: "Cheminements <br>libres", description: "Garantir l'absence d'obstacles pour un transfert rapide et sécurisé des lits et brancards." },
+    { number: "03", title: "Coordination <br>médicale", description: "Articulation entre le personnel de soin et l'équipe de sécurité lors de l'évacuation." }
+  ]}
+  moyensIntro="Nous créons des scénarios réalistes pour tester votre organisation de sécurité."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée pour la levée de doute réaliste.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Outils</strong> : PC portable, vidéo projecteur et plans de compartimentage.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Bilan</strong> : Rapport de synthèse avec préconisations organisationnelles.'
+  ]}
+  moyensImage="/images/transfert_horizontal.png"
+  quote='Maîtriser le transfert horizontal pour <span class="text-[var(--a2ci-red)] font-normal">protéger les plus vulnérables</span> en établissement de santé.'
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "12", label: "Pers. Max / Session" },
+    { value: "100%", label: "Pratique" },
+    { value: "ERP", label: "Secteurs U & J" }
+  ]}
+  ctaTitle='Maîtrisez votre transfert <span class="text-[var(--a2ci-red)]">horizontal ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-th.pdf"
+/>

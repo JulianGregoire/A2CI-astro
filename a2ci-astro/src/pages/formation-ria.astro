@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="RIA - Robinet d'Incendie Armé - A2CI Prévention"
+  description="Formation Robinet d'Incendie Armé (RIA). Apprenez à manipuler le matériel, maîtriser l'extinction et les règles de sécurité avec A2CI."
+  heroTitle={"Robinet d'Incendie<br /><span class=\"text-[var(--a2ci-red)]\">Armé (RIA).</span>"}
+  heroSubtitle="Maîtrisez la puissance du réseau d'eau pour une intervention immédiate et efficace sur tout départ de feu."
+  heroImage="/images/Robinets Incendie.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Robinet d'Incendie Armé (RIA)"
+  objectivesIntro="Une formation technique et pratique pour savoir utiliser le RIA en toute sécurité, seul ou en binôme, tout en respectant l'organisation des secours du site."
+  block1Title='Observer & <span class="text-[var(--a2ci-red)]">Alerter.</span>'
+  block1Items={["Capacité d'observer la situation et d'appliquer l'organisation de secours.","Connaître les règles de sécurité avant, pendant et après engagement.","Savoir localiser et identifier les différents moyens d'extinction du site."]}
+  block1Image="/images/Robinets Incendie.png"
+  block2Title='Maniement & <span class="text-[var(--a2ci-red)]">Extinction.</span>'
+  block2Items={["Exercice pratique d'utilisation du RIA (déploiement, ouverture, jet).","Maniement en individuel ou en binôme selon la configuration du poste.","Maîtrise des distances de sécurité et des techniques d'approche."]}
+  block2Image="/images/Formation extincteur.png"
+  reglementationIntro="L'utilisation d'un RIA nécessite le respect de protocoles stricts pour éviter les risques liés à la pression et à l'électrisation."
+  reglementationCards={[
+    { number: "01", title: "Risques <br>électriques", description: "Identification des zones à risques et distances de sécurité sur équipements sous tension." },
+    { number: "02", title: "Gestion de la <br>pression", description: "Maîtrise du recul et des techniques de maintien pour une manipulation stable." },
+    { number: "03", title: "Maintien en <br>condition", description: "Procédure de purge, de repli et de signalement des anomalies après usage." }
+  ]}
+  moyensIntro="Nous utilisons les RIA de votre site pour une formation au plus près de votre réalité opérationnelle."
+  moyensItems={[
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Atelier</strong> : Manipulation réelle des RIA de l'établissement.`,
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée & bac à feu « écologique ».',
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Théorie</strong> : Supports multimédias & PC portable pour l'analyse.`
+  ]}
+  moyensImage="/images/Robinets Incendie.png"
+  quote='Maîtriser la puissance du RIA pour une <span class="text-[var(--a2ci-red)] font-normal">intervention immédiate</span> et efficace sur tout départ de feu.'
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Pratique" },
+    { value: "Visite", label: "Technique site" }
+  ]}
+  ctaTitle={"Maîtrisez la force de l'<span class=\"text-[var(--a2ci-red)]\">eau ?</span>"}
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ria.pdf"
+/>

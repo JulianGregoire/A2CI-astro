@@ -1,0 +1,190 @@
+---
+---
+<div class="relative w-full transition-all duration-300" id="global-header-wrapper">
+  <!-- Top Bar -->
+  <div class="bg-black text-xs text-gray-300 border-b border-white/10 transition-all duration-300 overflow-hidden" id="top-bar">
+    <div class="max-w-site mx-auto flex flex-wrap items-center justify-between gap-3 px-8 py-2.5">
+      <div class="hidden sm:flex items-center gap-6">
+        <span class="inline-flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-a2ci-red"></span>
+          <span class="font-medium tracking-wide">Coordination SSI, Audit & Conseil</span>
+        </span>
+        <div class="h-4 w-px bg-white/20"></div>
+        <div class="flex items-center gap-2">
+          <img src="/images/qualiopi.png" alt="Qualiopi" class="h-6 w-auto object-contain" />
+          <span class="text-[8px] font-bold uppercase tracking-tight leading-tight text-gray-400">Certifié <br>Qualiopi</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4 sm:gap-6 w-full sm:w-auto justify-between sm:justify-end">
+        <div class="flex items-center gap-2">
+          <svg class="h-3.5 w-3.5 text-a2ci-red" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+          </svg>
+          <span>33210 Mazères</span>
+        </div>
+
+        <a href="tel:+33556272367" class="flex items-center gap-2 transition hover:text-white group">
+          <svg class="h-3.5 w-3.5 text-a2ci-red group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
+          </svg>
+          <span class="font-semibold">05 56 27 23 67</span>
+        </a>
+
+        <a href="mailto:contact@a2ci-prevention-incendie.fr" class="hidden sm:flex items-center gap-2 transition hover:text-white group">
+          <svg class="h-3.5 w-3.5 text-a2ci-red group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+          <span>contact@a2ci.fr</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Principale -->
+  <header class="border-b border-a2ci-grey/70 bg-white text-black shadow-sm transition-all duration-500 ease-in-out" id="main-header">
+    <div class="mx-auto flex max-w-site items-center justify-between gap-12 px-8 py-2" id="main-header-container">
+      
+      <a href="/" class="flex items-center gap-3 group shrink-0">
+        <img src="/images/logo.svg" alt="A2CI Prévention Incendie" class="h-10 w-auto sm:h-12 transition-transform group-hover:scale-105" id="header-logo" />
+        <div class="flex flex-col justify-center">
+          <span class="font-heading text-lg sm:text-xl font-extrabold text-black leading-none uppercase">A2CI</span>
+          <span class="font-heading text-[9px] sm:text-[10px] font-bold text-gray-600 uppercase tracking-widest mt-0.5">Prévention Incendie</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-5 lg:gap-8 text-xs font-semibold">
+        <a href="/a2ci" class="relative hover:text-a2ci-red transition-colors py-2 group">L'agence</a>
+
+        <!-- Dropdown Sécurité Incendie -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-a2ci-red transition-colors py-2 font-semibold group">
+            Sécurité Incendie
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 w-64 bg-white shadow-xl border border-gray-100 py-3 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+            <a href="/coordination-ssi" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">Coordination SSI</a>
+            <a href="/audit" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">Audit & Conseil</a>
+            <a href="/bet-amo" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">BET & AMO</a>
+            <a href="/aide-exploitant" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">Aide à l'Exploitant</a>
+          </div>
+        </div>
+
+        <!-- Dropdown Hygiène & Sécurité -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-a2ci-red transition-colors py-2 font-semibold group">
+            Hygiène & Sécurité
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 w-64 bg-white shadow-xl border border-gray-100 py-3 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+            <a href="/document-unique" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">Document Unique (D.U)</a>
+            <a href="/ppms" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">PPMS</a>
+            <a href="/notices" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">Notices</a>
+          </div>
+        </div>
+
+        <!-- Dropdown Formations -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-a2ci-red transition-colors py-2 font-semibold group">
+            Formations
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute top-full left-0 w-64 bg-white shadow-xl border border-gray-100 py-3 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
+            <a href="/formations" class="block px-6 py-2.5 text-sm text-a2ci-red hover:bg-gray-50 font-bold transition-colors border-b border-gray-50">Catalogue de formations</a>
+            <a href="/formations-incendie" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">Formations INCENDIE</a>
+            <a href="/formations-secourisme" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors">Formations SECOURISME</a>
+            <a href="/modalites-inscription" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors border-t border-gray-100">Modalités d'inscription</a>
+            <a href="/certifications-satisfaction" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-a2ci-red font-semibold transition-colors border-t border-gray-100">Satisfaction & Certification</a>
+          </div>
+        </div>
+
+        <a href="/blog" class="relative hover:text-a2ci-red transition-colors py-2 group">Blog</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="/#contact" class="inline-flex items-center justify-center rounded-md bg-a2ci-red px-6 py-2.5 text-xs font-bold text-white transition-all duration-300 hover:bg-a2ci-red shadow-md hover:shadow-lg hover:-translate-y-0.5">
+          <span class="hidden sm:inline">Demander un devis</span>
+          <span class="sm:hidden">Contact</span>
+        </a>
+
+        <button id="mobile-menu-btn" class="md:hidden relative z-50 flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-black hover:bg-gray-50 focus:outline-none" aria-label="Menu">
+          <svg id="icon-menu" class="h-6 w-6 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg id="icon-close" class="absolute h-6 w-6 opacity-0 rotate-90 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-xl overflow-hidden transition-all duration-300 max-h-0 opacity-0 md:hidden">
+      <div class="flex flex-col p-6 gap-4">
+        <a href="/a2ci" class="text-lg font-bold text-gray-800 hover:text-a2ci-red border-b border-gray-100 pb-3">L'agence</a>
+        <div class="flex flex-col gap-2 border-b border-gray-100 pb-3">
+          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pl-1">Sécurité Incendie</span>
+          <a href="/coordination-ssi" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Coordination SSI</a>
+          <a href="/audit" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Audit & Conseil</a>
+          <a href="/bet-amo" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- BET & AMO</a>
+          <a href="/aide-exploitant" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Aide à l'Exploitant</a>
+        </div>
+        <div class="flex flex-col gap-2 border-b border-gray-100 pb-3">
+          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pl-1">Hygiène & Sécurité</span>
+          <a href="/document-unique" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Document Unique (D.U)</a>
+          <a href="/ppms" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- PPMS</a>
+          <a href="/notices" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Notices</a>
+        </div>
+        <div class="flex flex-col gap-2 border-b border-gray-100 pb-3">
+          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pl-1">Formations</span>
+          <a href="/formations" class="text-lg font-bold text-a2ci-red pl-2">Catalogue de formations</a>
+          <a href="/formations-incendie" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Formations INCENDIE</a>
+          <a href="/formations-secourisme" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Formations SECOURISME</a>
+          <a href="/modalites-inscription" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Modalités d'inscription</a>
+          <a href="/certifications-satisfaction" class="text-lg font-bold text-gray-800 hover:text-a2ci-red pl-2">- Satisfaction & Certification</a>
+        </div>
+        <a href="/blog" class="text-lg font-bold text-gray-800 hover:text-a2ci-red border-b border-gray-100 pb-3">Blog</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  let isMenuOpen = false;
+
+  function toggleMenu() {
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+      menu?.classList.remove('max-h-0', 'opacity-0');
+      menu?.classList.add('max-h-[90vh]', 'opacity-100', 'py-6', 'overflow-y-auto');
+      iconMenu?.classList.add('opacity-0', '-rotate-90');
+      iconClose?.classList.remove('opacity-0', 'rotate-90');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu?.classList.remove('max-h-[90vh]', 'opacity-100', 'py-6', 'overflow-y-auto');
+      menu?.classList.add('max-h-0', 'opacity-0');
+      iconMenu?.classList.remove('opacity-0', '-rotate-90');
+      iconClose?.classList.add('opacity-0', 'rotate-90');
+      document.body.style.overflow = '';
+    }
+  }
+
+  btn?.addEventListener('click', toggleMenu);
+
+  // Close menu on link click
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => { if (isMenuOpen) toggleMenu(); });
+  });
+</script>

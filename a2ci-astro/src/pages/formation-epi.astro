@@ -1,0 +1,50 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+
+<FormationLayout
+  title="EPI - Équipier de Première Intervention - A2CI Prévention"
+  description="Formation Équipier de Première Intervention (EPI). Maîtrisez le maniement des extincteurs, la lutte contre l'incendie et la sécurité avec A2CI."
+  heroTitle='Équipier de Première<br /><span class="text-[var(--a2ci-red)]">Intervention (EPI).</span>'
+  heroSubtitle="Devenez le premier maillon de la sécurité incendie en maîtrisant les techniques d'extinction sur feux réels."
+  heroImage="/images/Formation extincteur.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Équipier de Première Intervention (EPI)"
+  objectivesIntro="Une formation complète mêlant théorie indispensable et pratique intensive sur feux réels pour acquérir une confiance totale face à un début de sinistre."
+  block1Title='Comprendre & <span class="text-[var(--a2ci-red)]">Intervenir.</span>'
+  block1Items={[
+    "Analyser la combustion, les causes d'éclosion et les modes de propagation.",
+    "Maîtriser les classes de feux, les agents et les procédés d'extinction.",
+    "Appréhender l'alarme, l'alerte et la conduite à tenir en zone à risque."
+  ]}
+  block1Image="/images/Formation extincteur.png"
+  block2Title='Pratique & <span class="text-[var(--a2ci-red)]">Efficacité.</span>'
+  block2Items={[
+    "Exercices pratiques sur feux réels avec manipulation par chaque participant.",
+    "Maîtrise de la description et du mode d'utilisation des extincteurs.",
+    "Remise d'un mémento pratique à chaque participant en fin de stage."
+  ]}
+  block2Image="/images/sri_base_formation.png"
+  reglementationIntro="L'action rapide de l'EPI permet de stopper la propagation d'un feu dans les premières minutes cruciales."
+  reglementationCards={[
+    { number: "01", title: "Triangle <br>du feu", description: "Compréhension des mécanismes de combustion pour mieux les interrompre." },
+    { number: "02", title: "Conduite à <br>tenir", description: "De la découverte du feu à l'alerte et l'engagement sécurisé des moyens." },
+    { number: "03", title: "Organisation <br>interne", description: "L'intégration de l'EPI dans la chaîne de secours de l'entreprise." }
+  ]}
+  moyensIntro="Du matériel professionnel pour une formation de terrain sans aucun risque pour l'environnement."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Simulateur</strong> : Générateur de feu « écologique » (sans pollution).',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Pratique</strong> : Extincteurs pédagogiques tous types pour chaque participant.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Théorie</strong> : Vidéo projecteur et écran sur pied.'
+  ]}
+  moyensImage="/images/Formation extincteur.png"
+  quote='Maîtriser les gestes de première intervention pour <span class="text-[var(--a2ci-red)] font-normal">neutraliser un départ de feu</span> en toute confiance et sécurité.'
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Terrain" },
+    { value: "Qualiopi", label: "Formation certifiée" }
+  ]}
+  ctaTitle='Maîtrisez les gestes qui <span class="text-[var(--a2ci-red)]">sauvent ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-epi.pdf"
+/>

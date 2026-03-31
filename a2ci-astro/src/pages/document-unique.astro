@@ -1,0 +1,133 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import TimelineSteps from '../components/TimelineSteps.astro';
+import Accordion from '../components/Accordion.astro';
+---
+
+<ServiceLayout
+  title="Document Unique (DUERP) - A2CI Hygiène & Sécurité"
+  description="Évaluation des risques professionnels et Document Unique (DUERP) par A2CI. Identifier, évaluer et prévenir les risques pour la santé et la sécurité au travail."
+  heroTitle={"Document Unique <br><span class=\"text-[var(--a2ci-red)]\">d'Évaluation des Risques.</span>"}
+  heroSubtitle="Identifier, évaluer et analyser les risques auxquels sont exposés les salariés durant leur travail pour mettre en place une prévention efficace."
+  heroImage="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+  breadcrumbs={[
+    { label: "Accueil", href: "/" },
+    { label: "Hygiène & Sécurité", href: "/#audit-conseil" },
+    { label: "Document Unique d'Évaluation des Risques" }
+  ]}
+  ctaTitle='Mettre votre Document Unique en <span class="text-a2ci-red">conformité</span>'
+>
+
+  <TimelineSteps
+    title='Notre <span class="text-[var(--a2ci-red)]">Approche.</span>'
+    subtitle="Une démarche structurée pour la santé et la sécurité de vos collaborateurs."
+    steps={[
+      { number: "01", title: "Identifier", description: "Recenser les risques de chaque unité de travail." },
+      { number: "02", title: "Évaluer", description: "Analyser les risques selon leur gravité et leur fréquence." },
+      { number: "03", title: "Prévenir", description: "Mettre en place des actions pour réduire ou supprimer les risques." }
+    ]}
+  />
+
+  <!-- Section 1: Obligation réglementaire -->
+  <section class="bg-gray-50">
+    <div class="container-custom">
+      <div class="section-custom scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Obligation <span class="text-[var(--a2ci-red)]">réglementaire</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Le <strong>Document Unique</strong> est <span class="font-bold text-gray-900">obligatoire pour toutes les entreprises</span> employant au moins une personne.
+          </p>
+          <p class="mb-4 text-gray-600">
+            Il doit être <strong>mis à jour chaque année</strong>, après un <strong>accident du travail</strong> ou lors de tout changement dans l'<strong>organisation</strong>, la <strong>technique</strong> ou les <strong>conditions de travail</strong>.
+          </p>
+          <p class="text-gray-600">
+            Le <strong>chef d'entreprise</strong> est responsable de son élaboration et peut être sanctionné en cas de non-respect.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Obligation reglementaire(D.U).png" alt="Obligation réglementaire" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Finalité -->
+  <section class="bg-gray-50">
+    <div class="container-custom pt-0">
+      <div class="section-custom reverse scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Finalité du <span class="text-[var(--a2ci-red)]">Document Unique</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Le <strong>Document Unique</strong> permet de mettre en place des <strong>actions de prévention</strong> efficaces afin d'améliorer les <strong>conditions de travail</strong> et réduire les <strong>risques professionnels</strong>.
+          </p>
+          <p class="text-gray-600">
+            Il permet également d'<strong>identifier des risques</strong> souvent sous-estimés comme les <strong>chutes de plain-pied</strong> ou les <strong>manutentions</strong>.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/finalite_du_unique.png" alt="Finalité" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Détail (Dark) -->
+  <section id="detail-reglementaire" class="section-dark">
+    <div class="container-custom">
+      <div class="scroll-reveal">
+        <div class="text-center mb-16">
+          <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Expertise & Conformité</p>
+          <h2 class="font-heading text-4xl font-bold text-white">Détail du <span class="text-red">Document Unique</span></h2>
+        </div>
+
+        <Accordion items={[
+          {
+            title: "Réglementation",
+            content: `<ul class="premium-list !text-gray-400">
+              <li>Article L4121-1 à L4121-3 du Code du Travail</li>
+              <li>Directive 89/391/CEE du 12 juin 1989</li>
+              <li>Décret 2001-1016 du 05 novembre 2001</li>
+              <li>Circulaire DRT n°6 du 18 avril 2002</li>
+              <li>Loi n°91-1414 du 31 décembre 1991</li>
+              <li>Décrets 2008-244 et 2008-1347</li>
+            </ul>`
+          },
+          {
+            title: "Responsabilité du chef d'entreprise",
+            content: `<p class="text-sm text-gray-400 mb-4">Le chef d'entreprise est responsable de l'élaboration du Document Unique. En cas d'accident, sa responsabilité pénale peut être engagée.</p>
+            <div class="p-4 bg-white/5 border-l-2 border-[var(--a2ci-red)] rounded-r-lg">
+              <p class="text-xs italic text-[#C00000]">« Le fait de ne pas transcrire ou de ne pas mettre à jour les résultats de l'évaluation des risques est puni d'une amende de 5ème classe » (Article R4741-1 du Code du Travail).</p>
+            </div>`
+          },
+          {
+            title: "Contenu du Document Unique",
+            content: `<p class="text-sm text-gray-400 mb-4">Support écrit regroupant l'inventaire des risques et les résultats de l'évaluation. Deux fonctions principales :</p>
+            <ul class="premium-list !text-gray-400">
+              <li><strong>Bilan de la situation</strong> en matière d'hygiène, sécurité et conditions de travail</li>
+              <li>Élaboration d'un <strong>plan d'actions de prévention</strong></li>
+            </ul>`
+          },
+          {
+            title: "Méthodologie",
+            content: `<ul class="premium-list !text-gray-400">
+              <li>Identifier les risques pour chaque unité de travail</li>
+              <li><div>Évaluer les risques selon :<p class="text-[10px] mt-1 opacity-70">• Gravité | • Fréquence d'exposition | • Maîtrise du risque</p></div></li>
+              <li>Mettre en place un plan d'action adapté à chaque risque</li>
+            </ul>`
+          }
+        ]} />
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>

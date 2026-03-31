@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Exercice d'Évacuation périodique - A2CI Prévention"
+  description="Exercice d'évacuation périodique. Testez votre organisation de sécurité, améliorez les temps de réponse et assurez la sécurité avec A2CI."
+  heroTitle={"Exercice d'<br /><span class=\"text-[var(--a2ci-red)]\">Évacuation.</span>"}
+  heroSubtitle="Mettez à l'épreuve votre organisation de sécurité et assurez-vous que chaque collaborateur connaît les gestes qui sauvent."
+  heroImage="/images/evacuation.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Exercice d'Évacuation"
+  objectivesIntro="Un test grandeur nature pour évaluer l'efficacité de vos procédures, la réactivité de vos équipes et le bon fonctionnement de vos équipements de mise en sécurité."
+  block1Title='Tester & <span class="text-[var(--a2ci-red)]">Ajuster.</span>'
+  block1Items={["Tester la réactivité du personnel face à un signal d'alarme.","Vérifier la bonne exécution des missions des Guides et Serre-Files.","Identifier les points d'amélioration de l'organisation interne."]}
+  block1Image="/images/evacuation.png"
+  block2Title='Analyser & <span class="text-[var(--a2ci-red)]">Certifier.</span>'
+  block2Items={["Observation neutre par un expert prévention externe (A2CI).","Bilan à chaud avec les responsables après l'exercice.","Rédaction d'un \"Compte-rendu d'exercice\" détaillé pour le registre de sécurité."]}
+  block2Image="/images/transfert_horizontal.png"
+  reglementationIntro="L'exercice permet de valider concrètement les piliers de votre stratégie d'évacuation."
+  reglementationCards={[
+    { number: "01", title: "Temps de <br>réponse", description: "Mesure du délai entre l'alarme et le vidage complet de l'établissement." },
+    { number: "02", title: "Audibilité <br>Alarme", description: "Vérification de la perception du signal dans toutes les zones du bâtiment." },
+    { number: "03", title: "Point de <br>rassemblement", description: "Évaluation de la gestion des flux et du comptage des collaborateurs." }
+  ]}
+  moyensIntro="Nous apportons un regard extérieur professionnel pour un audit de sécurité objectif."
+  moyensItems={[
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée pour simuler l'obstruction d'une issue.`,
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Analyse</strong> : Grilles d'évaluation précises (norme NF S 61-931).`,
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Certification</strong> : Inscription officielle au registre de sécurité de l'entreprise.`
+  ]}
+  moyensImage="/images/evacuation.png"
+  quote='Un exercice grandeur nature pour <span class="text-[var(--a2ci-red)] font-normal">valider votre organisation</span> de sécurité et optimiser les temps de réponse.'
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "Totalité", label: "Personnel impliqué" },
+    { value: "100%", label: "Réalité terrain" },
+    { value: "Expert", label: "Bilan certifié" }
+  ]}
+  ctaTitle={"Testez votre plan d'<span class=\"text-[var(--a2ci-red)]\">évacuation ?</span>"}
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-exe_eva.pdf"
+/>

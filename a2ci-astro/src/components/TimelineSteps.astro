@@ -1,0 +1,42 @@
+---
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  steps: Step[];
+}
+
+const { title, subtitle, steps } = Astro.props;
+---
+
+<section class="bg-gray-50 py-20 border-b border-gray-100">
+  <div class="container-custom py-0">
+    <div class="mb-20 scroll-reveal text-center">
+      <div class="h2-bar justify-center">
+        <span></span>
+        <h2 class="section-title mb-0" set:html={title} />
+        <span></span>
+      </div>
+      {subtitle && <p class="text-gray-500 font-light max-w-2xl mx-auto">{subtitle}</p>}
+    </div>
+
+    <div class:list={[`grid gap-8 relative px-4 text-center`, steps.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-4']}>
+      {steps.map((step, i) => (
+        <div class="text-center scroll-reveal" style={i > 0 ? `transition-delay: ${i * 100}ms` : undefined}>
+          <div class="mb-6 relative">
+            <div class="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto border border-gray-100 shadow-sm relative z-10">
+              <span class="text-[var(--a2ci-red)] font-bold">{step.number}</span>
+            </div>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">{step.title}</h3>
+          <p class="text-xs text-gray-500 font-light px-4">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

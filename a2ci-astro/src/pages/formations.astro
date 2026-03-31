@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import HeroSection from '../components/HeroSection.astro';
+import QualiopiBar from '../components/QualiopiBar.astro';
+---
+
+<BaseLayout title="Catalogue de Formations - A2CI Prévention Incendie" description="Découvrez notre catalogue complet de formations en sécurité incendie et secourisme (SST, SRI, ARI, SSI) par A2CI.">
+  <Header />
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Catalogue de Formations" }
+  ]} />
+
+  <HeroSection
+    title='Catalogue de<br /><span class="text-[var(--a2ci-red)]">Formations.</span>'
+    subtitle="A2CI vous accompagne dans la montée en compétences de vos collaborateurs à travers des programmes certifiants et opérationnels."
+    backgroundImage="/images/catalogue_hero.png"
+    ctaText="Explorer le catalogue"
+    ctaHref="#categories"
+    centered
+  />
+
+  <QualiopiBar />
+
+  <!-- Categories Grid -->
+  <section id="categories" class="py-24 bg-gray-50">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 gap-12">
+
+        <!-- Category Incendie -->
+        <a href="/formations-incendie" class="category-card group relative block h-[600px] rounded-[3rem] overflow-hidden shadow-2xl scroll-reveal">
+          <div class="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-110">
+            <img src="/images/catalogue_incendie.png" alt="Formation Incendie" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          <div class="absolute inset-x-0 bottom-0 p-12 z-10">
+            <span class="inline-block px-4 py-1 bg-[var(--a2ci-red)] text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Expertise Technique</span>
+            <div class="h2-bar mb-6">
+              <span></span>
+              <h2 class="font-heading text-4xl font-bold text-white uppercase tracking-tight leading-tight">Formations <br>INCENDIE</h2>
+            </div>
+            <p class="text-gray-300 font-light mb-8 max-w-sm">SRI, ARI, SSI, Évacuation... Maîtrisez les risques et les outils d'extinction.</p>
+            <div class="inline-flex items-center gap-4 text-white font-bold group-hover:gap-6 transition-all">
+              Explorer le catalogue
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Category Secourisme -->
+        <a href="/formations-secourisme" class="category-card group relative block h-[600px] rounded-[3rem] overflow-hidden shadow-2xl scroll-reveal" style="transition-delay: 200ms;">
+          <div class="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-110">
+            <img src="/images/catalogue_secourisme.png" alt="Formation Secourisme" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+          </div>
+          <div class="absolute inset-x-0 bottom-0 p-12 z-10">
+            <span class="inline-block px-4 py-1 bg-black text-white text-[10px] font-bold uppercase tracking-widest rounded-full mb-8">Santé au Travail</span>
+            <div class="h2-bar mb-6">
+              <span></span>
+              <h2 class="font-heading text-4xl font-bold text-white uppercase tracking-tight leading-tight">Formations <br>SECOURISME</h2>
+            </div>
+            <p class="text-gray-300 font-light mb-8 max-w-sm">SST, défibrillateur (DAE)... Les gestes qui sauvent en milieu professionnel.</p>
+            <div class="inline-flex items-center gap-4 text-white font-bold group-hover:gap-6 transition-all">
+              Explorer le catalogue
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-[1150px] mx-auto px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        <div class="scroll-reveal">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">15+</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Programmes</div>
+        </div>
+        <div class="scroll-reveal" style="transition-delay: 100ms;">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">10</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Pers. Max / Session</div>
+        </div>
+        <div class="scroll-reveal" style="transition-delay: 200ms;">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">100%</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Opérationnel</div>
+        </div>
+        <div class="scroll-reveal" style="transition-delay: 300ms;">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">Sur-mesure</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest">Adaptation locale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .category-card {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .category-card:hover {
+    transform: translateY(-12px);
+  }
+</style>

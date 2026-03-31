@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Formation SSI - Exploitation du Système de Sécurité Incendie - A2CI"
+  description="Formation Exploitation du Système de Sécurité Incendie (SSI). Maîtrisez votre centrale et vos équipements de détection avec A2CI."
+  heroTitle='Formation<br /><span class="text-[var(--a2ci-red)]">SSI.</span>'
+  heroSubtitle="Apprenez à exploiter, surveiller et maintenir votre Système de Sécurité Incendie pour garantir la réactivité de votre établissement."
+  heroImage="/images/ssi_hero.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Formation SSI"
+  objectivesIntro="Une formation complète pour connaître, manipuler et diagnostiquer votre installation SSI au quotidien."
+  block1Title='Connaître & <span class="text-[var(--a2ci-red)]">Manipuler.</span>'
+  block1Items={["Identifier les composants du SSI : détecteurs, déclencheurs, centrales, DAS.","Connaître le fonctionnement du CMSI et ses différentes configurations.","Exploiter la centrale en situation normale : lecture des états, acquittement."]}
+  block1Image="/images/ssi_hero.png"
+  block2Title='Analyse & <span class="text-[var(--a2ci-red)]">Maintenance.</span>'
+  block2Items={["Réagir face aux alarmes, dérangements et défauts signalés par le SSI.","Effectuer les opérations de maintenance de niveau 1.","Remplir le registre de sécurité et tenir à jour le main-courante."]}
+  block2Image="/images/ssi_maintenance.png"
+  reglementationIntro="Le SSI est au cœur de la réglementation incendie. Sa maîtrise est une obligation pour les exploitants d'ERP et d'IGH."
+  reglementationCards={[
+    { number: "01", title: "Norme <br>NF S 61-931", description: "Définition des catégories de SSI (A à E) et des exigences fonctionnelles associées." },
+    { number: "02", title: "Règlement de <br>Sécurité ERP", description: "Obligation de formation du personnel à l'exploitation du SSI selon le type d'établissement." },
+    { number: "03", title: "Registre <br>de Sécurité", description: "Consignation des vérifications, essais et interventions sur le système de sécurité." }
+  ]}
+  moyensIntro="Nos formateurs experts interviennent directement sur votre installation SSI."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Sur site</strong> : Manipulation directe de votre centrale et de vos équipements.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Supports</strong> : Documentation technique, schémas fonctionnels et procédures.',
+    "<strong class='text-gray-900 font-bold uppercase tracking-widest text-xs'>Bilan</strong> : Rapport de formation avec état des lieux de l'installation."
+  ]}
+  moyensImage="/images/ssi_hero.png"
+  quote='Maîtrisez votre <span class="text-[var(--a2ci-red)] font-normal">système SSI</span> pour anticiper et réagir efficacement à toute situation.'
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Pratique" },
+    { value: "Audit", label: "Préconisations" }
+  ]}
+  ctaTitle='Maîtrisez votre système <span class="text-[var(--a2ci-red)]">SSI ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ssi_no1.pdf"
+/>

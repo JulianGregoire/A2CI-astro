@@ -1,0 +1,117 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import HeroSection from '../components/HeroSection.astro';
+
+interface ListItem {
+  title: string;
+  description: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroImage: string;
+  breadcrumbLabel: string;
+  sectionTitle: string;
+  sectionIntro: string;
+  sectionImage: string;
+  listItems: ListItem[];
+}
+
+const {
+  title,
+  description,
+  heroTitle,
+  heroSubtitle,
+  heroImage,
+  breadcrumbLabel,
+  sectionTitle,
+  sectionIntro,
+  sectionImage,
+  listItems,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description} bodyClass="overflow-x-hidden w-full">
+  <Header />
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Type de bâtiments", href: "/#secteurs" },
+    { label: breadcrumbLabel }
+  ]} />
+
+  <HeroSection
+    title={heroTitle}
+    subtitle={heroSubtitle}
+    backgroundImage={heroImage}
+    ctaText="Demander une étude"
+    ctaHref="/#contact"
+    secondaryCtaText="Nos solutions"
+    secondaryCtaHref="#procede"
+    centered
+  />
+
+  <!-- Content Section -->
+  <section id="procede" class="bg-white py-20">
+    <div class="container-custom">
+      <div class="section-custom">
+        <div class="section-text">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="h-[2px] w-8 bg-[var(--a2ci-red)]"></span>
+            <h2 class="font-heading text-3xl font-bold mb-0 text-gray-900" set:html={sectionTitle} />
+          </div>
+          <p class="mb-8 text-lg font-light text-gray-600">{sectionIntro}</p>
+          <ul class="space-y-4 mb-8">
+            {listItems.map((item) => (
+              <li class="flex items-start gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100">
+                <div class="h-6 w-6 rounded-full bg-[var(--a2ci-red)]/10 flex items-center justify-center text-[var(--a2ci-red)] shrink-0 mt-1">
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" /></svg>
+                </div>
+                <div>
+                  <span class="font-bold text-gray-900 block">{item.title}</span>
+                  <span class="text-sm text-gray-500">{item.description}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src={sectionImage} alt={breadcrumbLabel} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 bg-gray-50 border-y border-gray-100">
+    <div class="max-w-[1150px] mx-auto px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+        <div class="scroll-reveal">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">CAT 1-5</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">Couverture complète</div>
+        </div>
+        <div class="scroll-reveal" style="transition-delay: 100ms;">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">100%</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">Réglementaire</div>
+        </div>
+        <div class="scroll-reveal" style="transition-delay: 200ms;">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">20 ANS</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">D'expérience</div>
+        </div>
+        <div class="scroll-reveal" style="transition-delay: 300ms;">
+          <div class="text-4xl font-bold text-[var(--a2ci-red)] mb-2">EXPERT</div>
+          <div class="text-xs font-bold text-gray-400 uppercase tracking-widest leading-tight">Terrain</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

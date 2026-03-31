@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const { title, ctaText = "Demander un devis", ctaHref = "/#contact" } = Astro.props;
+---
+
+<section class="section-cta">
+  <div class="container-custom">
+    <div class="cta">
+      <h2 class="section-title !text-white mb-6" set:html={title} />
+      <a href={ctaHref} class="cta-button">{ctaText}</a>
+    </div>
+  </div>
+</section>

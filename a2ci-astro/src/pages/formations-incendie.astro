@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import HeroSection from '../components/HeroSection.astro';
+import QualiopiBar from '../components/QualiopiBar.astro';
+import FormationCard from '../components/FormationCard.astro';
+
+const formations = [
+  {
+    href: "/formation-sri", id: "sri", category: "Base", badgeColor: "bg-gray-500", badge: "Fondamentaux",
+    image: "/images/sri_base_formation.png",
+    title: 'Sensibilisation au <br><span class="text-[var(--a2ci-red)]">Risque Incendie (SRI)</span>',
+    description: "Acquérez les réflexes essentiels et les conduites à tenir en cas de départ de feu pour garantir votre sécurité.",
+    duration: "1 JOURNÉE (7H)"
+  },
+  {
+    href: "/formation-sri-handicap", id: "sri-handicap", category: "Base", badgeColor: "bg-gray-500", badge: "Fondamentaux",
+    image: "/images/sri_handicap.png",
+    title: 'Risque Incendie <br><span class="text-[var(--a2ci-red)]">(Handicap)</span>',
+    description: "Sensibilisation adaptée aux types de handicap pour alarmer, alerter et évacuer en toute sécurité.",
+    duration: "1/2 JOURNÉE"
+  },
+  {
+    href: "/formation-ssi", id: "ssi", category: "Systemes", badgeColor: "bg-black", badge: "Matériel & Systèmes",
+    image: "/images/ssi_hero.png",
+    title: 'Exploitation du <br><span class="text-[var(--a2ci-red)]">SSI & Évacuation</span>',
+    description: "Maîtrisez le fonctionnement des organes de sécurité incendie et analysez les événements de mise en sécurité.",
+    duration: "1 JOURNÉE (7H)"
+  },
+  {
+    href: "/formation-ari", id: "ari", category: "Specifiques", badgeColor: "bg-[var(--a2ci-red)]", badge: "ARI Spécialisés",
+    image: "/images/ari_formation.png",
+    title: 'Appareil Respiratoire <br><span class="text-[var(--a2ci-red)]">Isolant (ARI)</span>',
+    description: "Maîtrisez l'utilisation de l'ARI en binôme et comprenez les contraintes physiologiques liées à son port.",
+    duration: "1 JOURNÉE (7H)"
+  },
+  {
+    href: "/formation-ari-recyclage", id: "ari-recyclage", category: "Specifiques", badgeColor: "bg-[var(--a2ci-red)]", badge: "ARI Spécialisés",
+    image: "/images/ari_recyclage.png",
+    title: 'Recyclage <br><span class="text-[var(--a2ci-red)]">ARI</span>',
+    description: "Maintenez votre capacité d'intervention et révisez les principes d'utilisation et de sécurité de l'ARI.",
+    duration: "1/2 JOURNÉE"
+  },
+  {
+    href: "/formation-ria", id: "ria", category: "Systemes", badgeColor: "bg-black", badge: "Matériel & Systèmes",
+    image: "/images/Robinets Incendie.png",
+    title: `Robinet d'Incendie <br><span class="text-[var(--a2ci-red)]">Armé (RIA)</span>`,
+    description: "Apprenez à utiliser efficacement le RIA et maîtrisez les règles de sécurité lors de son engagement.",
+    duration: "1/2 JOURNÉE"
+  },
+  {
+    href: "/formation-epi", id: "epi", category: "Base", badgeColor: "bg-gray-500", badge: "Fondamentaux",
+    image: "/images/Formation extincteur.png",
+    title: 'Équipier de Première <br><span class="text-[var(--a2ci-red)]">Intervention (EPI)</span>',
+    description: "Maîtrisez le maniement des extincteurs sur feux réels et apprenez à analyser les classes de feux.",
+    duration: "1/2 JOURNÉE"
+  },
+  {
+    href: "/formation-esi", id: "esi", category: "Systemes", badgeColor: "bg-black", badge: "Matériel & Systèmes",
+    image: "/images/esi_formation.png",
+    title: 'Équipier de Seconde <br><span class="text-[var(--a2ci-red)]">Intervention (ESI)</span>',
+    description: "Analyse approfondie du risque incendie, utilisation du RIA et étude des systèmes d'extinction automatique.",
+    duration: "1 JOURNÉE (7H)"
+  },
+  {
+    href: "/formation-transfert-horizontal", id: "transfert", category: "Evacuation", badgeColor: "bg-[var(--a2ci-red)]", badge: "Évacuation",
+    image: "/images/transfert_horizontal.png",
+    title: 'Transfert Horizontal <br><span class="text-[var(--a2ci-red)]">& Mise en Sécurité</span>',
+    description: "Mise en œuvre des procédures de sécurité pour les types U et J, et exploitation du système de détection.",
+    duration: "1 JOURNÉE (7H)"
+  },
+  {
+    href: "/formation-referent-incendie", id: "referent", category: "Conseil", badgeColor: "bg-gray-800", badge: "Conseil & Référents",
+    image: "/images/referent_incendie.png",
+    title: 'Référent <br><span class="text-[var(--a2ci-red)]">Incendie Site</span>',
+    description: "Devenez le garant de la sécurité incendie de votre établissement et maîtrisez l'exploitation du SSI.",
+    duration: "SUR-MESURE"
+  },
+  {
+    href: "/formation-evacuation-gsf", id: "evacuation", category: "Evacuation", badgeColor: "bg-[var(--a2ci-red)]", badge: "Évacuation",
+    image: "/images/evacuation.png",
+    title: 'Guides & <br><span class="text-[var(--a2ci-red)]">Serre-Files (GSF)</span>',
+    description: "Répartissez les rôles et gérez le recensement en zone de sécurité pour une évacuation maîtrisée.",
+    duration: "1/2 JOURNÉE"
+  },
+  {
+    href: "/formation-exercice-evacuation", id: "exercice", category: "Evacuation", badgeColor: "bg-[var(--a2ci-red)]", badge: "Évacuation",
+    image: "/images/entrenement-incendie.png",
+    title: `Exercice <br><span class="text-[var(--a2ci-red)]">d'Évacuation Réel</span>`,
+    description: "Validation de terrain avec mise en situation réelle pour tester l'alarme et les délais de mise en sécurité.",
+    duration: "1/2 JOURNÉE"
+  }
+];
+
+const filters = [
+  { value: "all", label: "Tous les stages" },
+  { value: "Base", label: "Fondamentaux" },
+  { value: "Systemes", label: "Matériel & Systèmes" },
+  { value: "Specifiques", label: "ARI Spécialisés" },
+  { value: "Evacuation", label: "Évacuation" },
+  { value: "Conseil", label: "Conseil & Référents" }
+];
+---
+
+<BaseLayout title="Formations INCENDIE - A2CI Prévention" description="Catalogue complet des formations sécurité incendie: SRI, ARI, SSI, Évacuation. Expertise et pédagogie par A2CI." bodyClass="bg-gray-50 overflow-x-hidden w-full">
+  <Header />
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Formations", href: "/formations" },
+    { label: "Formations INCENDIE" }
+  ]} />
+
+  <HeroSection
+    title='Formations<br /><span class="text-[var(--a2ci-red)]">INCENDIE.</span>'
+    subtitle="Maîtrisez les risques, les procédures d'évacuation et l'usage des équipements de sécurité incendie."
+    backgroundImage="/images/formation incendie.png"
+    ctaText="Voir le catalogue"
+    ctaHref="/formations"
+    centered
+  />
+
+  <QualiopiBar />
+
+  <section class="py-24 bg-gray-50">
+    <div class="container-custom">
+      <!-- Filtres -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-20 scroll-reveal">
+        {filters.map((f, i) => (
+          <button data-filter={f.value} class={`filter-btn px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest border border-gray-100 transition-all ${i === 0 ? 'active' : 'bg-white text-gray-500'}`}>
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {formations.map((f) => (
+          <FormationCard {...f} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-black text-white text-center">
+    <div class="max-w-4xl mx-auto px-8">
+      <h2 class="font-heading text-4xl font-bold mb-8 uppercase italic">Besoin d'un programme sur-mesure ?</h2>
+      <p class="text-xl text-gray-400 mb-12 font-light">Nous adaptons nos formations aux réalités techniques de votre établissement et à la typologie de vos risques.</p>
+      <a href="/#contact" class="inline-block px-10 py-5 bg-[var(--a2ci-red)] rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all transform hover:-translate-y-1">Consulter nos experts</a>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .formation-card {
+    background: white;
+    border-radius: 2.5rem;
+    border: 1px solid #f1f1f1;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+  }
+  .formation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.05);
+    border-color: var(--a2ci-red);
+  }
+  .filter-btn.active {
+    background: black;
+    color: white;
+    border-color: black;
+  }
+</style>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const formationCards = document.querySelectorAll('.formation-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('active');
+        b.classList.add('bg-white', 'text-gray-500');
+      });
+      btn.classList.remove('bg-white', 'text-gray-500');
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      formationCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+
+        setTimeout(() => {
+          if (filterValue === 'all' || category === filterValue) {
+            card.style.display = 'block';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, 50);
+          } else {
+            card.style.display = 'none';
+          }
+        }, 300);
+      });
+    });
+  });
+</script>

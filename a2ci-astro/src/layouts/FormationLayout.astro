@@ -1,0 +1,247 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import HeroSection from '../components/HeroSection.astro';
+import QualiopiBar from '../components/QualiopiBar.astro';
+
+interface RegCard {
+  number: string;
+  title: string;
+  description: string;
+}
+
+interface Stat {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroImage: string;
+  parentCategory: 'incendie' | 'secourisme';
+  breadcrumbLabel: string;
+  objectivesIntro: string;
+  block1Title: string;
+  block1Items: string[];
+  block1Image: string;
+  block2Title: string;
+  block2Items: string[];
+  block2Image: string;
+  reglementationIntro?: string;
+  reglementationCards?: RegCard[];
+  moyensIntro: string;
+  moyensItems: string[];
+  moyensImage: string;
+  quote: string;
+  stats: Stat[];
+  ctaTitle: string;
+  pdfUrl?: string;
+}
+
+const {
+  title,
+  description: desc,
+  heroTitle,
+  heroSubtitle,
+  heroImage,
+  parentCategory,
+  breadcrumbLabel,
+  objectivesIntro,
+  block1Title,
+  block1Items,
+  block1Image,
+  block2Title,
+  block2Items,
+  block2Image,
+  reglementationIntro,
+  reglementationCards,
+  moyensIntro,
+  moyensItems,
+  moyensImage,
+  quote,
+  stats,
+  ctaTitle,
+  pdfUrl,
+} = Astro.props;
+
+const parentHref = parentCategory === 'incendie' ? '/formations-incendie' : '/formations-secourisme';
+const parentLabel = parentCategory === 'incendie' ? 'Formations INCENDIE' : 'Formations SECOURISME';
+---
+
+<BaseLayout title={title} description={desc}>
+  <Header />
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Formations", href: "/formations" },
+    { label: parentLabel, href: parentHref },
+    { label: breadcrumbLabel }
+  ]} />
+
+  <HeroSection
+    title={heroTitle}
+    subtitle={heroSubtitle}
+    backgroundImage={heroImage}
+    ctaText="Découvrir le programme"
+    ctaHref="#objectifs"
+    centered
+  />
+
+  <QualiopiBar />
+
+  <!-- Objectifs Pédagogiques -->
+  <section id="objectifs" class="pt-0 pb-12 bg-white">
+    <div class="container-custom">
+      <div class="max-w-3xl mx-auto text-center mb-10 scroll-reveal">
+        <div class="h2-bar !items-center !justify-center mb-8">
+          <span class="!mt-0"></span>
+          <h2 class="section-title mb-0">Objectifs <span class="text-[var(--a2ci-red)]">Pédagogiques.</span></h2>
+          <span class="!mt-0"></span>
+        </div>
+        <p class="text-lg text-gray-600 font-light leading-relaxed">{objectivesIntro}</p>
+      </div>
+    </div>
+
+    <!-- Block 1 -->
+    <div class="container-custom py-12">
+      <div class="section-custom">
+        <div class="section-img scroll-reveal">
+          <div class="img-wrapper !h-[450px]">
+            <img src={block1Image} alt={breadcrumbLabel} />
+          </div>
+        </div>
+        <div class="section-text scroll-reveal" style="transition-delay: 100ms;">
+          <div class="h2-bar">
+            <span></span>
+            <h3 class="text-3xl font-bold uppercase tracking-tight mb-8" set:html={block1Title} />
+          </div>
+          <ul class="premium-list text-gray-600">
+            {block1Items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2 -->
+    <div class="container-custom py-12">
+      <div class="section-custom border-none">
+        <div class="section-text scroll-reveal" style="transition-delay: 100ms;">
+          <div class="h2-bar">
+            <span></span>
+            <h3 class="text-3xl font-bold uppercase tracking-tight mb-8" set:html={block2Title} />
+          </div>
+          <ul class="premium-list text-gray-600">
+            {block2Items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+        <div class="section-img scroll-reveal">
+          <div class="img-wrapper !h-[450px]">
+            <img src={block2Image} alt={breadcrumbLabel} />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Réglementation -->
+  {reglementationCards && reglementationCards.length > 0 && <section class="py-24 bg-gray-50">
+    <div class="container-custom">
+      <div class="relative overflow-hidden scroll-reveal">
+        <div class="relative z-10 p-4 lg:p-0">
+          <div class="max-w-3xl mb-20">
+            <div class="h2-bar !items-center mb-8">
+              <span class="!mt-0"></span>
+              <h3 class="text-3xl lg:text-4xl font-bold uppercase tracking-tight mb-0 text-gray-900">Cadre <span class="text-[var(--a2ci-red)]">Réglementaire.</span></h3>
+            </div>
+            <p class="text-xl text-gray-500 font-light leading-relaxed">{reglementationIntro}</p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+            {reglementationCards.map((card, i) => (
+              <div class="group" style={i > 0 ? `transition-delay: ${i * 100}ms;` : ''}>
+                <div class="text-[var(--a2ci-red)] font-heading text-5xl font-extrabold mb-6 opacity-40 group-hover:opacity-100 transition-opacity duration-300">{card.number}</div>
+                <h4 class="text-lg font-bold uppercase tracking-widest text-gray-900 mb-4 leading-tight" set:html={card.title} />
+                <div class="h-px w-12 bg-gray-200 mb-6 group-hover:w-full group-hover:bg-[var(--a2ci-red)] transition-all duration-500"></div>
+                <p class="text-sm text-gray-600 font-light leading-relaxed">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>}
+
+  <!-- Moyens Techniques -->
+  <section class="py-24 bg-white">
+    <div class="container-custom py-0">
+      <div class="section-custom items-start">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Moyens <span class="text-[var(--a2ci-red)]">Techniques.</span></h2>
+          </div>
+          <p class="text-gray-600 mb-10 leading-relaxed font-light">{moyensIntro}</p>
+          <ul class="premium-list text-gray-600 font-light space-y-4">
+            {moyensItems.map((item) => <li set:html={item} />)}
+          </ul>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper !h-[450px]">
+            <img src={moyensImage} alt="Moyens techniques" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="py-16 bg-white">
+    <div class="container-custom py-0 text-center">
+      <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-10">Programme de formation</h4>
+      <div class="max-w-4xl mx-auto relative px-8">
+        <span class="absolute -top-10 -left-4 text-8xl text-red-500/10 font-serif leading-none">"</span>
+        <p class="text-2xl md:text-3xl lg:text-4xl text-gray-800 font-light italic leading-relaxed" set:html={quote} />
+        <span class="absolute -bottom-10 -right-4 text-8xl text-red-500/10 font-serif leading-none rotate-180">"</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-16 bg-white">
+    <div class="container-custom">
+      <div class="h2-bar !items-center !justify-center mb-10">
+        <span class="!mt-0"></span>
+        <h2 class="section-title mb-0">Organisation <span class="text-[var(--a2ci-red)]">sur site.</span></h2>
+        <span class="!mt-0"></span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        {stats.map((stat, i) => (
+          <div class="scroll-reveal" style={i > 0 ? `transition-delay: ${i * 100}ms;` : ''}>
+            <div class="text-4xl lg:text-5xl font-bold text-[var(--a2ci-red)] mb-2">{stat.value}</div>
+            <div class="text-[10px] font-bold text-gray-400 uppercase tracking-[0.2em]">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-white">
+    <div class="max-w-[1150px] mx-auto px-8 text-center">
+      <h2 class="section-title mb-8" set:html={ctaTitle} />
+      <div class="flex flex-wrap justify-center gap-6">
+        {pdfUrl && (
+          <a href={pdfUrl} target="_blank" rel="noopener noreferrer" class="px-10 py-5 bg-black text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-gray-900 transition-all shadow-xl">Télécharger la Fiche (PDF)</a>
+        )}
+        <a href="/#contact" class="px-10 py-5 bg-[var(--a2ci-red)] text-white rounded-full text-sm font-bold uppercase tracking-widest hover:bg-[#C00000] transition-all shadow-xl">Nous contacter</a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

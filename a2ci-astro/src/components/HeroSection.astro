@@ -1,0 +1,87 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  backgroundImage?: string;
+  centered?: boolean;
+  ctaText?: string;
+  ctaHref?: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
+  badge?: string;
+  showRating?: boolean;
+  minHeight?: string;
+}
+
+const {
+  title,
+  subtitle,
+  backgroundImage,
+  centered = false,
+  ctaText,
+  ctaHref,
+  secondaryCtaText,
+  secondaryCtaHref,
+  badge,
+  showRating = false,
+  minHeight = "min-h-[700px] lg:min-h-[800px]",
+} = Astro.props;
+---
+
+<section class:list={["relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center", minHeight]}>
+  {backgroundImage && (
+    <div class="absolute inset-0 z-0">
+      <img src={backgroundImage} alt="" class="h-full w-full object-cover opacity-60" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
+    </div>
+  )}
+
+  <div class:list={["relative z-10 mx-auto max-w-content px-4", centered ? "text-center" : ""]}>
+    {badge && (
+      <div class="badge-premium mb-6">
+        <span class="badge-dot"></span>
+        <span class="badge-text text-white">{badge}</span>
+      </div>
+    )}
+
+    <div class:list={[centered ? "max-w-4xl mx-auto" : "max-w-3xl"]}>
+      <h1 class="mb-6 font-heading text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl uppercase tracking-tight" set:html={title} />
+
+      {subtitle && (
+        <p class:list={["mb-10 text-lg text-gray-300 leading-relaxed", centered ? "mx-auto max-w-2xl" : "max-w-2xl"]}>
+          {subtitle}
+        </p>
+      )}
+
+      <div class:list={["flex flex-wrap items-center gap-4", centered ? "justify-center" : ""]}>
+        {ctaText && ctaHref && (
+          <a href={ctaHref} class="cta-button">{ctaText}</a>
+        )}
+        {secondaryCtaText && secondaryCtaHref && (
+          <a href={secondaryCtaHref} class="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition duration-300 hover:bg-white/10">
+            {secondaryCtaText}
+          </a>
+        )}
+      </div>
+
+      {showRating && (
+        <div class="flex items-center gap-3 mt-8 sm:border-l sm:border-white/20 sm:pl-6">
+          <div class="flex flex-col">
+            <div class="flex gap-1 text-yellow-400 text-sm">
+              {Array.from({length: 5}).map(() => (
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <div class="mt-1 flex items-center gap-1 text-xs font-medium text-gray-300">
+              <span class="text-white font-bold text-sm">4.9/5</span> sur Google
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+
+    <slot />
+  </div>
+</section>

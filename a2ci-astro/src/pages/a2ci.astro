@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import HeroSection from '../components/HeroSection.astro';
+import TeamCarousel from '../components/TeamCarousel.astro';
+import SectionBlock from '../components/SectionBlock.astro';
+---
+
+<BaseLayout title="Présentation A2CI – Expertise Sécurité Incendie depuis 2006" description="Découvrez A2CI Prévention Incendie, votre partenaire en sécurité incendie depuis 2006. Équipe, histoire et moyens.">
+  <Header />
+  <Breadcrumb items={[
+    { label: "Accueil", href: "/" },
+    { label: "Expertise, Proximité & Engagement" }
+  ]} />
+
+  <HeroSection
+    title='Expertise, Proximité<br>& Engagement.'
+    subtitle="Depuis 2006, A2CI Prévention Incendie accompagne ses clients dans la maîtrise du risque incendie avec rigueur et savoir-faire."
+    backgroundImage="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg"
+    ctaText="Nous contacter"
+    ctaHref="/#contact"
+    centered
+  />
+
+  <!-- Notre Équipe -->
+  <TeamCarousel />
+
+  <!-- Historique -->
+  <section id="historique" class="py-20 bg-gray-50">
+    <div class="mx-auto max-w-[1150px] px-4">
+      <div class="mb-16 text-center max-w-3xl mx-auto">
+        <div class="h2-bar justify-center mb-8">
+          <span></span>
+          <h2 class="section-title mb-0">Historique de <span class="text-[var(--a2ci-red)]">l'entreprise.</span></h2>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Timeline Container -->
+      <div class="relative py-12 lg:py-20">
+        
+        <!-- DESKTOP TIMELINE -->
+        <div class="hidden md:block">
+          <div class="absolute left-0 right-0 top-[260px] h-0.5 bg-gray-200 z-0">
+            <div class="absolute inset-y-0 left-0 bg-[var(--a2ci-red)] w-full opacity-30"></div>
+          </div>
+
+          <div class="flex justify-between gap-2 relative z-10">
+            {[
+              { year: "2006", img: "/images/hist_2006.png", title: "Création", desc: "Fondation par Mr Rémy DENIS. Expertise SSI.", mt: "" },
+              { year: "2007", img: "/images/hist_2007.png", title: "Bureau d'Études", desc: "Ingénierie technique et plans SSI.", mt: "mt-10" },
+              { year: "2009", img: "/images/hist_2009.png", title: "Formation", desc: "Lara & Pascal Massias nous rejoignent.", mt: "mt-10" },
+              { year: "2012", img: "/images/hist_2012.png", title: "Audit & Conseil", desc: "Direction Technique par Magalie.", mt: "mt-20" },
+              { year: "2016", img: "/images/hist_2016.png", title: "Croissance", desc: "Expansion régionale Sud-Ouest.", mt: "mt-10" },
+              { year: "2013", img: "/images/A2CCI.jpg", title: "Centre Technique", desc: "Centre dédié Risques & Secours.", mt: "" },
+              { year: "2021", img: "/images/hist_2021.png", title: "Nouvel Horizon", desc: "Reprise & Innovation.", mt: "mt-10" }
+            ].map((item) => (
+              <div class={`flex flex-col items-center w-1/6 ${item.mt}`}>
+                <div class="mb-4 text-center">
+                  <span class="text-xs font-bold text-gray-500 mb-1 block tracking-wider">{item.year}</span>
+                  <div class="w-32 h-44 overflow-hidden rounded-lg shadow-lg border border-white/20 mx-auto">
+                    <img src={item.img} alt={item.year} class="w-full h-full object-cover" />
+                  </div>
+                </div>
+                <div class="h-12 w-px border-l border-dashed border-gray-300"></div>
+                <div class="w-3 h-3 rounded-full bg-white border-2 border-gray-300 flex items-center justify-center -mt-1.5">
+                  <div class="w-1 h-1 rounded-full bg-gray-300"></div>
+                </div>
+                <div class="mt-4 text-center px-1">
+                  <h3 class="text-[10px] font-bold uppercase tracking-widest text-gray-900 mb-1">{item.title}</h3>
+                  <p class="text-[10px] text-gray-500 leading-tight">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- MOBILE TIMELINE -->
+        <div class="md:hidden relative px-4">
+          <div class="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gray-200">
+            <div class="absolute inset-x-0 top-0 bg-gradient-to-b from-[var(--a2ci-red)] to-gray-200 w-full h-[80%] opacity-40"></div>
+          </div>
+
+          <div class="space-y-16 py-8">
+            {[
+              { year: "2006", img: "/images/hist_2006.png", title: "Création", desc: "Fondation par Mr Rémy DENIS. Expertise SSI.", color: "bg-[var(--a2ci-red)]", textColor: "text-[var(--a2ci-red)]" },
+              { year: "2007", img: "/images/hist_2007.png", title: "Bureau d'Études", desc: "Ingénierie technique et plans SSI.", color: "bg-gray-300", textColor: "text-gray-400" },
+              { year: "2009", img: "/images/hist_2009.png", title: "Formation", desc: "Ouverture du service formation.", color: "bg-gray-300", textColor: "text-gray-400" },
+              { year: "2012", img: "/images/hist_2012.png", title: "Consolidation", desc: "Accompagnement ERT renforcé.", color: "bg-gray-300", textColor: "text-gray-400" },
+              { year: "2013", img: "/images/A2CCI.jpg", title: "Centre Technique", desc: "Centre dédié Risques & Secours.", color: "bg-gray-300", textColor: "text-gray-400" },
+              { year: "2021", img: "/images/hist_2021.png", title: "Nouvel Horizon", desc: "Reprise & Innovation.", color: "bg-gray-300", textColor: "text-gray-400" }
+            ].map((item) => (
+              <div class="relative flex flex-col items-center">
+                <div class={`absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full ${item.color} border-4 border-white shadow-sm z-10`}></div>
+                <div class="w-full bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center relative mt-6">
+                  <span class={`inline-block px-3 py-1 bg-gray-50 ${item.textColor} text-[10px] font-bold rounded-full mb-4 border border-gray-100 tracking-widest`}>{item.year}</span>
+                  <div class="w-20 h-28 mx-auto mb-4 rounded-lg overflow-hidden shadow-md">
+                    <img src={item.img} class="w-full h-full object-cover" alt={item.year} />
+                  </div>
+                  <h3 class="text-xs font-bold uppercase tracking-widest text-gray-900 mb-2">{item.title}</h3>
+                  <p class="text-[11px] text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Nos Moyens -->
+  <section id="moyens" class="py-24 bg-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+    <div class="mx-auto max-w-[1150px] px-4">
+      <div class="space-y-0">
+
+        <!-- BE -->
+        <section class="py-16">
+          <div class="container-custom py-0">
+            <div class="section-custom scroll-reveal">
+              <div class="section-text text-left">
+                <div class="h2-bar">
+                  <span></span>
+                  <h2 class="section-title">SSI & Bureau <span class="text-[var(--a2ci-red)]">d'études</span></h2>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                  Notre bureau d'études s'appuie sur des technologies de pointe pour modéliser et concevoir vos systèmes de sécurité incendie avec une précision absolue.
+                </p>
+                <ul class="premium-list space-y-4 text-sm text-gray-600">
+                  <li>Logiciel de dessin <strong>AUTOCAD LT 2024</strong> pour des plans précis</li>
+                  <li>Accès permanent aux <strong>Textes, Arrêtés et Normes NF/CE</strong> en vigueur</li>
+                  <li><strong>Matériels de test SSI</strong> dernière génération</li>
+                  <li>Mètre laser haute précision et reportage photo numérique</li>
+                  <li>Flotte de véhicules de société pour une réactivité optimale</li>
+                </ul>
+              </div>
+              <div class="section-img">
+                <div class="img-wrapper">
+                  <img src="/images/autocad6.png" alt="Bureau d'études A2CI" class="glow-border" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Formations sur site -->
+        <section class="py-16 bg-gray-50/50">
+          <div class="container-custom py-0">
+            <div class="section-custom reverse scroll-reveal">
+              <div class="section-text">
+                <div class="h2-bar">
+                  <span></span>
+                  <h2 class="section-title">Formations <span class="text-[var(--a2ci-red)]">sur site</span></h2>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                  Nous intervenons directement dans vos locaux avec tout l'équipement nécessaire pour des mises en situation réelles et percutantes.
+                </p>
+                <ul class="premium-list space-y-4 text-sm text-gray-600">
+                  <li><strong>Générateurs de foyer</strong> (bac propre sans pollution)</li>
+                  <li>Extincteurs pédagogiques : <strong>CO2, eau, poudre</strong></li>
+                  <li><strong>Mannequins de secourisme</strong> (SST) dernière génération</li>
+                  <li><strong>Défibrillateurs de formation</strong> (DAE) haute fidélité</li>
+                  <li>Systèmes de <strong>vidéo surveillance pédagogique</strong></li>
+                </ul>
+              </div>
+              <div class="section-img">
+                <div class="img-wrapper">
+                  <img src="/images/Formation extincteur.png" alt="Formation sur site A2CI" class="glow-border" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Centre de formation -->
+        <section class="py-16">
+          <div class="container-custom py-0">
+            <div class="section-custom scroll-reveal">
+              <div class="section-text text-left">
+                <div class="h2-bar">
+                  <span></span>
+                  <h2 class="section-title">Notre Centre <span class="text-[var(--a2ci-red)]">de formation</span></h2>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                  Situé à Mazères, notre infrastructure dédiée offre un cadre d'apprentissage optimal alliant théorie et exercices pratiques grandeur nature.
+                </p>
+                <ul class="premium-list space-y-4 text-sm text-gray-600">
+                  <li>Locaux modernes entièrement <strong>accessibles PMR</strong></li>
+                  <li>Salles équipées de <strong>vidéoprojecteurs interactifs</strong></li>
+                  <li><strong>Aire de feu extérieure</strong> sécurisée pour exercices réels</li>
+                  <li>Installation <strong>RIA</strong> (Robinet Incendie Armé) pédagogique</li>
+                </ul>
+              </div>
+              <div class="section-img">
+                <div class="img-wrapper">
+                  <img src="/images/A2CCI.jpg" alt="Centre de formation A2CI" class="glow-border" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--a2ci-red);
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px rgba(150, 6, 6, 0.1);
+    z-index: 10;
+  }
+</style>
+
+<script>
+  function scrollTeam(dir: string) {
+    const container = document.getElementById('team-scroll-container');
+    if (!container) return;
+    const scrollAmount = container.clientWidth > 768 ? 400 : 300;
+    if (dir === 'left') {
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+  (window as any).scrollTeam = scrollTeam;
+</script>

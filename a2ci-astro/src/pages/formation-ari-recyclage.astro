@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Recyclage ARI - A2CI Prévention"
+  description="Formation Recyclage ARI (Appareil Respiratoire Isolant). Maintenez vos compétences opérationnelles et votre sécurité en milieu hostile avec A2CI."
+  heroTitle='Recyclage<br /><span class="text-[var(--a2ci-red)]">ARI.</span>'
+  heroSubtitle="Maintenez votre capacité d'intervention et révisez les protocoles de sécurité pour une efficacité constante sur le terrain."
+  heroImage="/images/ari_recyclage.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Recyclage ARI"
+  objectivesIntro="Une session de maintien et d'actualisation des connaissances pour garantir que chaque porteur d'ARI conserve ses réflexes et sa maîtrise technique."
+  block1Title='Actualiser & <span class="text-[var(--a2ci-red)]">Maîtriser.</span>'
+  block1Items={["Maintenir la capacité d'intervention des porteurs d'ARI.","Révision approfondie des principes d'utilisation et de sécurité.","Mises en situation pratique pour valider les acquis techniques."]}
+  block1Image="/images/ari_recyclage.png"
+  block2Title='Précision & <span class="text-[var(--a2ci-red)]">Sécurité.</span>'
+  block2Items={["Vérification des automatismes de mise en œuvre.","Gestion du stress et de l'effort physique en situation réelle.","Remise d'un mémento actualisé pour chaque participant."]}
+  block2Image="/images/ari_formation.png"
+  reglementationIntro="Le recyclage périodique est essentiel pour garantir la sécurité des personnels exposés à des risques respiratoires."
+  reglementationCards={[
+    { number: "01", title: "Vérification <br>du matériel", description: "Contrôle des connaissances sur l'entretien et l'inspection de l'équipement." },
+    { number: "02", title: "Gestion des <br>Incidents", description: "Révision des protocoles d'urgence en cas de défaillance matérielle." },
+    { number: "03", title: "Retours <br>d'expérience", description: "Analyse des situations vécues pour améliorer les futures interventions." }
+  ]}
+  moyensIntro="Nous mettons à jour vos connaissances avec les dernières évolutions techniques et normatives."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Atelier</strong> : Révision pratique sur ARI (matériel site ou formateur).',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Mises en situation enfumées (générateur de fumée).',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Expertise</strong> : Mémento de recyclage actualisé remis à chacun.'
+  ]}
+  moyensImage="/images/ari_recyclage.png"
+  quote='Maintenir ses compétences pour <span class="text-[var(--a2ci-red)] font-normal">intervenir avec assurance</span> en milieu hostile et préserver la sécurité de tous.'
+  stats={[
+    { value: "1/2", label: "Journée" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Terrain" },
+    { value: "Expert", label: "Maintien acquis" }
+  ]}
+  ctaTitle='Maintenez votre niveau de <span class="text-[var(--a2ci-red)]">protection ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ari_rec.pdf"
+/>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import HeroSection from '../components/HeroSection.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  heroTitle: string;
+  heroSubtitle?: string;
+  heroImage?: string;
+  heroBadge?: string;
+  breadcrumbs: { label: string; href?: string }[];
+  ctaTitle?: string;
+}
+
+const {
+  title,
+  description,
+  heroTitle,
+  heroSubtitle,
+  heroImage,
+  heroBadge,
+  breadcrumbs,
+  ctaTitle = 'Besoin d\'un accompagnement <span class="text-a2ci-red">sur-mesure</span> ?',
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description} bodyClass="overflow-x-hidden w-full">
+  <Header />
+  <Breadcrumb items={breadcrumbs} />
+
+  <HeroSection
+    title={heroTitle}
+    subtitle={heroSubtitle}
+    backgroundImage={heroImage}
+    badge={heroBadge}
+    ctaText="Demander un devis"
+    ctaHref="/#contact"
+    centered
+  />
+
+  <slot />
+
+  <CtaBanner title={ctaTitle} />
+
+  <Footer />
+</BaseLayout>

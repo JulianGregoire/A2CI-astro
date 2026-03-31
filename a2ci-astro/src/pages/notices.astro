@@ -1,0 +1,138 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import TimelineSteps from '../components/TimelineSteps.astro';
+import Accordion from '../components/Accordion.astro';
+---
+
+<ServiceLayout
+  title="Notices réglementaires ERP - A2CI"
+  description="Rédaction de notices d'accessibilité et de sécurité pour ERP. Accompagnement expert pour la conformité réglementaire de vos établissements."
+  heroTitle='Notices réglementaires <br><span class="text-[var(--a2ci-red)]">Accessibilité & Sécurité ERP</span>'
+  heroSubtitle="Rédaction expert des notices d'accessibilité et de sécurité permettant de garantir la conformité de vos établissements recevant du public."
+  heroImage="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
+  breadcrumbs={[
+    { label: "Accueil", href: "/" },
+    { label: "Hygiène & Sécurité", href: "/#audit-conseil" },
+    { label: "Notices réglementaires Accessibilité & Sécurité ERP" }
+  ]}
+  ctaTitle='Rédiger vos notices <span class="text-a2ci-red">réglementaires</span>'
+>
+
+  <TimelineSteps
+    title='Un parcours réglementaire <span class="text-[var(--a2ci-red)]">structuré.</span>'
+    subtitle="De l'analyse initiale à la validation finale par les autorités."
+    steps={[
+      { number: "01", title: "Analyse", description: "Étude des obligations selon le type d'établissement." },
+      { number: "02", title: "Rédaction", description: "Élaboration des notices accessibilité et sécurité incendie." },
+      { number: "03", title: "Vérification", description: "Contrôle des dispositions techniques et réglementaires." }
+    ]}
+  />
+
+  <!-- Section Accessibilité -->
+  <section class="bg-gray-50">
+    <div class="container-custom">
+      <div class="section-custom scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Notice <span class="text-[var(--a2ci-red)]">d'accessibilité</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            La <strong>notice d'accessibilité</strong> présente les <strong>dispositions constructives</strong> permettant de répondre aux <strong>exigences réglementaires</strong> en matière d'<strong>accessibilité aux personnes handicapées</strong>.
+          </p>
+          <p class="mb-4 text-gray-600">
+            Elle est réalisée dans le cadre de la <strong>construction</strong> ou de l'<strong>aménagement d'un ERP</strong>, en complément des <strong>plans d'aménagement</strong>.
+          </p>
+          <p class="text-gray-600">
+            Elle tient compte du <strong>type d'établissement</strong>, de la <strong>réglementation en vigueur</strong> et des dispositions existantes.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/Analyse du projet (SSI).png" alt="Notice Accessibilité" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Sécurité -->
+  <section class="bg-gray-50">
+    <div class="container-custom pt-0">
+      <div class="section-custom reverse scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Obligation <span class="text-[var(--a2ci-red)]">réglementaire</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            La <strong>notice de sécurité</strong> présente les dispositions permettant de répondre aux exigences du <strong>règlement de sécurité incendie</strong> pour les <strong>ERP</strong>.
+          </p>
+          <p class="mb-4 text-gray-600">
+            Elle est <strong>obligatoire</strong> pour tous travaux et permet de garantir la <strong>conformité des installations</strong> et le bon <strong>suivi du chantier</strong>.
+          </p>
+          <p class="text-gray-600">
+            En l'absence de notice, l'<strong>exploitant</strong> s'expose à un avis défavorable de la <strong>commission de sécurité</strong>.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/ssi_dossier.png" alt="Notice Sécurité" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Détail (Dark) -->
+  <section id="detail-reglementaire" class="section-dark">
+    <div class="container-custom">
+      <div class="scroll-reveal">
+        <div class="text-center mb-16">
+          <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Expertise & Conformité</p>
+          <h2 class="font-heading text-4xl font-bold text-white">Détail des <span class="text-red">notices</span></h2>
+        </div>
+
+        <Accordion items={[
+          {
+            title: "Réglementation accessibilité",
+            content: `<ul class="premium-list !text-gray-400">
+              <li><strong>Arrêté du 1er août 2006</strong> (Accessibilité ERP)</li>
+              <li><strong>Arrêté du 21 mars 2007</strong></li>
+              <li>Articles <strong>R111-19 à R111-19-11</strong> du CCH</li>
+              <li>Référence : <strong>article R123.24</strong></li>
+            </ul>`
+          },
+          {
+            title: "Objectif de la notice d'accessibilité",
+            content: `<p class="text-sm text-gray-400 mb-4">Présenter les dispositions constructives répondant aux exigences selon :</p>
+            <ul class="premium-list !text-gray-400 mb-4">
+              <li>Le <strong>type d'établissement</strong></li>
+              <li>Les <strong>contraintes existantes</strong></li>
+            </ul>
+            <p class="text-xs text-[#C00000] italic">Absence de notice = risque d'avis défavorable en commission.</p>`
+          },
+          {
+            title: "Réglementation sécurité",
+            content: `<ul class="premium-list !text-gray-400">
+              <li><strong>Code de la construction</strong> et de l'habitation (CCH)</li>
+              <li><strong>Arrêté du 25 juin 1980</strong> (Règlement incendie)</li>
+              <li>Arrêtés du <strong>22 juin 1990</strong> et <strong>22 mars 2004</strong></li>
+              <li>Normes SSI <strong>NF S 61-930 à 940</strong></li>
+            </ul>`
+          },
+          {
+            title: "Objectif de la notice de sécurité",
+            content: `<p class="text-sm text-gray-400 mb-4">Vérifier la conformité des travaux (Article R123-22 du CCH) :</p>
+            <ul class="premium-list !text-gray-400 mb-4">
+              <li>Suivi des <strong>travaux en conformité</strong></li>
+              <li>Obligatoire pour <strong>tous les travaux</strong> en ERP</li>
+            </ul>
+            <p class="text-xs text-[#C00000] italic">Absence de notice = avis défavorable en commission de sécurité.</p>`
+          }
+        ]} />
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>

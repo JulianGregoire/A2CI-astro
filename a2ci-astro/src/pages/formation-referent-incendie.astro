@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Référent Incendie Site - A2CI Prévention"
+  description="Formation Référent Incendie Site. Devenez le garant de la sécurité incendie, maîtrisez le SSI et l'organisation des secours avec A2CI."
+  heroTitle='Référent<br /><span class="text-[var(--a2ci-red)]">Incendie Site.</span>'
+  heroSubtitle="Devenez l'interlocuteur privilégié de la sécurité incendie au sein de votre établissement et garantissez le maintien du niveau de protection."
+  heroImage="/images/referent_incendie.png"
+  parentCategory="incendie"
+  breadcrumbLabel="Référent Incendie Site"
+  objectivesIntro="Le référent incendie assure la surveillance quotidienne, l'exploitation du SSI et la transmission de l'organisation des secours à l'ensemble des collaborateurs."
+  block1Title='Transmettre & <span class="text-[var(--a2ci-red)]">Surveiller.</span>'
+  block1Items={["Transmettre l'organisation des secours prescrite dans l'établissement.","Apprendre les règles de base de maintien du niveau de sécurité incendie.","Gérer les points de vulnérabilité au quotidien (Permis de feu, travaux)."]}
+  block1Image="/images/referent_incendie.png"
+  block2Title='Exploiter & <span class="text-[var(--a2ci-red)]">Identifier.</span>'
+  block2Items={["Opérations d'exploitation sur le Système de Sécurité Incendie (SSI).","Identifier les différents organes de sécurité via visite technique.","Accompagner les prestataires de maintenance lors de leurs passages."]}
+  block2Image="/images/ssi_hero.png"
+  reglementationIntro="Le référent est le pivot de la prévention, assurant le lien entre la direction, les collaborateurs et les secours."
+  reglementationCards={[
+    { number: "01", title: "Veille <br>Réglementaire", description: "Vérification de la conformité des registres et de la visibilité des consignes." },
+    { number: "02", title: "Suivi des <br>Matériels", description: "Contrôle visuel des extincteurs, des RIA et des dégagements des issues." },
+    { number: "03", title: "Sensibilisation <br>continue", description: "Rappel constant des bonnes pratiques aux nouveaux arrivants et prestataires." }
+  ]}
+  moyensIntro="Une formation mêlant théorie administrative et réalité terrain."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Visite</strong> : Visite technique complète (Extincteurs, SSI, issues).',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Immersion</strong> : Générateur de fumée & bac à feu pour la sensibilisation.',
+    `<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Support</strong> : Logiciel d'exploitation SSI & PC portable.`
+  ]}
+  moyensImage="/images/referent_incendie.png"
+  quote='Devenir le garant de la <span class="text-[var(--a2ci-red)] font-normal">sécurité incendie</span> au quotidien dans votre établissement.'
+  stats={[
+    { value: "15+", label: "Programmes" },
+    { value: "10", label: "Pers. Max / Session" },
+    { value: "100%", label: "Responsable" },
+    { value: "Audit", label: "Accompagnement site" }
+  ]}
+  ctaTitle='Devenez le garant de la <span class="text-[var(--a2ci-red)]">sécurité ?</span>'
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-ref_inc.pdf"
+/>

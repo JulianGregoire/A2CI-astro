@@ -1,0 +1,41 @@
+---
+import FormationLayout from '../layouts/FormationLayout.astro';
+---
+<FormationLayout
+  title="Initiation au Défibrillateur (DAE) - A2CI Prévention"
+  description="Formation Initiation au Défibrillateur Automatisé Externe (DAE). Apprenez les gestes qui sauvent avec A2CI Prévention."
+  heroTitle='Formation<br /><span class="text-[var(--a2ci-red)]">DAE.</span>'
+  heroSubtitle="Formez vos équipes à l'utilisation du Défibrillateur Automatisé Externe et aux gestes de réanimation cardio-pulmonaire."
+  heroImage="/images/dae_formation.png"
+  parentCategory="secourisme"
+  breadcrumbLabel="Formation DAE"
+  objectivesIntro="Une formation courte et intensive pour savoir réagir face à un arrêt cardiaque et utiliser un défibrillateur en toute confiance."
+  block1Title='Alerter & <span class="text-[var(--a2ci-red)]">Masser.</span>'
+  block1Items={["Reconnaître un arrêt cardiaque et alerter les secours (15, 18 ou 112).","Pratiquer le massage cardiaque externe sur mannequin adulte.","Comprendre la chaîne de survie et le rôle de chaque maillon."]}
+  block1Image="/images/dae_formation.png"
+  block2Title='Utiliser le <span class="text-[var(--a2ci-red)]">Défibrillateur.</span>'
+  block2Items={["Mettre en œuvre un Défibrillateur Automatisé Externe (DAE) en toute sécurité.","Coordonner massage cardiaque et défibrillation en binôme.","Cas particuliers : enfant, nourrisson, environnement humide."]}
+  block2Image="/images/dae_pratique.png"
+  reglementationIntro="Le décret du 4 mai 2007 autorise toute personne à utiliser un DAE, même sans formation préalable."
+  reglementationCards={[
+    { number: "01", title: "Décret <br>2007-705", description: "Toute personne est autorisée à utiliser un DAE, même non-professionnel de santé." },
+    { number: "02", title: "Loi du <br>28 juin 2018", description: "Obligation d'équipement en DAE pour certains ERP selon leur catégorie." },
+    { number: "03", title: "Code du <br>Travail", description: "L'employeur doit organiser les soins d'urgence et former le personnel." }
+  ]}
+  moyensIntro="Des exercices pratiques intensifs pour acquérir les réflexes de réanimation."
+  moyensItems={[
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">Mannequins</strong> : Adulte et enfant pour la pratique du massage cardiaque.',
+    '<strong class="text-gray-900 font-bold uppercase tracking-widest text-xs">DAE</strong> : Défibrillateurs de formation pour une manipulation réaliste.',
+    "<strong class='text-gray-900 font-bold uppercase tracking-widest text-xs'>Attestation</strong> : Remise d'une attestation de formation à chaque participant."
+  ]}
+  moyensImage="/images/dae_formation.png"
+  quote={"Formez vos équipes aux <span class=\"text-[var(--a2ci-red)] font-normal\">gestes d'urgence</span> pour sauver des vies."}
+  stats={[
+    { value: "2h", label: "De Formation" },
+    { value: "12", label: "Pers. Max / Session" },
+    { value: "A2CI", label: "Certifié" },
+    { value: "Sur-mesure", label: "Adaptation" }
+  ]}
+  ctaTitle={"Formez vos équipes aux gestes <span class=\"text-[var(--a2ci-red)]\">d'urgence ?</span>"}
+  pdfUrl="https://www.a2ci-prevention-incendie.fr/IMG/pdf/fp-dae.pdf"
+/>

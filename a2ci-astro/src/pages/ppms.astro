@@ -1,0 +1,133 @@
+---
+import ServiceLayout from '../layouts/ServiceLayout.astro';
+import TimelineSteps from '../components/TimelineSteps.astro';
+import Accordion from '../components/Accordion.astro';
+---
+
+<ServiceLayout
+  title="Plan Particulier de Mise en Sûreté (PPMS) - A2CI"
+  description="Mise en place et accompagnement pour le Plan Particulier de Mise en Sûreté (PPMS). Protection des élèves et du personnel face aux risques majeurs."
+  heroTitle='Plan Particulier de <br><span class="text-[var(--a2ci-red)]">Mise en Sûreté (PPMS)</span>'
+  heroSubtitle="Conformément à la circulaire n°2002-119 du 29 mai 2002 : protéger les élèves, le personnel et le public face aux risques majeurs."
+  heroImage="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg"
+  breadcrumbs={[
+    { label: "Accueil", href: "/" },
+    { label: "Hygiène & Sécurité", href: "/#audit-conseil" },
+    { label: "Plan Particulier de Mise en Sûreté (PPMS)" }
+  ]}
+  ctaTitle='Mettre en place votre <span class="text-a2ci-red">PPMS</span>'
+>
+
+  <TimelineSteps
+    title='Parcours de <span class="text-[var(--a2ci-red)]">Mise en Sûreté.</span>'
+    subtitle="Une organisation structurée pour faire face aux événements naturels ou anthropiques."
+    steps={[
+      { number: "01", title: "Identifier", description: "Analyse des risques majeurs naturels ou anthropiques." },
+      { number: "02", title: "Organiser", description: "Mise en place des procédures de sécurité et des consignes." },
+      { number: "03", title: "Protéger", description: "Mise en sûreté efficace des élèves et du personnel." },
+      { number: "04", title: "Gérer", description: "Communication et coordination en attendant les secours." }
+    ]}
+  />
+
+  <!-- Section 1: Définition -->
+  <section class="bg-gray-50">
+    <div class="container-custom">
+      <div class="section-custom scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Définition <span class="text-[var(--a2ci-red)]">du PPMS</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Le <strong>PPMS</strong> est un plan destiné à <span class="font-bold text-gray-900">mettre en sûreté</span> les <strong>élèves</strong>, le <strong>personnel</strong> et éventuellement le <strong>public</strong> en cas de <strong>risque majeur</strong>.
+          </p>
+          <p class="text-gray-600">
+            Un <strong>risque majeur</strong> est un <strong>événement naturel ou anthropique</strong>, rare mais grave, pouvant dépasser les <strong>capacités de réaction</strong> de la société.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="/images/PPMS.png" alt="Définition PPMS" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Objectif -->
+  <section class="bg-gray-50">
+    <div class="container-custom pt-0">
+      <div class="section-custom reverse scroll-reveal">
+        <div class="section-text">
+          <div class="h2-bar">
+            <span></span>
+            <h2 class="section-title">Objectif <span class="text-[var(--a2ci-red)]">du PPMS</span></h2>
+          </div>
+          <p class="mb-4 text-gray-600">
+            Définir l'organisation permettant de <strong>protéger les personnes</strong> et de <strong>gérer la crise</strong> en attendant l'<strong>intervention des secours</strong> ou la <strong>fin de l'alerte</strong>.
+          </p>
+          <p class="text-gray-600">
+            Le <strong>PPMS</strong> est <strong>spécifique à chaque établissement</strong> en fonction des lieux, du public et des <strong>risques identifiés</strong>.
+          </p>
+        </div>
+        <div class="section-img">
+          <div class="img-wrapper">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Objectif PPMS" class="glow-border">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Détail PPMS (Dark) -->
+  <section id="detail-ppms" class="section-dark">
+    <div class="container-custom">
+      <div class="scroll-reveal">
+        <div class="text-center mb-16">
+          <p class="text-[var(--a2ci-red)] font-bold uppercase tracking-widest text-xs mb-3">Expertise & Conformité</p>
+          <h2 class="font-heading text-4xl font-bold text-white">Détail du <span class="text-red">PPMS</span></h2>
+        </div>
+
+        <Accordion items={[
+          {
+            title: "Organisation et périmètre",
+            content: `<p class="text-sm text-gray-400">Le PPMS couvre les plages horaires les plus larges incluant les activités périscolaires et tous les lieux fréquentés par les élèves, y compris les activités extra-muros.</p>`
+          },
+          {
+            title: "Les 6 questions essentielles",
+            content: `<ul class="premium-list !text-gray-400">
+              <li>Quand <strong>déclencher l'alerte</strong> ?</li>
+              <li>Comment <strong>déclencher l'alerte</strong> (moyens) ?</li>
+              <li>Quelles <strong>consignes appliquer</strong> (évacuation, confinement, mise à l'abri) ?</li>
+              <li>Où et comment <strong>mettre en sûreté</strong> les personnes ?</li>
+              <li>Comment <strong>gérer les communications</strong> internes et externes ?</li>
+              <li>Quels <strong>documents et ressources</strong> sont nécessaires ?</li>
+            </ul>`
+          },
+          {
+            title: "Éléments à identifier",
+            content: `<ul class="premium-list !text-gray-400">
+              <li>Les <strong>risques majeurs</strong> impactant le site.</li>
+              <li>Les <strong>lieux de mise en sûreté</strong>.</li>
+              <li>Les <strong>moyens logistiques</strong> et humains.</li>
+            </ul>`
+          },
+          {
+            title: "Mise en œuvre",
+            content: `<p class="text-sm text-gray-400 mb-4">Le document doit être accompagné d'une information des personnels, parents et élèves, ainsi que d'un exercice de simulation pour validation.</p>
+            <p class="text-sm text-gray-400">Il permet de développer une culture du risque au sein de l'établissement.</p>`
+          },
+          {
+            title: "Réglementation",
+            content: `<ul class="premium-list !text-gray-400">
+              <li>Guide ORSEC (Tome G1) : établissements vulnérables.</li>
+              <li>Article L312-13-1 relatif à la sécurité des élèves.</li>
+              <li>Circulaire n°2002-119 du 29/05/2002 relative au PPMS.</li>
+            </ul>`
+          }
+        ]} />
+      </div>
+    </div>
+  </section>
+
+</ServiceLayout>
