@@ -28,6 +28,10 @@ body {
   padding: 80px 20px;
 }
 
+#objectifs > .container-custom:first-child {
+  padding-top: 2rem;
+}
+
 .section-custom {
   display: flex;
   flex-wrap: wrap;
