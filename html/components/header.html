@@ -64,35 +64,28 @@
           L'agence
         </a>
 
-        <!-- Dropdown Sécurité Incendie -->
-        <div class="relative group">
-          <button class="flex items-center gap-1 hover:text-[#C00000] transition-colors py-2 font-semibold group nav-dropdown-trigger">
-            Sécurité Incendie
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="absolute top-full left-0 w-64 bg-white shadow-xl border border-gray-100 py-3 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
-            <a href="coordination-ssi.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">Coordination SSI</a>
-            <a href="audit.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">Audit & Conseil</a>
-            <a href="bet-amo.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">BET & AMO</a>
-            <a href="aide-exploitant.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">Aide à l'Exploitant</a>
-          </div>
-        </div>
+        <a href="audit.html" class="relative hover:text-[#C00000] transition-colors py-2 group">
+          Audit
+        </a>
 
+        <!-- Dropdown Coordination SSI -->
         <div class="relative group">
           <button class="flex items-center gap-1 hover:text-[#C00000] transition-colors py-2 font-semibold group nav-dropdown-trigger">
-            Hygiène & Sécurité
+            Coordination SSI
             <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="absolute top-full left-0 w-64 bg-white shadow-xl border border-gray-100 py-3 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
-            <a href="document-unique.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">Document Unique (D.U)</a>
-            <a href="ppms.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">PPMS</a>
+            <a href="coordination-ssi.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">SSI / RUS</a>
+            <a href="aide-exploitant.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">Aide à l'Exploitant</a>
             <a href="notices.html" class="block px-6 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#C00000] font-semibold transition-colors">Notices</a>
           </div>
         </div>
+
+        <a href="bet-amo.html" class="relative hover:text-[#C00000] transition-colors py-2 group">
+          AMO
+        </a>
 
         <!-- Dropdown Formations -->
         <div class="relative group">
@@ -137,19 +130,17 @@
     <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-xl overflow-hidden transition-all duration-300 max-h-0 opacity-0 md:hidden">
       <div class="flex flex-col p-6 gap-4">
         <a href="a2ci.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] border-b border-gray-100 pb-3 mobile-nav-link">L'agence</a>
+        <a href="audit.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] border-b border-gray-100 pb-3 mobile-nav-link">Audit</a>
+        
         <div class="flex flex-col gap-2 border-b border-gray-100 pb-3">
-          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pl-1">Sécurité Incendie</span>
-          <a href="coordination-ssi.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- Coordination SSI</a>
-          <a href="audit.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- Audit & Conseil</a>
-          <a href="bet-amo.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- BET & AMO</a>
+          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pl-1">Coordination SSI</span>
+          <a href="coordination-ssi.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- SSI / RUS</a>
           <a href="aide-exploitant.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- Aide à l'Exploitant</a>
-        </div>
-        <div class="flex flex-col gap-2 border-b border-gray-100 pb-3">
-          <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pl-1">Hygiène & Sécurité</span>
-          <a href="document-unique.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- Document Unique (D.U)</a>
-          <a href="ppms.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- PPMS</a>
           <a href="notices.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] pl-2 mobile-nav-link">- Notices</a>
         </div>
+        
+        <a href="bet-amo.html" class="text-lg font-bold text-gray-800 hover:text-[#C00000] border-b border-gray-100 pb-3 mobile-nav-link">AMO</a>
+
         <div class="flex flex-col gap-2 border-b border-gray-100 pb-3">
           <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest pl-1">Formations</span>
           <a href="formations.html" class="text-lg font-bold text-[#C00000] pl-2 mobile-nav-link">Catalogue de formations</a>

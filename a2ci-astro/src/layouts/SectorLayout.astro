@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroSection from '../components/HeroSection.astro';
 
@@ -38,7 +38,6 @@ const {
 ---
 
 <BaseLayout title={title} description={description} bodyClass="overflow-x-hidden w-full">
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Type de bâtiments", href: "/#secteurs" },
@@ -113,5 +112,4 @@ const {
     </div>
   </section>
 
-  <Footer />
 </BaseLayout>

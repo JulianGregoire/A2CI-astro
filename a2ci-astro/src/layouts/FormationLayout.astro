@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroSection from '../components/HeroSection.astro';
 import QualiopiBar from '../components/QualiopiBar.astro';
@@ -74,7 +74,6 @@ const parentLabel = parentCategory === 'incendie' ? 'Formations INCENDIE' : 'For
 ---
 
 <BaseLayout title={title} description={desc}>
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Formations", href: "/formations" },
@@ -243,5 +242,4 @@ const parentLabel = parentCategory === 'incendie' ? 'Formations INCENDIE' : 'For
     </div>
   </section>
 
-  <Footer />
 </BaseLayout>

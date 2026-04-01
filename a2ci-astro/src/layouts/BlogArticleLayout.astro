@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
 interface Props {
@@ -33,7 +33,6 @@ const badgeClass = categoryColor === 'red'
   : 'bg-gray-50 text-gray-500 border-gray-100';
 ---
 <BaseLayout title={title}>
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Blog", href: "/blog" },
@@ -78,7 +77,6 @@ const badgeClass = categoryColor === 'red'
     </div>
   </article>
 
-  <Footer />
 </BaseLayout>
 
 <style>

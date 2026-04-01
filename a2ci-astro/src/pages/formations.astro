@@ -1,14 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroSection from '../components/HeroSection.astro';
 import QualiopiBar from '../components/QualiopiBar.astro';
 ---
 
 <BaseLayout title="Catalogue de Formations - A2CI Prévention Incendie" description="Découvrez notre catalogue complet de formations en sécurité incendie et secourisme (SST, SRI, ARI, SSI) par A2CI.">
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Catalogue de Formations" }
@@ -98,7 +97,6 @@ import QualiopiBar from '../components/QualiopiBar.astro';
     </div>
   </section>
 
-  <Footer />
 </BaseLayout>
 
 <style>

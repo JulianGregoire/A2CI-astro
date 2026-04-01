@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroSection from '../components/HeroSection.astro';
 import TeamCarousel from '../components/TeamCarousel.astro';
@@ -9,7 +9,6 @@ import SectionBlock from '../components/SectionBlock.astro';
 ---
 
 <BaseLayout title="Présentation A2CI – Expertise Sécurité Incendie depuis 2006" description="Découvrez A2CI Prévention Incendie, votre partenaire en sécurité incendie depuis 2006. Équipe, histoire et moyens.">
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Expertise, Proximité & Engagement" }
@@ -207,7 +206,6 @@ import SectionBlock from '../components/SectionBlock.astro';
     </div>
   </section>
 
-  <Footer />
 </BaseLayout>
 
 <style>

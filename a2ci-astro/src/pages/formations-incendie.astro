@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroSection from '../components/HeroSection.astro';
 import QualiopiBar from '../components/QualiopiBar.astro';
@@ -105,7 +105,6 @@ const filters = [
 ---
 
 <BaseLayout title="Formations INCENDIE - A2CI Prévention" description="Catalogue complet des formations sécurité incendie: SRI, ARI, SSI, Évacuation. Expertise et pédagogie par A2CI." bodyClass="bg-gray-50 overflow-x-hidden w-full">
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Formations", href: "/formations" },
@@ -151,7 +150,6 @@ const filters = [
     </div>
   </section>
 
-  <Footer />
 </BaseLayout>
 
 <style>

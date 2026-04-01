@@ -1,13 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactSection from '../components/ContactSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import TeamCarousel from '../components/TeamCarousel.astro';
 ---
 
 <BaseLayout title="A2CI Prévention Incendie – Coordination SSI, Audit, Conseil, Formation" bodyClass="bg-[#0b0b0b] text-white">
-  <Header />
 
   <!-- Hero Section -->
   <section class="relative w-full overflow-hidden bg-black py-20 lg:py-32 flex flex-col justify-center min-h-[700px] lg:min-h-[800px]">
@@ -442,7 +441,6 @@ import TeamCarousel from '../components/TeamCarousel.astro';
   <!-- Contact -->
   <ContactSection />
 
-  <Footer />
 
   <!-- Particles.js -->
   <script is:inline src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroSection from '../components/HeroSection.astro';
 
@@ -99,7 +99,6 @@ const articles = [
 ];
 ---
 <BaseLayout title="Blog & Actualités - A2CI Prévention">
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Le Blog A2CI" }
@@ -173,7 +172,6 @@ const articles = [
     </div>
   </section>
 
-  <Footer />
 </BaseLayout>
 
 <style>

@@ -1,13 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import HeroSection from '../components/HeroSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 ---
 <BaseLayout title="Certifications & Satisfaction - A2CI Prévention">
-  <Header />
   <Breadcrumb items={[
     { label: "Accueil", href: "/" },
     { label: "Formations", href: "/formations" },
@@ -121,5 +120,4 @@ import ContactSection from '../components/ContactSection.astro';
     </div>
   </section>
 
-  <Footer />
 </BaseLayout>
